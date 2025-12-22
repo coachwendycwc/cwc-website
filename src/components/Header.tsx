@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
 const navigation = [
   {
@@ -36,13 +36,12 @@ export default function Header() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.webp"
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.webp`}
             alt="Coaching Women of Color"
             width={280}
             height={70}
             className="h-16 md:h-20 w-auto"
-            priority
           />
         </Link>
 

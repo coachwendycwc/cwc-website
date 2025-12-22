@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import Image from "next/image";
 
 const footerNavigation = {
   solutions: [
@@ -70,8 +70,8 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/logo.webp"
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.webp`}
                 alt="Coaching Women of Color"
                 width={220}
                 height={55}
