@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { siteConfig } from "@/config";
 
 const footerNavigation = {
   solutions: [
@@ -71,7 +72,7 @@ export default function Footer() {
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center">
               <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.webp`}
+                src={`${siteConfig.basePath}/logo.webp`}
                 alt="Coaching Women of Color"
                 width={220}
                 height={55}
