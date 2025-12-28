@@ -1,6 +1,40 @@
 # Claude Session Notes - CWC Website
 
-**Last Updated:** 2025-12-28 (New photos inventory added)
+**Last Updated:** 2025-12-28 (Photos added + CI fixed)
+
+**Live Site:** https://mdxvision.github.io/cwc-website/
+
+---
+
+## Latest Session (Dec 28, 2025)
+
+### Completed
+- [x] Added 11 new optimized photos from Dec 2024 photoshoot to `public/images/new/`
+- [x] Updated homepage hero with `headshot-wocip-1.jpg`
+- [x] Updated About page with `headshot-professional-1.jpg`
+- [x] Updated all service pages with new action shots
+- [x] Fixed CI deployment (Node 20, removed corrupt package-lock.json)
+- [x] Site deployed and live
+
+### New Images Added (`public/images/new/`)
+| File | Size | Used On |
+|------|------|---------|
+| headshot-wocip-1.jpg | 308KB | Homepage hero |
+| headshot-professional-1.jpg | 177KB | About page |
+| headshot-studio-1.jpg | 242KB | Available |
+| headshot-wocip-2.jpg | 205KB | Available |
+| headshot-retouched.jpg | 119KB | Available |
+| action-summit-talk.jpg | 160KB | Keynote Speaking |
+| action-woc-leaders.jpg | 465KB | DEI Workshops |
+| action-awards.jpg | 416KB | Leadership Development |
+| action-pitch.jpg | 144KB | Consulting |
+| action-recent-event.jpg | 381KB | Available |
+| action-women-club.jpg | 104KB | Available |
+
+### CI Fix
+- Issue: `npm ci` failing with "Invalid Version:" error
+- Cause: Corrupted package-lock.json
+- Fix: Removed package-lock.json from git, added to .gitignore, use Node 20
 
 ---
 
