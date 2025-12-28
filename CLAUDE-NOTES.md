@@ -1,6 +1,111 @@
 # Claude Session Notes - CWC Website
 
-**Last Updated:** 2025-12-27
+**Last Updated:** 2025-12-27 (Evening session)
+
+---
+
+## Session Update - Image Conversion
+
+All 55 images from `content/mediakit_extract/ppt/media/` have been converted to optimized JPEG format and saved to `public/images/`.
+
+- Converted using `sips` with 80% quality
+- Total size reduced from ~11MB to ~3.2MB
+- Largest file: image19.jpg (499KB)
+- All files now in `public/images/image1.jpg` through `image55.jpg`
+
+**Status:** Image review COMPLETE - see inventory below
+
+---
+
+## Image Inventory (public/images/)
+
+### Wendy Photos - HIGH PRIORITY
+| File | Description | Recommended Use |
+|------|-------------|-----------------|
+| image15.jpg | Blue blazer, arms crossed, white bg | Homepage hero, About page |
+| image19.jpg | Blue blazer, outdoor/greenery background | About page, testimonials |
+| image48.jpg | Full body seated, blue blouse, yellow circle bg | Creative/lifestyle section |
+| image49.jpg | Media kit cover, orange blazer, contact info | Speaker/keynote page |
+
+### Action/Speaking Shots
+| File | Description |
+|------|-------------|
+| image4.jpg | On stage at podium with another speaker |
+| image5.jpg | Speaking to large audience (wearing yellow) |
+| image8.jpg | Standing with CWC banner at event |
+| image11.jpg | Facilitating workshop (wearing red) |
+| image47.jpg | "TOPICS" header with speaking photo background |
+| image55.jpg | Group coaching session (faded/light) |
+
+### Brand Assets
+| File | Description |
+|------|-------------|
+| image7.jpg | **CWC Logo** - Coaching Women of Color (colorful leaves) |
+| image24.jpg | Service icons (coaching, clock, handshake, mic) |
+| image32.jpg | Colorful service icons (superhero, handshake, growth, etc.) |
+| image37.jpg | Row of 5 service icons (lightbulb, handshake, growth, strength, community) |
+
+### Certification Logos
+| File | Description |
+|------|-------------|
+| image1.jpg | BEACONS (red torch badge) |
+| image2.jpg | Everything DiSC Certified Practitioner |
+| image3.jpg | ICF (International Coaching Federation) |
+| image9.jpg | Small certification icon (hand/book) |
+| image16.jpg | Imposter Syndrome Coach Practitioner |
+| image34.jpg | International Coaching & Leadership Institute Rising |
+
+### Client Logos
+| File | Organization |
+|------|--------------|
+| image10.jpg | Colgate University |
+| image12.jpg | Hill's |
+| image13.jpg | ALPFA |
+| image14.jpg | TD Bank |
+| image17.jpg | Women in Housing and Finance (WHF) |
+| image18.jpg | Bloomberg Quicktake |
+| image20.jpg | VillageCareMAX |
+| image21.jpg | Proud To Be Latina |
+| image22.jpg | HACE (Hispanic Alliance for Career Enhancement) |
+| image23.jpg | NYC Department of Education |
+| image25.jpg | University of Michigan |
+| image26.jpg | Latinas Represent |
+| image27.jpg | SURGE Institute |
+| image28.jpg | VaynerMedia |
+| image29.jpg | NJ Arts & Culture Renewal Fund |
+| image30.jpg | Ellevate |
+| image31.jpg | URI NYC (Urban Resource Institute) |
+| image33.jpg | ATD Maryland |
+| image35.jpg | Howard Center |
+| image36.jpg | Developing Capacity Coaching |
+| image39.jpg | Poderistas |
+| image40.jpg | RiseBoro Community Partnership |
+| image41.jpg | Monique Burr Foundation for Children |
+| image42.jpg | DataRobot |
+| image43.jpg | Novo Nordisk |
+| image44.jpg | Genentech (Roche Group) |
+| image45.jpg | Johnson & Johnson |
+
+### Testimonial Photos (Not Wendy)
+| File | Description |
+|------|-------------|
+| image46.jpg | Woman with curly hair, colorful background |
+| image51.jpg | Woman in green top, circle crop |
+
+### Social/Contact Icons (Purple)
+| File | Icon |
+|------|------|
+| image50.jpg | Email |
+| image52.jpg | Instagram |
+| image53.jpg | LinkedIn |
+| image54.jpg | Website/Globe |
+
+### Skip (Blank/Unusable)
+- image6.jpg - Blank (transparency issue)
+- image38.jpg - Unknown "W" logo
+
+---
+
 **Project:** Coaching Women of Color Website Rebuild
 
 ---
@@ -20,13 +125,20 @@
 - [x] Headshot image optimized (wendy-perdomo.png)
 
 ### In Progress
-- [ ] Extract and use images from PPTX files for website
-- [ ] Add more visual content throughout site
+- [x] Extract and use images from PPTX files for website ✓ DONE
+- [x] Add images to website pages ✓ DONE
+
+### Completed This Session (Dec 27 Evening)
+- [x] Homepage hero - Updated with image15.jpg (professional headshot)
+- [x] About page - Updated with image19.jpg (outdoor headshot)
+- [x] Client logos carousel - 18 logos with auto-scroll, grayscale→color on hover
+- [x] Keynote Speaking page - Added image5.jpg (speaking to audience)
+- [x] DEI Workshops page - Added image11.jpg (facilitating workshop)
+- [x] Leadership Development page - Added image4.jpg (on stage)
+- [x] Consulting page - Added image8.jpg (with CWC banner)
 
 ### Not Started
 - [ ] Case studies with real content
-- [ ] Client logo images (currently text-only)
-- [ ] Action shots / speaking photos
 - [ ] Video embeds (if available)
 
 ---
@@ -188,12 +300,13 @@ npm run build   # Production build
 
 ---
 
-## Priority Tasks (Next Session)
+## Priority Tasks (Next Steps)
 
-1. **Identify usable images** - Review extracted media folder
-2. **Add speaking/action photos** - If available in extracts
-3. **Create real case studies** - Need content from capabilities statement
-4. **Add client logos** - If logo images available, otherwise keep text
+1. ~~**Update homepage hero**~~ ✓ DONE - Using image15.jpg
+2. ~~**Add client logo images**~~ ✓ DONE - 18 logos in carousel
+3. ~~**Add speaking/action photos**~~ ✓ DONE - All 4 service pages updated
+4. **Create real case studies** - Need content from capabilities statement PDF
+5. **Fine-tune logo carousel sizing** - Some logos (J&J, Colgate) may need adjustment
 
 ---
 
