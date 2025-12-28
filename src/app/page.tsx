@@ -50,31 +50,35 @@ const testimonials = [
       "It has been both an honor and privilege to work with Wendy. I have left all our interactions inspired and excited for what is yet to come. Wendy is a thoughtful leader who truly cares about supporting and developing her team, colleagues, clients and any organization she serves. I cannot recommend her enough!",
     author: "Tanya Ramos-Puig",
     role: "CEO, Monique Burr Foundation for Children",
-    image: "image51.jpg",
+    image: "testimonial-tanya.png",
   },
   {
     quote:
       "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth.",
     author: "Stephanie Lopez",
     role: "California",
+    image: "testimonial-stephanie.png",
   },
   {
     quote:
       "Wendy pushed me to consider my strengths and how to apply myself for best results. She helped me work through difficult issues by brainstorming solutions that work for me. The customized attention and sage advice made all the difference on my journey.",
     author: "Lisa Morgan",
     role: "Ontario, Canada",
+    image: "testimonial-lisa.png",
   },
   {
     quote:
-      "Wendy has a holistic approach to coaching, seeing me not only as a professional, but as the multi-faceted woman that I am. She seamlessly creates a safe and non-judgmental approach all while thoughtfully holding the mirror to thoughts and actions that did not serve me.",
-    author: "Patricia Quintero",
-    role: "New York, NY",
+      "Wendy is an amazing coach and an inspiring leader. She catered our sessions to my needs, even when I didn't know what I needed. I am better at identifying, setting and communicating my boundaries. I feel more confident in my decision-making skills as it relates to my professional growth.",
+    author: "Alexis Brown",
+    role: "Washington, D.C.",
+    image: "testimonial-alexis.png",
   },
   {
     quote:
       "With your coaching, I feel a sense of responsibility and purpose, but also potency and power. You said something that changed everything: 'You are not there to become an executive in the way you're imagining it, you are there to become you and for the system to shift around you.'",
     author: "Catarina Campbell",
     role: "Vermont",
+    image: "testimonial-catarina.png",
   },
 ];
 
