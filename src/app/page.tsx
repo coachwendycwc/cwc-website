@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import { siteConfig } from "@/config";
 
 // Service cards with different petal colors
 const services = [
@@ -30,38 +31,39 @@ const services = [
 ];
 
 const stats = [
-  { value: "300+", label: "Coaching Hours" },
+  { value: "25+", label: "Years Experience" },
+  { value: "500+", label: "Leaders Developed" },
+  { value: "50+", label: "Organizations Served" },
   { value: "100%", label: "Client Satisfaction" },
-  { value: "50+", label: "Organizations Transformed" },
 ];
 
 const testimonials = [
   {
     quote:
-      "The leadership workshop fundamentally changed how our team approaches inclusion. Authentic, impactful, unforgettable.",
-    author: "Sarah M.",
-    role: "VP of People, Tech Company",
+      "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. She is in a class by herself!",
+    author: "Lynne Toye",
+    role: "Newark, NJ",
   },
   {
     quote:
-      "I finally found my voice. The coaching gave me clarity and confidence to step into leadership I never thought possible.",
-    author: "Michelle R.",
-    role: "Senior Director",
+      "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth.",
+    author: "Stephanie Lopez",
+    role: "California",
   },
   {
     quote:
-      "Our ERG program has never been stronger. CWC delivered exactly what our organization needed.",
-    author: "Jennifer L.",
-    role: "DEI Director, Fortune 500",
+      "Working with Wendy kept me steady in a very, very difficult year. And not just me, but my colleague as well. The relationship has changed the emotionality of the workplace, allowing for better collaboration and better outcomes.",
+    author: "Emily Kurtz",
+    role: "Brooklyn, NY",
   },
 ];
 
 // Color mapping for service cards
 const colorClasses: Record<string, { border: string; bg: string; text: string }> = {
   pink: {
-    border: "hover:border-[#E91E8C]",
-    bg: "bg-[#FDE8F3]",
-    text: "text-[#E91E8C]",
+    border: "hover:border-[#3EBCE8]",
+    bg: "bg-[#E8F8FD]",
+    text: "text-[#3EBCE8]",
   },
   yellow: {
     border: "hover:border-[#FFC425]",
@@ -91,32 +93,48 @@ export default function Home() {
           {/* Subtle pink gradient background */}
           <div
             className="absolute inset-0"
-            style={{ background: "linear-gradient(135deg, #FDE8F3 0%, #ffffff 50%, #F3F0F8 100%)" }}
+            style={{ background: "linear-gradient(135deg, #E8F8FD 0%, #ffffff 50%, #F3F0F8 100%)" }}
           />
 
           <div className="container-wide relative z-10 py-20 lg:py-32">
-            <div className="max-w-5xl mx-auto text-center">
-              {/* Power words headline */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-[#1A1A1A] leading-[1.1]">
-                Transform.
-                <br />
-                <span className="text-gradient">Elevate.</span>
-                <br />
-                Lead.
-              </h1>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Text content */}
+              <div className="text-center lg:text-left">
+                {/* Power words headline */}
+                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-[#1A1A1A] leading-[1.1]">
+                  Transform.
+                  <br />
+                  <span className="text-gradient">Elevate.</span>
+                  <br />
+                  Lead.
+                </h1>
 
-              <p className="mt-8 text-xl md:text-2xl text-[#525252] max-w-2xl mx-auto leading-relaxed">
-                Empowering organizations to build inclusive cultures where women of color don&apos;t just belong—they thrive.
-              </p>
+                <p className="mt-8 text-xl md:text-2xl text-[#525252] max-w-2xl leading-relaxed">
+                  Empowering organizations to build inclusive cultures where women of color don&apos;t just belong—they thrive.
+                </p>
 
-              {/* Dual CTA */}
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/for-organizations" className="btn-primary">
-                  Partner With Us
-                </Link>
-                <Link href="/for-individuals" className="btn-secondary">
-                  Individual Coaching
-                </Link>
+                {/* Dual CTA */}
+                <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Link href="/for-organizations" className="btn-primary">
+                    Partner With Us
+                  </Link>
+                  <Link href="/for-individuals" className="btn-secondary">
+                    Individual Coaching
+                  </Link>
+                </div>
+              </div>
+
+              {/* Photo */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${siteConfig.basePath}/wendy-perdomo.png`}
+                    alt="Wendy Perdomo - Executive Leadership Coach"
+                    className="relative w-72 md:w-80 lg:w-96 h-auto rounded-2xl shadow-xl"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -145,13 +163,21 @@ export default function Home() {
             <p className="text-center text-sm font-medium text-[#737373] uppercase tracking-widest mb-10">
               Trusted by Leading Organizations
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="h-8 md:h-10 flex items-center">
-                  <div className="w-24 h-8 bg-[#E5E5E5] rounded" />
+            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+              {["Fortune 500", "Healthcare", "Technology", "Finance", "Non-Profit"].map((industry) => (
+                <div key={industry} className="flex items-center gap-2 text-[#A3A3A3]">
+                  <div className="w-10 h-10 rounded-lg bg-[#F5F5F5] flex items-center justify-center">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium">{industry}</span>
                 </div>
               ))}
             </div>
+            <p className="text-center text-xs text-[#A3A3A3] mt-8">
+              Client logos available upon request
+            </p>
           </div>
         </section>
 
@@ -181,12 +207,12 @@ export default function Home() {
                   <div
                     className={`w-3 h-3 rounded-full mb-4 ${colorClasses[service.color].bg}`}
                     style={{
-                      backgroundColor: service.color === 'pink' ? '#E91E8C' :
+                      backgroundColor: service.color === 'pink' ? '#3EBCE8' :
                                        service.color === 'yellow' ? '#FFC425' :
                                        service.color === 'green' ? '#C4D82E' : '#6ECEF5'
                     }}
                   />
-                  <h3 className="heading-card group-hover:text-[#E91E8C] transition-colors">
+                  <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-[#737373] mt-2">{service.description}</p>
@@ -206,13 +232,13 @@ export default function Home() {
         {/* Impact Stats */}
         <section className="section gradient-subtle">
           <div className="container-wide">
-            <div className="grid md:grid-cols-3 gap-12 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-6xl md:text-7xl lg:text-8xl font-semibold text-[#1A1A1A] tracking-tight">
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-semibold text-[#1A1A1A] tracking-tight">
                     {stat.value}
                   </div>
-                  <div className="text-lg text-[#737373] mt-2">{stat.label}</div>
+                  <div className="text-base md:text-lg text-[#737373] mt-2">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -229,7 +255,7 @@ export default function Home() {
                   <br />
                   train teams.
                   <br />
-                  <span className="text-[#E91E8C]">We transform cultures.</span>
+                  <span className="text-[#3EBCE8]">We transform cultures.</span>
                 </h2>
               </div>
               <div className="space-y-8">
@@ -245,7 +271,7 @@ export default function Home() {
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[#D4D4D4]">
                       <svg
-                        className="w-6 h-6 text-[#E91E8C] flex-shrink-0 mt-0.5"
+                        className="w-6 h-6 text-[#3EBCE8] flex-shrink-0 mt-0.5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -263,7 +289,7 @@ export default function Home() {
                 </ul>
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 text-[#E91E8C] font-medium hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#3EBCE8] font-medium hover:gap-3 transition-all"
                 >
                   Learn our story
                   <span>→</span>
@@ -277,7 +303,7 @@ export default function Home() {
         <section className="section bg-white">
           <div className="container-wide">
             <div className="max-w-4xl mx-auto text-center">
-              <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
                 For Individuals
               </p>
               <h2 className="heading-display">
@@ -317,7 +343,7 @@ export default function Home() {
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
-                        className="w-5 h-5 text-[#E91E8C]"
+                        className="w-5 h-5 text-[#3EBCE8]"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >

@@ -54,7 +54,7 @@ export default function Header() {
               href={item.href}
               className={`text-sm font-medium transition-colors ${
                 item.highlight
-                  ? "text-[#E91E8C] hover:text-[#C4186F]"
+                  ? "text-[#3EBCE8] hover:text-[#1A9FCC]"
                   : "text-[#525252] hover:text-[#1A1A1A]"
               }`}
             >
@@ -67,7 +67,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           <Link
             href="/book"
-            className="px-6 py-2.5 bg-[#E91E8C] text-white text-sm font-medium rounded-full transition-all hover:bg-[#C4186F] hover:scale-105"
+            className="px-6 py-2.5 bg-[#3EBCE8] text-white text-sm font-medium rounded-full transition-all hover:bg-[#1A9FCC] hover:scale-105"
           >
             Book a Consultation
           </Link>
@@ -115,7 +115,7 @@ export default function Header() {
                 href={item.href}
                 className={`block py-2 text-lg font-medium ${
                   item.highlight
-                    ? "text-[#E91E8C]"
+                    ? "text-[#3EBCE8]"
                     : "text-[#525252]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
@@ -125,7 +125,7 @@ export default function Header() {
             ))}
             <Link
               href="/book"
-              className="block w-full text-center px-6 py-3 bg-[#E91E8C] text-white font-medium rounded-full mt-6"
+              className="block w-full text-center px-6 py-3 bg-[#3EBCE8] text-white font-medium rounded-full mt-6"
               onClick={() => setMobileMenuOpen(false)}
             >
               Book a Consultation

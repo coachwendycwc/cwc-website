@@ -17,10 +17,10 @@ export default function DEIWorkshopsPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#FDE8F3] to-white">
+        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#E91E8C] hover:text-[#C4186F] transition-colors">
+              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
                 ← Back to Solutions
               </Link>
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -64,7 +64,7 @@ export default function DEIWorkshopsPage() {
                 <ul className="space-y-4">
                   {workshopTopics.map((topic) => (
                     <li key={topic} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-[#E91E8C] rounded-full" />
+                      <div className="w-2 h-2 bg-[#3EBCE8] rounded-full" />
                       <span className="text-[#525252]">{topic}</span>
                     </li>
                   ))}
@@ -90,7 +90,7 @@ export default function DEIWorkshopsPage() {
                 { title: "Workshop Series", duration: "Multi-week", description: "Ongoing program for sustained learning and cultural transformation." },
               ].map((format) => (
                 <div key={format.title} className="card">
-                  <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-wider">{format.duration}</p>
+                  <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider">{format.duration}</p>
                   <h3 className="heading-card mt-2">{format.title}</h3>
                   <p className="text-[#737373] mt-3">{format.description}</p>
                 </div>

@@ -6,7 +6,7 @@ const services = [
     title: "DEI Workshops",
     description: "Interactive sessions that go beyond awareness to create actionable change. Customized for your organization's unique challenges.",
     href: "/services/dei-workshops",
-    color: "#E91E8C",
+    color: "#3EBCE8",
   },
   {
     title: "Leadership Development",
@@ -35,10 +35,10 @@ export default function ServicesPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#FDE8F3] to-white">
+        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
-              <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
                 Our Services
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -61,13 +61,13 @@ export default function ServicesPage() {
                 <Link
                   key={service.title}
                   href={service.href}
-                  className="card-bordered group hover:border-[#E91E8C] transition-all"
+                  className="card-bordered group hover:border-[#3EBCE8] transition-all"
                 >
                   <div
                     className="w-4 h-4 rounded-full mb-6"
                     style={{ backgroundColor: service.color }}
                   />
-                  <h2 className="heading-card group-hover:text-[#E91E8C] transition-colors">
+                  <h2 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
                     {service.title}
                   </h2>
                   <p className="text-[#737373] mt-3 leading-relaxed">

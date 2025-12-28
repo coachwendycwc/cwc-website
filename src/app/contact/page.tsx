@@ -24,10 +24,10 @@ export default function ContactPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#FDE8F3] to-white">
+        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
-              <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
                 Contact Us
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -58,7 +58,7 @@ export default function ContactPage() {
                       type="text"
                       id="name"
                       required
-                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#E91E8C] focus:ring-2 focus:ring-[#E91E8C]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
@@ -72,7 +72,7 @@ export default function ContactPage() {
                       type="email"
                       id="email"
                       required
-                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#E91E8C] focus:ring-2 focus:ring-[#E91E8C]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
@@ -85,7 +85,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       id="company"
-                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#E91E8C] focus:ring-2 focus:ring-[#E91E8C]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     />
@@ -103,7 +103,7 @@ export default function ContactPage() {
                           value="organization"
                           checked={formData.type === "organization"}
                           onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                          className="w-4 h-4 text-[#E91E8C] focus:ring-[#E91E8C]"
+                          className="w-4 h-4 text-[#3EBCE8] focus:ring-[#3EBCE8]"
                         />
                         <span className="text-[#525252]">Organizational Services</span>
                       </label>
@@ -114,7 +114,7 @@ export default function ContactPage() {
                           value="individual"
                           checked={formData.type === "individual"}
                           onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                          className="w-4 h-4 text-[#E91E8C] focus:ring-[#E91E8C]"
+                          className="w-4 h-4 text-[#3EBCE8] focus:ring-[#3EBCE8]"
                         />
                         <span className="text-[#525252]">Individual Coaching</span>
                       </label>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                       id="message"
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#E91E8C] focus:ring-2 focus:ring-[#E91E8C]/20 outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all resize-none"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us about your goals and how we can help..."
@@ -149,30 +149,30 @@ export default function ContactPage() {
 
                   <div className="space-y-6">
                     <div>
-                      <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-wider mb-2">
+                      <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
                         Email
                       </p>
-                      <a href="mailto:info@coachingwomenofcolor.com" className="text-[#1A1A1A] hover:text-[#E91E8C] transition-colors">
+                      <a href="mailto:info@coachingwomenofcolor.com" className="text-[#1A1A1A] hover:text-[#3EBCE8] transition-colors">
                         info@coachingwomenofcolor.com
                       </a>
                     </div>
 
                     <div>
-                      <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-wider mb-2">
+                      <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
                         Follow Us
                       </p>
                       <div className="flex gap-4">
-                        <a href="https://linkedin.com/company/coachingwomenofcolor" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#E91E8C] transition-colors">
+                        <a href="https://linkedin.com/company/coachingwomenofcolor" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#3EBCE8] transition-colors">
                           LinkedIn
                         </a>
-                        <a href="https://instagram.com/coachingwomenofcolor" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#E91E8C] transition-colors">
+                        <a href="https://instagram.com/coachingwomenofcolor" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#3EBCE8] transition-colors">
                           Instagram
                         </a>
                       </div>
                     </div>
 
                     <div className="pt-6 border-t border-[#E5E5E5]">
-                      <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-wider mb-2">
+                      <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
                         Book a Consultation
                       </p>
                       <p className="text-[#737373] mb-4">

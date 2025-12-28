@@ -36,10 +36,10 @@ export default function ForIndividualsPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#FDE8F3] to-white">
+        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
-              <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
                 For Individuals
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -66,14 +66,14 @@ export default function ForIndividualsPage() {
             <div className="grid md:grid-cols-2 gap-8">
               {coachingTypes.map((type) => (
                 <div key={type.title} className="card-bordered">
-                  <h3 className="heading-card text-[#E91E8C]">{type.title}</h3>
+                  <h3 className="heading-card text-[#3EBCE8]">{type.title}</h3>
                   <p className="text-[#737373] mt-3 leading-relaxed">{type.description}</p>
 
                   <ul className="mt-6 space-y-3">
                     {type.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-2 text-[#525252]">
                         <svg
-                          className="w-5 h-5 text-[#E91E8C]"
+                          className="w-5 h-5 text-[#3EBCE8]"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -127,8 +127,8 @@ export default function ForIndividualsPage() {
                 },
               ].map((item, index) => (
                 <div key={item.title} className="card text-center">
-                  <div className="w-12 h-12 bg-[#FDE8F3] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-xl font-semibold text-[#E91E8C]">{index + 1}</span>
+                  <div className="w-12 h-12 bg-[#E8F8FD] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-xl font-semibold text-[#3EBCE8]">{index + 1}</span>
                   </div>
                   <h3 className="heading-card">{item.title}</h3>
                   <p className="text-[#737373] mt-3">{item.description}</p>
@@ -154,7 +154,7 @@ export default function ForIndividualsPage() {
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
-                        className="w-5 h-5 text-[#E91E8C]"
+                        className="w-5 h-5 text-[#3EBCE8]"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >

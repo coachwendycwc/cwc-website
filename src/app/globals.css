@@ -89,22 +89,22 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-pink-100);
+  background-color: var(--color-blue-100);
   color: var(--color-neutral-900);
 }
 
 *:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-pink-500);
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-blue-500);
 }
 
-/* Primary Button - Hot Pink */
+/* Primary Button - Cyan */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  background-color: var(--color-pink-500);
+  background-color: var(--color-blue-600);
   color: white;
   font-weight: 500;
   font-size: 1.125rem;
@@ -113,7 +113,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-pink-600);
+  background-color: var(--color-blue-700);
   transform: scale(1.05);
 }
 
@@ -311,7 +311,7 @@ body {
 }
 
 .card-bordered:hover {
-  border-color: var(--color-pink-300);
+  border-color: var(--color-blue-200);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
@@ -324,9 +324,9 @@ body {
   background: linear-gradient(135deg, var(--color-pink-50), white);
 }
 
-/* Text gradient - Pink to Yellow (vibrant) */
+/* Text gradient - Cyan to Purple (professional) */
 .text-gradient {
-  background: linear-gradient(90deg, var(--color-pink-500), var(--color-yellow-500));
+  background: linear-gradient(90deg, var(--color-blue-600), var(--color-purple-500));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -345,14 +345,14 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--color-pink-500);
+  color: var(--color-blue-600);
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .link-arrow:hover {
   gap: 0.75rem;
-  color: var(--color-pink-600);
+  color: var(--color-blue-700);
 }
 
 .link-arrow::after {

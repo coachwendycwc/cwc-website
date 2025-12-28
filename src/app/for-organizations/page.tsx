@@ -6,7 +6,7 @@ const services = [
     title: "DEI Workshops",
     description: "Interactive sessions that go beyond awareness to create actionable change. Customized for your organization's unique challenges and goals.",
     href: "/services/dei-workshops",
-    color: "#E91E8C",
+    color: "#3EBCE8",
   },
   {
     title: "Leadership Development",
@@ -44,10 +44,10 @@ export default function ForOrganizationsPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#FDE8F3] to-white">
+        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
-              <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
                 For Organizations
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -85,13 +85,13 @@ export default function ForOrganizationsPage() {
                 <Link
                   key={service.title}
                   href={service.href}
-                  className="card-bordered group hover:border-[#E91E8C]"
+                  className="card-bordered group hover:border-[#3EBCE8]"
                 >
                   <div
                     className="w-3 h-3 rounded-full mb-4"
                     style={{ backgroundColor: service.color }}
                   />
-                  <h3 className="heading-card group-hover:text-[#E91E8C] transition-colors">
+                  <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-[#737373] mt-3 leading-relaxed">{service.description}</p>
@@ -124,7 +124,7 @@ export default function ForOrganizationsPage() {
                   {benefits.map((benefit) => (
                     <li key={benefit} className="flex items-start gap-3">
                       <svg
-                        className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 text-[#3EBCE8] flex-shrink-0 mt-0.5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -162,7 +162,7 @@ export default function ForOrganizationsPage() {
                 { step: "04", title: "Measure", description: "We track outcomes and refine for continuous improvement." },
               ].map((item) => (
                 <div key={item.step} className="text-center">
-                  <div className="text-5xl font-semibold text-[#E91E8C]/20 mb-4">{item.step}</div>
+                  <div className="text-5xl font-semibold text-[#3EBCE8]/20 mb-4">{item.step}</div>
                   <h3 className="heading-card">{item.title}</h3>
                   <p className="text-[#737373] mt-2">{item.description}</p>
                 </div>
