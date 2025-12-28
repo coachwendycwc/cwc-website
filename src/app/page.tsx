@@ -40,41 +40,6 @@ const stats = [
 const testimonials = [
   {
     quote:
-      "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. We were extremely pleased with the quality and clarity of Wendy's preparation, delivery, and follow up. She is in a class by herself! I would recommend her without hesitation.",
-    author: "Lynne Toye",
-    role: "Executive Director, NJ Arts & Cultural Renewal Fund",
-    image: "testimonial-lynne.png",
-  },
-  {
-    quote:
-      "It has been both an honor and privilege to work with Wendy. I have left all our interactions inspired and excited for what is yet to come. Wendy is a thoughtful leader who truly cares about supporting and developing her team, colleagues, clients and any organization she serves. She is a high impact leader who authentically mentors and coaches. I cannot recommend her enough!",
-    author: "Tanya Ramos-Puig",
-    role: "CEO, Monique Burr Foundation for Children",
-    image: "testimonial-tanya.png",
-  },
-  {
-    quote:
-      "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. She approached all of our sessions with patience, grace, and compassion. Even so, she wasn't afraid to share hard truths and insights that supported my personal and professional journey. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth. I highly recommend Wendy to anyone looking for a transformative coaching experience.",
-    author: "Stephanie Lopez",
-    role: "California",
-    image: "testimonial-stephanie.png",
-  },
-  {
-    quote:
-      "I started working with Wendy prior to assuming a position of leadership in my university. I was concerned about my ability to step fully into the role and gain the respect of my peers. Wendy pushed me to consider my strengths and how to apply myself for best results. She helped me work through difficult issues by brainstorming solutions that work for me. The customized attention and sage advice made all the difference on my journey.",
-    author: "Lisa Morgan",
-    role: "Ontario, Canada",
-    image: "testimonial-lisa.png",
-  },
-  {
-    quote:
-      "Wendy's life and leadership coaching program has successfully equipped me with the effective mental mindset tools and techniques to overcome my own 'analysis paralysis.' She has supported me in developing a deeper self-awareness and increased accountability towards my proposed life and career goals. As CEO & Founder of P2P, I've served as a guest speaker at various women's empowerment events and was featured on the Donna Drake Show on NBC and CBS.",
-    author: "Nicole Carr",
-    role: "CEO & Founder, Long Island, NY",
-    image: "testimonial-nicole.png",
-  },
-  {
-    quote:
       "Wendy is an incredible coach and advocate for her clients. I worked with her for 6 months and found her guidance invaluable. She helped me grow as a professional and gave me tangible tools to use to better myself as a leader. I highly recommend working with Wendy, she is the absolute best!",
     author: "Teal Inzunza",
     role: "New York, NY",
@@ -82,17 +47,17 @@ const testimonials = [
   },
   {
     quote:
-      "I had met Wendy and participated in her Women of Color series in 2020 while undergoing some serious challenges with a previous role. When I had the opportunity to work with her as my Executive Coach, it was a no brainer. Wendy has a holistic approach to coaching, seeing me not only as a professional, but as the multi-faceted woman that I am. Wendy seamlessly creates a safe and non-judgmental approach all while thoughtfully holding the mirror to some of my thoughts and actions that did not serve me. I cannot recommend Wendy enough.",
-    author: "Patricia Quintero",
-    role: "New York, NY",
-    image: "testimonial-patricia.png",
+      "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. We were extremely pleased with the quality and clarity of Wendy's preparation, delivery, and follow up. She is in a class by herself! I would recommend her without hesitation.",
+    author: "Lynne Toye",
+    role: "Newark, NJ",
+    image: "testimonial-lynne.png",
   },
   {
     quote:
-      "At any stage of your career or life journey, you can get stuck. I chose to be coached by Wendy because I TRUSTED that she would help me break through the barriers holding me back from achieving my next level dreams and goals. Wendy helped me create a blueprint for my second act after retirement. Her approach was uniquely crafted and tailored specifically to my needs. With her encouragement and support, I accomplished my dream of graduating from Fashion Institute of Technology as a Costume Designer and Wardrobe Technician. I highly endorse Wendy as a professional coach.",
-    author: "Lori Bennett",
-    role: "Brooklyn, NY",
-    image: "testimonial-lori.png",
+      "It has been both an honor and privilege to work with Wendy. I have left all our interactions inspired and excited for what is yet to come. Wendy is a thoughtful leader who truly cares about supporting and developing her team, colleagues, clients and any organization she serves. She is a high impact leader who authentically mentors and coaches. I cannot recommend her enough!",
+    author: "Tanya Ramos-Puig",
+    role: "Florida",
+    image: "testimonial-tanya.png",
   },
   {
     quote:
@@ -114,6 +79,48 @@ const testimonials = [
     author: "Catarina Campbell",
     role: "Vermont",
     image: "testimonial-catarina.png",
+  },
+  {
+    quote:
+      "I recently began a mid-career exploration of what new professional chapters might lie ahead and reached out to Wendy. During our consultation call, it quickly became apparent that Wendy could offer me so much more than resume editing. Her dynamic personality and candor captured my attention immediately. I learned so much about myself while working with Wendy. Being able to connect so openly and honestly with someone who could relate how I moved through the world was an absolute gift.",
+    author: "Nicole Vlado",
+    role: "Brooklyn, NY",
+    image: "testimonial-nicolev.png",
+  },
+  {
+    quote:
+      "I was able to accomplish nearly everything in my action planning document. At the beginning of the cohort, I was jobless and depressed. Being a part of the cohort and working on my action planning document allowed me to achieve my goals alongside others who would hold me accountable. If there is anyone I would recommend as a coach, it's Wendy. She challenged me to not make excuses and to hold myself accountable. She reminded me that there is a beautiful life on the other side of fear.",
+    author: "Tiffany Cordero",
+    role: "Bronx, NY",
+    image: "testimonial-tiffany.png",
+  },
+  {
+    quote:
+      "At any stage of your career or life journey, you can get stuck. I chose to be coached by Wendy because I TRUSTED that she would help me break through the barriers holding me back from achieving my next level dreams and goals. Wendy helped me create a blueprint for my second act after retirement. Her approach was uniquely crafted and tailored specifically to my needs. With her encouragement and support, I accomplished my dream of graduating from Fashion Institute of Technology as a Costume Designer and Wardrobe Technician. I highly endorse Wendy as a professional coach.",
+    author: "Lori Bennett",
+    role: "Brooklyn, NY",
+    image: "testimonial-lori.png",
+  },
+  {
+    quote:
+      "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. She approached all of our sessions with patience, grace, and compassion. Even so, she wasn't afraid to share hard truths and insights that supported my personal and professional journey. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth. I highly recommend Wendy to anyone looking for a transformative coaching experience.",
+    author: "Stephanie Lopez",
+    role: "California",
+    image: "testimonial-stephanie.png",
+  },
+  {
+    quote:
+      "I started working with Wendy prior to assuming a position of leadership in my university. I was concerned about my ability to step fully into the role and gain the respect of my peers. Wendy pushed me to consider my strengths and how to apply myself for best results. She helped me work through difficult issues by brainstorming solutions that work for me. The customized attention and sage advice made all the difference on my journey.",
+    author: "Lisa Morgan",
+    role: "Ontario, Canada",
+    image: "testimonial-lisa.png",
+  },
+  {
+    quote:
+      "Wendy's life and leadership coaching program has successfully equipped me with the effective mental mindset tools and techniques to overcome my own 'analysis paralysis.' She has supported me in developing a deeper self-awareness and increased accountability towards my proposed life and career goals. As CEO & Founder of P2P, I've served as a guest speaker at various women's empowerment events and was featured on the Donna Drake Show on NBC and CBS.",
+    author: "Nicole Carr",
+    role: "CEO & Founder, Long Island, NY",
+    image: "testimonial-nicole.png",
   },
 ];
 
