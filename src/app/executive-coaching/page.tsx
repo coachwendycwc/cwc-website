@@ -130,6 +130,57 @@ export default function ExecutiveCoachingPage() {
           </div>
         </section>
 
+        {/* Investment */}
+        <section className="section gradient-subtle">
+          <div className="container-wide">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="heading-display">
+                Your <span className="text-gradient">Investment</span>
+              </h2>
+              <p className="body-large mt-4">
+                A 6-month transformational coaching experience designed for lasting impact.
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="card-bordered">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-2">
+                      6-Month Program
+                    </p>
+                    <div className="text-4xl md:text-5xl font-semibold text-[#1A1A1A]">
+                      $9,900
+                    </div>
+                    <p className="text-[#737373] mt-2">
+                      or $1,650/month payment plan
+                    </p>
+                  </div>
+                  <div>
+                    <ul className="space-y-3">
+                      {[
+                        "12 one-on-one coaching sessions",
+                        "DiSC® & Positive Intelligence® assessments",
+                        "Spot coaching between sessions",
+                        "Unlimited session recordings",
+                        "Text & WhatsApp support",
+                        "Custom templates & resources",
+                      ].map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-[#525252]">
+                          <svg className="w-5 h-5 text-[#3EBCE8] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="section bg-[#1A1A1A] text-white">
           <div className="container-tight text-center">

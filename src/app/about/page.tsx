@@ -5,8 +5,14 @@ import { siteConfig } from "@/config";
 const credentials = [
   "M.P.A. (Master of Public Administration)",
   "M.S.Ed (Master of Science in Education)",
+];
+
+const certifications = [
+  "ICF Member",
   "Certified DiSC® Facilitator",
   "Positive Intelligence® Certified",
+  "Trauma Informed Institute",
+  "Imposter Syndrome Coach Practitioner",
 ];
 
 const expertise = [
@@ -72,16 +78,31 @@ export default function AboutPage() {
                   heard, and understood.
                 </p>
 
-                {/* Credentials */}
+                {/* Education */}
                 <div className="mt-8">
-                  <h3 className="font-semibold text-[#1A1A1A] mb-4">Credentials</h3>
+                  <h3 className="font-semibold text-[#1A1A1A] mb-3">Education</h3>
                   <div className="flex flex-wrap gap-2">
                     {credentials.map((cred) => (
                       <span
                         key={cred}
-                        className="px-3 py-1 bg-[#E8F8FD] text-[#1A9FCC] text-sm rounded-full"
+                        className="px-3 py-1 bg-[#F5F5F5] text-[#525252] text-sm rounded-full"
                       >
                         {cred}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Certifications */}
+                <div className="mt-6">
+                  <h3 className="font-semibold text-[#1A1A1A] mb-3">Certifications</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {certifications.map((cert) => (
+                      <span
+                        key={cert}
+                        className="px-3 py-1 bg-[#E8F8FD] text-[#1A9FCC] text-sm rounded-full"
+                      >
+                        {cert}
                       </span>
                     ))}
                   </div>

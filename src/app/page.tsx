@@ -56,6 +56,24 @@ const testimonials = [
     author: "Emily Kurtz",
     role: "Brooklyn, NY",
   },
+  {
+    quote:
+      "Wendy pushed me to consider my strengths and how to apply myself for best results. She helped me work through difficult issues by brainstorming solutions that work for me. The customized attention and sage advice made all the difference on my journey.",
+    author: "Lisa Morgan",
+    role: "Ontario, Canada",
+  },
+  {
+    quote:
+      "Wendy has a holistic approach to coaching, seeing me not only as a professional, but as the multi-faceted woman that I am. She seamlessly creates a safe and non-judgmental approach all while thoughtfully holding the mirror to thoughts and actions that did not serve me.",
+    author: "Patricia Quintero",
+    role: "New York, NY",
+  },
+  {
+    quote:
+      "With your coaching, I feel a sense of responsibility and purpose, but also potency and power. You said something that changed everything: 'You are not there to become an executive in the way you're imagining it, you are there to become you and for the system to shift around you.'",
+    author: "Catarina Campbell",
+    role: "Vermont",
+  },
 ];
 
 // Color mapping for service cards
@@ -157,26 +175,34 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Trusted By - Logo Cloud */}
+        {/* Trusted By - Client Logos */}
         <section className="section-tight bg-white border-y border-[#E5E5E5]">
           <div className="container-wide">
             <p className="text-center text-sm font-medium text-[#737373] uppercase tracking-widest mb-10">
-              Trusted by Leading Organizations
+              Transforming Leaders From
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
-              {["Fortune 500", "Healthcare", "Technology", "Finance", "Non-Profit"].map((industry) => (
-                <div key={industry} className="flex items-center gap-2 text-[#A3A3A3]">
-                  <div className="w-10 h-10 rounded-lg bg-[#F5F5F5] flex items-center justify-center">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <span className="text-sm font-medium">{industry}</span>
-                </div>
+            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 md:gap-x-12">
+              {[
+                "Johnson & Johnson",
+                "Genentech",
+                "VaynerMedia",
+                "DataRobot",
+                "TD Bank",
+                "NYC Dept of Education",
+                "Colgate University",
+                "University of Michigan",
+                "Bloomberg Quicktake",
+                "Ellevate",
+                "SURGE",
+                "RiseBoro",
+              ].map((org) => (
+                <span key={org} className="text-sm md:text-base font-medium text-[#737373] hover:text-[#3EBCE8] transition-colors">
+                  {org}
+                </span>
               ))}
             </div>
             <p className="text-center text-xs text-[#A3A3A3] mt-8">
-              Client logos available upon request
+              And many more across Fortune 500, Healthcare, Technology, Finance & Non-Profit sectors
             </p>
           </div>
         </section>
@@ -335,7 +361,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="card">
                   {/* Stars in pink */}

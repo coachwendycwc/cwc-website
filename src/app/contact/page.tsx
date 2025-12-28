@@ -152,8 +152,17 @@ export default function ContactPage() {
                       <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
                         Email
                       </p>
-                      <a href="mailto:info@coachingwomenofcolor.com" className="text-[#1A1A1A] hover:text-[#3EBCE8] transition-colors">
-                        info@coachingwomenofcolor.com
+                      <a href="mailto:wendy@coachingwomenofcolor.com" className="text-[#1A1A1A] hover:text-[#3EBCE8] transition-colors">
+                        wendy@coachingwomenofcolor.com
+                      </a>
+                    </div>
+
+                    <div>
+                      <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
+                        Phone
+                      </p>
+                      <a href="tel:+19172241343" className="text-[#1A1A1A] hover:text-[#3EBCE8] transition-colors">
+                        (917) 224-1343
                       </a>
                     </div>
 
