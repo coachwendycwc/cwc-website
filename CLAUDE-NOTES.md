@@ -137,8 +137,10 @@ All 55 images from `content/mediakit_extract/ppt/media/` have been converted to 
 - [x] Leadership Development page - Added image4.jpg (on stage)
 - [x] Consulting page - Added image8.jpg (with CWC banner)
 
+### Completed (Dec 28)
+- [x] Case studies page with real success stories from extracted PDFs
+
 ### Not Started
-- [ ] Case studies with real content
 - [ ] Video embeds (if available)
 
 ---
@@ -305,7 +307,7 @@ npm run build   # Production build
 1. ~~**Update homepage hero**~~ ✓ DONE - Using image15.jpg
 2. ~~**Add client logo images**~~ ✓ DONE - 18 logos in carousel
 3. ~~**Add speaking/action photos**~~ ✓ DONE - All 4 service pages updated
-4. **Create real case studies** - Need content from capabilities statement PDF
+4. ~~**Create real case studies**~~ ✓ DONE - 6 featured success stories + 3 organizational + 6 additional testimonials
 5. **Fine-tune logo carousel sizing** - Some logos (J&J, Colgate) may need adjustment
 
 ---

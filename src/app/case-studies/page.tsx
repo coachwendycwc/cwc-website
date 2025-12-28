@@ -1,42 +1,145 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
 
-const caseStudies = [
+const successStories = [
   {
-    client: "Fortune 500 Tech Company",
-    industry: "Technology",
-    challenge: "Low representation of women of color in leadership positions despite strong entry-level diversity.",
-    solution: "Implemented a 12-month leadership development program combined with sponsorship initiatives and inclusive leadership training for executives.",
+    name: "Nicole Carr",
+    title: "CEO & Founder of P2P",
+    location: "Long Island, New York",
+    challenge: "Struggling with 'analysis paralysis' that was holding back both personal and professional growth.",
     results: [
-      "40% increase in women of color in senior roles within 2 years",
-      "Improved employee engagement scores by 25%",
-      "Reduced turnover among high-potential employees by 35%",
+      "Featured guest on the Donna Drake Show/Live It Up (aired on NBC and CBS)",
+      "Served as guest speaker at multiple women's empowerment events",
+      "Currently working on second book, soon to be published",
+      "Lost 30 lbs after committing to health and wellness goals",
     ],
+    quote: "Wendy's life and leadership coaching program has successfully equipped me with the effective mental mindset tools and techniques to overcome my own 'analysis paralysis.' She has supported me in developing a deeper self-awareness and increased accountability towards my proposed life and career goals.",
     color: "#3EBCE8",
+    category: "Executive Coaching",
   },
   {
-    client: "Healthcare System",
-    industry: "Healthcare",
-    challenge: "Cultural disconnect between leadership and diverse patient population affecting care quality and employee satisfaction.",
-    solution: "Comprehensive DEI assessment followed by customized training programs and policy updates to create a more inclusive environment.",
+    name: "Morgan Bullock",
+    title: "Founder, Sportswomen.co",
+    location: "Atlanta, GA",
+    challenge: "Needed clarity and confidence to launch a new business venture.",
     results: [
-      "Patient satisfaction scores increased by 18%",
-      "Staff retention improved by 28%",
-      "Achieved healthcare equity certification",
+      "Successfully launched Sportswomen.co",
+      "Gained clarity on personal strengths and unique value",
+      "Developed deep self-awareness for future growth",
     ],
+    quote: "I recognize that because of the conversations that we've had and the calls that we've had, without them I wouldn't have gotten here, or I wouldn't have gotten here as quickly as I have. I appreciate you challenging me, showing me so much of myself and peeling back layers. I was able to really hone in on what's really in here to help others discover that as well.",
     color: "#FFC425",
+    category: "Life Coaching",
   },
   {
-    client: "Financial Services Firm",
-    industry: "Finance",
-    challenge: "Struggling to attract and retain diverse talent in a competitive market while meeting DEI commitments to stakeholders.",
-    solution: "Partnered on employer branding, interview process redesign, and creation of employee resource groups with executive sponsorship.",
+    name: "Lori Bennett",
+    title: "Costume Designer & Wardrobe Technician",
+    location: "Brooklyn, NY",
+    challenge: "A retired educator struggling to craft a plan and define a new identity after a long career.",
     results: [
-      "Diverse candidate pipeline increased by 60%",
-      "First-year retention of diverse hires improved by 45%",
-      "ERG participation grew to 40% of workforce",
+      "Graduated from Fashion Institute of Technology",
+      "Successfully transitioned to second career as Costume Designer",
+      "Created a powerful growth plan with self-created timeframes",
     ],
+    quote: "Wendy helped me to create a blueprint for my second act after retirement. Her approach was uniquely crafted and tailored specifically to my needs. She helped me to quickly identify my stuck spots, challenge my limiting beliefs and recognize and embrace all of the tools and resources around me that would facilitate my transformation.",
     color: "#C4D82E",
+    category: "Career Transition",
+  },
+  {
+    name: "Melissa Delgado",
+    title: "Corporate Leader",
+    location: "California",
+    challenge: "Seeking career advancement and recognition for contributions.",
+    results: [
+      "Received an off-cycle raise (significant increase)",
+      "Recognized for leadership potential",
+      "Now training team members for advancement",
+    ],
+    quote: "I wanted to share some amazing news. I am so grateful for your services and skills because I got an off cycle raise and it was huge. And they want to give more opportunities so I'm training my team up for the next level.",
+    color: "#E8478C",
+    category: "Executive Coaching",
+  },
+  {
+    name: "Lisa Morgan",
+    title: "University Leader",
+    location: "Ontario, Canada",
+    challenge: "Concerned about stepping into a new leadership position and gaining the respect of peers to transform the workspace.",
+    results: [
+      "Successfully stepped into leadership role",
+      "Transformed workspace into a high-functioning team",
+      "Maintained energy and enthusiasm for continued growth",
+    ],
+    quote: "Wendy pushed me to consider my strengths and how to apply myself for best results. She also helped me work through difficult issues that I encountered by brainstorming solutions that work for me. The customized attention and sage advice made all of the difference on my journey.",
+    color: "#9B59B6",
+    category: "Leadership Development",
+  },
+  {
+    name: "Tiffany Cordero",
+    title: "Professional",
+    location: "Bronx, NY",
+    challenge: "Jobless and depressed at the beginning of the coaching cohort.",
+    results: [
+      "Accomplished nearly everything in action planning document",
+      "Achieved goals with accountability support",
+      "Found renewed confidence and direction",
+    ],
+    quote: "Being a part of the cohort and working on my action planning document allowed me to achieve my goals alongside others who would hold me accountable. She challenged me to not make excuses and to hold myself accountable. She reminded me that there is a beautiful life on the other side of fear.",
+    color: "#3EBCE8",
+    category: "Group Coaching",
+  },
+];
+
+const organizationalImpact = [
+  {
+    name: "Emily Kurtz",
+    location: "Brooklyn, NY",
+    type: "Team Coaching",
+    quote: "Working with Wendy kept me steady in a very, very difficult year. And not just me, but my colleague as well. The relationship has changed the emotionality of the workplace, allowing for better collaboration and better outcomes.",
+  },
+  {
+    name: "Lynne Toye",
+    location: "Newark, NJ",
+    type: "Board Retreat Facilitation",
+    quote: "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. We were extremely pleased with the quality and clarity of Wendy's preparation, delivery, and follow up. She is in a class by herself!",
+  },
+  {
+    name: "CEO, Monique Burr Foundation",
+    location: "Florida",
+    type: "Organizational Development",
+    quote: "Wendy's ability to connect with people and ensure that those she is working with get the most out of any engagement is truly unparalleled. She creates a collaborative atmosphere that is also thought provoking.",
+  },
+];
+
+const additionalTestimonials = [
+  {
+    name: "Catarina Campbell",
+    location: "Vermont",
+    quote: "With your coaching, I feel a sense of responsibility and purpose, but also potency and power. You said something to me that changed everything: 'You are not there to become an executive in the way that you're imagining it, you are there to become you and for the system to shift around you.' I know who I am in the world now, and I know the ancestors I carry with me.",
+  },
+  {
+    name: "Stephanie Lopez",
+    location: "California",
+    quote: "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth.",
+  },
+  {
+    name: "Alexis Brown",
+    location: "Washington, D.C.",
+    quote: "I feel deeply appreciative of Wendy's support during some professionally challenging months. She catered our sessions to my needs, even when I didn't know what I needed. I am better at identifying, setting and communicating my boundaries. I feel more confident in my decision-making skills as it relates to my professional growth.",
+  },
+  {
+    name: "Nicole Vlado",
+    location: "Brooklyn, NY",
+    quote: "I learned so much about myself while working with Wendy. Her careful listening and encouragement during each session combined with the innovative tools and resources that she shared helped guide me towards new ways of thinking about my strengths, skills, and abilities. Being able to connect so openly and honestly with someone who could relate how I moved through the world was an absolute gift.",
+  },
+  {
+    name: "Patricia Quintero",
+    location: "New York, NY",
+    quote: "Wendy has a holistic approach to coaching, seeing me not only as a professional, but as the multi-faceted woman that I am. Wendy seamlessly creates a safe and non-judgmental approach all while thoughtfully holding the mirror to some of my thoughts and actions that did not serve me.",
+  },
+  {
+    name: "Teal Inzunza",
+    location: "New York, NY",
+    quote: "Wendy is an incredible coach and advocate for her clients. I worked with her for 6 months and found her guidance invaluable. She helped me grow as a professional and gave me tangible tools to use to better myself as a leader.",
   },
 ];
 
@@ -51,54 +154,54 @@ export default function CaseStudiesPage() {
           <div className="container-wide">
             <div className="max-w-4xl">
               <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
-                Case Studies
+                Success Stories
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                Real Results,
+                Real Transformations,
                 <br />
-                <span className="text-gradient">Real Impact</span>
+                <span className="text-gradient">Real Results</span>
               </h1>
               <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
-                See how we&apos;ve helped organizations transform their cultures
-                and achieve measurable outcomes.
+                Discover how women of color have transformed their careers,
+                launched businesses, and achieved breakthrough results through coaching.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Case Studies */}
+        {/* Featured Success Stories */}
         <section className="section bg-white">
           <div className="container-wide">
-            <div className="space-y-16">
-              {caseStudies.map((study, index) => (
-                <div key={study.client} className="card-bordered">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#1A1A1A] mb-12">
+              Featured Success Stories
+            </h2>
+            <div className="space-y-12">
+              {successStories.map((story) => (
+                <div key={story.name} className="card-bordered">
                   <div className="grid lg:grid-cols-3 gap-8">
                     {/* Client Info */}
                     <div className="lg:col-span-1">
-                      <div
-                        className="w-4 h-4 rounded-full mb-4"
-                        style={{ backgroundColor: study.color }}
-                      />
-                      <p className="text-sm font-medium text-[#737373] uppercase tracking-wider">
-                        {study.industry}
-                      </p>
-                      <h2 className="heading-card mt-2">{study.client}</h2>
+                      <span
+                        className="inline-block px-3 py-1 rounded-full text-xs font-medium text-white mb-4"
+                        style={{ backgroundColor: story.color }}
+                      >
+                        {story.category}
+                      </span>
+                      <h3 className="heading-card">{story.name}</h3>
+                      <p className="text-[#525252] font-medium">{story.title}</p>
+                      <p className="text-sm text-[#737373]">{story.location}</p>
                     </div>
 
-                    {/* Challenge & Solution */}
+                    {/* Challenge & Results */}
                     <div className="lg:col-span-2 space-y-6">
                       <div>
-                        <h3 className="font-semibold text-[#1A1A1A] mb-2">The Challenge</h3>
-                        <p className="text-[#737373]">{study.challenge}</p>
+                        <h4 className="font-semibold text-[#1A1A1A] mb-2">The Challenge</h4>
+                        <p className="text-[#737373]">{story.challenge}</p>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-[#1A1A1A] mb-2">Our Solution</h3>
-                        <p className="text-[#737373]">{study.solution}</p>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-[#1A1A1A] mb-2">Results</h3>
+                        <h4 className="font-semibold text-[#1A1A1A] mb-2">Results Achieved</h4>
                         <ul className="space-y-2">
-                          {study.results.map((result) => (
+                          {story.results.map((result) => (
                             <li key={result} className="flex items-start gap-2">
                               <svg className="w-5 h-5 text-[#3EBCE8] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -108,6 +211,9 @@ export default function CaseStudiesPage() {
                           ))}
                         </ul>
                       </div>
+                      <blockquote className="border-l-4 border-[#3EBCE8] pl-4 italic text-[#525252]">
+                        &ldquo;{story.quote}&rdquo;
+                      </blockquote>
                     </div>
                   </div>
                 </div>
@@ -116,32 +222,97 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* Testimonial */}
+        {/* Organizational Impact */}
         <section className="section gradient-subtle">
-          <div className="container-tight text-center">
-            <blockquote className="text-2xl md:text-3xl font-medium text-[#1A1A1A] leading-relaxed">
-              &ldquo;Working with Coaching Women of Color transformed how we approach
-              diversity and inclusion. The results speak for themselves.&rdquo;
-            </blockquote>
-            <p className="mt-6 text-[#737373]">
-              — Chief People Officer, Fortune 500 Tech Company
+          <div className="container-wide">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#1A1A1A] mb-4">
+              Organizational Impact
+            </h2>
+            <p className="text-xl text-[#525252] mb-12 max-w-3xl">
+              Beyond individual coaching, we help teams and organizations build
+              stronger cultures through retreats, facilitation, and team development.
             </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {organizationalImpact.map((item) => (
+                <div key={item.name} className="bg-white rounded-xl p-8 shadow-sm">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-[#3EBCE8] text-white mb-4">
+                    {item.type}
+                  </span>
+                  <blockquote className="text-[#525252] italic mb-6">
+                    &ldquo;{item.quote}&rdquo;
+                  </blockquote>
+                  <div className="border-t border-gray-100 pt-4">
+                    <p className="font-semibold text-[#1A1A1A]">{item.name}</p>
+                    <p className="text-sm text-[#737373]">{item.location}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="section bg-[#1A1A1A] text-white">
-          <div className="container-tight text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-              Ready to write your success story?
+        {/* Additional Testimonials */}
+        <section className="section bg-white">
+          <div className="container-wide">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#1A1A1A] mb-4">
+              More Client Experiences
             </h2>
-            <p className="mt-6 text-xl text-[#A3A3A3]">
-              Let&apos;s discuss how we can help your organization achieve similar results.
+            <p className="text-xl text-[#525252] mb-12 max-w-3xl">
+              Every coaching journey is unique. Here&apos;s what other clients have shared about their experience.
             </p>
-            <div className="mt-10">
-              <Link href="/contact" className="btn-primary">
-                Start the Conversation
-              </Link>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {additionalTestimonials.map((testimonial) => (
+                <div key={testimonial.name} className="bg-[#F8FAFB] rounded-xl p-6">
+                  <blockquote className="text-[#525252] text-sm mb-4">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </blockquote>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-[#3EBCE8]" />
+                    <p className="font-medium text-[#1A1A1A] text-sm">{testimonial.name}</p>
+                    <span className="text-[#737373] text-sm">• {testimonial.location}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="section bg-[#1A1A1A] text-white">
+          <div className="container-wide">
+            <div className="grid md:grid-cols-4 gap-8 text-center mb-16">
+              <div>
+                <p className="text-4xl md:text-5xl font-bold text-[#3EBCE8]">25+</p>
+                <p className="text-[#A3A3A3] mt-2">Years of Leadership Experience</p>
+              </div>
+              <div>
+                <p className="text-4xl md:text-5xl font-bold text-[#FFC425]">100+</p>
+                <p className="text-[#A3A3A3] mt-2">Women Coached</p>
+              </div>
+              <div>
+                <p className="text-4xl md:text-5xl font-bold text-[#C4D82E]">30+</p>
+                <p className="text-[#A3A3A3] mt-2">Organizations Served</p>
+              </div>
+              <div>
+                <p className="text-4xl md:text-5xl font-bold text-[#E8478C]">5</p>
+                <p className="text-[#A3A3A3] mt-2">Professional Certifications</p>
+              </div>
+            </div>
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
+                Ready to write your success story?
+              </h2>
+              <p className="mt-6 text-xl text-[#A3A3A3]">
+                Book a consultation to discuss your goals and how coaching can help you achieve them.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/book" className="btn-primary">
+                  Book a Consultation
+                </Link>
+                <Link href="/contact" className="btn-secondary-dark">
+                  Contact Us
+                </Link>
+              </div>
             </div>
           </div>
         </section>
