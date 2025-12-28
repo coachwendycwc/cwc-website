@@ -40,7 +40,7 @@ const stats = [
 const testimonials = [
   {
     quote:
-      "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. She is in a class by herself! I would recommend her without hesitation.",
+      "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. We were extremely pleased with the quality and clarity of Wendy's preparation, delivery, and follow up. She is in a class by herself! I would recommend her without hesitation.",
     author: "Lynne Toye",
     role: "Executive Director, NJ Arts & Cultural Renewal Fund",
     image: "testimonial-lynne.png",
@@ -72,6 +72,27 @@ const testimonials = [
     author: "Nicole Carr",
     role: "CEO & Founder, Long Island, NY",
     image: "testimonial-nicole.png",
+  },
+  {
+    quote:
+      "Wendy is an incredible coach and advocate for her clients. I worked with her for 6 months and found her guidance invaluable. She helped me grow as a professional and gave me tangible tools to use to better myself as a leader. I highly recommend working with Wendy, she is the absolute best!",
+    author: "Teal Inzunza",
+    role: "New York, NY",
+    image: "testimonial-teal.png",
+  },
+  {
+    quote:
+      "I had met Wendy and participated in her Women of Color series in 2020 while undergoing some serious challenges with a previous role. When I had the opportunity to work with her as my Executive Coach, it was a no brainer. Wendy has a holistic approach to coaching, seeing me not only as a professional, but as the multi-faceted woman that I am. Wendy seamlessly creates a safe and non-judgmental approach all while thoughtfully holding the mirror to some of my thoughts and actions that did not serve me. I cannot recommend Wendy enough.",
+    author: "Patricia Quintero",
+    role: "New York, NY",
+    image: "testimonial-patricia.png",
+  },
+  {
+    quote:
+      "At any stage of your career or life journey, you can get stuck. I chose to be coached by Wendy because I TRUSTED that she would help me break through the barriers holding me back from achieving my next level dreams and goals. Wendy helped me create a blueprint for my second act after retirement. Her approach was uniquely crafted and tailored specifically to my needs. With her encouragement and support, I accomplished my dream of graduating from Fashion Institute of Technology as a Costume Designer and Wardrobe Technician. I highly endorse Wendy as a professional coach.",
+    author: "Lori Bennett",
+    role: "Brooklyn, NY",
+    image: "testimonial-lori.png",
   },
   {
     quote:
