@@ -33,7 +33,7 @@ export default function ConsultingPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#6ECEF5]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`${siteConfig.basePath}/images/image8.jpg`}
+                  src={`${siteConfig.basePath}/images/new/action-pitch.jpg`}
                   alt="Wendy Perdomo at a Coaching Women of Color event"
                   className="relative w-full h-auto rounded-2xl shadow-xl object-cover"
                 />

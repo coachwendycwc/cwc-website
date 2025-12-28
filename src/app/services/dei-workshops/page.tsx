@@ -42,7 +42,7 @@ export default function DEIWorkshopsPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`${siteConfig.basePath}/images/image11.jpg`}
+                  src={`${siteConfig.basePath}/images/new/action-woc-leaders.jpg`}
                   alt="Wendy Perdomo facilitating a DEI workshop"
                   className="relative w-full h-auto rounded-2xl shadow-xl object-cover"
                 />

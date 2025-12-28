@@ -1,6 +1,6 @@
 # Claude Session Notes - CWC Website
 
-**Last Updated:** 2025-12-27 (Evening session)
+**Last Updated:** 2025-12-28 (New photos inventory added)
 
 ---
 
@@ -103,6 +103,123 @@ All 55 images from `content/mediakit_extract/ppt/media/` have been converted to 
 ### Skip (Blank/Unusable)
 - image6.jpg - Blank (transparency issue)
 - image38.jpg - Unknown "W" logo
+
+---
+
+## NEW PHOTOS INVENTORY (Dec 28, 2025)
+
+Located in `content/new-photos/` - **8.1GB total** of new high-resolution content
+
+### Summary
+| Category | Files | Notes |
+|----------|-------|-------|
+| Images (jpg/jpeg) | 596 | High-res professional photos |
+| Images (HEIC) | 154 | iPhone format, need conversion |
+| Images (PNG) | 50 | Mixed graphics and photos |
+| Videos (MP4/MOV) | 84 | Speaking clips, events, podcast |
+
+---
+
+### CWC Photos (2.0GB)
+Organized professional photo collection
+
+| Folder | Count | Description |
+|--------|-------|-------------|
+| **PROFESSIONAL PHOTOS** | 52 | Studio headshots (_PBK*, ESPI*), high-res |
+| **NEW WEBSITE PHOTOS** | 26 | ESPF series - website-ready professional shots |
+| **IN-ACTION PHOTOS** | 78 | Speaking events, Global Women summit, workshops |
+| **FUN LIFE COACHING PHOTOS** | 27 | Lifestyle shots (_DSC series) |
+| **BLACK & WHITE PHOTOS** | 22 | B&W versions of professional photos |
+| **WOCIP PHOTOS** | 53 | Recent Dec 2024 shoot (0B1A series) + older DSC photos |
+| **Stock Photos** | 3 | Board meeting, corporate imagery (webp) |
+
+#### Key Files
+- `PROFESSIONAL PHOTOS/_PBK7515.jpg` through `_PBK7770.jpg` - Studio session
+- `NEW WEBSITE PHOTOS/ESPF0904-2.jpg` through `ESPF1006-2.jpg` - Professional headshots
+- `IN-ACTION PHOTOS/Global women awards.jpg` - Award ceremony
+- `IN-ACTION PHOTOS/IMG_1837.JPG`, `IMG_1839.JPG` - Recent (Apr 2025)
+- `WOCIP PHOTOS/0B1A7912.jpg` through `0B1A7954.jpg` - Latest photoshoot (Dec 2024)
+
+---
+
+### CWC Photos 2 (1.5GB)
+Additional professional collection
+
+| Folder | Count | Description |
+|--------|-------|-------------|
+| **PROFESSIONAL PHOTOS** | 72 | More _PBK series + retouched versions |
+| **NEW WEBSITE PHOTOS** | 22 | ESPF series variants |
+| **IN-ACTION PHOTOS** | 6 | Global women pitch, Thailand nonprofit, leaders |
+| **BLACK & WHITE PHOTOS** | 47 | B&W versions |
+
+#### Key Files
+- `PROFESSIONAL PHOTOS/_PBK7642 Retouched.jpg` - Retouched headshot
+- `IN-ACTION PHOTOS/women of color leaders.jpg` - Group shot
+- `IN-ACTION PHOTOS/Global women pitch.jpg` - Presentation photo
+
+---
+
+### CWC 2026 Website (Compilation) (4.6GB)
+Large collection with 558 files - mixed content from various sources
+
+| Type | Count | Notes |
+|------|-------|-------|
+| JPG/JPEG images | 435 | Mix of all photo types |
+| HEIC images | 154 | iPhone photos, need conversion for web |
+| MP4/MOV videos | 11+ | Event clips, podcast content |
+| PNG graphics | ~50 | Screenshots, graphics |
+
+#### Notable Content
+- `0B1A6984.jpg` through `0B1A7930.jpg` - Professional shots
+- `Podcast Post.mov` - Podcast video content
+- `IMG_1824.mov` through `IMG_1828.mov` - Recent video clips
+- Various iPhone photos (IMG_* HEIC) - need conversion
+
+---
+
+### Videos Available (11 files)
+| File | Description |
+|------|-------------|
+| `20250301_121922342.mp4` | Recent clip (Mar 2025) |
+| `Podcast Post.mov` | Podcast promotional video |
+| `IMG_1824.mov` - `IMG_1828.mov` | Event video clips |
+| `IMG_7947.MOV` | Event footage |
+| `IMG_3274.MOV` - `IMG_3320.MOV` | Additional clips |
+| `e1d0940f-5067-4195-9bb1-543d56b8bfad.mp4` | Unknown content |
+| `IMG_2869.mov` | Additional video |
+
+---
+
+### Recommended for Website Use
+
+#### Homepage Hero Options
+1. `CWC Photos/NEW WEBSITE PHOTOS/ESPF0920-2.jpg` - Professional headshot
+2. `CWC Photos/WOCIP PHOTOS/0B1A7924.jpg` - Latest photoshoot (Dec 2024)
+3. `CWC Photos/PROFESSIONAL PHOTOS/ESPI9369.jpg` - Studio shot
+
+#### Speaking/Action Shots
+1. `CWC Photos/IN-ACTION PHOTOS/Global women summit talk.jpg`
+2. `CWC Photos/IN-ACTION PHOTOS/global women club.jpg`
+3. `CWC Photos/IN-ACTION PHOTOS/IMG_1837.JPG` - Recent event
+
+#### About Page
+1. `CWC Photos/WOCIP PHOTOS/0B1A7916.jpg` - Recent professional
+2. `CWC Photos 2/PROFESSIONAL PHOTOS/_PBK7642 Retouched.jpg`
+
+#### Video Embed Candidates
+1. `Podcast Post.mov` - Podcast content for media page
+2. `20250301_121922342.mp4` - Recent speaking clip
+
+---
+
+### Next Steps for New Photos
+1. [ ] Select best headshots from WOCIP (Dec 2024) shoot
+2. [ ] Convert selected HEIC files to JPEG for web
+3. [ ] Optimize chosen photos with sips (80% quality)
+4. [ ] Copy optimized images to `public/images/new/`
+5. [ ] Update homepage hero with new headshot
+6. [ ] Add video embeds to keynote/speaking page
+7. [ ] Consider adding photo gallery page
 
 ---
 

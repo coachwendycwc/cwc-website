@@ -33,7 +33,7 @@ export default function LeadershipDevelopmentPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#FFC425]/20 to-[#3EBCE8]/20 rounded-3xl blur-2xl" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`${siteConfig.basePath}/images/image4.jpg`}
+                  src={`${siteConfig.basePath}/images/new/action-awards.jpg`}
                   alt="Wendy Perdomo on stage delivering leadership training"
                   className="relative w-full h-auto rounded-2xl shadow-xl object-cover"
                 />

@@ -114,7 +114,7 @@ export default function AboutPage() {
                 <div className="text-center mb-8">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`${siteConfig.basePath}/images/image19_nobg.png`}
+                    src={`${siteConfig.basePath}/images/new/headshot-professional-1.jpg`}
                     alt="Wendy Perdomo"
                     className="w-80 md:w-96 h-auto mx-auto rounded-2xl object-cover"
                   />

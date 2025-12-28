@@ -42,7 +42,7 @@ export default function KeynoteSpeakingPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#C4D82E]/20 to-[#3EBCE8]/20 rounded-3xl blur-2xl" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`${siteConfig.basePath}/images/image5.jpg`}
+                  src={`${siteConfig.basePath}/images/new/action-summit-talk.jpg`}
                   alt="Wendy Perdomo speaking to a large audience"
                   className="relative w-full h-auto rounded-2xl shadow-xl object-cover"
                 />
