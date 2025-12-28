@@ -42,8 +42,15 @@ const testimonials = [
     quote:
       "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. She is in a class by herself!",
     author: "Lynne Toye",
-    role: "Newark, NJ",
+    role: "Executive Director, NJ Arts & Cultural Renewal Fund",
     image: "testimonial-lynne.png",
+  },
+  {
+    quote:
+      "It has been both an honor and privilege to work with Wendy. I have left all our interactions inspired and excited for what is yet to come. Wendy is a thoughtful leader who truly cares about supporting and developing her team, colleagues, clients and any organization she serves. I cannot recommend her enough!",
+    author: "Tanya Ramos-Puig",
+    role: "CEO, Monique Burr Foundation for Children",
+    image: "image51.jpg",
   },
   {
     quote:
