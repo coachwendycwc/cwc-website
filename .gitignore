@@ -40,3 +40,6 @@ Thumbs.db
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+# Extracted PPTX contents
+content/mediakit_extract/
+content/pptx_extract/
