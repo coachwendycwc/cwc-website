@@ -76,6 +76,23 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 45s linear infinite;
+}
+
+.animate-scroll-testimonials {
+  animation: scroll 60s linear infinite;
+}
+
+.hover\:pause-animation:hover {
+  animation-play-state: paused;
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;

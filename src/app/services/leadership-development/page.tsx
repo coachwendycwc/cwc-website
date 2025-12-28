@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import { siteConfig } from "@/config";
 
 export default function LeadershipDevelopmentPage() {
   return (
@@ -10,21 +11,32 @@ export default function LeadershipDevelopmentPage() {
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#FFF8E5] to-white">
           <div className="container-wide">
-            <div className="max-w-4xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Solutions
-              </Link>
-              <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                Leadership Development
-              </h1>
-              <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
-                Comprehensive programs designed to identify, nurture, and elevate diverse
-                leadership talent within your organization.
-              </p>
-              <div className="mt-10">
-                <Link href="/contact" className="btn-primary">
-                  Learn More
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
+                  ← Back to Solutions
                 </Link>
+                <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
+                  Leadership Development
+                </h1>
+                <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
+                  Comprehensive programs designed to identify, nurture, and elevate diverse
+                  leadership talent within your organization.
+                </p>
+                <div className="mt-10">
+                  <Link href="/contact" className="btn-primary">
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#FFC425]/20 to-[#3EBCE8]/20 rounded-3xl blur-2xl" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${siteConfig.basePath}/images/image4.jpg`}
+                  alt="Wendy Perdomo on stage delivering leadership training"
+                  className="relative w-full h-auto rounded-2xl shadow-xl object-cover"
+                />
               </div>
             </div>
           </div>

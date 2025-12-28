@@ -114,9 +114,9 @@ export default function AboutPage() {
                 <div className="text-center mb-8">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`${siteConfig.basePath}/wendy-perdomo.png`}
+                    src={`${siteConfig.basePath}/images/image19_nobg.png`}
                     alt="Wendy Perdomo"
-                    className="w-64 h-auto mx-auto rounded-2xl"
+                    className="w-80 md:w-96 h-auto mx-auto rounded-2xl object-cover"
                   />
                   <p className="text-sm text-[#737373] mt-4">
                     Executive Leadership & Life Coach

@@ -43,18 +43,13 @@ const testimonials = [
       "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. She is in a class by herself!",
     author: "Lynne Toye",
     role: "Newark, NJ",
+    image: "testimonial-lynne.png",
   },
   {
     quote:
       "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth.",
     author: "Stephanie Lopez",
     role: "California",
-  },
-  {
-    quote:
-      "Working with Wendy kept me steady in a very, very difficult year. And not just me, but my colleague as well. The relationship has changed the emotionality of the workplace, allowing for better collaboration and better outcomes.",
-    author: "Emily Kurtz",
-    role: "Brooklyn, NY",
   },
   {
     quote:
@@ -74,6 +69,28 @@ const testimonials = [
     author: "Catarina Campbell",
     role: "Vermont",
   },
+];
+
+// Client logos for carousel
+const clientLogos = [
+  { name: "Johnson & Johnson", image: "image45.jpg", w: 180, h: 45 },
+  { name: "Genentech", image: "image44.jpg", w: 200, h: 85 },
+  { name: "Novo Nordisk", image: "image43.jpg", w: 100, h: 80 },
+  { name: "VaynerMedia", image: "image28.jpg", w: 150, h: 35 },
+  { name: "DataRobot", image: "image42.jpg", w: 180, h: 65 },
+  { name: "TD Bank", image: "image14.jpg", w: 70, h: 65 },
+  { name: "NYC Dept of Education", image: "image23.jpg", w: 130, h: 100 },
+  { name: "Colgate University", image: "image10.jpg", w: 280, h: 100 },
+  { name: "University of Michigan", image: "image25.jpg", w: 90, h: 65 },
+  { name: "Bloomberg Quicktake", image: "image18.jpg", w: 220, h: 60 },
+  { name: "Ellevate", image: "image30.jpg", w: 160, h: 80 },
+  { name: "SURGE Institute", image: "image27.jpg", w: 150, h: 45 },
+  { name: "RiseBoro", image: "image40.jpg", w: 110, h: 45 },
+  { name: "ALPFA", image: "image13.jpg", w: 90, h: 70 },
+  { name: "HACE", image: "image22.jpg", w: 160, h: 55 },
+  { name: "URI NYC", image: "image31.jpg", w: 150, h: 45 },
+  { name: "Poderistas", image: "image39.jpg", w: 130, h: 55 },
+  { name: "Hills", image: "image12.jpg", w: 100, h: 65 },
 ];
 
 // Color mapping for service cards
@@ -148,9 +165,9 @@ export default function Home() {
                   <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`${siteConfig.basePath}/wendy-perdomo.png`}
+                    src={`${siteConfig.basePath}/images/image15_nobg.png`}
                     alt="Wendy Perdomo - Executive Leadership Coach"
-                    className="relative w-72 md:w-80 lg:w-96 h-auto rounded-2xl shadow-xl"
+                    className="relative w-80 md:w-96 lg:w-[500px] xl:w-[580px] h-auto rounded-2xl shadow-xl object-cover"
                   />
                 </div>
               </div>
@@ -175,32 +192,34 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Trusted By - Client Logos */}
-        <section className="section-tight bg-white border-y border-[#E5E5E5]">
+        {/* Trusted By - Client Logos Carousel */}
+        <section className="section-tight bg-white border-y border-[#E5E5E5] overflow-hidden">
           <div className="container-wide">
             <p className="text-center text-sm font-medium text-[#737373] uppercase tracking-widest mb-10">
               Transforming Leaders From
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 md:gap-x-12">
-              {[
-                "Johnson & Johnson",
-                "Genentech",
-                "VaynerMedia",
-                "DataRobot",
-                "TD Bank",
-                "NYC Dept of Education",
-                "Colgate University",
-                "University of Michigan",
-                "Bloomberg Quicktake",
-                "Ellevate",
-                "SURGE",
-                "RiseBoro",
-              ].map((org) => (
-                <span key={org} className="text-sm md:text-base font-medium text-[#737373] hover:text-[#3EBCE8] transition-colors">
-                  {org}
-                </span>
+          </div>
+          <div className="relative">
+            {/* Gradient fade edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+
+            {/* Scrolling container - logos repeat twice for seamless loop */}
+            <div className="flex animate-scroll hover:[animation-play-state:paused]">
+              {[...clientLogos, ...clientLogos].map((org, index) => (
+                <div key={`${org.name}-${index}`} className="flex items-center justify-center mx-6 flex-shrink-0">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${siteConfig.basePath}/images/${org.image}`}
+                    alt={org.name}
+                    style={{ width: `${org.w}px`, height: `${org.h}px` }}
+                    className="object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                  />
+                </div>
               ))}
             </div>
+          </div>
+          <div className="container-wide">
             <p className="text-center text-xs text-[#A3A3A3] mt-8">
               And many more across Fortune 500, Healthcare, Technology, Finance & Non-Profit sectors
             </p>
@@ -361,33 +380,49 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="card">
-                  {/* Stars in pink */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        className="w-5 h-5 text-[#3EBCE8]"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <blockquote className="text-lg text-[#404040] leading-relaxed">
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </blockquote>
-                  <div className="mt-6 pt-6 border-t border-[#E5E5E5]">
-                    <div className="font-semibold text-[#1A1A1A]">
-                      {testimonial.author}
+            <div className="overflow-hidden">
+              <div className="flex gap-6 animate-scroll-testimonials hover:pause-animation">
+                {[...testimonials, ...testimonials].map((testimonial, index) => (
+                  <div key={index} className="card flex-shrink-0 w-[400px]">
+                    {/* Stars */}
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className="w-5 h-5 text-[#3EBCE8]"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
                     </div>
-                    <div className="text-sm text-[#737373]">{testimonial.role}</div>
+                    <blockquote className="text-lg text-[#404040] leading-relaxed">
+                      &ldquo;{testimonial.quote}&rdquo;
+                    </blockquote>
+                    <div className="mt-6 pt-6 border-t border-[#E5E5E5] flex items-center gap-4">
+                      {testimonial.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={`${siteConfig.basePath}/images/${testimonial.image}`}
+                          alt={testimonial.author}
+                          className="w-12 h-12 rounded-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-12 h-12 rounded-full bg-[#3EBCE8] flex items-center justify-center text-white font-semibold">
+                          {testimonial.author.split(" ").map(n => n[0]).join("")}
+                        </div>
+                      )}
+                      <div>
+                        <div className="font-semibold text-[#1A1A1A]">
+                          {testimonial.author}
+                        </div>
+                        <div className="text-sm text-[#737373]">{testimonial.role}</div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
