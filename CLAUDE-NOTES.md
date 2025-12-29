@@ -46,6 +46,31 @@
 
 ---
 
+## Site Pages (16 total)
+
+| Page | URL Path | Description |
+|------|----------|-------------|
+| Homepage | `/` | Hero, services overview, testimonials, client logos |
+| For Organizations | `/for-organizations` | B2B solutions, pricing starting at $5K |
+| For Individuals | `/for-individuals` | 4 coaching programs with pricing |
+| Executive Coaching | `/executive-coaching` | 6-month program details ($9,900) |
+| About | `/about` | Wendy's bio, credentials, expertise |
+| Contact | `/contact` | Contact form |
+| Book | `/book` | Calendly booking embed |
+| Case Studies | `/case-studies` | Client success stories |
+| **Services** | | |
+| DEI Workshops | `/services/dei-workshops` | Workshop offerings |
+| Leadership Development | `/services/leadership-development` | Leadership programs |
+| Keynote Speaking | `/services/keynote-speaking` | Speaking topics & formats |
+| Consulting | `/services/consulting` | Strategic consulting |
+| Group Coaching | `/services/group-coaching` | Group program info |
+| Services Index | `/services` | Services overview |
+| **Legal** | | |
+| Privacy Policy | `/privacy` | Privacy policy |
+| Terms of Service | `/terms` | Terms of service |
+
+---
+
 ## Previous Session (Dec 28, 2025)
 
 ### Completed
