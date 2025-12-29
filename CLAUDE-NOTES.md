@@ -18,6 +18,7 @@
 - [x] Fixed book page - removed "life coaching" reference
 - [x] Updated group coaching page → Executive Coaching Lab ($997, 10 months)
 - [x] Fixed about page - changed "Executive Leadership and Life Coach" to "Executive Leadership Coach"
+- [x] Updated For Organizations page with richer 5-solution structure from new docx
 
 ---
 
@@ -31,7 +32,16 @@
 | Executive Leadership Coaching | $9,900 ($1,650/mo) | 6 months (12 sessions) |
 | Executive Coaching Lab (Group) | $997 ($100/mo) | 10 months |
 
-### Organizational Offerings (B2B)
+### Organizational Offerings (B2B) - 5 Solutions
+| Solution | Description |
+|----------|-------------|
+| Executive Coaching for Leaders | 1:1 High-Impact Coaching |
+| Group Coaching for Leaders | Leadership Development at Scale |
+| Keynote Speaking | From Awareness to Action |
+| Customized Webinars & Workshops | Interactive Learning Experiences |
+| Multi-Session Virtual Series | Sustained Behavior Change |
+
+### Organizational Pricing
 | Service | Starting Price |
 |---------|----------------|
 | Workshops/Webinars (60-90 min) | $5,000 |
@@ -39,6 +49,7 @@
 | Half-Day Team Session | $5,000 + assessments |
 | Full-Day Offsite/Retreat | $10,000 |
 | Cohort Group Coaching | $5,000+ |
+| Executive Coaching | Custom |
 | Consulting (hourly) | $350/hour |
 
 ### Key Info
