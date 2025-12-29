@@ -29,7 +29,7 @@ const successStories = [
     ],
     quote: "I recognize that because of the conversations that we've had and the calls that we've had, without them I wouldn't have gotten here, or I wouldn't have gotten here as quickly as I have. I appreciate you challenging me, showing me so much of myself and peeling back layers. I was able to really hone in on what's really in here to help others discover that as well.",
     color: "#FFC425",
-    category: "Life Coaching",
+    category: "Leadership Coaching",
   },
   {
     name: "Lori Bennett",

@@ -159,12 +159,12 @@ export default function ExecutiveCoachingPage() {
                   <div>
                     <ul className="space-y-3">
                       {[
-                        "12 one-on-one coaching sessions",
-                        "DiSC® & Positive Intelligence® assessments",
-                        "Spot coaching between sessions",
-                        "Unlimited session recordings",
-                        "Text & WhatsApp support",
-                        "Custom templates & resources",
+                        "2 private coaching calls per month (1 hour each)",
+                        "DiSC® & Positive Intelligence® assessments included",
+                        "Customized leadership strategies",
+                        "Direct email access between sessions",
+                        "Support navigating bias & imposter syndrome",
+                        "Tailored action plans & accountability",
                       ].map((item) => (
                         <li key={item} className="flex items-start gap-2 text-[#525252]">
                           <svg className="w-5 h-5 text-[#3EBCE8] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

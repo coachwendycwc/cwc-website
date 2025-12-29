@@ -1,12 +1,52 @@
 # Claude Session Notes - CWC Website
 
-**Last Updated:** 2025-12-28 (Photos added + CI fixed)
+**Last Updated:** 2025-12-29 (Pricing update + Life Coaching removed)
 
 **Live Site:** https://mdxvision.github.io/cwc-website/
 
 ---
 
-## Latest Session (Dec 28, 2025)
+## Latest Session (Dec 29, 2025) - Pricing Update
+
+### Changes Made
+- [x] Removed Life Coaching page and all references
+- [x] Updated For Individuals page with 4 coaching programs
+- [x] Updated For Organizations page with signature solutions + pricing
+- [x] Updated Executive Coaching page features
+- [x] Updated Footer navigation
+- [x] Fixed case studies category reference
+
+---
+
+## Pricing Reference
+
+### Individual Coaching Programs (B2C)
+| Program | Price | Duration |
+|---------|-------|----------|
+| Leadership Clarity Session | $697 | 90 min (1 session) |
+| 90-Day Executive Momentum Sprint | $5,000 | 90 days (6 sessions) |
+| Executive Leadership Coaching | $9,900 ($1,650/mo) | 6 months (12 sessions) |
+| Executive Coaching Lab (Group) | $997 ($100/mo) | 10 months |
+
+### Organizational Offerings (B2B)
+| Service | Starting Price |
+|---------|----------------|
+| Workshops/Webinars (60-90 min) | $5,000 |
+| 3-Part Learning Series | $7,500 |
+| Half-Day Team Session | $5,000 + assessments |
+| Full-Day Offsite/Retreat | $10,000 |
+| Cohort Group Coaching | $5,000+ |
+| Consulting (hourly) | $350/hour |
+
+### Key Info
+- Discovery calls: FREE (30-45 min)
+- Client split: 50% B2C / 50% B2B
+- Assessments included: DiSC® and Positive Intelligence®
+- Life Coaching: REMOVED from offerings
+
+---
+
+## Previous Session (Dec 28, 2025)
 
 ### Completed
 - [x] Added 11 new optimized photos from Dec 2024 photoshoot to `public/images/new/`

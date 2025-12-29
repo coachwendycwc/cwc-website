@@ -11,8 +11,8 @@ const footerNavigation = {
   ],
   coaching: [
     { name: "Executive Coaching", href: "/executive-coaching" },
-    { name: "Life Coaching", href: "/life-coaching" },
-    { name: "Group Programs", href: "/services/group-coaching" },
+    { name: "Executive Coaching Lab", href: "/for-individuals#coaching-lab" },
+    { name: "For Individuals", href: "/for-individuals" },
   ],
   company: [
     { name: "About", href: "/about" },

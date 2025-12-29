@@ -408,14 +408,14 @@ export default function Home() {
                 You already have everything you need.
               </h2>
               <p className="body-large mt-6 max-w-2xl mx-auto">
-                Executive and life coaching designed specifically for women of color ready to break through barriers, silence imposter syndrome, and step fully into their power.
+                Executive coaching designed specifically for women of color ready to break through barriers, silence imposter syndrome, and step fully into their power.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/executive-coaching" className="btn-secondary">
                   Executive Coaching
                 </Link>
-                <Link href="/life-coaching" className="btn-secondary">
-                  Life Coaching
+                <Link href="/for-individuals" className="btn-secondary">
+                  View All Programs
                 </Link>
               </div>
             </div>
