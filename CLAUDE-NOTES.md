@@ -1,12 +1,12 @@
 # Claude Session Notes - CWC Website
 
-**Last Updated:** 2025-12-29 (Pricing update + Life Coaching removed)
+**Last Updated:** 2025-12-29 (All content gaps fixed)
 
 **Live Site:** https://mdxvision.github.io/cwc-website/
 
 ---
 
-## Latest Session (Dec 29, 2025) - Pricing Update
+## Latest Session (Dec 29, 2025) - Pricing Update + Content Fixes
 
 ### Changes Made
 - [x] Removed Life Coaching page and all references
@@ -15,6 +15,8 @@
 - [x] Updated Executive Coaching page features
 - [x] Updated Footer navigation
 - [x] Fixed case studies category reference
+- [x] Fixed book page - removed "life coaching" reference
+- [x] Updated group coaching page → Executive Coaching Lab ($997, 10 months)
 
 ---
 
@@ -63,7 +65,7 @@
 | Leadership Development | `/services/leadership-development` | Leadership programs |
 | Keynote Speaking | `/services/keynote-speaking` | Speaking topics & formats |
 | Consulting | `/services/consulting` | Strategic consulting |
-| Group Coaching | `/services/group-coaching` | Group program info |
+| Executive Coaching Lab | `/services/group-coaching` | Group program ($997, 10 months) |
 | Services Index | `/services` | Services overview |
 | **Legal** | | |
 | Privacy Policy | `/privacy` | Privacy policy |
@@ -461,16 +463,15 @@ src/app/
 ├── about/page.tsx              # About Wendy
 ├── contact/page.tsx            # Contact form
 ├── book/page.tsx               # Booking/calendar
-├── executive-coaching/page.tsx # Exec coaching + pricing
-├── life-coaching/page.tsx      # Life coaching
-├── for-individuals/page.tsx    # Individual services
+├── executive-coaching/page.tsx # Exec coaching + pricing ($9,900)
+├── for-individuals/page.tsx    # Individual services (4 programs)
 ├── for-organizations/page.tsx  # B2B services
-├── case-studies/page.tsx       # Case studies (needs content)
+├── case-studies/page.tsx       # 6 featured + 3 org + 6 testimonials
 ├── services/
 │   ├── page.tsx                # Services overview
 │   ├── consulting/page.tsx
 │   ├── dei-workshops/page.tsx
-│   ├── group-coaching/page.tsx
+│   ├── group-coaching/page.tsx  # Executive Coaching Lab ($997)
 │   ├── keynote-speaking/page.tsx
 │   └── leadership-development/page.tsx
 ├── privacy/page.tsx
