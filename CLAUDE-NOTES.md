@@ -17,6 +17,7 @@
 - [x] Fixed case studies category reference
 - [x] Fixed book page - removed "life coaching" reference
 - [x] Updated group coaching page → Executive Coaching Lab ($997, 10 months)
+- [x] Fixed about page - changed "Executive Leadership and Life Coach" to "Executive Leadership Coach"
 
 ---
 
