@@ -79,7 +79,7 @@ export default function BookPage() {
                 </div>
                 <h2 className="heading-card">For Individuals</h2>
                 <p className="text-[#737373] mt-3 leading-relaxed">
-                  Explore executive coaching or life coaching to accelerate your
+                  Explore executive coaching programs to accelerate your
                   personal and professional growth.
                 </p>
                 <ul className="mt-6 space-y-2 text-sm text-[#525252]">
