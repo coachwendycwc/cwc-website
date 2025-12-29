@@ -65,7 +65,7 @@ export default function AboutPage() {
                 </h2>
                 <p className="text-lg text-[#737373] mt-2">M.P.A., M.S.Ed</p>
                 <p className="body-large mt-6">
-                  Wendy Perdomo is an Executive Leadership and Life Coach with over
+                  Wendy Perdomo is an Executive Leadership Coach with over
                   25 years of experience in non-profit education reform and leadership.
                   As a certified coach, international speaker, and non-profit executive,
                   she brings a unique blend of corporate expertise and deep understanding
@@ -119,7 +119,7 @@ export default function AboutPage() {
                     className="w-80 md:w-96 h-auto mx-auto rounded-2xl object-cover"
                   />
                   <p className="text-sm text-[#737373] mt-4">
-                    Executive Leadership & Life Coach
+                    Executive Leadership Coach
                   </p>
                 </div>
                 <div className="space-y-6">
