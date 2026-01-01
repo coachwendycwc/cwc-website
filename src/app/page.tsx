@@ -2,33 +2,48 @@ import Link from "next/link";
 import { Header, Footer, TestimonialsCarousel } from "@/components";
 import { siteConfig } from "@/config";
 
-// Service cards with different petal colors
-const services = [
+// Organizational solutions - simple cards
+const solutions = [
   {
-    title: "DEI Workshops",
-    description: "Transform culture. Build belonging.",
-    href: "/services/dei-workshops",
-    color: "pink",
+    id: "executive-coaching",
+    title: "Executive Coaching",
+    description: "1:1 high-impact coaching for leaders.",
+    color: "blue",
   },
   {
-    title: "Leadership Development",
-    description: "Elevate potential. Accelerate growth.",
-    href: "/services/leadership-development",
+    id: "group-coaching",
+    title: "Group Coaching",
+    description: "Leadership development at scale.",
     color: "yellow",
   },
   {
+    id: "keynote-speaking",
     title: "Keynote Speaking",
     description: "Inspire change. Ignite action.",
-    href: "/services/keynote-speaking",
     color: "green",
   },
   {
-    title: "Consulting",
-    description: "Strategic insight. Lasting impact.",
-    href: "/services/consulting",
-    color: "blue",
+    id: "workshops",
+    title: "Workshops & Webinars",
+    description: "Interactive learning experiences.",
+    color: "pink",
+  },
+  {
+    id: "virtual-series",
+    title: "Virtual Series",
+    description: "Sustained behavior change.",
+    color: "purple",
   },
 ];
+
+// Color mapping for solution cards
+const colorClasses: Record<string, { dot: string }> = {
+  pink: { dot: "#E91E8C" },
+  yellow: { dot: "#FFC425" },
+  green: { dot: "#C4D82E" },
+  blue: { dot: "#3EBCE8" },
+  purple: { dot: "#9333EA" },
+};
 
 const stats = [
   { value: "25+", label: "Years Experience" },
@@ -146,29 +161,6 @@ const clientLogos = [
   { name: "Hills", image: "image12.jpg", w: 100, h: 65 },
 ];
 
-// Color mapping for service cards
-const colorClasses: Record<string, { border: string; bg: string; text: string }> = {
-  pink: {
-    border: "hover:border-[#3EBCE8]",
-    bg: "bg-[#E8F8FD]",
-    text: "text-[#3EBCE8]",
-  },
-  yellow: {
-    border: "hover:border-[#FFC425]",
-    bg: "bg-[#FFF8E5]",
-    text: "text-[#B38300]",
-  },
-  green: {
-    border: "hover:border-[#C4D82E]",
-    bg: "bg-[#F7FAE5]",
-    text: "text-[#7F8D1D]",
-  },
-  blue: {
-    border: "hover:border-[#6ECEF5]",
-    bg: "bg-[#E8F8FD]",
-    text: "text-[#147DA0]",
-  },
-};
 
 export default function Home() {
   return (
@@ -293,27 +285,23 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Service cards with petal colors */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service) => (
+            {/* Solution cards - simple grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {solutions.map((solution) => (
                 <Link
-                  key={service.title}
-                  href={service.href}
-                  className={`card-bordered group ${colorClasses[service.color].border}`}
+                  key={solution.id}
+                  href={`/for-organizations#${solution.id}`}
+                  className="card-bordered group hover:border-[#3EBCE8]"
                 >
                   {/* Color accent dot */}
                   <div
-                    className={`w-3 h-3 rounded-full mb-4 ${colorClasses[service.color].bg}`}
-                    style={{
-                      backgroundColor: service.color === 'pink' ? '#3EBCE8' :
-                                       service.color === 'yellow' ? '#FFC425' :
-                                       service.color === 'green' ? '#C4D82E' : '#6ECEF5'
-                    }}
+                    className="w-3 h-3 rounded-full mb-4"
+                    style={{ backgroundColor: colorClasses[solution.color].dot }}
                   />
                   <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
-                    {service.title}
+                    {solution.title}
                   </h3>
-                  <p className="text-[#737373] mt-2">{service.description}</p>
+                  <p className="text-[#737373] mt-2">{solution.description}</p>
                   <span className="link-arrow mt-6 text-sm">Learn more</span>
                 </Link>
               ))}

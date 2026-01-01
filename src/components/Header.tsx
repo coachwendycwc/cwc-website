@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config";
 /* eslint-disable @next/next/no-img-element */
 
@@ -9,11 +10,12 @@ const navigation = [
   {
     name: "For Organizations",
     href: "/for-organizations",
-    highlight: true,
+    matchPaths: ["/for-organizations", "/services"],
   },
   {
     name: "Services",
     href: "/services",
+    matchPaths: ["/services"],
     children: [
       { name: "DEI Workshops", href: "/services/dei-workshops" },
       { name: "Leadership Development", href: "/services/leadership-development" },
@@ -21,13 +23,20 @@ const navigation = [
       { name: "Consulting", href: "/services/consulting" },
     ],
   },
-  { name: "Coaching", href: "/for-individuals" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Coaching", href: "/for-individuals", matchPaths: ["/for-individuals", "/executive-coaching"] },
+  { name: "About", href: "/about", matchPaths: ["/about", "/case-studies"] },
+  { name: "Contact", href: "/contact", matchPaths: ["/contact", "/book"] },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Check if current path matches any of the nav item's matchPaths
+  const isActive = (matchPaths?: string[]) => {
+    if (!matchPaths) return false;
+    return matchPaths.some((path) => pathname.startsWith(path));
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-[#F5F5F5]">
@@ -53,7 +62,7 @@ export default function Header() {
               key={item.name}
               href={item.href}
               className={`text-sm font-medium transition-colors ${
-                item.highlight
+                isActive(item.matchPaths)
                   ? "text-[#3EBCE8] hover:text-[#1A9FCC]"
                   : "text-[#525252] hover:text-[#1A1A1A]"
               }`}
@@ -114,7 +123,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`block py-2 text-lg font-medium ${
-                  item.highlight
+                  isActive(item.matchPaths)
                     ? "text-[#3EBCE8]"
                     : "text-[#525252]"
                 }`}
