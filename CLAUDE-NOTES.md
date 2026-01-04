@@ -1,12 +1,27 @@
 # Claude Session Notes - CWC Website
 
-**Last Updated:** 2025-12-29 (All content gaps fixed)
+**Last Updated:** 2026-01-04
 
 **Live Site:** https://mdxvision.github.io/cwc-website/
 
 ---
 
-## Latest Session (Dec 29, 2025) - Pricing Update + Content Fixes
+## Latest Session (Jan 4, 2026) - Project Review & Orientation
+
+### Session Summary
+- Reviewed full project structure and documentation
+- Confirmed site is live and git is clean
+- Identified remaining tasks: logo carousel sizing, video embeds, new photo selection
+
+### Remaining Work
+- [ ] Fine-tune logo carousel sizing (J&J, Colgate may need adjustment)
+- [ ] Add video embeds to keynote/speaking page
+- [ ] Select best headshots from WOCIP (Dec 2024) shoot
+- [ ] Convert selected HEIC files to JPEG for web
+
+---
+
+## Previous Session (Dec 29, 2025) - Pricing Update + Content Fixes
 
 ### Changes Made
 - [x] Removed Life Coaching page and all references
