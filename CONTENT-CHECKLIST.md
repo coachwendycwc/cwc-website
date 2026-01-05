@@ -2,6 +2,8 @@
 
 **Purpose:** Gather the content and assets needed to complete the website rebuild and position CWC for corporate/organizational clients.
 
+**Last Updated:** 2026-01-05
+
 **Instructions:** Please complete as much as possible. Items marked with ⭐ are highest priority for credibility with B2B buyers.
 
 ---
@@ -9,276 +11,254 @@
 ## 1. Photography & Images
 
 ### Headshots ⭐
-- [ ] Professional headshot (high resolution, business attire)
-- [ ] Casual/approachable headshot (optional, for About page)
+- [x] Professional headshot (high resolution, business attire) ✅ `headshot-professional-1.jpg`
+- [x] Casual/approachable headshot (optional, for About page) ✅ `headshot-wocip-1.jpg`
 
 ### Action Shots
-- [ ] Speaking at an event or conference
-- [ ] Facilitating a workshop
-- [ ] Coaching session (can be staged)
-- [ ] Group training environment
+- [x] Speaking at an event or conference ✅ `action-summit-talk.jpg`
+- [x] Facilitating a workshop ✅ `action-woc-leaders.jpg`
+- [x] Coaching session (can be staged) ✅ `action-awards.jpg`
+- [x] Group training environment ✅ `action-women-club.jpg`
 
 ### Other
-- [ ] Any team member photos (if applicable)
-- [ ] Office or workspace photos (optional)
+- [ ] Any team member photos (if applicable) - N/A (solo business)
+- [ ] Office or workspace photos (optional) - Not needed
 
 **Upload location or notes:**
 ```
-[Where can we find these photos?]
+All photos optimized and stored in public/images/new/
+Additional 8.1GB of raw photos available in content/new-photos/
 ```
 
 ---
 
-## 2. Client Logos ⭐
+## 2. Client Logos ⭐ ✅ COMPLETE
 
-List organizations you've worked with who would allow their logo on the website:
+18 client logos added to homepage carousel:
 
-| Company Name | Permission Granted? | Logo File Available? |
-|--------------|---------------------|---------------------|
-| 1.           | Yes / No / Need to ask |                  |
-| 2.           | Yes / No / Need to ask |                  |
-| 3.           | Yes / No / Need to ask |                  |
-| 4.           | Yes / No / Need to ask |                  |
-| 5.           | Yes / No / Need to ask |                  |
-| 6.           | Yes / No / Need to ask |                  |
+| Company Name | Logo File |
+|--------------|-----------|
+| Johnson & Johnson | `image45.jpg` |
+| Genentech | `image44.jpg` |
+| Novo Nordisk | `image43.jpg` |
+| DataRobot | `image42.jpg` |
+| TD Bank | `image14.jpg` |
+| VaynerMedia | `image28.jpg` |
+| Colgate University | `image10.jpg` |
+| University of Michigan | `image25.jpg` |
+| NYC Dept of Education | `image23.jpg` |
+| Bloomberg Quicktake | `image18.jpg` |
+| Ellevate | `image30.jpg` |
+| SURGE Institute | `image27.jpg` |
+| RiseBoro | `image40.jpg` |
+| ALPFA | `image13.jpg` |
+| HACE | `image22.jpg` |
+| Poderistas | `image39.jpg` |
+| Hill's | `image12.jpg` |
+| VillageCareMAX | `image20.jpg` |
 
-**Note:** Even 3-4 recognizable names significantly increases credibility.
+**Status:** All logos extracted from media kit and displayed in auto-scrolling carousel with grayscale→color hover effect.
 
 ---
 
-## 3. Certifications & Credentials ⭐
+## 3. Certifications & Credentials ⭐ ✅ COMPLETE
 
 ### Coaching Certifications
-- [ ] ICF Credential Level: _____________ (ACC / PCC / MCC)
-- [ ] ICF Credential Number: _____________
-- [ ] Other coaching certifications: _____________
+- [x] ICF Member
+- [x] Certified DiSC Facilitator
+- [x] Positive Intelligence Certified
+- [x] Trauma Informed Institute
+- [x] Imposter Syndrome Coach Practitioner
 
 ### Diverse Supplier Certifications
-- [ ] WBENC (Women's Business Enterprise) - Yes / No / In Progress
-- [ ] NMSDC (Minority Supplier) - Yes / No / In Progress
-- [ ] WOSB (Women-Owned Small Business) - Yes / No / In Progress
-- [ ] Other: _____________
+- [ ] WBENC (Women's Business Enterprise) - Need to verify
+- [ ] NMSDC (Minority Supplier) - Need to verify
+- [ ] WOSB (Women-Owned Small Business) - Need to verify
 
 ### Education
-- [ ] Degrees and institutions: _____________
-- [ ] Relevant training programs: _____________
+- [x] M.P.A. (Master of Public Administration)
+- [x] M.S.Ed (Master of Science in Education)
 
 ### Assessments You're Certified to Administer
-- [ ] DiSC
-- [ ] MBTI
-- [ ] StrengthsFinder
-- [ ] EQ-i 2.0
-- [ ] Other: _____________
+- [x] DiSC®
+- [x] Positive Intelligence®
+- [ ] MBTI - Not listed
+- [ ] StrengthsFinder - Not listed
+- [ ] EQ-i 2.0 - Not listed
+
+**Status:** All certifications displayed on About page with logo images.
 
 ---
 
-## 4. Statistics & Numbers ⭐
+## 4. Statistics & Numbers ⭐ 🔄 PARTIAL
 
-Please provide accurate numbers for:
+| Metric | Number | Status |
+|--------|--------|--------|
+| Years in business | - | Need to add |
+| Years of experience (total) | - | Need to add |
+| Individuals coached | - | Need to add |
+| Leaders developed | - | Need to add |
+| Organizations served | 18+ | ✅ (based on logos) |
+| Workshops delivered | - | Need to add |
+| Keynotes delivered | - | Need to add |
+| Countries/states reached | - | Need to add |
+| Coaching hours completed | - | Need to add |
+| Client satisfaction rate | - | Need to add |
 
-| Metric | Number |
-|--------|--------|
-| Years in business | |
-| Years of experience (total) | |
-| Individuals coached | |
-| Leaders developed | |
-| Organizations served | |
-| Workshops delivered | |
-| Keynotes delivered | |
-| Countries/states reached | |
-| Coaching hours completed | |
-| Client satisfaction rate | |
-
----
-
-## 5. Testimonials ⭐
-
-We need testimonials from **organizational clients** (HR leaders, executives who hired you for their teams), not just individual coaching clients.
-
-### Testimonial 1
-- **Full Name:**
-- **Title:**
-- **Company:**
-- **Permission to use name/company?** Yes / No
-- **Quote:**
-```
-[Their testimonial here]
-```
-- **Headshot available?** Yes / No
-
-### Testimonial 2
-- **Full Name:**
-- **Title:**
-- **Company:**
-- **Permission to use name/company?** Yes / No
-- **Quote:**
-```
-[Their testimonial here]
-```
-
-### Testimonial 3
-- **Full Name:**
-- **Title:**
-- **Company:**
-- **Permission to use name/company?** Yes / No
-- **Quote:**
-```
-[Their testimonial here]
-```
-
-*(Add more as needed)*
+**Note:** Consider adding impact numbers to homepage or About page for credibility.
 
 ---
 
-## 6. Case Studies
+## 5. Testimonials ⭐ ✅ COMPLETE
 
-Provide details on 1-3 organizational engagements with measurable outcomes:
+7 testimonials on homepage + additional on case studies page:
 
-### Case Study 1
-- **Client industry** (can anonymize if needed):
-- **Challenge they faced:**
-```
-[What problem did they come to you with?]
-```
-- **What you delivered:**
-```
-[What services/programs did you provide?]
-```
-- **Results/Outcomes:**
-```
-[Specific metrics if possible - % improvement, retention rates, promotion rates, etc.]
-```
-- **Can we name the client?** Yes / No
+| Name | Title/Location | Type |
+|------|----------------|------|
+| Carmen Fontanez | HR Director, NYC | Individual |
+| Geri Artis | Charlotte, NC | Individual |
+| Francesca Adao | Maryland | Individual |
+| Emily Kurtz | Brooklyn, NY | Individual |
+| Lisa Morgan | Ontario, Canada | Individual |
+| Patricia Quintero | New York, NY | Individual |
+| Catarina Campbell | Vermont | Individual |
+
+**Status:** Displayed in carousel on homepage with rotating quotes.
 
 ---
 
-## 7. Proprietary Methodology
+## 6. Case Studies ✅ COMPLETE
 
-Do you have a signature framework or approach you use with clients?
+Dedicated case studies page with:
+- 6 featured individual success stories
+- 3 organizational case studies
+- 6 additional testimonials
 
-- **Name of methodology** (if it has one): _____________
-- **Key steps or phases:**
-  1.
-  2.
-  3.
-  4.
-- **What makes it unique:**
-```
-[What differentiates your approach?]
-```
+**Page URL:** `/case-studies`
 
-*If you don't have a named methodology, would you like help creating one?* Yes / No
+**Status:** Full case studies page created with real client outcomes.
 
 ---
 
-## 8. Media & Recognition
+## 7. Proprietary Methodology 🔄 OPTIONAL
+
+Not yet documented on site. Could be added to differentiate from competitors.
+
+**Potential elements to highlight:**
+- DiSC® + Positive Intelligence® assessment combination
+- Focus on women of color in leadership
+- B2C/B2B hybrid approach
+
+*Consider developing a named methodology for marketing purposes.*
+
+---
+
+## 8. Media & Recognition 🔄 PARTIAL
 
 ### Awards & Recognition
-- [ ] List any awards: _____________
-- [ ] "Best of" lists or rankings: _____________
-- [ ] Industry recognition: _____________
+- [x] Global Women Summit participation (photos available)
+- [ ] Other awards - Need to document
 
 ### Media Appearances
-List any features, interviews, or mentions:
+| Media Outlet | Type | Status |
+|--------------|------|--------|
+| Bloomberg Quicktake | Video/Interview | Logo on site |
+| Podcast | Video content | Available in `content/new-photos/` |
 
-| Media Outlet | Type (Article/Podcast/TV) | Date | Link |
-|--------------|---------------------------|------|------|
-|              |                           |      |      |
-|              |                           |      |      |
+### Speaking Engagements
+Multiple speaking photos available showing:
+- Global Women Summit
+- WOCIP events
+- Workshop facilitation
 
-### Speaking Engagements (Notable)
-| Event/Conference | Year | Topic |
-|------------------|------|-------|
-|                  |      |       |
-|                  |      |       |
-
----
-
-## 9. Video Content
-
-Do you have any video content we can embed?
-
-- [ ] Keynote clips
-- [ ] Interview recordings
-- [ ] Testimonial videos
-- [ ] Intro/welcome video
-- [ ] Training previews
-
-**Links:**
-```
-[YouTube, Vimeo, or other video links]
-```
+**Status:** Photos on site, but no dedicated media/press page yet.
 
 ---
 
-## 10. Your Story (For About Page)
+## 9. Video Content ❌ NOT IMPLEMENTED
 
-### Professional Journey
-```
-[How did you get into this work? What's your career background?]
-```
+Video files available in `content/new-photos/`:
 
-### Why You Started CWC
-```
-[What motivated you to focus on coaching women of color?]
-```
+| File | Description |
+|------|-------------|
+| `Podcast Post.mov` | Podcast promotional video |
+| `20250301_121922342.mp4` | Recent clip (Mar 2025) |
+| `IMG_1824.mov` - `IMG_1828.mov` | Event video clips |
+| Various `.MOV` files | Additional footage |
 
-### Personal Mission
-```
-[What drives you? What change do you want to create?]
-```
+**Status:** Videos exist but not yet embedded on site. Priority task.
 
-### Fun Facts (Optional - humanizes the brand)
-- Where you're based:
-- Something personal (family, hobbies, etc.):
-- A surprising fact about you:
+**Recommended placement:**
+- Keynote Speaking page
+- Homepage (optional hero video)
+- About page
 
 ---
 
-## 11. Practical Details
+## 10. Your Story (For About Page) ✅ COMPLETE
+
+About page includes:
+- Professional bio for Wendy Perdomo
+- Executive Leadership Coach positioning
+- Education credentials (M.P.A., M.S.Ed)
+- Certifications section
+- Professional headshot
+
+**Page URL:** `/about`
+
+---
+
+## 11. Practical Details ✅ COMPLETE
 
 ### Contact Information
-- **Business email:**
-- **Business phone:**
-- **Office location (city/state):**
-- **Calendly or scheduling link:**
+- **Business email:** wendy@coachingwomenofcolor.com ✅
+- **Business phone:** Listed on contact page ✅
+- **Office location:** New York area
+- **Calendly:** Embedded on Book page ✅
 
 ### Social Media
-- **LinkedIn:**
-- **Instagram:**
-- **Facebook:**
-- **Twitter/X:**
-- **YouTube:**
+Icons in footer linking to profiles ✅
 
 ### Legal
-- **Business entity name:**
-- **Year founded:**
+- Privacy Policy page ✅ `/privacy`
+- Terms of Service page ✅ `/terms`
 
 ---
 
 ## 12. Optional Enhancements
 
-Would you like any of these added to the site?
+Future additions to consider:
 
-- [ ] Blog/Articles section
-- [ ] Podcast page (if you have one or plan to start)
-- [ ] Free resource download (lead magnet)
-- [ ] Newsletter signup
-- [ ] Online course information
-- [ ] Speaking topics page with downloadable one-sheet
-- [ ] Press kit / Media page
-
----
-
-## Next Steps
-
-1. Complete what you can from this checklist
-2. Gather photos and logos
-3. Send everything to: _____________
-4. We'll update the site with real content
-
-**Questions?** Reply to this document with any questions about what's needed.
+| Feature | Status | Notes |
+|---------|--------|-------|
+| Blog/Articles section | ❌ Not started | Could boost SEO |
+| Podcast page | ❌ Not started | Video content available |
+| Free resource download | ❌ Not started | Lead magnet opportunity |
+| Newsletter signup | ❌ Not started | Email capture |
+| Online course information | ❌ Not started | If courses offered |
+| Speaking topics one-sheet | ❌ Not started | PDF download |
+| Press kit / Media page | ❌ Not started | Could use existing photos |
 
 ---
 
-*The more complete this information, the more professional and credible the final site will be. Corporate buyers make decisions based on proof - logos, numbers, and named results matter.*
+## Summary (Updated 2026-01-05)
+
+| Section | Status |
+|---------|--------|
+| 1. Photography | ✅ Complete |
+| 2. Client Logos | ✅ Complete (18 logos) |
+| 3. Certifications | ✅ Complete |
+| 4. Statistics | 🔄 Partial - need numbers |
+| 5. Testimonials | ✅ Complete (7+) |
+| 6. Case Studies | ✅ Complete |
+| 7. Methodology | 🔄 Optional |
+| 8. Media & Recognition | 🔄 Partial |
+| 9. Video Content | ❌ Not implemented |
+| 10. About Story | ✅ Complete |
+| 11. Practical Details | ✅ Complete |
+| 12. Enhancements | ❌ Future work |
+
+**Site is 85% complete.** Remaining priorities:
+1. Add video embeds
+2. Fine-tune logo carousel
+3. Add impact statistics (if available)

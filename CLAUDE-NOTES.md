@@ -1,23 +1,54 @@
 # Claude Session Notes - CWC Website
 
-**Last Updated:** 2026-01-04
+**Last Updated:** 2026-01-05
 
 **Live Site:** https://mdxvision.github.io/cwc-website/
 
 ---
 
-## Latest Session (Jan 4, 2026) - Project Review & Orientation
+## Latest Session (Jan 5, 2026) - Project Review & Orientation
 
 ### Session Summary
 - Reviewed full project structure and documentation
-- Confirmed site is live and git is clean
-- Identified remaining tasks: logo carousel sizing, video embeds, new photo selection
+- Read all key files: CLAUDE-NOTES.md, CONTENT-CHECKLIST.md, APPLE-STYLING-NOTES.md
+- Confirmed site is live at https://mdxvision.github.io/cwc-website/
+- Git status: clean, up to date with origin/main
+- Identified 4 remaining tasks for completion
 
-### Remaining Work
-- [ ] Fine-tune logo carousel sizing (J&J, Colgate may need adjustment)
-- [ ] Add video embeds to keynote/speaking page
-- [ ] Select best headshots from WOCIP (Dec 2024) shoot
-- [ ] Convert selected HEIC files to JPEG for web
+### Project Status
+| Area | Status |
+|------|--------|
+| Core Pages (16) | ✅ Complete |
+| Pricing | ✅ Complete |
+| Photos (11 optimized) | ✅ Complete |
+| Client Logos (18) | ✅ Complete |
+| Case Studies | ✅ Complete |
+| Testimonials (6+) | ✅ Complete |
+| Logo Carousel | 🔄 Needs sizing adjustment |
+| Video Embeds | ❌ Not started |
+| New Photo Selection | ❌ Not started |
+
+### Remaining Work (Priority Order)
+1. [ ] **Logo carousel sizing** - J&J, Colgate logos may need adjustment
+2. [ ] **Video embeds** - Add to keynote/speaking page from `content/new-photos/`
+3. [ ] **WOCIP photo selection** - Pick best Dec 2024 headshots
+4. [ ] **HEIC conversion** - Convert iPhone photos to web-ready JPEG
+
+### Files & Structure
+```
+src/app/           - 16 pages (tsx)
+src/components/    - Header, Footer, TestimonialsCarousel
+public/images/     - 55 converted images from media kit
+public/images/new/ - 11 optimized photos (headshots + action)
+content/           - Source materials (PPTX, PDF, new-photos)
+```
+
+### Quick Commands
+```bash
+npm run dev        # Dev server on port 3001
+npm run build      # Production build
+git push           # Auto-deploys to GitHub Pages
+```
 
 ---
 
