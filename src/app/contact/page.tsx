@@ -9,8 +9,17 @@ export default function ContactPage() {
     email: "",
     company: "",
     type: "organization",
+    service: "",
     message: "",
   });
+
+  const organizationalServices = [
+    "Executive Coaching",
+    "Group Coaching",
+    "Keynote Speaking",
+    "Workshops & Webinars",
+    "Virtual Series",
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -102,7 +111,7 @@ export default function ContactPage() {
                           name="type"
                           value="organization"
                           checked={formData.type === "organization"}
-                          onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                          onChange={(e) => setFormData({ ...formData, type: e.target.value, service: "" })}
                           className="w-4 h-4 text-[#3EBCE8] focus:ring-[#3EBCE8]"
                         />
                         <span className="text-[#525252]">Organizational Services</span>
@@ -113,13 +122,35 @@ export default function ContactPage() {
                           name="type"
                           value="individual"
                           checked={formData.type === "individual"}
-                          onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                          onChange={(e) => setFormData({ ...formData, type: e.target.value, service: "" })}
                           className="w-4 h-4 text-[#3EBCE8] focus:ring-[#3EBCE8]"
                         />
                         <span className="text-[#525252]">Individual Coaching</span>
                       </label>
                     </div>
                   </div>
+
+                  {formData.type === "organization" && (
+                    <div>
+                      <label htmlFor="service" className="block text-sm font-medium text-[#1A1A1A] mb-2">
+                        Which service are you interested in? *
+                      </label>
+                      <select
+                        id="service"
+                        required
+                        className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all bg-white"
+                        value={formData.service}
+                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      >
+                        <option value="">Select a service...</option>
+                        {organizationalServices.map((service) => (
+                          <option key={service} value={service}>
+                            {service}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-[#1A1A1A] mb-2">
