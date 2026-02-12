@@ -94,14 +94,37 @@ const solutions = [
   },
 ];
 
-const pricing = [
-  { service: "Workshops/Webinars (60–90 min)", price: "$5,000" },
-  { service: "3-Part Learning Series", price: "$7,500" },
-  { service: "Half-Day Team Session", price: "$5,000 + assessments" },
-  { service: "Full-Day Offsite/Retreat", price: "$10,000" },
-  { service: "Cohort Group Coaching", price: "$5,000+" },
-  { service: "Executive Coaching", price: "Custom" },
-  { service: "Consulting (hourly)", price: "$350/hour" },
+const processSteps = [
+  {
+    step: "1",
+    title: "Right Fit",
+    description: "Identify if we have the capability to serve your organization and if we're a good fit.",
+  },
+  {
+    step: "2",
+    title: "Needs Discovery",
+    description: "Identify your organization's urgent problem or opportunity with all stakeholders.",
+  },
+  {
+    step: "3",
+    title: "Co-Create",
+    description: "With your input, deliver our recommended strategic approach to address urgent problems and opportunities.",
+  },
+  {
+    step: "4",
+    title: "Engagement Letter & Contract",
+    description: "Confirm the scope of work, payment, and terms.",
+  },
+  {
+    step: "5",
+    title: "Execute",
+    description: "Deliver on our commitments and drive results for your organization.",
+  },
+  {
+    step: "6",
+    title: "Strategic Debrief",
+    description: "Interpret the results, share conclusions, and adapt learning as we explore next phase of our work.",
+  },
 ];
 
 const benefits = [
@@ -131,7 +154,7 @@ export default function ForOrganizationsPage() {
               </h1>
               <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
                 High-impact coaching and development programs that strengthen leaders
-                and transform culture. Solutions starting at $5,000, customized to your needs.
+                and transform culture. Every engagement is customized to your needs.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="btn-primary">
@@ -251,81 +274,46 @@ export default function ForOrganizationsPage() {
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* How We Work With You Section */}
         <section className="section gradient-subtle">
-          <div className="container-wide">
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <div>
-                <h2 className="heading-display">
-                  Investment
-                  <br />
-                  <span className="text-gradient">Starting at $5,000</span>
-                </h2>
-                <p className="body-large mt-6">
-                  Pricing is customized based on duration, participant count, customization level,
-                  assessments, deliverables, and travel requirements.
-                </p>
-                <div className="mt-8">
-                  <Link href="/contact" className="btn-primary">
-                    Get a Custom Quote
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-3xl p-8 shadow-lg">
-                <h3 className="heading-card mb-6">Starting Points</h3>
-                <div className="space-y-4">
-                  {pricing.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex justify-between items-center py-3 border-b border-[#E5E5E5] last:border-0"
-                    >
-                      <span className="text-[#525252]">{item.service}</span>
-                      <span className="font-semibold text-[#1A1A1A]">{item.price}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="section bg-white">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
-                How We <span className="text-gradient">Work</span>
+                How We Work <span className="text-gradient">With You</span>
               </h2>
-              <p className="body-large mt-4">Simple process. Meaningful outcomes.</p>
+              <p className="body-large mt-4">
+                A proven process designed for organizational partners.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              {processSteps.slice(0, 3).map((item) => (
+                <div key={item.step} className="bg-white rounded-2xl p-6 shadow-sm">
+                  <div className="w-12 h-12 bg-[#1A365D] rounded-lg flex items-center justify-center mb-4 rotate-45">
+                    <span className="text-xl font-bold text-white -rotate-45">{item.step}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] uppercase tracking-wide">{item.title}</h3>
+                  <p className="text-[#737373] mt-2 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              ))}
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  step: "01",
-                  title: "Discovery Call",
-                  description: "We understand your goals, audience, and organizational context.",
-                },
-                {
-                  step: "02",
-                  title: "Custom Proposal",
-                  description: "We propose format, scope, and deliverables tailored to your needs.",
-                },
-                {
-                  step: "03",
-                  title: "Delivery + Action",
-                  description: "Virtual or in-person delivery with measurable outcomes and action planning.",
-                },
-              ].map((item) => (
-                <div key={item.step} className="text-center">
-                  <div className="w-16 h-16 bg-[#E8F8FD] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-[#3EBCE8]">{item.step}</span>
+              {processSteps.slice(3, 6).map((item) => (
+                <div key={item.step} className="bg-white rounded-2xl p-6 shadow-sm">
+                  <div className="w-12 h-12 bg-[#1A365D] rounded-lg flex items-center justify-center mb-4 rotate-45">
+                    <span className="text-xl font-bold text-white -rotate-45">{item.step}</span>
                   </div>
-                  <h3 className="heading-card">{item.title}</h3>
-                  <p className="text-[#737373] mt-2">{item.description}</p>
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] uppercase tracking-wide">{item.title}</h3>
+                  <p className="text-[#737373] mt-2 text-sm leading-relaxed">{item.description}</p>
                 </div>
               ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link href="/contact" className="btn-primary">
+                Get a Custom Quote
+              </Link>
             </div>
           </div>
         </section>
