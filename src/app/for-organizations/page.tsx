@@ -92,6 +92,21 @@ const solutions = [
     details: "Leaders return to the room, apply what they learned, and refine their approach with support. Series can be designed for leadership cohorts, people managers, high-potential groups, or cross-functional teams.",
     formats: ["3+ sessions (60-90 min each)", "Pre-session surveys", "Workbooks & action plans", "Optional coaching add-ons"],
   },
+  {
+    id: "strategic-retreats",
+    title: "Strategic Leadership & Board Retreats",
+    subtitle: "Align, Strategize, and Move Forward Together",
+    description: "Executive teams, boards of directors, and senior leadership groups seeking clarity, alignment, and actionable strategy in a focused, facilitated environment.",
+    outcomes: [
+      "Aligned vision and shared priorities across leadership",
+      "Strengthened trust, communication, and team cohesion",
+      "Clear action plans with defined ownership and accountability",
+      "Renewed energy and commitment to organizational goals",
+      "Strategic clarity on critical decisions and direction",
+    ],
+    details: "Retreats are fully customized to your team's needs—whether you're navigating a transition, setting annual strategy, resolving tension, or building stronger board dynamics. We create a space where honest dialogue leads to meaningful outcomes.",
+    formats: ["Half-day or full-day sessions", "In-person or hybrid", "Pre-retreat assessments", "Post-retreat action planning"],
+  },
 ];
 
 const processSteps = [

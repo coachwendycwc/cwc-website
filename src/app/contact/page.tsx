@@ -19,6 +19,8 @@ export default function ContactPage() {
     "Keynote Speaking",
     "Workshops & Webinars",
     "Virtual Series",
+    "Strategic Leadership & Board Retreats",
+    "Other",
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
