@@ -196,10 +196,10 @@ export default function Home() {
                 {/* Dual CTA */}
                 <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Link href="/for-organizations" className="btn-primary">
-                    Partner With Us
+                    For Organizations
                   </Link>
                   <Link href="/for-individuals" className="btn-secondary">
-                    Individual Coaching
+                    For Individuals
                   </Link>
                 </div>
               </div>
