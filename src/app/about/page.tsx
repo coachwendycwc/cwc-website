@@ -3,23 +3,40 @@ import { Header, Footer } from "@/components";
 import { siteConfig } from "@/config";
 
 const credentials = [
-  "M.P.A. (Master of Public Administration)",
-  "M.S.Ed (Master of Science in Education)",
+  "B.A., Colgate University",
+  "M.P.A., Baruch College School of Public Affairs",
+  "M.S.Ed., Baruch College School of Public Affairs",
+  "Executive Education, Columbia Business School",
 ];
 
 const certifications = [
   "ICF Member",
   "Certified DiSC® Facilitator",
+  "Accomplishment Coaching Certified",
   "Imposter Syndrome Coach Practitioner",
 ];
 
 const expertise = [
-  "Executive Coaching to Senior Leaders & C-Suite",
-  "Leadership Development & Training Program Design",
-  "Diversity, Equity & Inclusion",
-  "Communication & DiSC Facilitation",
-  "Performance Management",
-  "Courageous Conversations",
+  "Executive Coaching & Leadership Transformation",
+  "Organizational Development Strategy",
+  "DiSC® Assessment & Facilitation",
+  "Team Dynamics & Performance Coaching",
+  "Workplace Culture & Psychological Safety",
+  "Courageous Conversations & Conflict Navigation",
+];
+
+const affiliations = [
+  "Faculty Member, Surge Institute",
+  "Faculty Member, International Coaching Leadership Institute",
+  "Lead Facilitator, WOCIP Global Leadership Accelerator Program",
+  "Featured on Bloomberg QuickTake",
+];
+
+const notableClients = [
+  "TD Bank",
+  "Hills Pet Nutrition",
+  "University of Michigan",
+  "NJ Arts & Culture Renewal Fund",
 ];
 
 export default function AboutPage() {
@@ -61,16 +78,13 @@ export default function AboutPage() {
                 </h2>
                 <p className="text-lg text-[#737373] mt-2">M.P.A., M.S.Ed</p>
                 <p className="body-large mt-6">
-                  Wendy Perdomo is an Executive Leadership Coach with over
-                  25 years of experience in non-profit education reform and leadership.
-                  As a certified coach, international speaker, and non-profit executive,
-                  she brings a unique blend of corporate expertise and deep understanding
-                  of the challenges women of color face in the workplace.
+                  Wendy Perdomo is the Founder and Executive Leadership &amp; Life Coach at Coaching Women of Color, LLC, a premier coaching and leadership development firm committed to advancing the voice, visibility, and impact of professional women of color in today&apos;s workforce. With over two decades of experience across the nonprofit, education, and public sectors, Wendy is a master facilitator, certified executive coach, and organizational development strategist.
                 </p>
                 <p className="body-large mt-4">
-                  Her approach is rooted in authenticity, combining evidence-based
-                  frameworks like DiSC® with a compassionate, culturally-aware coaching
-                  style that helps clients feel truly seen, heard, and understood.
+                  Wendy partners with organizations and executives to cultivate inclusive, high-performing cultures where people and teams can thrive. As a certified DiSC® facilitator, she leverages assessment-based coaching and facilitation to improve communication, strengthen collaboration, and build psychologically safe environments that foster trust, cohesion, and accountability.
+                </p>
+                <p className="body-large mt-4">
+                  Widely regarded as a strategic thought partner, Wendy helps leaders at all levels refine their leadership presence, develop emotional intelligence, and navigate complex organizational challenges—from team transitions and workplace culture repair to bias incidents and courageous conversations. She is passionate about creating space for women of color to lead authentically, manage power with confidence, and move with clarity through all levels of leadership.
                 </p>
 
                 {/* Education */}
@@ -114,7 +128,7 @@ export default function AboutPage() {
                     className="w-80 md:w-96 h-auto mx-auto rounded-2xl object-cover"
                   />
                   <p className="text-sm text-[#737373] mt-4">
-                    Executive Leadership Coach
+                    Founder & Executive Leadership Coach
                   </p>
                 </div>
                 <div className="space-y-6">
@@ -143,7 +157,7 @@ export default function AboutPage() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {expertise.map((item) => (
                 <div key={item} className="card text-center">
                   <div className="w-10 h-10 bg-[#E8F8FD] rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -154,6 +168,40 @@ export default function AboutPage() {
                   <p className="text-[#525252] font-medium">{item}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Affiliations & Clients Section */}
+        <section className="section bg-white">
+          <div className="container-wide">
+            <div className="grid lg:grid-cols-2 gap-16">
+              <div>
+                <h2 className="heading-card mb-6">Affiliations</h2>
+                <ul className="space-y-3">
+                  {affiliations.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-[#3EBCE8] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-[#525252]">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h2 className="heading-card mb-6">Notable Clients</h2>
+                <div className="flex flex-wrap gap-3">
+                  {notableClients.map((client) => (
+                    <span
+                      key={client}
+                      className="px-4 py-2 bg-[#F5F5F5] text-[#525252] rounded-full"
+                    >
+                      {client}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
