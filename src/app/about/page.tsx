@@ -29,6 +29,7 @@ const affiliations = [
   "Faculty Member, Surge Institute",
   "Faculty Member, International Coaching Leadership Institute",
   "Lead Facilitator, WOCIP Global Leadership Accelerator Program",
+  "Developing Capacity Coach Affiliate",
   "Featured on Bloomberg QuickTake",
 ];
 
