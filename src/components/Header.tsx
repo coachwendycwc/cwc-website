@@ -10,22 +10,18 @@ const navigation = [
   {
     name: "For Organizations",
     href: "/for-organizations",
-    matchPaths: ["/for-organizations"],
+    matchPaths: ["/for-organizations", "/services"],
   },
   {
-    name: "Services",
-    href: "/services",
-    matchPaths: ["/services"],
-    children: [
-      { name: "DEI Workshops", href: "/services/dei-workshops" },
-      { name: "Leadership Development", href: "/services/leadership-development" },
-      { name: "Keynote Speaking", href: "/services/keynote-speaking" },
-      { name: "Consulting", href: "/services/consulting" },
-    ],
+    name: "For Individuals",
+    href: "/for-individuals",
+    matchPaths: ["/for-individuals", "/executive-coaching"],
   },
-  { name: "Coaching", href: "/for-individuals", matchPaths: ["/for-individuals", "/executive-coaching"] },
-  { name: "About", href: "/about", matchPaths: ["/about", "/case-studies"] },
-  { name: "Contact", href: "/contact", matchPaths: ["/contact", "/book"] },
+  {
+    name: "About",
+    href: "/about",
+    matchPaths: ["/about", "/case-studies"],
+  },
 ];
 
 export default function Header() {
