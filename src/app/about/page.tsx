@@ -208,32 +208,39 @@ export default function AboutPage() {
         </section>
 
         {/* Values Section */}
-        <section className="section bg-white">
+        <section className="section gradient-subtle">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
                 What We <span className="text-gradient">Stand For</span>
               </h2>
+              <p className="body-large mt-6">
+                Our coaching philosophy is built on the principles of inclusion, empowerment, and intentional action. We believe that:
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  title: "Authenticity",
-                  description: "We believe in showing up as your full self. Our approach celebrates the unique perspectives and experiences that women of color bring to leadership.",
+                  title: "Authenticity Drives Impact",
+                  description: "Success is most sustainable when leaders show up as their full, authentic selves.",
                 },
                 {
-                  title: "Impact",
-                  description: "Every program, every session, every conversation is designed to create measurable, lasting change—not just check boxes.",
+                  title: "Opportunity is Essential",
+                  description: "Leadership development should be accessible and inclusive, addressing systemic barriers and fostering equal opportunity.",
                 },
                 {
-                  title: "Community",
-                  description: "We build connections. Our work creates networks of support that extend far beyond the workshop or coaching session.",
+                  title: "Communication is Key",
+                  description: "Effective communication builds trust, aligns teams, and enhances collaboration.",
+                },
+                {
+                  title: "Action Creates Change",
+                  description: "Through reflection, goal-setting, and accountability, we guide our clients to achieve transformative results both personally and professionally.",
                 },
               ].map((value) => (
-                <div key={value.title} className="card-bordered">
-                  <h3 className="heading-card text-[#3EBCE8]">{value.title}</h3>
-                  <p className="text-[#737373] mt-4 leading-relaxed">{value.description}</p>
+                <div key={value.title} className="bg-white rounded-2xl p-6 shadow-sm">
+                  <h3 className="font-semibold text-[#1A1A1A] text-lg">{value.title}</h3>
+                  <p className="text-[#737373] mt-3 leading-relaxed text-sm">{value.description}</p>
                 </div>
               ))}
             </div>
