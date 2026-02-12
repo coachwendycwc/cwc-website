@@ -10,8 +10,6 @@ const credentials = [
 const certifications = [
   "ICF Member",
   "Certified DiSC® Facilitator",
-  "Positive Intelligence® Certified",
-  "Trauma Informed Institute",
   "Imposter Syndrome Coach Practitioner",
 ];
 
@@ -22,8 +20,6 @@ const expertise = [
   "Communication & DiSC Facilitation",
   "Performance Management",
   "Courageous Conversations",
-  "Positive Intelligence",
-  "Trauma-Informed Advocacy",
 ];
 
 export default function AboutPage() {
@@ -73,9 +69,8 @@ export default function AboutPage() {
                 </p>
                 <p className="body-large mt-4">
                   Her approach is rooted in authenticity, combining evidence-based
-                  frameworks like DiSC® and Positive Intelligence® with a compassionate,
-                  culturally-aware coaching style that helps clients feel truly seen,
-                  heard, and understood.
+                  frameworks like DiSC® with a compassionate, culturally-aware coaching
+                  style that helps clients feel truly seen, heard, and understood.
                 </p>
 
                 {/* Education */}
