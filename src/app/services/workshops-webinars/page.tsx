@@ -2,39 +2,38 @@ import Link from "next/link";
 import { Header, Footer } from "@/components";
 
 const outcomes = [
-  "Practical strategies leaders can apply immediately",
-  "Increased confidence and clarity in leadership decisions",
-  "Peer support and accountability that accelerates growth",
-  "Stronger ability to lead teams with trust and consistency",
-  "Shared language and frameworks across leadership levels",
+  "Customized to your goals, audience, and culture",
+  "Trauma-informed facilitation that supports participation and trust",
+  "Tools, templates, and action steps leaders can use immediately",
+  "Options for pre-surveys and follow-up resources",
 ];
 
 const topics = [
-  "Leading through change and uncertainty",
-  "Executive presence, influence, and visibility",
-  "Communication, feedback, and courageous conversations",
-  "Boundaries, workload management, and sustainable leadership",
-  "Navigating conflict, team dynamics, and performance challenges",
+  "Psychological safety and team norms",
+  "Communication, feedback, and conflict navigation",
+  "Executive presence and leadership visibility",
+  "Navigating bias and inclusive leadership practices",
+  "Building high-performing teams and accountability",
 ];
 
-export default function GroupCoachingPage() {
+export default function WorkshopsWebinarsPage() {
   return (
     <>
       <Header />
 
       <main id="main-content">
         {/* Hero */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#FFF8E8] to-white">
+        <section className="pt-32 pb-20 bg-gradient-to-b from-[#FCE8F3] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
               <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
                 ← Back to Solutions
               </Link>
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                Group Coaching
+                Workshops & Webinars
               </h1>
               <p className="mt-6 text-xl text-[#525252] leading-relaxed">
-                Leadership development at scale. Build capability across your organization while creating shared language and stronger peer connection.
+                Interactive learning experiences that build skills, shift mindsets, and equip your teams with practical tools they can use immediately.
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
@@ -54,23 +53,23 @@ export default function GroupCoachingPage() {
                   The Challenge
                 </p>
                 <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                  Developing leaders one at a time doesn&apos;t scale.
+                  Training that doesn&apos;t change behavior is wasted time.
                 </h2>
                 <p className="mt-6 text-lg text-[#525252] leading-relaxed">
-                  Organizations need leaders at every level equipped with the same skills, frameworks, and language. But traditional training often fails to create lasting behavior change.
+                  Too many workshops check a box without creating real change. Participants sit through slides, nod along, and return to their desks unchanged.
                 </p>
                 <p className="mt-4 text-lg text-[#525252] leading-relaxed">
-                  Group coaching combines the depth of coaching with the power of peer learning—creating accountability, connection, and momentum that sticks.
+                  Our workshops are different. We design for application—not just awareness. Every session includes practice, reflection, and clear next steps that participants can implement immediately.
                 </p>
               </div>
               <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12">
                 <p className="text-sm font-medium text-[#1A1A1A] uppercase tracking-widest mb-6">
-                  What Leaders Gain
+                  What You Get
                 </p>
                 <ul className="space-y-4">
                   {outcomes.map((outcome) => (
                     <li key={outcome} className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-[#FFC425] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span className="text-[#525252]">{outcome}</span>
@@ -82,22 +81,22 @@ export default function GroupCoachingPage() {
           </div>
         </section>
 
-        {/* Focus Areas */}
+        {/* Topics */}
         <section className="section gradient-subtle">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
-                Focus <span className="text-gradient">Areas</span>
+                Workshop <span className="text-gradient">Topics</span>
               </h2>
               <p className="body-large mt-4">
-                Sessions are tailored to your organization&apos;s priorities.
+                Each workshop is tailored to your organization&apos;s needs.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {topics.map((topic) => (
                 <div key={topic} className="bg-white rounded-2xl p-6 shadow-sm">
-                  <div className="w-2 h-2 bg-[#FFC425] rounded-full mb-4" />
+                  <div className="w-2 h-2 bg-[#E91E8C] rounded-full mb-4" />
                   <p className="text-[#1A1A1A] font-medium">{topic}</p>
                 </div>
               ))}
@@ -105,8 +104,27 @@ export default function GroupCoachingPage() {
           </div>
         </section>
 
-        {/* Formats */}
+        {/* Best For */}
         <section className="section bg-white">
+          <div className="container-tight text-center">
+            <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+              Best For
+            </p>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
+              Leadership teams, people managers, ERGs, high-potential cohorts, or cross-functional teams needing practical skill-building.
+            </h2>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              {["Leadership Teams", "People Managers", "ERGs", "High-Potential Cohorts", "Cross-Functional Teams"].map((tag) => (
+                <span key={tag} className="px-4 py-2 bg-[#F5F5F5] text-[#525252] rounded-full text-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Formats */}
+        <section className="section bg-[#F5F5F5]">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
@@ -116,12 +134,13 @@ export default function GroupCoachingPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { title: "By Level", description: "Cohorts designed for emerging, mid-level, or senior leaders with relevant challenges." },
-                { title: "Virtual or In-Person", description: "Delivered where it works best for your team—remote, on-site, or hybrid." },
-                { title: "Short or Extended", description: "From focused 3-session sprints to longer engagements for deeper transformation." },
+                { title: "Standalone Webinar", duration: "60-90 min", description: "Focused session on a single topic, delivered virtually to any size audience." },
+                { title: "Interactive Workshop", duration: "Half day", description: "Deeper dive with breakout activities, practice scenarios, and peer discussion." },
+                { title: "Workshop + Coaching", duration: "Multi-session", description: "Extended engagement combining workshops with follow-up group coaching." },
               ].map((format) => (
-                <div key={format.title} className="text-center">
-                  <h3 className="text-lg font-semibold text-[#1A1A1A]">{format.title}</h3>
+                <div key={format.title} className="bg-white rounded-2xl p-6 text-center">
+                  <p className="text-sm font-medium text-[#E91E8C] uppercase tracking-wider">{format.duration}</p>
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] mt-2">{format.title}</h3>
                   <p className="text-[#737373] mt-2">{format.description}</p>
                 </div>
               ))}
@@ -133,10 +152,10 @@ export default function GroupCoachingPage() {
         <section className="section bg-[#1A1A1A] text-white">
           <div className="container-tight text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-              Develop leaders at scale.
+              Build skills that stick.
             </h2>
             <p className="mt-6 text-xl text-[#A3A3A3]">
-              Let&apos;s design a group coaching program for your organization.
+              Let&apos;s design a workshop experience for your team.
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">

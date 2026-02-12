@@ -2,13 +2,19 @@ import Link from "next/link";
 import { Header, Footer } from "@/components";
 import { siteConfig } from "@/config";
 
-const speakingTopics = [
-  "The Business Case for Inclusion",
-  "Leading with Authenticity",
-  "Breaking Barriers: Women of Color in Leadership",
-  "From Awareness to Action: Moving Beyond Performative DEI",
-  "Building Psychological Safety in Teams",
-  "The Power of Belonging",
+const outcomes = [
+  "Clear insights and language they can use immediately",
+  "Practical frameworks for communication and leadership decisions",
+  "A renewed sense of responsibility and possibility",
+  "Action steps that support culture change, not just motivation",
+];
+
+const topics = [
+  "Leading with executive presence and influence",
+  "Navigating workplace dynamics and bias",
+  "Psychological safety: what it is, what it isn't, and how to build it",
+  "Communication that strengthens trust and performance",
+  "Confidence, visibility, and leading authentically",
 ];
 
 export default function KeynoteSpeakingPage() {
@@ -17,7 +23,7 @@ export default function KeynoteSpeakingPage() {
       <Header />
 
       <main id="main-content">
-        {/* Hero Section */}
+        {/* Hero */}
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#F7FAE5] to-white">
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -28,13 +34,12 @@ export default function KeynoteSpeakingPage() {
                 <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                   Keynote Speaking
                 </h1>
-                <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
-                  Powerful presentations that inspire, educate, and motivate your teams
-                  to embrace inclusion as a competitive advantage.
+                <p className="mt-6 text-xl text-[#525252] leading-relaxed">
+                  Engaging, high-impact presentations that spark real conversation and meaningful action—not just applause.
                 </p>
                 <div className="mt-10">
                   <Link href="/contact" className="btn-primary">
-                    Book a Speaker
+                    Get a Custom Quote
                   </Link>
                 </div>
               </div>
@@ -43,7 +48,7 @@ export default function KeynoteSpeakingPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`${siteConfig.basePath}/images/new/action-summit-talk.jpg`}
-                  alt="Wendy Perdomo speaking to a large audience"
+                  alt="Wendy Perdomo delivering a keynote presentation"
                   className="relative w-full h-auto rounded-2xl shadow-xl object-cover"
                 />
               </div>
@@ -51,31 +56,35 @@ export default function KeynoteSpeakingPage() {
           </div>
         </section>
 
-        {/* Speaking Topics */}
+        {/* The Challenge */}
         <section className="section bg-white">
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="heading-display">
-                  Inspire <span className="text-gradient">Action</span>
-                </h2>
-                <p className="body-large mt-6">
-                  A great keynote doesn&apos;t just inform—it transforms. Our speakers combine
-                  compelling storytelling with practical insights that leave audiences
-                  energized and equipped to drive change.
+                <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                  The Challenge
                 </p>
-                <p className="body-large mt-4">
-                  Whether it&apos;s a conference, leadership summit, or company-wide event,
-                  we deliver presentations that resonate and inspire action.
+                <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
+                  Most keynotes inspire for a moment, then fade.
+                </h2>
+                <p className="mt-6 text-lg text-[#525252] leading-relaxed">
+                  Organizations invest in speakers who energize the room—but a week later, nothing has changed. The message didn&apos;t stick. The action didn&apos;t happen.
+                </p>
+                <p className="mt-4 text-lg text-[#525252] leading-relaxed">
+                  Our keynotes are designed differently. We combine compelling storytelling with practical frameworks that audiences can apply the next day. Inspiration with implementation.
                 </p>
               </div>
               <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12">
-                <h3 className="heading-card mb-6">Popular Topics</h3>
+                <p className="text-sm font-medium text-[#1A1A1A] uppercase tracking-widest mb-6">
+                  What Audiences Gain
+                </p>
                 <ul className="space-y-4">
-                  {speakingTopics.map((topic) => (
-                    <li key={topic} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-[#C4D82E] rounded-full" />
-                      <span className="text-[#525252]">{topic}</span>
+                  {outcomes.map((outcome) => (
+                    <li key={outcome} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-[#C4D82E] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-[#525252]">{outcome}</span>
                     </li>
                   ))}
                 </ul>
@@ -84,8 +93,31 @@ export default function KeynoteSpeakingPage() {
           </div>
         </section>
 
-        {/* Event Types */}
+        {/* Topics */}
         <section className="section gradient-subtle">
+          <div className="container-wide">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="heading-display">
+                Signature <span className="text-gradient">Topics</span>
+              </h2>
+              <p className="body-large mt-4">
+                Each keynote is customized to your audience and goals.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {topics.map((topic) => (
+                <div key={topic} className="bg-white rounded-2xl p-6 shadow-sm">
+                  <div className="w-2 h-2 bg-[#C4D82E] rounded-full mb-4" />
+                  <p className="text-[#1A1A1A] font-medium">{topic}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Formats */}
+        <section className="section bg-white">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
@@ -95,14 +127,14 @@ export default function KeynoteSpeakingPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { title: "Keynote Address", duration: "45-60 min", description: "High-impact presentation for large audiences at conferences and summits." },
-                { title: "Fireside Chat", duration: "30-45 min", description: "Intimate, conversational format perfect for leadership retreats." },
-                { title: "Panel Moderation", duration: "Varies", description: "Expert facilitation of panel discussions on DEI topics." },
+                { title: "Keynote Address", duration: "45-60 min", description: "High-impact presentation for conferences, summits, and company-wide events." },
+                { title: "Keynote + Q&A", duration: "60-90 min", description: "Extended format with audience engagement and real-time discussion." },
+                { title: "Keynote + Workshop", duration: "Half day", description: "Combine inspiration with hands-on skill building for deeper impact." },
               ].map((format) => (
-                <div key={format.title} className="card">
+                <div key={format.title} className="text-center">
                   <p className="text-sm font-medium text-[#C4D82E] uppercase tracking-wider">{format.duration}</p>
-                  <h3 className="heading-card mt-2">{format.title}</h3>
-                  <p className="text-[#737373] mt-3">{format.description}</p>
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] mt-2">{format.title}</h3>
+                  <p className="text-[#737373] mt-2">{format.description}</p>
                 </div>
               ))}
             </div>
@@ -120,7 +152,7 @@ export default function KeynoteSpeakingPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Inquire About Availability
+                Get a Custom Quote
               </Link>
             </div>
           </div>

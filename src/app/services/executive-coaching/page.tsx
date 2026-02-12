@@ -2,39 +2,31 @@ import Link from "next/link";
 import { Header, Footer } from "@/components";
 
 const outcomes = [
-  "Practical strategies leaders can apply immediately",
-  "Increased confidence and clarity in leadership decisions",
-  "Peer support and accountability that accelerates growth",
-  "Stronger ability to lead teams with trust and consistency",
-  "Shared language and frameworks across leadership levels",
+  "Clear leadership identity and decision-making confidence",
+  "Stronger communication, influence, and executive presence",
+  "Boundary-setting and sustainable performance",
+  "Strategies to navigate bias, conflict, and high-stakes conversations",
+  "A leadership approach that builds trust and drives results",
 ];
 
-const topics = [
-  "Leading through change and uncertainty",
-  "Executive presence, influence, and visibility",
-  "Communication, feedback, and courageous conversations",
-  "Boundaries, workload management, and sustainable leadership",
-  "Navigating conflict, team dynamics, and performance challenges",
-];
-
-export default function GroupCoachingPage() {
+export default function ExecutiveCoachingPage() {
   return (
     <>
       <Header />
 
       <main id="main-content">
         {/* Hero */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#FFF8E8] to-white">
+        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
               <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
                 ← Back to Solutions
               </Link>
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                Group Coaching
+                Executive Coaching
               </h1>
               <p className="mt-6 text-xl text-[#525252] leading-relaxed">
-                Leadership development at scale. Build capability across your organization while creating shared language and stronger peer connection.
+                1:1 high-impact coaching for senior leaders and high-potential talent who need a confidential, strategic space to lead with clarity and confidence.
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
@@ -54,13 +46,13 @@ export default function GroupCoachingPage() {
                   The Challenge
                 </p>
                 <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                  Developing leaders one at a time doesn&apos;t scale.
+                  Leadership is lonely at the top.
                 </h2>
                 <p className="mt-6 text-lg text-[#525252] leading-relaxed">
-                  Organizations need leaders at every level equipped with the same skills, frameworks, and language. But traditional training often fails to create lasting behavior change.
+                  Senior leaders face decisions that shape teams, cultures, and careers—often without a trusted space to think out loud. The pressure to perform, the weight of bias, and the complexity of organizational politics can erode confidence and clarity.
                 </p>
                 <p className="mt-4 text-lg text-[#525252] leading-relaxed">
-                  Group coaching combines the depth of coaching with the power of peer learning—creating accountability, connection, and momentum that sticks.
+                  You need more than advice. You need a strategic partner who understands the unique challenges you face.
                 </p>
               </div>
               <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12">
@@ -70,7 +62,7 @@ export default function GroupCoachingPage() {
                 <ul className="space-y-4">
                   {outcomes.map((outcome) => (
                     <li key={outcome} className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-[#FFC425] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-5 h-5 text-[#3EBCE8] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span className="text-[#525252]">{outcome}</span>
@@ -82,48 +74,47 @@ export default function GroupCoachingPage() {
           </div>
         </section>
 
-        {/* Focus Areas */}
+        {/* How It Works */}
         <section className="section gradient-subtle">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
-                Focus <span className="text-gradient">Areas</span>
+                How It <span className="text-gradient">Works</span>
               </h2>
-              <p className="body-large mt-4">
-                Sessions are tailored to your organization&apos;s priorities.
-              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {topics.map((topic) => (
-                <div key={topic} className="bg-white rounded-2xl p-6 shadow-sm">
-                  <div className="w-2 h-2 bg-[#FFC425] rounded-full mb-4" />
-                  <p className="text-[#1A1A1A] font-medium">{topic}</p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { title: "Discovery", description: "We begin with a deep-dive conversation to understand your goals, challenges, and organizational context." },
+                { title: "Engagement", description: "Regular coaching sessions tailored to your schedule, with real-time support between sessions." },
+                { title: "Results", description: "Measurable growth in leadership effectiveness, with ongoing progress tracking and adjustment." },
+              ].map((step, index) => (
+                <div key={step.title} className="text-center">
+                  <div className="w-12 h-12 bg-[#1A1A1A] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-lg font-semibold text-white">{index + 1}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#1A1A1A]">{step.title}</h3>
+                  <p className="text-[#737373] mt-2">{step.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Formats */}
+        {/* Best For */}
         <section className="section bg-white">
-          <div className="container-wide">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="heading-display">
-                Flexible <span className="text-gradient">Formats</span>
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { title: "By Level", description: "Cohorts designed for emerging, mid-level, or senior leaders with relevant challenges." },
-                { title: "Virtual or In-Person", description: "Delivered where it works best for your team—remote, on-site, or hybrid." },
-                { title: "Short or Extended", description: "From focused 3-session sprints to longer engagements for deeper transformation." },
-              ].map((format) => (
-                <div key={format.title} className="text-center">
-                  <h3 className="text-lg font-semibold text-[#1A1A1A]">{format.title}</h3>
-                  <p className="text-[#737373] mt-2">{format.description}</p>
-                </div>
+          <div className="container-tight text-center">
+            <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+              Best For
+            </p>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
+              Senior leaders and high-potential talent ready to lead with greater clarity, confidence, and impact.
+            </h2>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              {["C-Suite Executives", "Vice Presidents", "Directors", "High-Potential Leaders", "Leaders in Transition"].map((tag) => (
+                <span key={tag} className="px-4 py-2 bg-[#F5F5F5] text-[#525252] rounded-full text-sm">
+                  {tag}
+                </span>
               ))}
             </div>
           </div>
@@ -133,10 +124,10 @@ export default function GroupCoachingPage() {
         <section className="section bg-[#1A1A1A] text-white">
           <div className="container-tight text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-              Develop leaders at scale.
+              Ready to lead with clarity?
             </h2>
             <p className="mt-6 text-xl text-[#A3A3A3]">
-              Let&apos;s design a group coaching program for your organization.
+              Let&apos;s explore how executive coaching can accelerate your leadership.
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">

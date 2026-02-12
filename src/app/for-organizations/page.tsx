@@ -343,10 +343,12 @@ export default function ForOrganizationsPage() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                { name: "DEI Workshops", href: "/services/dei-workshops" },
-                { name: "Leadership Development", href: "/services/leadership-development" },
+                { name: "Executive Coaching", href: "/services/executive-coaching" },
+                { name: "Group Coaching", href: "/services/group-coaching" },
                 { name: "Keynote Speaking", href: "/services/keynote-speaking" },
-                { name: "Consulting", href: "/services/consulting" },
+                { name: "Workshops & Webinars", href: "/services/workshops-webinars" },
+                { name: "Virtual Series", href: "/services/virtual-series" },
+                { name: "Strategic Retreats", href: "/services/strategic-retreats" },
               ].map((service) => (
                 <Link
                   key={service.name}
