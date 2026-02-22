@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const individualTestimonials = [
   {
     quote:
-      "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. She approached all of our sessions with patience, grace, and compassion. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth. I highly recommend Wendy to anyone looking for a transformative coaching experience.",
+      "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. She approached all of our sessions with patience, grace, and compassion. Even so, she wasn't afraid to share hard truths and insights that supported my personal and professional journey during our year of working together. Connecting with Wendy was typically the highlight of my week, as it gave me the opportunity to reflect and troubleshoot issues I was experiencing at work in a supportive and non-judgemental environment. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth. I highly recommend Wendy to anyone looking for a transformative coaching experience.",
     author: "Stephanie Lopez",
     role: "California",
     image: "testimonial-stephanie.png",
@@ -33,21 +33,21 @@ const individualTestimonials = [
   },
   {
     quote:
-      "I learned so much about myself while working with Wendy. Her careful listening and encouragement during each session combined with the innovative tools and resources that she shared helped guide me towards new ways of thinking about my strengths, skills, and abilities. Being able to connect so openly and honestly with someone who could relate how I moved through the world was an absolute gift.",
+      "I recently began a mid-career exploration of what new professional chapters might lie ahead and reached out to Wendy to help me polish my (dusty) CV. During our consultation call, it quickly became apparent that Wendy could offer me so much more than resume editing -- her dynamic personality and candor captured my attention immediately and so began my first coaching experience. I learned so much about myself while working with Wendy. Her careful listening and encouragement during each session combined with the innovative tools and resources that she shared helped guide me towards new ways of thinking about my strengths, skills, and abilities. This was only made more meaningful by Wendy sharing with me her own lived experience as a woman of color. Being able to connect so openly and honestly with someone who could relate how I moved through the world was an absolute gift.",
     author: "Nicole Vlado",
     role: "Brooklyn, NY",
     image: "testimonial-nicolev.png",
   },
   {
     quote:
-      "Wendy has a holistic approach to coaching, seeing me not only as a professional, but as the multi-faceted woman that I am. Wendy seamlessly creates a safe and non-judgmental approach all while thoughtfully holding the mirror to some of my thoughts and actions that did not serve me. I cannot recommend Wendy enough.",
+      "I had met Wendy and participated in her Women of Color series in 2020 while undergoing some serious challenges with a previous role. During that time, Wendy provided some great feedback that resonated with me so when I had the opportunity to work with her as my Executive Coach, it was a no brainer. Wendy has a holistic approach to coaching, seeing me not only as a professional, but as the multi faceted woman that I am. Wendy seamlessly creates a safe and non judgmental approach all while thoughtfully holding the mirror to some of my thoughts and actions that did not serve me. I cannot recommend Wendy enough.",
     author: "Patricia Quintero",
     role: "New York, NY",
     image: "testimonial-patricia.png",
   },
   {
     quote:
-      "Wendy helped me to create a blueprint for my second act after retirement. Her approach was uniquely crafted and tailored specifically to my needs. She helped me to quickly identify my stuck spots, challenge my limiting beliefs and recognize and embrace all of the tools and resources around me that would facilitate my transformation.",
+      "At any stage of your career or life journey, along the way you can get stuck. At the time I reached out to Wendy, I was a retired educator struggling to craft a plan to define a new identity. I chose to be coached by Wendy because I TRUSTED that she would help me to break through the barriers that were holding me back from achieving my next level dreams and goals. Wendy helped me to create a blueprint for my second act after retirement. Her approach was uniquely crafted and tailored specifically to my needs. She helped me to quickly identify my stuck spots, challenge my limiting beliefs and to recognize and embrace all of the tools and resources around me that would facilitate my transformation. I appreciated being coached by Wendy and I feel that she has established a unique approach to personal growth and development. Wendy listened and was attentive to my specific needs. She is straightforward and her coaching conversations always felt highly individualized. Wendy's coaching gave me the opportunity to craft a powerful and compelling growth plan with self-created time frames. My work with Wendy was indeed challenging and thought provoking but certainly more than worth it and with her encouragement, inspiration and support, I did indeed accomplish my second act dream of graduating from Fashion Institute of Technology as a Costume Designer and Wardrobe Technician. I highly endorse Wendy as a professional coach.",
     author: "Lori Bennett",
     role: "Brooklyn, NY",
     image: "testimonial-lori.png",
