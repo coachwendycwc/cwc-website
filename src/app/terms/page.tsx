@@ -1,5 +1,12 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description:
+    "Terms of service for Coaching Women of Color. Review the terms and conditions governing your use of our website and services.",
+};
 
 export default function TermsPage() {
   return (
@@ -57,7 +64,7 @@ export default function TermsPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-[#3EBCE8] rounded-full mt-2 flex-shrink-0" />
-                      <span>Attend scheduled sessions or provide advance notice of cancellations</span>
+                      <span>Attend scheduled sessions or provide at least 24 hours&apos; notice for cancellations</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-[#3EBCE8] rounded-full mt-2 flex-shrink-0" />
@@ -103,12 +110,24 @@ export default function TermsPage() {
 
                 <div>
                   <h2 className="heading-card mb-4">Cancellation Policy</h2>
-                  <p className="text-[#525252] leading-relaxed">
-                    Cancellations must be made at least 24 hours before a scheduled session.
-                    Late cancellations or no-shows may be subject to a fee equal to the full
-                    session rate. Specific cancellation terms may vary by service and will
-                    be outlined in your service agreement.
+                  <p className="text-[#525252] leading-relaxed mb-4">
+                    Coaching sessions may be cancelled or rescheduled with a minimum of
+                    24 hours&apos; notice prior to your scheduled session time.
                   </p>
+                  <ul className="space-y-3 text-[#525252]">
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3EBCE8] rounded-full mt-2 flex-shrink-0" />
+                      <span>If you fail to provide at least 24 hours&apos; notice, you will be charged the full session fee</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3EBCE8] rounded-full mt-2 flex-shrink-0" />
+                      <span>Missed sessions (no-shows) are non-refundable and will not be rescheduled</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3EBCE8] rounded-full mt-2 flex-shrink-0" />
+                      <span>In the event of a late cancellation or no-show, rescheduling is at the sole discretion of the coach and subject to availability</span>
+                    </li>
+                  </ul>
                 </div>
 
                 <div>

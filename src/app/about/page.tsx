@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
 import { siteConfig } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Wendy Perdomo",
+  description:
+    "Meet Wendy Perdomo — executive coach, keynote speaker, and founder of Coaching Women of Color. 25+ years of leadership experience developing 500+ leaders across 50+ organizations.",
+};
 
 const credentials = [
   "B.A., Colgate University",
@@ -26,18 +33,21 @@ const expertise = [
 ];
 
 const affiliations = [
-  "Faculty Member, Surge Institute",
+  "Faculty Member & Coach Affiliate, Surge Institute",
   "Faculty Member, International Coaching Leadership Institute",
   "Lead Facilitator, WOCIP Global Leadership Accelerator Program",
   "Developing Capacity Coach Affiliate",
   "Featured on Bloomberg QuickTake",
 ];
 
-const notableClients = [
-  "TD Bank",
-  "Hills Pet Nutrition",
-  "University of Michigan",
-  "NJ Arts & Culture Renewal Fund",
+const industriesServed = [
+  "Financial Services",
+  "Higher Education",
+  "Nonprofits",
+  "Technology",
+  "Healthcare",
+  "Government",
+  "Arts & Culture",
 ];
 
 export default function AboutPage() {
@@ -191,14 +201,14 @@ export default function AboutPage() {
                 </ul>
               </div>
               <div>
-                <h2 className="heading-card mb-6">Notable Clients</h2>
+                <h2 className="heading-card mb-6">Industries Served</h2>
                 <div className="flex flex-wrap gap-3">
-                  {notableClients.map((client) => (
+                  {industriesServed.map((industry) => (
                     <span
-                      key={client}
+                      key={industry}
                       className="px-4 py-2 bg-[#F5F5F5] text-[#525252] rounded-full"
                     >
-                      {client}
+                      {industry}
                     </span>
                   ))}
                 </div>

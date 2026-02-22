@@ -1,5 +1,58 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, TestimonialsCarousel } from "@/components";
+import { siteConfig } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Coaching Programs for Individuals",
+  description:
+    "Executive coaching designed for women of color professionals, senior leaders, and executives. From 90-day sprints to 6-month programs — find the right pathway for your leadership journey.",
+};
+
+const individualTestimonials = [
+  {
+    quote:
+      "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. She approached all of our sessions with patience, grace, and compassion. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth. I highly recommend Wendy to anyone looking for a transformative coaching experience.",
+    author: "Stephanie Lopez",
+    role: "California",
+    image: "testimonial-stephanie.png",
+  },
+  {
+    quote:
+      "Wendy is an amazing coach and an inspiring leader. I feel deeply appreciative of Wendy's support during some professionally challenging months. She catered our sessions to my needs, even when I didn't know what I needed. I am better at identifying, setting and communicating my boundaries. I feel more confident in my decision-making skills as it relates to my professional growth.",
+    author: "Alexis Brown",
+    role: "Washington, D.C.",
+    image: "testimonial-alexis.png",
+  },
+  {
+    quote:
+      "Working with you has given me a clarity I haven't had in a long time. I would not have felt qualified to pursue a new role if it wasn't for the work we did together, regardless of what it says on paper.",
+    author: "Adrianne Rosario",
+    role: "New York, NY",
+    image: "testimonial-adrianne.png",
+  },
+  {
+    quote:
+      "I learned so much about myself while working with Wendy. Her careful listening and encouragement during each session combined with the innovative tools and resources that she shared helped guide me towards new ways of thinking about my strengths, skills, and abilities. Being able to connect so openly and honestly with someone who could relate how I moved through the world was an absolute gift.",
+    author: "Nicole Vlado",
+    role: "Brooklyn, NY",
+    image: "testimonial-nicolev.png",
+  },
+  {
+    quote:
+      "Wendy has a holistic approach to coaching, seeing me not only as a professional, but as the multi-faceted woman that I am. Wendy seamlessly creates a safe and non-judgmental approach all while thoughtfully holding the mirror to some of my thoughts and actions that did not serve me. I cannot recommend Wendy enough.",
+    author: "Patricia Quintero",
+    role: "New York, NY",
+    image: "testimonial-patricia.png",
+  },
+  {
+    quote:
+      "Wendy helped me to create a blueprint for my second act after retirement. Her approach was uniquely crafted and tailored specifically to my needs. She helped me to quickly identify my stuck spots, challenge my limiting beliefs and recognize and embrace all of the tools and resources around me that would facilitate my transformation.",
+    author: "Lori Bennett",
+    role: "Brooklyn, NY",
+    image: "testimonial-lori.png",
+  },
+];
 
 const coachingPrograms = [
   {
@@ -264,8 +317,23 @@ export default function ForIndividualsPage() {
           </div>
         </section>
 
-        {/* Not Sure CTA */}
+        {/* Testimonials */}
         <section className="section bg-white">
+          <div className="container-wide">
+            <div className="text-center mb-16">
+              <h2 className="heading-display">
+                Real impact.
+                <br />
+                <span className="text-gradient">Real stories.</span>
+              </h2>
+            </div>
+
+            <TestimonialsCarousel testimonials={individualTestimonials} />
+          </div>
+        </section>
+
+        {/* Not Sure CTA */}
+        <section className="section bg-[#F5F5F5]">
           <div className="container-tight text-center">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A]">
               Not sure where to start?

@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import { siteConfig } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Multi-Session Virtual Series",
+  description:
+    "Sustained leadership development through multi-session virtual programs. Leaders learn, apply, and refine skills over time for lasting behavior change.",
+};
 
 const outcomes = [
   "Stronger communication and leadership consistency",
@@ -145,6 +153,29 @@ export default function VirtualSeriesPage() {
                   {tag}
                 </span>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial */}
+        <section className="section bg-white">
+          <div className="container-wide max-w-3xl mx-auto">
+            <div className="bg-[#F8FAFB] rounded-2xl p-8 lg:p-10">
+              <blockquote className="text-lg text-[#525252] leading-relaxed">
+                &ldquo;I really appreciate you and the coaching that I&apos;ve had with you. I recognize that because of the conversations that we&apos;ve had and the calls that we&apos;ve had, without them I wouldn&apos;t have gotten here, or I wouldn&apos;t have gotten here as quickly as I have. I appreciate you challenging me, showing me so much of myself and peeling back layers. I was able to really hone in on what&apos;s really in here to help others discover that as well.&rdquo;
+              </blockquote>
+              <div className="mt-6 pt-6 border-t border-[#E5E5E5] flex items-center gap-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${siteConfig.basePath}/images/testimonial-morgan.png`}
+                  alt="Morgan Bullock"
+                  className="w-14 h-14 rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-semibold text-[#1A1A1A]">Morgan Bullock</p>
+                  <p className="text-sm text-[#737373]">Atlanta, GA</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
 import { siteConfig } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Keynote Speaking",
+  description:
+    "Book Wendy Perdomo for your next conference or event. High-impact keynotes on executive presence, psychological safety, navigating bias, and inclusive leadership.",
+};
 
 const outcomes = [
   "Clear insights and language they can use immediately",
@@ -137,6 +144,29 @@ export default function KeynoteSpeakingPage() {
                   <p className="text-[#737373] mt-2">{format.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial */}
+        <section className="section gradient-subtle">
+          <div className="container-wide max-w-3xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm">
+              <blockquote className="text-lg text-[#525252] leading-relaxed">
+                &ldquo;Wendy Perdomo is in a class by herself; they truly broke the &quot;mold&quot; with her. Ms. Perdomo&apos;s level of expertise, compassion and ability to engage, inform and foster meaningful connections, and discussion, sets her apart from other coaches and facilitators. Her ability to connect with people and ensure that those she is working with get the most out of any engagement is truly unparalleled. She creates a collaborative atmosphere that is also thought provoking.&rdquo;
+              </blockquote>
+              <div className="mt-6 pt-6 border-t border-[#E5E5E5] flex items-center gap-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${siteConfig.basePath}/images/testimonial-tanya.png`}
+                  alt="Tanya Ramos-Puig"
+                  className="w-14 h-14 rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-semibold text-[#1A1A1A]">Tanya Ramos-Puig</p>
+                  <p className="text-sm text-[#737373]">Florida</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

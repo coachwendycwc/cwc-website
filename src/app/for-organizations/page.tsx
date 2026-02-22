@@ -1,5 +1,44 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import { siteConfig } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "For Organizations",
+  description:
+    "High-impact coaching, keynote speaking, workshops, retreats, and performance coaching for organizations. Customized leadership development programs from Coaching Women of Color.",
+};
+
+const clientLogos = [
+  { name: "Johnson & Johnson", image: "logos/Johnson-and-Johnson.jpg" },
+  { name: "Genentech", image: "logos/Genentech.jpg" },
+  { name: "Novo Nordisk", image: "logos/Novo-Nordisk.jpg" },
+  { name: "VaynerMedia", image: "logos/VaynerMedia.jpg" },
+  { name: "DataRobot", image: "logos/DataRobot.jpg" },
+  { name: "TD Bank", image: "logos/TD-Bank.jpg" },
+  { name: "NYC Dept of Education", image: "logos/NYC-Department-of-Education.jpg" },
+  { name: "Colgate University", image: "logos/Colgate-University.jpg" },
+  { name: "University of Michigan", image: "logos/University-of-Michigan.jpg" },
+  { name: "Bloomberg Quicktake", image: "logos/Bloomberg-Quicktake.jpg" },
+  { name: "Ellevate", image: "logos/Ellevate.jpg" },
+  { name: "SURGE Institute", image: "logos/Surge-Institute.jpg" },
+  { name: "RiseBoro", image: "logos/RiseBoro-Community-Partnership.jpg" },
+  { name: "ALPFA", image: "logos/ALPFA.jpg" },
+  { name: "HACE", image: "logos/HACE-Hispanic-Alliance-for-Career-Enhancement.jpg" },
+  { name: "URI NYC", image: "logos/URI-NYC-Urban-Resource-Institute.jpg" },
+  { name: "Poderistas", image: "logos/Poderistas.jpg" },
+  { name: "Hills", image: "logos/Hills.jpg" },
+  { name: "ATD Maryland", image: "logos/ATD-Maryland.jpg" },
+  { name: "Developing Capacity Coaching", image: "logos/Developing-Capacity-Coaching.jpg" },
+  { name: "Howard Center", image: "logos/Howard-Center.jpg" },
+  { name: "ICLI Rising", image: "logos/ICLI-Rising-International-Coaching-Leadership-Institute.jpg" },
+  { name: "Latinas Represent", image: "logos/Latinas-Represent.jpg" },
+  { name: "Monique Burr Foundation", image: "logos/Monique-Burr-Foundation.jpg" },
+  { name: "NJ Arts & Culture Renewal Fund", image: "logos/NJ-Arts-and-Culture-Renewal-Fund.jpg" },
+  { name: "Proud To Be Latina", image: "logos/Proud-To-Be-Latina.jpg" },
+  { name: "VillageCareMAX", image: "logos/VillageCareMAX.jpg" },
+  { name: "Women in Housing & Finance", image: "logos/Women-in-Housing-and-Finance.jpg" },
+];
 
 const solutions = [
   {
@@ -107,6 +146,21 @@ const solutions = [
     details: "Retreats are fully customized to your team's needs—whether you're navigating a transition, setting annual strategy, resolving tension, or building stronger board dynamics. We create a space where honest dialogue leads to meaningful outcomes.",
     formats: ["Half-day or full-day sessions", "In-person or hybrid", "Pre-retreat assessments", "Post-retreat action planning"],
   },
+  {
+    id: "performance-coaching",
+    title: "Performance-Based Coaching",
+    subtitle: "The RESET Method™",
+    description: "Leaders navigating underperformance who need a structured, confidential coaching framework that drives accountability and real behavior change—without defaulting to avoidance or escalation.",
+    outcomes: [
+      "A team member who takes full ownership of their performance",
+      "A leader who gains confidence in managing underperformance",
+      "Measurable shifts in behavior, communication, and accountability",
+      "Alignment between leader and team member that closes performance gaps",
+      "Talent retained instead of replaced—saving your organization time and cost",
+    ],
+    details: "The RESET Method™ doesn't choose sides—it closes gaps. By engaging both the leader and the team member from the start, this framework surfaces blind spots, builds shared understanding, and produces real, lasting shifts in how people show up and deliver.",
+    formats: ["Virtual (Zoom)", "Dual-engagement model", "Mid-point checkpoint", "Comprehensive outcome summary"],
+  },
 ];
 
 const processSteps = [
@@ -180,6 +234,36 @@ export default function ForOrganizationsPage() {
                 </Link>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Trusted By - Client Logos Carousel */}
+        <section className="section-tight bg-white border-y border-[#E5E5E5] overflow-hidden">
+          <div className="container-wide">
+            <p className="text-center text-sm font-medium text-[#737373] uppercase tracking-widest mb-10">
+              Transforming Leaders From
+            </p>
+          </div>
+          <div className="relative">
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+            <div className="flex animate-scroll hover:[animation-play-state:paused]" style={{ width: "max-content", animationDuration: "70s" }}>
+              {[...clientLogos, ...clientLogos].map((org, index) => (
+                <div key={`${org.name}-${index}`} className="flex items-center justify-center mx-8 flex-shrink-0" style={{ width: "180px", height: "90px" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${siteConfig.basePath}/images/${org.image}`}
+                    alt={org.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="container-wide">
+            <p className="text-center text-xs text-[#A3A3A3] mt-8">
+              And many more across Fortune 500, Healthcare, Technology, Finance & Non-Profit sectors
+            </p>
           </div>
         </section>
 
@@ -349,6 +433,7 @@ export default function ForOrganizationsPage() {
                 { name: "Workshops & Webinars", href: "/services/workshops-webinars" },
                 { name: "Virtual Series", href: "/services/virtual-series" },
                 { name: "Strategic Retreats", href: "/services/strategic-retreats" },
+                { name: "Performance Coaching", href: "/services/performance-coaching" },
               ].map((service) => (
                 <Link
                   key={service.name}

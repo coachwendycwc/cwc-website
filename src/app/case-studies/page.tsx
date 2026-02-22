@@ -1,5 +1,12 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Success Stories & Case Studies",
+  description:
+    "Real transformations from women of color who achieved breakthrough results through coaching. Read client success stories spanning executive coaching, group programs, and organizational impact.",
+};
 
 const successStories = [
   {
@@ -286,16 +293,16 @@ export default function CaseStudiesPage() {
                 <p className="text-[#A3A3A3] mt-2">Years of Leadership Experience</p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-bold text-[#FFC425]">100+</p>
-                <p className="text-[#A3A3A3] mt-2">Women Coached</p>
+                <p className="text-4xl md:text-5xl font-bold text-[#FFC425]">500+</p>
+                <p className="text-[#A3A3A3] mt-2">Leaders Developed</p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-bold text-[#C4D82E]">30+</p>
+                <p className="text-4xl md:text-5xl font-bold text-[#C4D82E]">50+</p>
                 <p className="text-[#A3A3A3] mt-2">Organizations Served</p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-bold text-[#E8478C]">5</p>
-                <p className="text-[#A3A3A3] mt-2">Professional Certifications</p>
+                <p className="text-4xl md:text-5xl font-bold text-[#E8478C]">100%</p>
+                <p className="text-[#A3A3A3] mt-2">Client Satisfaction</p>
               </div>
             </div>
             <div className="text-center">

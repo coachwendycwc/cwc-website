@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import { siteConfig } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Group Coaching for Leaders",
+  description:
+    "Leadership development at scale. Build capability across your organization with group coaching that creates shared language, peer accountability, and lasting behavior change.",
+};
 
 const outcomes = [
   "Practical strategies leaders can apply immediately",
@@ -125,6 +133,29 @@ export default function GroupCoachingPage() {
                   <p className="text-[#737373] mt-2">{format.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial */}
+        <section className="section bg-white">
+          <div className="container-wide max-w-3xl mx-auto">
+            <div className="bg-[#F8FAFB] rounded-2xl p-8 lg:p-10">
+              <blockquote className="text-lg text-[#525252] leading-relaxed">
+                &ldquo;I was able to accomplish nearly everything in my action planning document. At the beginning of the cohort, I was jobless and depressed. Being a part of the cohort and working on my action planning document allowed me to achieve my goals alongside others who would hold me accountable. If there is anyone I would recommend as a coach, it&apos;s Wendy. She challenged me to not make excuses and to hold myself accountable. She reminded me that there is a beautiful life on the other side of fear.&rdquo;
+              </blockquote>
+              <div className="mt-6 pt-6 border-t border-[#E5E5E5] flex items-center gap-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${siteConfig.basePath}/images/testimonial-tiffany.jpg`}
+                  alt="Tiffany Cordero"
+                  className="w-14 h-14 rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-semibold text-[#1A1A1A]">Tiffany Cordero</p>
+                  <p className="text-sm text-[#737373]">Bronx, NY</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import { siteConfig } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Workshops & Webinars",
+  description:
+    "Interactive workshops and webinars on psychological safety, communication, executive presence, and inclusive leadership. Customized to your organization's goals and culture.",
+};
 
 const outcomes = [
   "Customized to your goals, audience, and culture",
@@ -144,6 +152,29 @@ export default function WorkshopsWebinarsPage() {
                   <p className="text-[#737373] mt-2">{format.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial */}
+        <section className="section bg-white">
+          <div className="container-wide max-w-3xl mx-auto">
+            <div className="bg-[#F8FAFB] rounded-2xl p-8 lg:p-10">
+              <blockquote className="text-lg text-[#525252] leading-relaxed">
+                &ldquo;Working with Wendy kept me steady in a very, very difficult year. And not just me, but my colleague as well. The relationship has changed the emotionality of the workplace, allowing for better collaboration and better outcomes.&rdquo;
+              </blockquote>
+              <div className="mt-6 pt-6 border-t border-[#E5E5E5] flex items-center gap-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${siteConfig.basePath}/images/testimonial-emily.png`}
+                  alt="Emily Kurtz"
+                  className="w-14 h-14 rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-semibold text-[#1A1A1A]">Emily Kurtz</p>
+                  <p className="text-sm text-[#737373]">Brooklyn, NY</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -1,30 +1,55 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description:
+    "Explore coaching, keynote speaking, workshops, retreats, and performance coaching solutions from Coaching Women of Color. Customized programs for organizations and leaders.",
+};
 
 const services = [
   {
-    title: "DEI Workshops",
-    description: "Interactive sessions that go beyond awareness to create actionable change. Customized for your organization's unique challenges.",
-    href: "/services/dei-workshops",
+    title: "Executive Coaching",
+    description: "1:1 high-impact coaching for senior leaders and high-potential talent who need a confidential, strategic space to lead with clarity and confidence.",
+    href: "/services/executive-coaching",
     color: "#3EBCE8",
   },
   {
-    title: "Leadership Development",
-    description: "Comprehensive programs to identify, nurture, and elevate diverse leadership talent within your organization.",
-    href: "/services/leadership-development",
+    title: "Group Coaching",
+    description: "Leadership development at scale. Build capability across your organization while creating shared language and stronger peer connection.",
+    href: "/services/group-coaching",
     color: "#FFC425",
   },
   {
     title: "Keynote Speaking",
-    description: "Powerful presentations that inspire, educate, and motivate your teams to embrace inclusion.",
+    description: "Engaging, high-impact presentations that spark real conversation and meaningful action—not just applause.",
     href: "/services/keynote-speaking",
     color: "#C4D82E",
   },
   {
-    title: "Consulting",
-    description: "Strategic partnership to assess, design, and implement sustainable DEI initiatives.",
-    href: "/services/consulting",
-    color: "#6ECEF5",
+    title: "Workshops & Webinars",
+    description: "Interactive learning experiences that build skills, shift mindsets, and equip your teams with practical tools they can use immediately.",
+    href: "/services/workshops-webinars",
+    color: "#E91E8C",
+  },
+  {
+    title: "Multi-Session Virtual Series",
+    description: "Sustained behavior change through multi-session programs where leaders learn, apply, and refine over time.",
+    href: "/services/virtual-series",
+    color: "#9333EA",
+  },
+  {
+    title: "Strategic Retreats",
+    description: "Facilitated sessions that align your leadership team, clarify strategic direction, and turn honest dialogue into actionable outcomes.",
+    href: "/services/strategic-retreats",
+    color: "#FFC425",
+  },
+  {
+    title: "Performance Coaching (RESET Method™)",
+    description: "A structured, dual-engagement coaching framework that closes performance gaps—without defaulting to avoidance or escalation.",
+    href: "/services/performance-coaching",
+    color: "#E91E8C",
   },
 ];
 
@@ -47,7 +72,7 @@ export default function ServicesPage() {
                 <span className="text-gradient">drive change.</span>
               </h1>
               <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
-                Comprehensive programs designed to transform your organization from the inside out.
+                High-impact coaching and development programs that strengthen leaders and transform culture. Every engagement is customized to your needs.
               </p>
             </div>
           </div>
@@ -56,7 +81,7 @@ export default function ServicesPage() {
         {/* Services Grid */}
         <section className="section bg-white">
           <div className="container-wide">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service) => (
                 <Link
                   key={service.title}

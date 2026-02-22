@@ -1,5 +1,12 @@
 import Link from "next/link";
 import { Header, Footer } from "@/components";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Executive Coaching for Women of Color",
+  description:
+    "1:1 executive coaching for women of color professionals ready to break through barriers, silence imposter syndrome, and step fully into their leadership power.",
+};
 
 export default function ExecutiveCoachingPage() {
   return (

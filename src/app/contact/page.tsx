@@ -20,13 +20,19 @@ export default function ContactPage() {
     "Workshops & Webinars",
     "Virtual Series",
     "Strategic Leadership & Board Retreats",
+    "Performance Coaching (RESET Method™)",
     "Other",
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    alert("Thank you for your message! We'll be in touch soon.");
+    const subject = encodeURIComponent(
+      `New Inquiry from ${formData.name}${formData.service ? ` — ${formData.service}` : ""}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}\nInterested In: ${formData.type === "organization" ? "Organizational Services" : "Individual Coaching"}\nService: ${formData.service || "N/A"}\n\nMessage:\n${formData.message}`
+    );
+    window.location.href = `mailto:wendy@coachingwomenofcolor.com?subject=${subject}&body=${body}`;
   };
 
   return (
