@@ -22,6 +22,16 @@ const navigation = [
     href: "/about",
     matchPaths: ["/about", "/case-studies"],
   },
+  {
+    name: "Resources",
+    href: "/#resources",
+    matchPaths: [],
+  },
+  {
+    name: "FAQ",
+    href: "/faq",
+    matchPaths: ["/faq"],
+  },
 ];
 
 export default function Header() {

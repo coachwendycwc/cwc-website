@@ -4,10 +4,12 @@ import { siteConfig } from "@/config";
 
 const footerNavigation = {
   solutions: [
-    { name: "DEI Workshops", href: "/services/dei-workshops" },
-    { name: "Leadership Development", href: "/services/leadership-development" },
+    { name: "Executive Coaching", href: "/services/executive-coaching" },
+    { name: "Group Coaching", href: "/services/group-coaching" },
     { name: "Keynote Speaking", href: "/services/keynote-speaking" },
-    { name: "Consulting", href: "/services/consulting" },
+    { name: "Workshops & Webinars", href: "/services/workshops-webinars" },
+    { name: "Strategic Retreats", href: "/services/strategic-retreats" },
+    { name: "Performance Coaching", href: "/services/performance-coaching" },
   ],
   coaching: [
     { name: "Executive Coaching", href: "/executive-coaching" },
@@ -16,7 +18,7 @@ const footerNavigation = {
   ],
   company: [
     { name: "About", href: "/about" },
-    { name: "Case Studies", href: "/case-studies" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ],
   social: [

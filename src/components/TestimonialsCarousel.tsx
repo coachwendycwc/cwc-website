@@ -16,15 +16,23 @@ interface TestimonialsCarouselProps {
 
 const MAX_QUOTE_LENGTH = 200;
 
-function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; index: number }) {
-  const [expanded, setExpanded] = useState(false);
+function TestimonialCard({
+  testimonial,
+  isExpanded,
+  onToggle,
+}: {
+  testimonial: Testimonial;
+  isExpanded: boolean;
+  onToggle: () => void;
+}) {
   const isLong = testimonial.quote.length > MAX_QUOTE_LENGTH;
-  const displayQuote = expanded || !isLong
-    ? testimonial.quote
-    : testimonial.quote.slice(0, MAX_QUOTE_LENGTH).trim() + "...";
+  const displayQuote =
+    isExpanded || !isLong
+      ? testimonial.quote
+      : testimonial.quote.slice(0, MAX_QUOTE_LENGTH).trim() + "...";
 
   return (
-    <div key={index} className="card flex-shrink-0 w-[400px] flex flex-col">
+    <div className="card flex-shrink-0 w-[400px] flex flex-col">
       {/* Stars */}
       <div className="flex gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
@@ -42,10 +50,10 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
         &ldquo;{displayQuote}&rdquo;
         {isLong && (
           <button
-            onClick={() => setExpanded(!expanded)}
+            onClick={onToggle}
             className="text-[#3EBCE8] hover:text-[#1A9FCC] ml-1 font-medium"
           >
-            {expanded ? "Show less" : "Read more"}
+            {isExpanded ? "Show less" : "Read more"}
           </button>
         )}
       </blockquote>
@@ -59,13 +67,14 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
           />
         ) : (
           <div className="w-20 h-20 rounded-full bg-[#3EBCE8] flex items-center justify-center text-white font-semibold text-xl">
-            {testimonial.author.split(" ").map(n => n[0]).join("")}
+            {testimonial.author
+              .split(" ")
+              .map((n) => n[0])
+              .join("")}
           </div>
         )}
         <div>
-          <div className="font-semibold text-[#1A1A1A]">
-            {testimonial.author}
-          </div>
+          <div className="font-semibold text-[#1A1A1A]">{testimonial.author}</div>
           <div className="text-sm text-[#737373]">{testimonial.role}</div>
         </div>
       </div>
@@ -75,6 +84,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
 
 export default function TestimonialsCarousel({ testimonials }: TestimonialsCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -84,6 +94,10 @@ export default function TestimonialsCarousel({ testimonials }: TestimonialsCarou
         behavior: "smooth",
       });
     }
+  };
+
+  const handleToggle = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
   };
 
   return (
@@ -113,11 +127,16 @@ export default function TestimonialsCarousel({ testimonials }: TestimonialsCarou
       {/* Carousel */}
       <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-2 py-2"
+        className="flex items-stretch gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-2 py-2"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {testimonials.map((testimonial, index) => (
-          <TestimonialCard key={index} testimonial={testimonial} index={index} />
+          <TestimonialCard
+            key={index}
+            testimonial={testimonial}
+            isExpanded={expandedIndex === index}
+            onToggle={() => handleToggle(index)}
+          />
         ))}
       </div>
     </div>
