@@ -114,14 +114,15 @@ const coachingPrograms = [
   {
     id: "coaching-lab",
     tier: "Group Program",
-    title: "Executive Coaching Lab",
+    title: "Executive Leadership Lab",
     subtitle: "Community + Coaching",
     price: "$997",
     priceNote: "$100/month",
-    duration: "10 months (Jan–Jun; Sept–Dec)",
+    duration: "12 months (July & August are integration months)",
     bestFor: "Self-directed mid-tier professionals who want proven tools, frameworks, and a supportive community to elevate their career.",
     features: [
-      "10 monthly coaching labs",
+      "10 asynchronous leadership labs",
+      "1 live coaching call",
       "Career tools, worksheets, and frameworks",
       "Private Skool community for support and accountability",
       "Lifetime access to replays",

@@ -62,7 +62,7 @@ git push           # Auto-deploys to GitHub Pages
 - [x] Updated Footer navigation
 - [x] Fixed case studies category reference
 - [x] Fixed book page - removed "life coaching" reference
-- [x] Updated group coaching page → Executive Coaching Lab ($997, 10 months)
+- [x] Updated group coaching page → Executive Leadership Lab ($997, 10 months)
 - [x] Fixed about page - changed "Executive Leadership and Life Coach" to "Executive Leadership Coach"
 - [x] Updated For Organizations page with richer 5-solution structure from new docx
 
@@ -76,7 +76,7 @@ git push           # Auto-deploys to GitHub Pages
 | Leadership Clarity Session | $697 | 90 min (1 session) |
 | 90-Day Executive Momentum Sprint | $5,000 | 90 days (6 sessions) |
 | Executive Leadership Coaching | $9,900 ($1,650/mo) | 6 months (12 sessions) |
-| Executive Coaching Lab (Group) | $997 ($100/mo) | 10 months |
+| Executive Leadership Lab (Group) | $997 ($100/mo) | 10 months |
 
 ### Organizational Offerings (B2B) - 5 Solutions
 | Solution | Description |
@@ -123,7 +123,7 @@ git push           # Auto-deploys to GitHub Pages
 | Leadership Development | `/services/leadership-development` | Leadership programs |
 | Keynote Speaking | `/services/keynote-speaking` | Speaking topics & formats |
 | Consulting | `/services/consulting` | Strategic consulting |
-| Executive Coaching Lab | `/services/group-coaching` | Group program ($997, 10 months) |
+| Executive Leadership Lab | `/services/group-coaching` | Group program ($997, 10 months) |
 | Services Index | `/services` | Services overview |
 | **Legal** | | |
 | Privacy Policy | `/privacy` | Privacy policy |
@@ -529,7 +529,7 @@ src/app/
 │   ├── page.tsx                # Services overview
 │   ├── consulting/page.tsx
 │   ├── dei-workshops/page.tsx
-│   ├── group-coaching/page.tsx  # Executive Coaching Lab ($997)
+│   ├── group-coaching/page.tsx  # Executive Leadership Lab ($997)
 │   ├── keynote-speaking/page.tsx
 │   └── leadership-development/page.tsx
 ├── privacy/page.tsx

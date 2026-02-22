@@ -13,7 +13,7 @@ const footerNavigation = {
   ],
   coaching: [
     { name: "Executive Coaching", href: "/executive-coaching" },
-    { name: "Executive Coaching Lab", href: "/for-individuals#coaching-lab" },
+    { name: "Executive Leadership Lab", href: "/for-individuals#coaching-lab" },
     { name: "For Individuals", href: "/for-individuals" },
   ],
   company: [
