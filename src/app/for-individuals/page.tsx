@@ -122,7 +122,7 @@ const coachingPrograms = [
     bestFor: "Self-directed mid-tier professionals who want proven tools, frameworks, and a supportive community to elevate their career.",
     features: [
       "10 asynchronous leadership labs",
-      "1 live coaching call",
+      "1 live monthly group coaching call",
       "Career tools, worksheets, and frameworks",
       "Private Skool community for support and accountability",
       "Lifetime access to replays",

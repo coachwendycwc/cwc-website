@@ -64,7 +64,7 @@ const faqs = [
       },
       {
         q: "What coaching programs are available for individuals?",
-        a: "We offer four pathways: the Leadership Clarity Session (a 90-minute deep dive), the 90-Day Executive Momentum Sprint (6 sessions), the Executive Leadership Coaching Program (6 months, 12 sessions), and the Executive Leadership Lab (a 12-month group program with 10 asynchronous leadership labs, 1 live coaching call, and community support — July and August are integration months).",
+        a: "We offer four pathways: the Leadership Clarity Session (a 90-minute deep dive), the 90-Day Executive Momentum Sprint (6 sessions), the Executive Leadership Coaching Program (6 months, 12 sessions), and the Executive Leadership Lab (a 12-month group program with 10 asynchronous leadership labs, 1 live monthly group coaching call, and community support — July and August are integration months).",
       },
       {
         q: "What can I expect from a coaching session?",
