@@ -226,9 +226,9 @@ export default function ForOrganizationsPage() {
                 and transform culture. Every engagement is customized to your needs.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="btn-primary">
+                <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Book a Discovery Call
-                </Link>
+                </a>
                 <Link href="#solutions" className="btn-secondary">
                   View Solutions
                 </Link>
@@ -410,9 +410,9 @@ export default function ForOrganizationsPage() {
             </div>
 
             <div className="text-center mt-12">
-              <Link href="/contact" className="btn-primary">
+              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Get a Custom Quote
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -457,9 +457,9 @@ export default function ForOrganizationsPage() {
               Book a discovery call to explore the best-fit format and scope for your team.
             </p>
             <div className="mt-10">
-              <Link href="/contact" className="btn-primary">
+              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book a Discovery Call
-              </Link>
+              </a>
             </div>
           </div>
         </section>
