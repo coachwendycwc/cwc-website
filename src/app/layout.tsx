@@ -68,7 +68,7 @@ const jsonLd = {
     "Professional coaching and consulting firm specializing in DEI training, leadership development, and organizational transformation for companies committed to empowering women of color.",
   email: "wendy@coachingwomenofcolor.com",
   sameAs: [
-    "https://www.linkedin.com/company/coachingwomenofcolor",
+    "https://www.linkedin.com/in/wendyperdomoleadershipcoach/",
     "https://www.instagram.com/coachingwomenofcolor",
     "https://www.facebook.com/coachingwomenofcolor",
   ],
