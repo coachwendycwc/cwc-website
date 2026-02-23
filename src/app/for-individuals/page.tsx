@@ -157,9 +157,9 @@ export default function ForIndividualsPage() {
                 and navigate workplace dynamics with clarity and power.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Link href="/book" className="btn-primary">
+                <a href="https://calendly.com/coachingwomenofcolor/coaching-consultation-with-wendy" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Book a Free Discovery Call
-                </Link>
+                </a>
                 <Link href="#programs" className="btn-secondary">
                   View Programs
                 </Link>
@@ -264,8 +264,10 @@ export default function ForIndividualsPage() {
                   )}
 
                   {/* CTA */}
-                  <Link
-                    href="/book"
+                  <a
+                    href="https://calendly.com/coachingwomenofcolor/coaching-consultation-with-wendy"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`mt-8 block w-full text-center py-3 px-6 rounded-full font-medium transition-all ${
                       program.highlight
                         ? "bg-[#3EBCE8] text-white hover:bg-[#1A9FCC]"
@@ -273,7 +275,7 @@ export default function ForIndividualsPage() {
                     }`}
                   >
                     {program.cta}
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>
@@ -344,9 +346,9 @@ export default function ForIndividualsPage() {
               your biggest blockers, and the best next step for your coaching journey.
             </p>
             <div className="mt-10">
-              <Link href="/book" className="btn-primary">
+              <a href="https://calendly.com/coachingwomenofcolor/coaching-consultation-with-wendy" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book Your Free Discovery Call
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -361,9 +363,9 @@ export default function ForIndividualsPage() {
               Take the first step toward the career and leadership you deserve.
             </p>
             <div className="mt-10">
-              <Link href="/book" className="btn-primary">
+              <a href="https://calendly.com/coachingwomenofcolor/coaching-consultation-with-wendy" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book Your Free Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </section>
