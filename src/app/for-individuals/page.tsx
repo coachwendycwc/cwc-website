@@ -19,7 +19,7 @@ const individualTestimonials = [
   },
   {
     quote:
-      "Wendy is an amazing coach and an inspiring leader. I feel deeply appreciative of Wendy's support during some professionally challenging months. She catered our sessions to my needs, even when I didn't know what I needed. I am better at identifying, setting and communicating my boundaries. I feel more confident in my decision-making skills as it relates to my professional growth.",
+      "Wendy is an amazing coach and an inspiring leader. I feel deeply appreciative of Wendy's support during some professionally challenging months. She catered our sessions to my needs, even when I didn't know what I needed, I am better at identifying, setting and communicating my boundaries. I feel more confident in my decision-making skills as it relates to my professional growth. Wendy is also just a dope human-being with amazing experience and I genuinely enjoyed meeting with her during our coaching calls.",
     author: "Alexis Brown",
     role: "Washington, D.C.",
     image: "testimonial-alexis.png",
