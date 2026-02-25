@@ -173,8 +173,9 @@ export default function ForIndividualsPage() {
                   <img
                     src={`${siteConfig.basePath}/images/hero-individuals.jpg`}
                     alt="Professional woman of color celebrating success"
-                    className="relative w-full md:w-[500px] lg:w-[500px] xl:w-[550px] h-auto rounded-2xl shadow-xl object-cover"
+                    className="relative w-full md:w-[500px] lg:w-[500px] xl:w-[550px] h-auto rounded-2xl object-cover opacity-40"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/60 rounded-2xl" />
                 </div>
               </div>
             </div>
