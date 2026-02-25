@@ -213,7 +213,7 @@ export default function ContactPage() {
                         <a href="https://www.linkedin.com/in/wendyperdomoleadershipcoach/" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#3EBCE8] transition-colors">
                           LinkedIn
                         </a>
-                        <a href="https://instagram.com/coachingwomenofcolor" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#3EBCE8] transition-colors">
+                        <a href="https://www.instagram.com/coachwendyp/" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#3EBCE8] transition-colors">
                           Instagram
                         </a>
                       </div>

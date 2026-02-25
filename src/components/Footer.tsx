@@ -33,7 +33,7 @@ const footerNavigation = {
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/coachingwomenofcolor",
+      href: "https://www.instagram.com/coachwendyp/",
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path

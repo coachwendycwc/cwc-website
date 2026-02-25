@@ -69,7 +69,7 @@ const jsonLd = {
   email: "wendy@coachingwomenofcolor.com",
   sameAs: [
     "https://www.linkedin.com/in/wendyperdomoleadershipcoach/",
-    "https://www.instagram.com/coachingwomenofcolor",
+    "https://www.instagram.com/coachwendyp/",
     "https://www.facebook.com/coachingwomenofcolor",
   ],
 };
