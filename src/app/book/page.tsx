@@ -67,7 +67,7 @@ export default function BookPage() {
                 </ul>
                 <div className="mt-8">
                   <a
-                    href="https://calendly.com/coachingwomenofcolor/organization"
+                    href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary inline-block"
@@ -111,7 +111,7 @@ export default function BookPage() {
                 </ul>
                 <div className="mt-8">
                   <a
-                    href="https://calendly.com/coachingwomenofcolor/individual"
+                    href="https://calendly.com/coachingwomenofcolor/coaching-consultation-with-wendy"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary inline-block"
