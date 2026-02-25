@@ -242,9 +242,8 @@ export default function ForOrganizationsPage() {
                   <img
                     src={`${siteConfig.basePath}/images/hero-organizations.jpg`}
                     alt="Women of color collaborating in a professional setting"
-                    className="relative w-full md:w-[500px] lg:w-[500px] xl:w-[550px] h-auto rounded-2xl object-cover opacity-40"
+                    className="relative w-full md:w-[500px] lg:w-[500px] xl:w-[550px] h-auto rounded-2xl shadow-xl object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/60 rounded-2xl" />
                 </div>
               </div>
             </div>
