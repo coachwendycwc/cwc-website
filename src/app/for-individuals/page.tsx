@@ -142,27 +142,40 @@ export default function ForIndividualsPage() {
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
-            <div className="max-w-4xl">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
-                Coaching Programs
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                You already have
-                <br />
-                <span className="text-gradient">everything you need.</span>
-              </h1>
-              <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
-                Executive coaching designed specifically for women of color professionals,
-                senior leaders, and executives ready to lead with confidence, set boundaries,
-                and navigate workplace dynamics with clarity and power.
-              </p>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <a href="https://calendly.com/coachingwomenofcolor/coaching-consultation-with-wendy" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Book a Free Discovery Call
-                </a>
-                <Link href="#programs" className="btn-secondary">
-                  View Programs
-                </Link>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="max-w-2xl">
+                <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                  Coaching Programs
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
+                  You already have
+                  <br />
+                  <span className="text-gradient">everything you need.</span>
+                </h1>
+                <p className="mt-6 text-xl text-[#525252] leading-relaxed">
+                  Executive coaching designed specifically for women of color professionals,
+                  senior leaders, and executives ready to lead with confidence, set boundaries,
+                  and navigate workplace dynamics with clarity and power.
+                </p>
+                <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                  <a href="https://calendly.com/coachingwomenofcolor/coaching-consultation-with-wendy" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                    Book a Free Discovery Call
+                  </a>
+                  <Link href="#programs" className="btn-secondary">
+                    View Programs
+                  </Link>
+                </div>
+              </div>
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${siteConfig.basePath}/images/hero-individuals.jpg`}
+                    alt="Professional woman of color celebrating success"
+                    className="relative w-full md:w-[500px] lg:w-[500px] xl:w-[550px] h-auto rounded-2xl shadow-xl object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
