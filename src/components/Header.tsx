@@ -28,6 +28,11 @@ const navigation = [
     matchPaths: [],
   },
   {
+    name: "Gallery",
+    href: "/gallery",
+    matchPaths: ["/gallery"],
+  },
+  {
     name: "FAQ",
     href: "/faq",
     matchPaths: ["/faq"],
