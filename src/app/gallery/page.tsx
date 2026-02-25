@@ -96,6 +96,13 @@ const galleryImages = [
   "IMG_9852.JPG",
   "IMG_9919.jpg",
   "IMG_9921.jpg",
+  "IMG_1837.JPG",
+  "PHOTO-2025-04-05-17-59-21-2.jpg",
+  "PHOTO-2025-04-05-17-59-21-1.jpg",
+  "PHOTO-2025-04-05-18-39-07.jpg",
+  "pic-with-locs.jpg",
+  "proud-to-be-latina.jpg",
+  "with-ona-brown.jpg",
 ];
 
 export default function GalleryPage() {
