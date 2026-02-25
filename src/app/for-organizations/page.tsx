@@ -299,11 +299,6 @@ export default function ForOrganizationsPage() {
                   description:
                     "People managers were promoted for technical skills but struggle to lead. They lack the tools for giving feedback, navigating difficult dynamics, and developing their direct reports.",
                 },
-                {
-                  title: "New Managers in the Storming Phase",
-                  description:
-                    "New managers are navigating through the storming phase of the team development process and aren't sure how to build a clear roadmap for team cohesion. Without guidance, early missteps become lasting culture problems.",
-                },
               ].map((item) => (
                 <div
                   key={item.title}
@@ -317,6 +312,16 @@ export default function ForOrganizationsPage() {
                   </p>
                 </div>
               ))}
+            </div>
+            <div className="flex justify-center mt-6">
+              <div className="bg-white border border-[#E5E5E5] rounded-2xl p-6 shadow-sm md:max-w-md lg:max-w-lg">
+                <h3 className="font-semibold text-[#1A1A1A] text-lg mb-3">
+                  New Managers in the Storming Phase
+                </h3>
+                <p className="text-[#525252] leading-relaxed text-sm">
+                  New managers are navigating through the storming phase of the team development process and aren&apos;t sure how to build a clear roadmap for team cohesion. Without guidance, early missteps become lasting culture problems.
+                </p>
+              </div>
             </div>
 
             <div className="text-center mt-12">
