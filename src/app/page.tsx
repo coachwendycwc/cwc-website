@@ -260,9 +260,9 @@ export default function Home() {
                   <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`${siteConfig.basePath}/images/new/headshot-wocip-1.jpg`}
+                    src={`${siteConfig.basePath}/images/wendy-hero.jpg`}
                     alt="Wendy Perdomo - Executive Leadership Coach"
-                    className="relative w-80 md:w-96 lg:w-[500px] xl:w-[580px] h-auto rounded-2xl shadow-xl object-cover"
+                    className="relative w-full md:w-[500px] lg:w-[600px] xl:w-[700px] h-auto rounded-2xl shadow-xl object-cover"
                   />
                 </div>
               </div>
