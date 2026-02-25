@@ -181,6 +181,82 @@ export default function ForIndividualsPage() {
           </div>
         </section>
 
+        {/* Pain Points Section */}
+        <section className="section bg-white">
+          <div className="container-wide">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                We See You
+              </p>
+              <h2 className="heading-display">
+                If this sounds familiar,{" "}
+                <span className="text-gradient">you&apos;re not alone.</span>
+              </h2>
+              <p className="body-large mt-6">
+                Women of color in the workplace face a unique set of challenges that
+                are rarely named out loud — but deeply felt every day.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Overlooked for Opportunities",
+                  description:
+                    "You consistently deliver results, yet promotions, stretch assignments, and leadership roles go to others. Your contributions are invisible until someone else takes credit.",
+                },
+                {
+                  title: "The Only One in the Room",
+                  description:
+                    "You carry the weight of representation — navigating spaces where no one looks like you, constantly code-switching, and wondering if you truly belong at the table.",
+                },
+                {
+                  title: "Imposter Syndrome & Self-Doubt",
+                  description:
+                    "Despite your track record, a voice inside questions whether you're qualified enough, ready enough, or deserving enough — even when the evidence says otherwise.",
+                },
+                {
+                  title: "Tone Policing & Respectability Pressure",
+                  description:
+                    "You've been told you're 'too much' or 'not enough.' You shrink your voice, soften your delivery, and manage everyone's comfort but your own.",
+                },
+                {
+                  title: "Burnout Without Boundaries",
+                  description:
+                    "You say yes to everything — mentoring, committees, extra projects — because you feel you have to prove your value twice as hard. The exhaustion is real.",
+                },
+                {
+                  title: "Lack of Sponsorship & Advocacy",
+                  description:
+                    "You have mentors who listen, but no sponsors who advocate. Without someone in the room championing your name, opportunities stay out of reach.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-[#FFF9F5] border border-[#F5E6D8] rounded-2xl p-6"
+                >
+                  <h3 className="font-semibold text-[#1A1A1A] text-lg mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#525252] leading-relaxed text-sm">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-lg text-[#525252] max-w-2xl mx-auto">
+                These challenges are not a reflection of your ability — they are a
+                reflection of systems that were never designed with you in mind.{" "}
+                <span className="font-semibold text-[#1A1A1A]">
+                  Coaching gives you the tools to navigate, reclaim, and lead on your own terms.
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Programs Section */}
         <section id="programs" className="section bg-white">
           <div className="container-wide">
