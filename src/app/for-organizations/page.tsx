@@ -229,9 +229,9 @@ export default function ForOrganizationsPage() {
                 <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Book a Discovery Call
                 </a>
-                <Link href="#solutions" className="btn-secondary">
-                  View Solutions
-                </Link>
+                <a href={`${siteConfig.basePath}/cwc-capabilities-statement.pdf`} download className="btn-secondary">
+                  Download Capabilities Statement
+                </a>
               </div>
             </div>
           </div>
