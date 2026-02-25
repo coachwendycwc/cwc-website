@@ -250,6 +250,86 @@ export default function ForOrganizationsPage() {
           </div>
         </section>
 
+        {/* Pain Points Section */}
+        <section className="section gradient-subtle">
+          <div className="container-wide">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                Sound Familiar?
+              </p>
+              <h2 className="heading-display">
+                The challenges{" "}
+                <span className="text-gradient">your organization faces.</span>
+              </h2>
+              <p className="body-large mt-6">
+                Leaders and HR executives are seeing these patterns across their
+                teams — and traditional approaches aren&apos;t solving them.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Retention of Top Talent",
+                  description:
+                    "You're losing high-performing women of color to competitors who invest in their development. The cost of turnover goes far beyond recruitment — it erodes institutional knowledge and team morale.",
+                },
+                {
+                  title: "Disengaged Teams",
+                  description:
+                    "Low morale, quiet quitting, and a lack of psychological safety are silently undermining your culture. People show up but aren't fully present, and trust across teams is fragile.",
+                },
+                {
+                  title: "Performance & Productivity Gaps",
+                  description:
+                    "Staff members are struggling to execute the work with a manager who is uncertain or has tried everything and is unable to move the needle. Without the right coaching framework, both sides stay stuck.",
+                },
+                {
+                  title: "Leadership Pipeline Gaps",
+                  description:
+                    "There's no diverse bench for senior roles. High-potential leaders aren't being developed intentionally, and the path from mid-level to executive remains unclear and inequitable.",
+                },
+                {
+                  title: "Communication Breakdowns",
+                  description:
+                    "Conflict avoidance, silos, and a lack of trust are creating friction across teams. Leaders struggle to have courageous conversations, and unresolved tension compounds over time.",
+                },
+                {
+                  title: "Manager Ineffectiveness",
+                  description:
+                    "People managers were promoted for technical skills but struggle to lead. They lack the tools for giving feedback, navigating difficult dynamics, and developing their direct reports.",
+                },
+                {
+                  title: "New Managers in the Storming Phase",
+                  description:
+                    "New managers are navigating through the storming phase of the team development process and aren't sure how to build a clear roadmap for team cohesion. Without guidance, early missteps become lasting culture problems.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-white border border-[#E5E5E5] rounded-2xl p-6 shadow-sm"
+                >
+                  <h3 className="font-semibold text-[#1A1A1A] text-lg mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#525252] leading-relaxed text-sm">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-lg text-[#525252] max-w-2xl mx-auto">
+                These aren&apos;t just HR problems — they&apos;re leadership problems.{" "}
+                <span className="font-semibold text-[#1A1A1A]">
+                  The right coaching partner helps you build the culture, communication, and capacity your organization needs to thrive.
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Trusted By - Client Logos Carousel */}
         <section className="section-tight bg-white border-y border-[#E5E5E5] overflow-hidden">
           <div className="container-wide">
