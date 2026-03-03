@@ -150,7 +150,7 @@ const solutions = [
     id: "performance-coaching",
     title: "Performance-Based Coaching",
     subtitle: "The RESET Method™",
-    description: "Leaders navigating underperformance who need a structured, confidential coaching framework that drives accountability and real behavior change—without defaulting to avoidance or escalation.",
+    description: "Leaders navigating team member(s) that are underperforming who need a structured, confidential coaching framework that drives accountability and real behavior change—without defaulting to avoidance or escalation.",
     outcomes: [
       "A team member who takes full ownership of their performance",
       "A leader who gains confidence in managing underperformance",
@@ -297,7 +297,7 @@ export default function ForOrganizationsPage() {
                 {
                   title: "Manager Ineffectiveness",
                   description:
-                    "People managers were promoted for technical skills but struggle to lead. They lack the tools for giving feedback, navigating difficult dynamics, and developing their direct reports.",
+                    "Managers were promoted for technical skills but struggle to lead. They lack the tools for giving feedback, navigating difficult dynamics, and developing their direct reports.",
                 },
               ].map((item) => (
                 <div

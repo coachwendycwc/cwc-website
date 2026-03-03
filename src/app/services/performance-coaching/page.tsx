@@ -143,7 +143,7 @@ export default function PerformanceCoachingPage() {
               Best For
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
-              Leaders navigating underperformance who need a structured, confidential coaching framework that drives accountability and real behavior change.
+              Leaders navigating team member(s) that are underperforming who need a structured, confidential coaching framework that drives accountability and real behavior change.
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {["People Managers", "Directors", "VPs", "HR Partners"].map((tag) => (
