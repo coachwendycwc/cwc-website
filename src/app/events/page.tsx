@@ -265,13 +265,15 @@ export default function EventsPage() {
                   className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer"
                   onClick={() => setSelectedImage(event.image)}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${siteConfig.basePath}/images/events/${event.image}`}
-                    alt={event.title}
-                    className="w-full h-auto object-cover"
-                    loading="lazy"
-                  />
+                  <div className="aspect-[4/5] overflow-hidden bg-[#F5F5F5]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${siteConfig.basePath}/images/events/${event.image}`}
+                      alt={event.title}
+                      className="w-full h-full object-cover object-top"
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-[#1A1A1A] text-sm">{event.title}</h3>
                     <p className="text-xs text-[#737373] mt-1">{event.date}</p>
