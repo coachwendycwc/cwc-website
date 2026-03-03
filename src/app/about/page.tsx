@@ -89,7 +89,7 @@ export default function AboutPage() {
                 </h2>
                 <p className="text-lg text-[#737373] mt-2">M.P.A., M.S.Ed</p>
                 <p className="body-large mt-6">
-                  Wendy Perdomo is the Founder and Executive Leadership &amp; Life Coach at Coaching Women of Color, LLC, a premier coaching and leadership development firm committed to advancing the voice, visibility, and impact of professional women of color in today&apos;s workforce. With over two decades of experience across the nonprofit, education, and public sectors, Wendy is a master facilitator, certified executive coach, and organizational development strategist.
+                  Wendy Perdomo is the Founder and Executive Leadership Coach at Coaching Women of Color, LLC, a premier coaching and leadership development firm committed to advancing the voice, visibility, and impact of professional women of color in today&apos;s workforce. With over two decades of experience across the nonprofit, education, and public sectors, Wendy is a master facilitator, certified executive coach, and organizational development strategist.
                 </p>
                 <p className="body-large mt-4">
                   Wendy partners with organizations and executives to cultivate inclusive, high-performing cultures where people and teams can thrive. As a certified DiSC® facilitator, she leverages assessment-based coaching and facilitation to improve communication, strengthen collaboration, and build psychologically safe environments that foster trust, cohesion, and accountability.
