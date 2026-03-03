@@ -198,15 +198,6 @@ export default function ContactPage() {
 
                     <div>
                       <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
-                        Phone
-                      </p>
-                      <a href="tel:+19172241343" className="text-[#1A1A1A] hover:text-[#3EBCE8] transition-colors">
-                        (917) 224-1343
-                      </a>
-                    </div>
-
-                    <div>
-                      <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
                         Follow Us
                       </p>
                       <div className="flex gap-4">
@@ -217,18 +208,6 @@ export default function ContactPage() {
                           Instagram
                         </a>
                       </div>
-                    </div>
-
-                    <div className="pt-6 border-t border-[#E5E5E5]">
-                      <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
-                        Book a Consultation
-                      </p>
-                      <p className="text-[#737373] mb-4">
-                        Prefer to schedule a call directly? Book a free 30-minute consultation.
-                      </p>
-                      <a href="/book" className="link-arrow text-sm">
-                        Schedule Now
-                      </a>
                     </div>
                   </div>
                 </div>
