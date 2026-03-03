@@ -29,6 +29,16 @@ const upcomingEvents = [
 
 const pastEventFlyers = [
   {
+    image: "affinity-healing-circle-flyer.jpg",
+    title: "March Affinity Leadership Healing Circle",
+    date: "March 26, 2026",
+  },
+  {
+    image: "wocip-conference-flyer.jpg",
+    title: "WOCIP 9th Annual Conference — Panelist",
+    date: "October 22–26, 2025",
+  },
+  {
     image: "reinvention-summit-flyer.png",
     title: "Reinvention: An Elevation Summit",
     date: "April 5, 2025",
@@ -52,6 +62,11 @@ const pastEventFlyers = [
     image: "virtual-series-flyer.png",
     title: "Virtual Series for Professional Women of Color",
     date: "October 2022",
+  },
+  {
+    image: "proud-to-be-latina-flyer.jpg",
+    title: "Proud to Be Latina — 9th Annual Empowerment & Leadership Conference",
+    date: "June 3, 2019",
   },
   {
     image: "quote-graphic.png",
