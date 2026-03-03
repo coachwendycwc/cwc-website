@@ -119,6 +119,7 @@ const galleryImages = [
   "IMG_1092.jpg",
   "IMG_6484.jpg",
   "IMG_9068_new.jpg",
+  "IMG_0645.jpg",
 ];
 
 export default function GalleryPage() {
