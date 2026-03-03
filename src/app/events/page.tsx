@@ -30,8 +30,13 @@ const upcomingEvents = [
 const pastEventFlyers = [
   {
     image: "affinity-healing-circle-flyer.jpg",
-    title: "March Affinity Leadership Healing Circle",
+    title: "March Affinity Leadership Healing Circle — Developing Capacity Coaching",
     date: "March 26, 2026",
+  },
+  {
+    image: "rise-leadership-conference.jpg",
+    title: "R.I.S.E Women's Leadership Conference — Panel Moderator",
+    date: "2025",
   },
   {
     image: "wocip-conference-flyer.jpg",
@@ -59,19 +64,99 @@ const pastEventFlyers = [
     date: "2023",
   },
   {
+    image: "virtual-series-may-2022.jpg",
+    title: "Virtual Series for Professional Women of Color",
+    date: "May 19, 2022",
+  },
+  {
     image: "virtual-series-flyer.png",
     title: "Virtual Series for Professional Women of Color",
     date: "October 2022",
   },
   {
-    image: "proud-to-be-latina-flyer.jpg",
-    title: "Proud to Be Latina — 9th Annual Empowerment & Leadership Conference",
-    date: "June 3, 2019",
-  },
-  {
     image: "quote-graphic.png",
     title: "Accomplishment Coaching Feature",
     date: "2022",
+  },
+  {
+    image: "fsp-personal-brand.jpg",
+    title: "How to Elevate Your Personal Brand — FSP Chicago",
+    date: "2022",
+  },
+  {
+    image: "bold-woc-self-saboteur.jpg",
+    title: "Bold Women of Color — Self Saboteur No More",
+    date: "November 17, 2021",
+  },
+  {
+    image: "bold-woc-full-flyer.jpg",
+    title: "Bold Women of Color — Take Action Now! Virtual Series",
+    date: "2021",
+  },
+  {
+    image: "bold-woc-ig-share.png",
+    title: "Bold Women of Color — Community Share",
+    date: "2021",
+  },
+  {
+    image: "ellevate-mentoring-meetup.jpg",
+    title: "Ellevate Network — Mentoring Meetup: Being an Ally or Accomplice",
+    date: "March 25, 2021",
+  },
+  {
+    image: "fierce-vulnerability-ig-live.jpg",
+    title: "Fierce Vulnerability IG Live with Coach Sophia Casey",
+    date: "January 13, 2021",
+  },
+  {
+    image: "latina-emergence-conference-2020.jpg",
+    title: "Latina Emergence and Empowerment Conference — The Future of Work",
+    date: "October 5, 2020",
+  },
+  {
+    image: "inner-critic-ig-live.jpg",
+    title: "How to Get Rid of Your Inner Critic — Network By Her IG Live",
+    date: "April 30, 2020",
+  },
+  {
+    image: "network-by-her-flyer.jpg",
+    title: "Network By Her — Learn with Us IG Live",
+    date: "April 30, 2020",
+  },
+  {
+    image: "ultimate-career-leap.jpg",
+    title: "Ultimate Career Leap with VJ Niles — LinkedIn Live",
+    date: "February 25, 2020",
+  },
+  {
+    image: "woman-of-impact-collective.jpg",
+    title: "Woman of Impact Collective — IG Live",
+    date: "2020",
+  },
+  {
+    image: "bloomberg-quicktake-1.jpg",
+    title: "Featured on Bloomberg QuickTake",
+    date: "2020",
+  },
+  {
+    image: "bloomberg-quicktake-2.png",
+    title: "Featured on Bloomberg QuickTake",
+    date: "2020",
+  },
+  {
+    image: "wonder-girls-feature.jpg",
+    title: "Wonder Girls Feature",
+    date: "2020",
+  },
+  {
+    image: "breakfast-with-champions.jpg",
+    title: "Breakfast with Champions — Women CEOs, Butterfly Dreamz",
+    date: "October 26, 2019",
+  },
+  {
+    image: "proud-to-be-latina-flyer.jpg",
+    title: "Proud to Be Latina — 9th Annual Empowerment & Leadership Conference",
+    date: "June 3, 2019",
   },
 ];
 
