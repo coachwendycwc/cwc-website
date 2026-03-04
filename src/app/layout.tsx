@@ -4,11 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://coachingwomenofcolor.com"),
   title: {
-    default: "Coaching Women of Color | DEI Training & Leadership Development",
+    default: "Coaching Women of Color | Executive Coaching & Leadership Development",
     template: "%s | Coaching Women of Color",
   },
   description:
-    "Transform your organization with DEI workshops, leadership development, and executive coaching designed to elevate women of color. Partner with CWC today.",
+    "Transform your organization with executive coaching, leadership development, and workshops designed to elevate women of color. Partner with CWC today.",
   keywords: [
     "DEI training",
     "diversity workshops",
@@ -25,12 +25,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://coachingwomenofcolor.com",
     siteName: "Coaching Women of Color",
-    title: "Coaching Women of Color | DEI Training & Leadership Development",
+    title: "Coaching Women of Color | Executive Coaching & Leadership Development",
     description:
-      "Transform your organization with DEI workshops, leadership development, and executive coaching designed to elevate women of color.",
+      "Transform your organization with executive coaching, leadership development, and workshops designed to elevate women of color.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Coaching Women of Color",
@@ -39,10 +39,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coaching Women of Color | DEI Training & Leadership Development",
+    title: "Coaching Women of Color | Executive Coaching & Leadership Development",
     description:
-      "Transform your organization with DEI workshops, leadership development, and executive coaching designed to elevate women of color.",
-    images: ["/og-image.jpg"],
+      "Transform your organization with executive coaching, leadership development, and workshops designed to elevate women of color.",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   robots: {
     index: true,
@@ -65,7 +69,7 @@ const jsonLd = {
   alternateName: "CWC",
   url: "https://coachingwomenofcolor.com",
   description:
-    "Professional coaching and consulting firm specializing in DEI training, leadership development, and organizational transformation for companies committed to empowering women of color.",
+    "Professional coaching and consulting firm specializing in executive coaching, leadership development, and organizational transformation for companies committed to empowering women of color.",
   email: "wendy@coachingwomenofcolor.com",
   sameAs: [
     "https://www.linkedin.com/in/wendyperdomoleadershipcoach/",
