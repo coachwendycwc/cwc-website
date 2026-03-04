@@ -1,8 +1,59 @@
 # Claude Session Notes - CWC Website
 
-**Last Updated:** 2026-01-05
+**Last Updated:** 2026-03-03
 
-**Live Site:** https://mdxvision.github.io/cwc-website/
+---
+
+## Deployment Workflow
+
+**⚠️ ALL changes go to staging first. Never push directly to production.**
+
+| Environment | Branch | URL | Infrastructure |
+|-------------|--------|-----|----------------|
+| **Production** | `main` | https://coachingwomenofcolor.com | S3 + CloudFront (E2RMMPGLN2DEIG) |
+| **Staging** | `staging` | https://staging.coachingwomenofcolor.com | S3 + CloudFront (TBD) |
+| **GitHub Pages** | `main` | https://mdx-vision.github.io/cwc-website/ | GitHub Pages (legacy) |
+
+### Deploy Commands
+```bash
+# Build & deploy to STAGING
+git checkout staging
+npm run build
+aws s3 sync out/ s3://staging.coachingwomenofcolor.com/ --delete
+aws cloudfront create-invalidation --distribution-id <STAGING_DIST_ID> --paths "/*"
+
+# Promote staging → production (after approval)
+git checkout main
+git merge staging
+npm run build
+aws s3 sync out/ s3://coachingwomenofcolor.com/ --delete
+aws cloudfront create-invalidation --distribution-id E2RMMPGLN2DEIG --paths "/*"
+```
+
+### AWS Resources
+| Resource | ID/ARN |
+|----------|--------|
+| S3 (Production) | `coachingwomenofcolor.com` |
+| S3 (Staging) | `staging.coachingwomenofcolor.com` |
+| CloudFront (Production) | `E2RMMPGLN2DEIG` / `d3qdfaeu832kyz.cloudfront.net` |
+| SSL Certificate | `arn:aws:acm:us-east-1:541801280754:certificate/604b51d5-a901-45ff-aff2-2cebb5e687ea` |
+| Route 53 Hosted Zone | `Z0786121WDTXROF6X6JP` |
+| Domain Registrar | Squarespace (nameservers pointed to Route 53) |
+| Email | Google Workspace (MX records in Route 53) |
+
+### DNS Records (Route 53)
+| Type | Name | Value |
+|------|------|-------|
+| A (ALIAS) | coachingwomenofcolor.com | d3qdfaeu832kyz.cloudfront.net |
+| CNAME | www | d3qdfaeu832kyz.cloudfront.net |
+| MX | @ | Google Workspace (5 records) |
+| TXT | @ | SPF (v=spf1 include:_spf.google.com ~all) |
+| TXT | _dmarc | DMARC (v=DMARC1; p=none; aspf=r; adkim=r;) |
+| CNAME | _35632bdaeb... | ACM cert validation |
+
+---
+
+**Live Site:** https://coachingwomenofcolor.com
 
 ---
 
