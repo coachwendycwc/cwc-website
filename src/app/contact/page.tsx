@@ -38,8 +38,10 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     const templateParams = {
+      to_email: "wendy@coachingwomenofcolor.com",
       from_name: formData.name,
       from_email: formData.email,
+      reply_to: formData.email,
       company: formData.company || "N/A",
       role: formData.role || "N/A",
       team_size: formData.teamSize || "N/A",
@@ -59,7 +61,11 @@ export default function ContactPage() {
       setToastType("success");
       setShowToast(true);
       setFormData({ name: "", email: "", company: "", role: "", teamSize: "", type: "organization", service: "", message: "" });
-    } catch {
+    } catch (error: unknown) {
+      const err = error as { status?: number; text?: string };
+      console.error("EmailJS Error Status:", err?.status);
+      console.error("EmailJS Error Text:", err?.text);
+      console.error("EmailJS Error Full:", JSON.stringify(error));
       setToastMessage("Something went wrong. Please try again or email us directly at wendy@coachingwomenofcolor.com");
       setToastType("error");
       setShowToast(true);
