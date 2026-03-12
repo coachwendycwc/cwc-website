@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import emailjs from "@emailjs/browser";
 import { Header, Footer, Toast } from "@/components";
 
 export default function ContactPage() {
@@ -16,6 +17,9 @@ export default function ContactPage() {
   });
 
   const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastType, setToastType] = useState<"success" | "error">("success");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const handleCloseToast = useCallback(() => setShowToast(false), []);
 
   const organizationalServices = [
@@ -29,26 +33,39 @@ export default function ContactPage() {
     "Other",
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `New Inquiry from ${formData.name}${formData.service ? ` — ${formData.service}` : ""}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}\nRole/Title: ${formData.role || "N/A"}\nTeam Size: ${formData.teamSize || "N/A"}\nInterested In: ${formData.type === "organization" ? "Organizational Services" : "Individual Coaching"}\nService: ${formData.service || "N/A"}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoUrl = `mailto:wendy@coachingwomenofcolor.com?subject=${subject}&body=${body}`;
+    setIsSubmitting(true);
 
-    // Open mailto in a new window/tab so it doesn't interfere with the page
-    const mailWindow = window.open(mailtoUrl, "_blank");
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      company: formData.company || "N/A",
+      role: formData.role || "N/A",
+      team_size: formData.teamSize || "N/A",
+      interest_type: formData.type === "organization" ? "Organizational Services" : "Individual Coaching",
+      service: formData.service || "N/A",
+      message: formData.message,
+    };
 
-    // Fallback: if popup was blocked, use location.href
-    if (!mailWindow || mailWindow.closed) {
-      window.location.href = mailtoUrl;
+    try {
+      await emailjs.send(
+        "service_n62dsgh",
+        "template_xl8go0s",
+        templateParams,
+        "y6UfKicpoRY2LvZNa"
+      );
+      setToastMessage("Message sent successfully! We'll get back to you within 1 business day.");
+      setToastType("success");
+      setShowToast(true);
+      setFormData({ name: "", email: "", company: "", role: "", teamSize: "", type: "organization", service: "", message: "" });
+    } catch {
+      setToastMessage("Something went wrong. Please try again or email us directly at wendy@coachingwomenofcolor.com");
+      setToastType("error");
+      setShowToast(true);
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setShowToast(true);
-    setFormData({ name: "", email: "", company: "", role: "", teamSize: "", type: "organization", service: "", message: "" });
   };
 
   return (
@@ -224,8 +241,8 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary w-full sm:w-auto">
-                    Send Message
+                  <button type="submit" disabled={isSubmitting} className="btn-primary w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed">
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
                   <p className="text-sm text-[#737373] mt-3">
                     Typical response time: within 1 business day.
@@ -289,8 +306,8 @@ export default function ContactPage() {
       <Footer />
 
       <Toast
-        message="Opening your email client to send to wendy@coachingwomenofcolor.com"
-        type="success"
+        message={toastMessage}
+        type={toastType}
         show={showToast}
         onClose={handleCloseToast}
       />
