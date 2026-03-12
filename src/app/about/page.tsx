@@ -82,7 +82,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
-                  Meet Your Coach
+                  Our Founder & Principal
                 </p>
                 <h2 className="heading-display">
                   Wendy Perdomo
@@ -177,6 +177,51 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <p className="text-[#525252] font-medium">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Organizations Choose CWC */}
+        <section className="section bg-white">
+          <div className="container-wide">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="heading-display">
+                Why Organizations <span className="text-gradient">Choose CWC</span>
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Fortune 500 & Enterprise Clients",
+                  description: "Trusted by Johnson & Johnson, Genentech, Novo Nordisk, TD Bank, and 50+ organizations across industries.",
+                },
+                {
+                  title: "Columbia Business School Executive Education",
+                  description: "Advanced training in organizational leadership and executive development from one of the world's top business schools.",
+                },
+                {
+                  title: "Certified DiSC\u00AE Facilitator",
+                  description: "Assessment-based coaching and facilitation that improves communication, collaboration, and team dynamics.",
+                },
+                {
+                  title: "Cross-Industry Experience",
+                  description: "25+ years across financial services, healthcare, technology, education, government, nonprofit, and arts & culture.",
+                },
+                {
+                  title: "Trauma-Informed Approach",
+                  description: "Facilitation and coaching grounded in psychological safety, creating space for honest dialogue and lasting change.",
+                },
+                {
+                  title: "Enterprise-Ready Operations",
+                  description: "Custom scoping, W-9 and insurance documentation, engagement letters, and post-engagement strategic debriefs.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-[#F5F5F5] rounded-2xl p-6">
+                  <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">{item.title}</h3>
+                  <p className="text-sm text-[#737373] leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>

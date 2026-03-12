@@ -8,39 +8,34 @@ import { siteConfig } from "@/config";
 
 const navigation = [
   {
-    name: "For Organizations",
+    name: "Solutions",
     href: "/for-organizations",
     matchPaths: ["/for-organizations", "/services"],
+  },
+  {
+    name: "Speaking",
+    href: "/services/keynote-speaking",
+    matchPaths: ["/services/keynote-speaking"],
+  },
+  {
+    name: "About",
+    href: "/about",
+    matchPaths: ["/about"],
+  },
+  {
+    name: "Case Studies",
+    href: "/case-studies",
+    matchPaths: ["/case-studies"],
+  },
+  {
+    name: "Resources",
+    href: "/resources",
+    matchPaths: ["/resources"],
   },
   {
     name: "For Individuals",
     href: "/for-individuals",
     matchPaths: ["/for-individuals", "/executive-coaching"],
-  },
-  {
-    name: "About",
-    href: "/about",
-    matchPaths: ["/about", "/case-studies"],
-  },
-  {
-    name: "Resources",
-    href: "/#resources",
-    matchPaths: [],
-  },
-  {
-    name: "Events",
-    href: "/events",
-    matchPaths: ["/events"],
-  },
-  {
-    name: "Gallery",
-    href: "/gallery",
-    matchPaths: ["/gallery"],
-  },
-  {
-    name: "FAQ",
-    href: "/faq",
-    matchPaths: ["/faq"],
   },
 ];
 
@@ -91,10 +86,10 @@ export default function Header() {
         {/* CTA Button */}
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           <Link
-            href="/book"
+            href="/contact"
             className="px-6 py-2.5 bg-[#3EBCE8] text-white text-sm font-medium rounded-full transition-all hover:bg-[#1A9FCC] hover:scale-105"
           >
-            Book a Consultation
+            Request a Proposal
           </Link>
         </div>
 
@@ -149,11 +144,11 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/book"
+              href="/contact"
               className="block w-full text-center px-6 py-3 bg-[#3EBCE8] text-white font-medium rounded-full mt-6"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Book a Consultation
+              Request a Proposal
             </Link>
           </div>
         </div>

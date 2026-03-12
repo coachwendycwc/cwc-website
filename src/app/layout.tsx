@@ -4,19 +4,22 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://coachingwomenofcolor.com"),
   title: {
-    default: "Coaching Women of Color | Executive Coaching & Leadership Development",
+    default: "Coaching Women of Color | Executive Coaching, Keynote Speaking & Leadership Development for Organizations",
     template: "%s | Coaching Women of Color",
   },
   description:
-    "Transform your organization with executive coaching, leadership development, and workshops designed to elevate women of color. Partner with CWC today.",
+    "Trusted by Fortune 500 companies and 50+ organizations. Executive coaching, keynote speaking, workshops, and strategic retreats that develop, retain, and advance women of color in leadership.",
   keywords: [
-    "DEI training",
-    "diversity workshops",
+    "executive coaching for organizations",
+    "keynote speaking",
     "leadership development",
     "women of color coaching",
-    "executive coaching",
+    "DEI training",
+    "diversity workshops",
     "inclusive workplace",
     "corporate training",
+    "strategic retreats",
+    "organizational development",
   ],
   authors: [{ name: "Coaching Women of Color" }],
   creator: "Coaching Women of Color",
@@ -25,9 +28,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://coachingwomenofcolor.com",
     siteName: "Coaching Women of Color",
-    title: "Coaching Women of Color | Executive Coaching & Leadership Development",
+    title: "Coaching Women of Color | Executive Coaching, Keynote Speaking & Leadership Development for Organizations",
     description:
-      "Transform your organization with executive coaching, leadership development, and workshops designed to elevate women of color.",
+      "Trusted by Fortune 500 companies and 50+ organizations. Executive coaching, keynote speaking, workshops, and strategic retreats for leadership development.",
     images: [
       {
         url: "/og-image.png",
@@ -39,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coaching Women of Color | Executive Coaching & Leadership Development",
+    title: "Coaching Women of Color | Executive Coaching, Keynote Speaking & Leadership Development for Organizations",
     description:
-      "Transform your organization with executive coaching, leadership development, and workshops designed to elevate women of color.",
+      "Trusted by Fortune 500 companies and 50+ organizations. Executive coaching, keynote speaking, workshops, and strategic retreats for leadership development.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -69,7 +72,7 @@ const jsonLd = {
   alternateName: "CWC",
   url: "https://coachingwomenofcolor.com",
   description:
-    "Professional coaching and consulting firm specializing in executive coaching, leadership development, and organizational transformation for companies committed to empowering women of color.",
+    "Professional coaching and consulting firm specializing in executive coaching, keynote speaking, leadership development, and organizational transformation. Trusted by Fortune 500 companies and 50+ organizations to develop, retain, and advance women of color in leadership.",
   email: "wendy@coachingwomenofcolor.com",
   sameAs: [
     "https://www.linkedin.com/in/wendyperdomoleadershipcoach/",

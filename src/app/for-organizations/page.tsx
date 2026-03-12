@@ -218,13 +218,13 @@ export default function ForOrganizationsPage() {
                   For Organizations
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                  Build cultures where
+                  Your organization needs leaders who
                   <br />
-                  <span className="text-gradient">everyone thrives.</span>
+                  <span className="text-gradient">stay, grow, and deliver.</span>
                 </h1>
                 <p className="mt-6 text-xl text-[#525252] leading-relaxed">
                   High-impact coaching and development programs that strengthen leaders
-                  and transform culture. Every engagement is customized to your needs.
+                  and transform culture. Every engagement is scoped, measured, and built for your timeline.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -262,8 +262,8 @@ export default function ForOrganizationsPage() {
                 <span className="text-gradient">your organization faces.</span>
               </h2>
               <p className="body-large mt-6">
-                Leaders and HR executives are seeing these patterns across their
-                teams — and traditional approaches aren&apos;t solving them.
+                These challenges cost organizations billions annually in turnover, disengagement, and lost productivity. Leaders and HR executives are seeing these patterns across their
+                teams—and traditional approaches aren&apos;t solving them.
               </p>
             </div>
 
@@ -509,8 +509,60 @@ export default function ForOrganizationsPage() {
 
             <div className="text-center mt-12">
               <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Get a Custom Quote
+                Request a Proposal
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Enterprise Readiness */}
+        <section className="section bg-white">
+          <div className="container-wide">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                Enterprise Ready
+              </p>
+              <h2 className="heading-display">
+                Built for <span className="text-gradient">how you work.</span>
+              </h2>
+              <p className="body-large mt-6">
+                We understand the procurement, compliance, and logistics requirements of organizational buyers.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  title: "Custom Scoping",
+                  description: "Every engagement starts with a discovery process to align on goals, audience, format, and success metrics.",
+                  icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+                },
+                {
+                  title: "Contracting Ready",
+                  description: "W-9, insurance documentation, and capabilities statements available. We work with your procurement process.",
+                  icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+                },
+                {
+                  title: "Flexible Delivery",
+                  description: "Virtual, in-person, or hybrid. Single sessions or multi-month engagements. Designed around your calendar.",
+                  icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
+                },
+                {
+                  title: "Post-Engagement Debrief",
+                  description: "Every engagement concludes with a strategic debrief—key findings, recommendations, and next steps for sustained impact.",
+                  icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+                },
+              ].map((card) => (
+                <div key={card.title} className="bg-[#F5F5F5] rounded-2xl p-6">
+                  <div className="w-10 h-10 bg-[#E8F8FD] rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-5 h-5 text-[#3EBCE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={card.icon} />
+                    </svg>
+                  </div>
+                  <h3 className="font-semibold text-[#1A1A1A] mb-2">{card.title}</h3>
+                  <p className="text-sm text-[#737373] leading-relaxed">{card.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

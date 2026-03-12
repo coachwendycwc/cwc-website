@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
@@ -27,9 +27,7 @@ export default function VirtualSeriesPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#F3E8FF] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Solutions
-              </Link>
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions", href: "/for-organizations" }, { label: "Virtual Series" }]} />
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                 Virtual Series
               </h1>
@@ -38,7 +36,7 @@ export default function VirtualSeriesPage() {
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
-                  Get a Custom Quote
+                  Request a Coaching Proposal
                 </Link>
               </div>
             </div>
@@ -145,7 +143,7 @@ export default function VirtualSeriesPage() {
               Best For
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
-              Organizations wanting sustainable leadership development, measurable growth over time, and a clear path from learning to implementation.
+              Chief People Officers, L&D directors, and HR leaders seeking sustainable leadership development with measurable growth and a clear path from learning to implementation.
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {["Leadership Cohorts", "People Managers", "High-Potential Groups", "Cross-Functional Teams"].map((tag) => (
@@ -191,7 +189,7 @@ export default function VirtualSeriesPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Get a Custom Quote
+                Request a Coaching Proposal
               </Link>
             </div>
           </div>

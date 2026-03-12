@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
@@ -35,9 +35,7 @@ export default function GroupCoachingPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#FFF8E8] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Solutions
-              </Link>
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions", href: "/for-organizations" }, { label: "Group Coaching" }]} />
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                 Group Coaching
               </h1>
@@ -46,7 +44,7 @@ export default function GroupCoachingPage() {
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
-                  Get a Custom Quote
+                  Request a Coaching Proposal
                 </Link>
               </div>
             </div>
@@ -171,7 +169,7 @@ export default function GroupCoachingPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Get a Custom Quote
+                Request a Coaching Proposal
               </Link>
             </div>
           </div>

@@ -1,25 +1,30 @@
 "use client";
 
-import { useState } from "react";
-import { Header, Footer } from "@/components";
+import { useState, useCallback } from "react";
+import { Header, Footer, Toast } from "@/components";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
+    role: "",
+    teamSize: "",
     type: "organization",
     service: "",
     message: "",
   });
 
+  const [showToast, setShowToast] = useState(false);
+  const handleCloseToast = useCallback(() => setShowToast(false), []);
+
   const organizationalServices = [
-    "Executive Coaching",
-    "Group Coaching",
     "Keynote Speaking",
-    "Workshops & Webinars",
-    "Virtual Series",
     "Strategic Leadership & Board Retreats",
+    "Executive Coaching",
+    "Workshops & Webinars",
+    "Group Coaching",
+    "Virtual Series",
     "Performance Coaching (RESET Method™)",
     "Other",
   ];
@@ -30,8 +35,10 @@ export default function ContactPage() {
       `New Inquiry from ${formData.name}${formData.service ? ` — ${formData.service}` : ""}`
     );
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}\nInterested In: ${formData.type === "organization" ? "Organizational Services" : "Individual Coaching"}\nService: ${formData.service || "N/A"}\n\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}\nRole/Title: ${formData.role || "N/A"}\nTeam Size: ${formData.teamSize || "N/A"}\nInterested In: ${formData.type === "organization" ? "Organizational Services" : "Individual Coaching"}\nService: ${formData.service || "N/A"}\n\nMessage:\n${formData.message}`
     );
+    setShowToast(true);
+    setFormData({ name: "", email: "", company: "", role: "", teamSize: "", type: "organization", service: "", message: "" });
     window.location.href = `mailto:wendy@coachingwomenofcolor.com?subject=${subject}&body=${body}`;
   };
 
@@ -108,6 +115,39 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="role" className="block text-sm font-medium text-[#1A1A1A] mb-2">
+                        Role/Title
+                      </label>
+                      <input
+                        type="text"
+                        id="role"
+                        placeholder="e.g., VP of HR, L&D Director"
+                        className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all"
+                        value={formData.role}
+                        onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="teamSize" className="block text-sm font-medium text-[#1A1A1A] mb-2">
+                        Team Size
+                      </label>
+                      <select
+                        id="teamSize"
+                        className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all bg-white"
+                        value={formData.teamSize}
+                        onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
+                      >
+                        <option value="">Select...</option>
+                        <option value="Individual">Individual</option>
+                        <option value="Team (5-20)">Team (5-20)</option>
+                        <option value="Department (20-100)">Department (20-100)</option>
+                        <option value="Organization-wide (100+)">Organization-wide (100+)</option>
+                      </select>
+                    </div>
+                  </div>
+
                   <div>
                     <label className="block text-sm font-medium text-[#1A1A1A] mb-2">
                       I&apos;m interested in *
@@ -178,6 +218,9 @@ export default function ContactPage() {
                   <button type="submit" className="btn-primary w-full sm:w-auto">
                     Send Message
                   </button>
+                  <p className="text-sm text-[#737373] mt-3">
+                    Typical response time: within 1 business day.
+                  </p>
                 </form>
               </div>
 
@@ -209,6 +252,23 @@ export default function ContactPage() {
                         </a>
                       </div>
                     </div>
+
+                    <div className="border-t border-[#E5E5E5] pt-6">
+                      <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
+                        For Your Team
+                      </p>
+                      <a
+                        href="/cwc-capabilities-statement.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[#525252] hover:text-[#3EBCE8] transition-colors text-sm"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download our Capabilities Statement
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -218,6 +278,13 @@ export default function ContactPage() {
       </main>
 
       <Footer />
+
+      <Toast
+        message="Opening your email client..."
+        type="info"
+        show={showToast}
+        onClose={handleCloseToast}
+      />
     </>
   );
 }

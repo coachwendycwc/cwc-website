@@ -4,12 +4,20 @@ import { siteConfig } from "@/config";
 
 const footerNavigation = {
   solutions: [
-    { name: "Executive Coaching", href: "/services/executive-coaching" },
-    { name: "Group Coaching", href: "/services/group-coaching" },
     { name: "Keynote Speaking", href: "/services/keynote-speaking" },
-    { name: "Workshops & Webinars", href: "/services/workshops-webinars" },
     { name: "Strategic Retreats", href: "/services/strategic-retreats" },
+    { name: "Executive Coaching", href: "/services/executive-coaching" },
+    { name: "Workshops & Webinars", href: "/services/workshops-webinars" },
+    { name: "Group Coaching", href: "/services/group-coaching" },
+    { name: "Virtual Series", href: "/services/virtual-series" },
     { name: "Performance Coaching", href: "/services/performance-coaching" },
+  ],
+  resources: [
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Capabilities Brief", href: "/cwc-capabilities-statement.pdf" },
+    { name: "Newsletter", href: "https://www.linkedin.com/newsletters/leading-while-woc-7301328637058842624/" },
+    { name: "Events", href: "/events" },
+    { name: "Gallery", href: "/gallery" },
   ],
   coaching: [
     { name: "Executive Coaching", href: "/executive-coaching" },
@@ -69,7 +77,7 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="container-wide py-16 lg:py-20">
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
           {/* Brand Column */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center">
@@ -82,7 +90,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-6 text-[#A3A3A3] text-sm leading-relaxed max-w-xs">
-              Empowering organizations to create inclusive cultures where women of color thrive and lead.
+              Leadership development, executive coaching, and keynote speaking for organizations committed to advancing women of color.
             </p>
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
@@ -120,10 +128,40 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Coaching */}
+          {/* Resources */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-[#A3A3A3]">
-              Coaching
+              Resources
+            </h3>
+            <ul role="list" className="mt-4 space-y-3">
+              {footerNavigation.resources.map((item) => (
+                <li key={item.name}>
+                  {item.href.startsWith("http") ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-[#737373] hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-sm text-[#737373] hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Individual Coaching */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#A3A3A3]">
+              Individual Coaching
             </h3>
             <ul role="list" className="mt-4 space-y-3">
               {footerNavigation.coaching.map((item) => (
@@ -164,7 +202,7 @@ export default function Footer() {
       <div className="border-t border-[#404040]">
         <div className="container-wide py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-[#737373]">
-            &copy; {new Date().getFullYear()} Coaching Women of Color. All rights reserved.
+            &copy; 2017-{new Date().getFullYear()} Coaching Women of Color. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link

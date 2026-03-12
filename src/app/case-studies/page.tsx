@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Badge } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Success Stories & Case Studies",
+  title: "Case Studies & Impact Stories",
   description:
-    "Real transformations from women of color who achieved breakthrough results through coaching. Read client success stories spanning executive coaching, group programs, and organizational impact.",
+    "See how organizations across industries have transformed their leadership culture through CWC coaching, keynotes, retreats, and development programs. Real impact, real results.",
 };
 
 const successStories = [
@@ -98,23 +98,42 @@ const successStories = [
 
 const organizationalImpact = [
   {
-    name: "Emily Kurtz",
-    location: "Brooklyn, NY",
-    type: "Team Coaching",
-    quote: "Working with Wendy kept me steady in a very, very difficult year. And not just me, but my colleague as well. The relationship has changed the emotionality of the workplace, allowing for better collaboration and better outcomes.",
-  },
-  {
     name: "Lynne Toye",
     location: "Newark, NJ",
     type: "Board Retreat Facilitation",
+    engagementType: "Strategic Retreat",
+    industry: "Nonprofit",
+    scope: "Board of Directors",
     quote: "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. We were extremely pleased with the quality and clarity of Wendy's preparation, delivery, and follow up. She is in a class by herself!",
+  },
+  {
+    name: "Emily Kurtz",
+    location: "Brooklyn, NY",
+    type: "Team Coaching",
+    engagementType: "Executive Coaching",
+    industry: "Education",
+    scope: "Team of 2 Leaders",
+    quote: "Working with Wendy kept me steady in a very, very difficult year. And not just me, but my colleague as well. The relationship has changed the emotionality of the workplace, allowing for better collaboration and better outcomes.",
   },
   {
     name: "CEO, Monique Burr Foundation",
     location: "Florida",
     type: "Organizational Development",
+    engagementType: "Organizational Development",
+    industry: "Nonprofit",
+    scope: "Organization-wide",
     quote: "Wendy's ability to connect with people and ensure that those she is working with get the most out of any engagement is truly unparalleled. She creates a collaborative atmosphere that is also thought provoking.",
   },
+];
+
+const industryBadges = [
+  "Financial Services",
+  "Healthcare",
+  "Education",
+  "Nonprofit",
+  "Technology",
+  "Government",
+  "Arts & Culture",
 ];
 
 const additionalTestimonials = [
@@ -161,26 +180,66 @@ export default function CaseStudiesPage() {
           <div className="container-wide">
             <div className="max-w-4xl">
               <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
-                Success Stories
+                Case Studies
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                Real Transformations,
+                Impact Across
                 <br />
-                <span className="text-gradient">Real Results</span>
+                <span className="text-gradient">Organizations</span>
               </h1>
               <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
-                Discover how women of color have transformed their careers,
-                launched businesses, and achieved breakthrough results through coaching.
+                See how organizations across industries have partnered with CWC to develop their leaders, strengthen their cultures, and drive measurable results.
               </p>
+              {/* Industry filter badges */}
+              <div className="mt-8 flex flex-wrap gap-2">
+                {industryBadges.map((industry) => (
+                  <span key={industry} className="px-3 py-1 bg-[#E8F8FD] text-[#1A9FCC] text-sm rounded-full font-medium">
+                    {industry}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Featured Success Stories */}
+        {/* Organizational Impact — FIRST */}
         <section className="section bg-white">
           <div className="container-wide">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#1A1A1A] mb-4">
+              Organizational Impact
+            </h2>
+            <p className="text-xl text-[#525252] mb-12 max-w-3xl">
+              From board retreats to team coaching, we help organizations build stronger cultures through facilitation, coaching, and strategic development.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {organizationalImpact.map((item) => (
+                <div key={item.name} className="bg-[#F8FAFB] rounded-xl p-8 shadow-sm">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-[#3EBCE8] text-white mb-4">
+                    {item.type}
+                  </span>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="text-xs text-[#737373] bg-[#F5F5F5] px-2 py-0.5 rounded">{item.engagementType}</span>
+                    <span className="text-xs text-[#737373] bg-[#F5F5F5] px-2 py-0.5 rounded">{item.industry}</span>
+                    <span className="text-xs text-[#737373] bg-[#F5F5F5] px-2 py-0.5 rounded">{item.scope}</span>
+                  </div>
+                  <blockquote className="text-[#525252] italic mb-6">
+                    &ldquo;{item.quote}&rdquo;
+                  </blockquote>
+                  <div className="border-t border-gray-100 pt-4">
+                    <p className="font-semibold text-[#1A1A1A]">{item.name}</p>
+                    <p className="text-sm text-[#737373]">{item.location}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Individual Success Stories — SECOND */}
+        <section className="section gradient-subtle">
+          <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-semibold text-[#1A1A1A] mb-12">
-              Featured Success Stories
+              Individual Success Stories
             </h2>
             <div className="space-y-12">
               {successStories.map((story) => (
@@ -222,35 +281,6 @@ export default function CaseStudiesPage() {
                         &ldquo;{story.quote}&rdquo;
                       </blockquote>
                     </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Organizational Impact */}
-        <section className="section gradient-subtle">
-          <div className="container-wide">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#1A1A1A] mb-4">
-              Organizational Impact
-            </h2>
-            <p className="text-xl text-[#525252] mb-12 max-w-3xl">
-              Beyond individual coaching, we help teams and organizations build
-              stronger cultures through retreats, facilitation, and team development.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              {organizationalImpact.map((item) => (
-                <div key={item.name} className="bg-white rounded-xl p-8 shadow-sm">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-[#3EBCE8] text-white mb-4">
-                    {item.type}
-                  </span>
-                  <blockquote className="text-[#525252] italic mb-6">
-                    &ldquo;{item.quote}&rdquo;
-                  </blockquote>
-                  <div className="border-t border-gray-100 pt-4">
-                    <p className="font-semibold text-[#1A1A1A]">{item.name}</p>
-                    <p className="text-sm text-[#737373]">{item.location}</p>
                   </div>
                 </div>
               ))}
@@ -307,18 +337,18 @@ export default function CaseStudiesPage() {
             </div>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-                Ready to write your success story?
+                Ready to create this kind of impact?
               </h2>
               <p className="mt-6 text-xl text-[#A3A3A3]">
-                Book a consultation to discuss your goals and how coaching can help you achieve them.
+                Let&apos;s discuss how CWC can support your organization&apos;s leadership development goals.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/book" className="btn-primary">
-                  Book a Consultation
+                <Link href="/contact" className="btn-primary">
+                  Request a Proposal
                 </Link>
-                <Link href="/contact" className="btn-secondary-dark">
-                  Contact Us
-                </Link>
+                <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-secondary bg-transparent text-white border-white hover:bg-white hover:text-[#1A1A1A]">
+                  Schedule an Executive Briefing
+                </a>
               </div>
             </div>
           </div>

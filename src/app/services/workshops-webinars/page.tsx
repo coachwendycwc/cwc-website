@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
@@ -34,9 +34,7 @@ export default function WorkshopsWebinarsPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#FCE8F3] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Solutions
-              </Link>
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions", href: "/for-organizations" }, { label: "Workshops & Webinars" }]} />
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                 Workshops & Webinars
               </h1>
@@ -45,7 +43,7 @@ export default function WorkshopsWebinarsPage() {
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
-                  Get a Custom Quote
+                  Request a Workshop Proposal
                 </Link>
               </div>
             </div>
@@ -119,7 +117,7 @@ export default function WorkshopsWebinarsPage() {
               Best For
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
-              Leadership teams, people managers, ERGs, high-potential cohorts, or cross-functional teams needing practical skill-building.
+              VP of HR, L&D directors, and talent development leaders seeking practical skill-building for leadership teams, people managers, ERGs, and high-potential cohorts.
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {["Leadership Teams", "People Managers", "ERGs", "High-Potential Cohorts", "Cross-Functional Teams"].map((tag) => (
@@ -167,7 +165,7 @@ export default function WorkshopsWebinarsPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Get a Custom Quote
+                Request a Workshop Proposal
               </Link>
             </div>
           </div>

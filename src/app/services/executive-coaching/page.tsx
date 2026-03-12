@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
@@ -27,9 +27,7 @@ export default function ExecutiveCoachingPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Solutions
-              </Link>
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions", href: "/for-organizations" }, { label: "Executive Coaching" }]} />
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                 Executive Coaching
               </h1>
@@ -38,7 +36,7 @@ export default function ExecutiveCoachingPage() {
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
-                  Get a Custom Quote
+                  Request a Coaching Proposal
                 </Link>
               </div>
             </div>
@@ -116,7 +114,7 @@ export default function ExecutiveCoachingPage() {
               Best For
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
-              Senior leaders and high-potential talent ready to lead with greater clarity, confidence, and impact.
+              VP of HR and talent leaders investing in senior leaders and high-potential talent ready to lead with greater clarity, confidence, and impact.
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {["C-Suite Executives", "Vice Presidents", "Directors", "High-Potential Leaders", "Leaders in Transition"].map((tag) => (
@@ -182,7 +180,7 @@ export default function ExecutiveCoachingPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Get a Custom Quote
+                Request a Coaching Proposal
               </Link>
             </div>
           </div>
