@@ -37,9 +37,18 @@ export default function ContactPage() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}\nRole/Title: ${formData.role || "N/A"}\nTeam Size: ${formData.teamSize || "N/A"}\nInterested In: ${formData.type === "organization" ? "Organizational Services" : "Individual Coaching"}\nService: ${formData.service || "N/A"}\n\nMessage:\n${formData.message}`
     );
+    const mailtoUrl = `mailto:wendy@coachingwomenofcolor.com?subject=${subject}&body=${body}`;
+
+    // Open mailto in a new window/tab so it doesn't interfere with the page
+    const mailWindow = window.open(mailtoUrl, "_blank");
+
+    // Fallback: if popup was blocked, use location.href
+    if (!mailWindow || mailWindow.closed) {
+      window.location.href = mailtoUrl;
+    }
+
     setShowToast(true);
     setFormData({ name: "", email: "", company: "", role: "", teamSize: "", type: "organization", service: "", message: "" });
-    window.location.href = `mailto:wendy@coachingwomenofcolor.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -280,8 +289,8 @@ export default function ContactPage() {
       <Footer />
 
       <Toast
-        message="Opening your email client..."
-        type="info"
+        message="Opening your email client to send to wendy@coachingwomenofcolor.com"
+        type="success"
         show={showToast}
         onClose={handleCloseToast}
       />
