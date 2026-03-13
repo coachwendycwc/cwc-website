@@ -97,6 +97,7 @@
 /* Base styles */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
