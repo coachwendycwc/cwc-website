@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Group Coaching for Leaders",
   description:
     "Leadership development at scale. Build capability across your organization with group coaching that creates shared language, peer accountability, and lasting behavior change.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/group-coaching/",
+  },
 };
 
 const outcomes = [
@@ -25,9 +28,26 @@ const topics = [
   "Navigating conflict, team dynamics, and performance challenges",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Group Coaching for Leaders",
+  description: "Leadership development at scale. Build capability across your organization with group coaching that creates shared language, peer accountability, and lasting behavior change.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/group-coaching/",
+};
+
 export default function GroupCoachingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">
@@ -138,7 +158,7 @@ export default function GroupCoachingPage() {
         {/* Testimonial */}
         <section className="section bg-white">
           <div className="container-wide max-w-3xl mx-auto">
-            <div className="bg-[#F8FAFB] rounded-2xl p-8 lg:p-10">
+            <div className="bg-[#F5F5F5] rounded-2xl p-8 lg:p-10">
               <blockquote className="text-lg text-[#525252] leading-relaxed">
                 &ldquo;I was able to accomplish nearly everything in my action planning document. At the beginning of the cohort, I was jobless and depressed. Being a part of the cohort and working on my action planning document allowed me to achieve my goals alongside others who would hold me accountable. If there is anyone I would recommend as a coach, it&apos;s Wendy. She challenged me to not make excuses and to hold myself accountable. She reminded me that there is a beautiful life on the other side of fear.&rdquo;
               </blockquote>

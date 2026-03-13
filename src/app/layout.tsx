@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
+
+// TODO: Replace with your actual GA4 Measurement ID from analytics.google.com
+const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://coachingwomenofcolor.com"),
   title: {
-    default: "Coaching Women of Color | Executive Coaching, Keynote Speaking & Leadership Development for Organizations",
+    default: "Coaching Women of Color® | Executive Coaching & Leadership Development",
     template: "%s | Coaching Women of Color",
   },
   description:
-    "Trusted by Fortune 500 companies and 50+ organizations. Executive coaching, keynote speaking, workshops, and strategic retreats that develop, retain, and advance women of color in leadership.",
+    "Coaching Women of Color® — executive coaching, keynote speaking, workshops, and retreats for organizations and individuals. Trusted by 50+ organizations to develop, retain, and advance women of color in leadership.",
   keywords: [
-    "executive coaching for organizations",
+    "coaching women of color",
+    "executive coaching for women of color",
+    "leadership coaching women of color",
     "keynote speaking",
     "leadership development",
     "women of color coaching",
@@ -28,9 +34,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://coachingwomenofcolor.com",
     siteName: "Coaching Women of Color",
-    title: "Coaching Women of Color | Executive Coaching, Keynote Speaking & Leadership Development for Organizations",
+    title: "Coaching Women of Color® | Executive Coaching & Leadership Development",
     description:
-      "Trusted by Fortune 500 companies and 50+ organizations. Executive coaching, keynote speaking, workshops, and strategic retreats for leadership development.",
+      "Coaching Women of Color® — executive coaching, keynote speaking, workshops, and retreats for organizations and individuals. Trusted by 50+ organizations to develop, retain, and advance women of color in leadership.",
     images: [
       {
         url: "/og-image.png",
@@ -42,14 +48,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coaching Women of Color | Executive Coaching, Keynote Speaking & Leadership Development for Organizations",
+    title: "Coaching Women of Color® | Executive Coaching & Leadership Development",
     description:
-      "Trusted by Fortune 500 companies and 50+ organizations. Executive coaching, keynote speaking, workshops, and strategic retreats for leadership development.",
+      "Coaching Women of Color® — executive coaching, keynote speaking, workshops, and retreats for organizations and individuals. Trusted by 50+ organizations to develop, retain, and advance women of color in leadership.",
     images: ["/og-image.png"],
   },
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
+  },
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com",
   },
   robots: {
     index: true,
@@ -89,6 +98,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics */}
+        {GA_MEASUREMENT_ID !== "G-XXXXXXXXXX" && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

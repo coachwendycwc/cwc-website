@@ -4,9 +4,12 @@ import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Coaching Programs for Individuals",
+  title: "Executive Coaching for Women of Color | Individual Programs",
   description:
-    "Executive coaching designed for women of color professionals, senior leaders, and executives. From 90-day sprints to 6-month programs — find the right pathway for your leadership journey.",
+    "1:1 executive coaching for women of color at every career stage. Leadership clarity sessions, 90-day sprints, and 6-month programs to build confidence, executive presence, and career momentum.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/for-individuals/",
+  },
 };
 
 const individualTestimonials = [
@@ -324,8 +327,8 @@ export default function ForIndividualsPage() {
 
                   {/* Features */}
                   <ul className="mt-6 space-y-3">
-                    {program.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
+                    {program.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3">
                         <svg
                           className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
                             program.highlight ? "text-[#3EBCE8]" : "text-[#3EBCE8]"
@@ -396,8 +399,8 @@ export default function ForIndividualsPage() {
                     { cat: "Sessions", sprint: "6 sessions", program: "12 sessions" },
                     { cat: "Support Level", sprint: "Light between-session support", program: "Higher-touch + email access" },
                     { cat: "Ideal Outcome", sprint: "Clear direction, first wins", program: "Sustained confidence, long-term advancement" },
-                  ].map((row, index) => (
-                    <tr key={index}>
+                  ].map((row) => (
+                    <tr key={row.cat}>
                       <td className="p-4 font-medium text-[#1A1A1A]">{row.cat}</td>
                       <td className="p-4 text-[#525252]">{row.sprint}</td>
                       <td className="p-4 text-[#525252]">{row.program}</td>

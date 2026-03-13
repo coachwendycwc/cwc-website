@@ -33,6 +33,11 @@ const navigation = [
     matchPaths: ["/resources"],
   },
   {
+    name: "Blog",
+    href: "/blog",
+    matchPaths: ["/blog"],
+  },
+  {
     name: "For Individuals",
     href: "/for-individuals",
     matchPaths: ["/for-individuals", "/executive-coaching"],
@@ -96,7 +101,7 @@ export default function Header() {
         {/* Mobile menu button */}
         <button
           type="button"
-          className="lg:hidden p-2 text-[#525252]"
+          className="lg:hidden p-2.5 -mr-2.5 text-[#525252]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
           aria-label="Toggle navigation menu"

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Keynote Speaking",
   description:
     "Book Wendy Perdomo for your next conference or event. High-impact keynotes on executive presence, psychological safety, navigating bias, and inclusive leadership.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/keynote-speaking/",
+  },
 };
 
 const outcomes = [
@@ -24,9 +27,26 @@ const topics = [
   "Confidence, visibility, and leading authentically",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Keynote Speaking",
+  description: "High-impact keynotes on executive presence, psychological safety, navigating bias, and inclusive leadership.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/keynote-speaking/",
+};
+
 export default function KeynoteSpeakingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">
@@ -213,26 +233,37 @@ export default function KeynoteSpeakingPage() {
                   ))}
                 </ul>
 
-                <div className="mt-10">
-                  <h3 className="font-semibold text-[#1A1A1A] mb-4">How to Book</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { step: "1", title: "Inquiry", description: "Submit your event details" },
-                      { step: "2", title: "Scoping Call", description: "Align on audience and goals" },
-                      { step: "3", title: "Proposal", description: "Receive a custom proposal" },
-                      { step: "4", title: "Confirm", description: "Book and prepare" },
-                    ].map((item) => (
-                      <div key={item.step} className="text-center">
-                        <div className="w-8 h-8 bg-[#C4D82E] rounded-full flex items-center justify-center mx-auto mb-2">
-                          <span className="text-sm font-semibold text-white">{item.step}</span>
-                        </div>
-                        <p className="text-sm font-medium text-[#1A1A1A]">{item.title}</p>
-                        <p className="text-xs text-[#737373] mt-1">{item.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How to Book */}
+        <section className="section gradient-subtle">
+          <div className="container-wide">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="heading-display">
+                How to <span className="text-gradient">Book</span>
+              </h2>
+              <p className="body-large mt-4">
+                Four simple steps to bring a transformative keynote to your event.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { step: "1", title: "Inquiry", description: "Submit your event details and preferred dates" },
+                { step: "2", title: "Scoping Call", description: "Align on audience, goals, and key messages" },
+                { step: "3", title: "Proposal", description: "Receive a custom proposal and engagement plan" },
+                { step: "4", title: "Confirm", description: "Book, prepare, and get ready for impact" },
+              ].map((item) => (
+                <div key={item.step} className="text-center">
+                  <div className="w-12 h-12 bg-[#C4D82E] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-lg font-bold text-white">{item.step}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#1A1A1A]">{item.title}</h3>
+                  <p className="text-sm text-[#525252] mt-2 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

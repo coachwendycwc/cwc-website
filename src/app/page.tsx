@@ -45,7 +45,7 @@ const solutions = [
   {
     id: "performance-coaching",
     title: "Performance Coaching",
-    description: "The RESET Method™ for navigating underperformance.",
+    description: "The RESET Method® for navigating underperformance.",
     color: "pink",
   },
 ];
@@ -234,15 +234,13 @@ export default function Home() {
               <div className="text-center lg:text-left">
                 {/* Consequence-first headline */}
                 <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-[#1A1A1A] leading-[1.1]">
-                  Your leaders
+                  Invest in
                   <br />
-                  are leaving.
-                  <br />
-                  <span className="text-gradient">We help you keep them.</span>
+                  <span className="text-gradient">your leaders.</span>
                 </h1>
 
                 <p className="mt-8 text-xl md:text-2xl text-[#525252] max-w-2xl leading-relaxed">
-                  We partner with Fortune 500 companies and high-growth organizations to develop, retain, and advance women of color in leadership—through executive coaching, keynotes, workshops, and strategic retreats.
+                  Invest in the leaders who are already transforming your organization—through executive coaching, keynotes, workshops, and strategic retreats.
                 </p>
 
                 {/* CTA Ladder */}
@@ -269,6 +267,8 @@ export default function Home() {
                   <img
                     src={`${siteConfig.basePath}/images/wendy-hero.jpg`}
                     alt="Wendy Perdomo - Executive Leadership Coach"
+                    width={700}
+                    height={875}
                     className="relative w-full md:w-[500px] lg:w-[600px] xl:w-[700px] h-auto rounded-2xl shadow-xl object-cover"
                   />
                 </div>
@@ -277,9 +277,9 @@ export default function Home() {
           </div>
 
           {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
             <svg
-              className="w-6 h-6 text-[#A3A3A3]"
+              className="w-6 h-6 text-[#737373]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -314,6 +314,9 @@ export default function Home() {
                   <img
                     src={`${siteConfig.basePath}/images/${org.image}`}
                     alt={org.name}
+                    loading="lazy"
+                    width={180}
+                    height={90}
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
@@ -321,8 +324,8 @@ export default function Home() {
             </div>
           </div>
           <div className="container-wide">
-            <p className="text-center text-xs text-[#A3A3A3] mt-8">
-              And many more across Fortune 500, Healthcare, Technology, Finance & Non-Profit sectors
+            <p className="text-center text-xs text-[#737373] mt-8">
+              And many more across Fortune 500, Government, Higher Education, Healthcare, Technology, Finance & Non-Profit sectors
             </p>
           </div>
         </section>

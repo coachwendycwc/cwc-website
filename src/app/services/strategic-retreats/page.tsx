@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Strategic Leadership & Board Retreats",
   description:
     "Facilitated retreats that align your leadership team, clarify strategic direction, and turn honest dialogue into actionable outcomes. Half-day or full-day, in-person or hybrid.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/strategic-retreats/",
+  },
 };
 
 const outcomes = [
@@ -17,9 +20,26 @@ const outcomes = [
   "Strategic clarity on critical decisions and direction",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Strategic Leadership & Board Retreats",
+  description: "Facilitated retreats that align your leadership team, clarify strategic direction, and turn honest dialogue into actionable outcomes.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/strategic-retreats/",
+};
+
 export default function StrategicRetreatsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">

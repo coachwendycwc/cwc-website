@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of service for Coaching Women of Color. Review the terms and conditions governing your use of our website and services.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/terms/",
+  },
 };
 
 export default function TermsPage() {

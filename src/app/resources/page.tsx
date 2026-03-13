@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Insights & Resources",
   description:
     "Practical tools, frameworks, and thought leadership for HR leaders, L&D professionals, and executives building inclusive cultures. Download our Capabilities Statement, take the Promotion Readiness Scorecard, and more.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/resources/",
+  },
 };
 
 export default function ResourcesPage() {

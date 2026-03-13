@@ -9,8 +9,8 @@ const variantClasses: Record<string, string> = {
   default: "bg-[#F5F5F5] text-[#525252]",
   teal: "bg-[#E8F8FD] text-[#3EBCE8]",
   pink: "bg-[#FDE8F4] text-[#E91E8C]",
-  gold: "bg-[#FFF8E5] text-[#D4A017]",
-  green: "bg-[#F7FAE5] text-[#8BA60A]",
+  gold: "bg-[#FFF8E5] text-[#B8A000]",
+  green: "bg-[#F7FAE5] text-[#7A9400]",
   purple: "bg-[#F3F0F8] text-[#9333EA]",
   dark: "bg-[#3EBCE8] text-white",
 };

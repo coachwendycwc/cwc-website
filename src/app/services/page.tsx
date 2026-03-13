@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Our Services",
   description:
     "Explore coaching, keynote speaking, workshops, retreats, and performance coaching solutions from Coaching Women of Color. Customized programs for organizations and leaders.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/",
+  },
 };
 
 const services = [
@@ -46,7 +49,7 @@ const services = [
     color: "#FFC425",
   },
   {
-    title: "Performance Coaching (RESET Method™)",
+    title: "Performance Coaching (RESET Method®)",
     description: "A structured, dual-engagement coaching framework that closes performance gaps—without defaulting to avoidance or escalation.",
     href: "/services/performance-coaching",
     color: "#E91E8C",

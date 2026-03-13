@@ -7,6 +7,52 @@ export const metadata: Metadata = {
   title: "About Wendy Perdomo",
   description:
     "Meet Wendy Perdomo — executive coach, keynote speaker, and founder of Coaching Women of Color. 25+ years of leadership experience developing 500+ leaders across 50+ organizations.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/about/",
+  },
+};
+
+// Person structured data for Wendy Perdomo — helps Google Knowledge Panel
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Wendy Perdomo",
+  jobTitle: "Founder & Executive Leadership Coach",
+  description:
+    "Executive coach, keynote speaker, and founder of Coaching Women of Color. 25+ years developing 500+ leaders across 50+ organizations.",
+  url: "https://coachingwomenofcolor.com/about/",
+  worksFor: {
+    "@type": "Organization",
+    name: "Coaching Women of Color, LLC",
+    url: "https://coachingwomenofcolor.com",
+  },
+  alumniOf: [
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Colgate University",
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Baruch College School of Public Affairs",
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Columbia Business School",
+    },
+  ],
+  knowsAbout: [
+    "Executive Coaching",
+    "Leadership Development",
+    "Keynote Speaking",
+    "Organizational Development",
+    "DiSC Assessment & Facilitation",
+    "Workplace Culture & Psychological Safety",
+  ],
+  sameAs: [
+    "https://www.linkedin.com/in/wendyperdomoleadershipcoach/",
+    "https://www.instagram.com/coachwendyp/",
+    "https://www.facebook.com/coachingwomenofcolor",
+  ],
 };
 
 const credentials = [
@@ -53,6 +99,10 @@ const industriesServed = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <Header />
 
       <main id="main-content">

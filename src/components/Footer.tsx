@@ -13,6 +13,7 @@ const footerNavigation = {
     { name: "Performance Coaching", href: "/services/performance-coaching" },
   ],
   resources: [
+    { name: "Blog", href: "/blog" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Capabilities Brief", href: "/cwc-capabilities-statement.pdf" },
     { name: "Newsletter", href: "https://www.linkedin.com/newsletters/leading-while-woc-7301328637058842624/" },
@@ -98,7 +99,7 @@ export default function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-[#737373] hover:text-white transition-colors"
+                  className="text-[#9CA3AF] hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit our ${item.name} page`}
@@ -119,7 +120,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[#737373] hover:text-white transition-colors"
+                    className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -141,14 +142,14 @@ export default function Footer() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-[#737373] hover:text-white transition-colors"
+                      className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
                     >
                       {item.name}
                     </a>
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-sm text-[#737373] hover:text-white transition-colors"
+                      className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
                     >
                       {item.name}
                     </Link>
@@ -168,7 +169,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[#737373] hover:text-white transition-colors"
+                    className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -187,7 +188,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[#737373] hover:text-white transition-colors"
+                    className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -201,19 +202,19 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-[#404040]">
         <div className="container-wide py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-[#737373]">
+          <p className="text-sm text-[#9CA3AF]">
             &copy; 2017-{new Date().getFullYear()} Coaching Women of Color. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link
               href="/privacy"
-              className="text-sm text-[#737373] hover:text-white transition-colors"
+              className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-sm text-[#737373] hover:text-white transition-colors"
+              className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
             >
               Terms of Service
             </Link>

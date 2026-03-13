@@ -40,11 +40,11 @@ export default function ImageLightbox({
   const current = images[currentIndex];
 
   return (
-    <Modal open={open} onClose={onClose}>
+    <Modal open={open} onClose={onClose} ariaLabel={`Image lightbox: ${current.alt}`}>
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute -top-12 right-0 text-white/80 hover:text-white transition-colors z-10"
+        className="absolute -top-14 right-0 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white transition-colors z-10"
         aria-label="Close lightbox"
       >
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -72,7 +72,7 @@ export default function ImageLightbox({
             e.stopPropagation();
             onPrev();
           }}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-all"
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-all"
           aria-label="Previous image"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,7 +88,7 @@ export default function ImageLightbox({
             e.stopPropagation();
             onNext();
           }}
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-all"
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-all"
           aria-label="Next image"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

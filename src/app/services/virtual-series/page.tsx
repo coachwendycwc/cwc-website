@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Multi-Session Virtual Series",
   description:
     "Sustained leadership development through multi-session virtual programs. Leaders learn, apply, and refine skills over time for lasting behavior change.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/virtual-series/",
+  },
 };
 
 const outcomes = [
@@ -17,9 +20,26 @@ const outcomes = [
   "Momentum and reinforcement that supports culture change",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Multi-Session Virtual Series",
+  description: "Sustained leadership development through multi-session virtual programs. Leaders learn, apply, and refine skills over time for lasting behavior change.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/virtual-series/",
+};
+
 export default function VirtualSeriesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">
@@ -158,7 +178,7 @@ export default function VirtualSeriesPage() {
         {/* Testimonial */}
         <section className="section bg-white">
           <div className="container-wide max-w-3xl mx-auto">
-            <div className="bg-[#F8FAFB] rounded-2xl p-8 lg:p-10">
+            <div className="bg-[#F5F5F5] rounded-2xl p-8 lg:p-10">
               <blockquote className="text-lg text-[#525252] leading-relaxed">
                 &ldquo;I really appreciate you and the coaching that I&apos;ve had with you. I recognize that because of the conversations that we&apos;ve had and the calls that we&apos;ve had, without them I wouldn&apos;t have gotten here, or I wouldn&apos;t have gotten here as quickly as I have. I appreciate you challenging me, showing me so much of myself and peeling back layers. I was able to really hone in on what&apos;s really in here to help others discover that as well.&rdquo;
               </blockquote>

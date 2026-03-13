@@ -62,8 +62,11 @@ npm start          # Start production server on port 3001
 ### SEO & Metadata
 - Every page exports `metadata` with title and description
 - Root layout has comprehensive OG/Twitter card metadata
-- JSON-LD schema for Organization (in layout) and BreadcrumbList (in Breadcrumbs component)
+- JSON-LD structured data: Organization (layout), BreadcrumbList (Breadcrumbs), FAQPage (faq/layout), Person (about), Article (blog posts)
+- Canonical URLs on all pages via `alternates.canonical`
+- `robots.ts` and `sitemap.ts` for search engine crawling
 - Title template: `"%s | Coaching Women of Color"`
+- Registered trademarks: Coaching Women of Color® and RESET Method® (use ® not ™)
 
 ### Accessibility
 - Skip-to-main-content link in root layout
@@ -79,7 +82,7 @@ src/
     page.tsx                # Homepage (client component)
     globals.css             # Design system, custom utilities, animations
     about/page.tsx          # About / founder bio
-    contact/page.tsx        # Contact form (client component, mailto submission)
+    contact/page.tsx        # Contact form (client component, EmailJS submission)
     case-studies/page.tsx   # Testimonials & case studies
     events/page.tsx         # Upcoming + past events with lightbox
     gallery/page.tsx        # Photo gallery (120+ images) with lightbox
@@ -88,9 +91,14 @@ src/
     faq/page.tsx            # FAQ
     privacy/page.tsx        # Privacy policy
     terms/page.tsx          # Terms of service
+    blog/
+      page.tsx              # Blog listing page
+      [slug]/page.tsx       # Individual blog post (dynamic route, Article schema)
     executive-coaching/     # Individual coaching landing
     for-individuals/        # Individual services overview
     for-organizations/      # Organizational solutions overview
+    robots.ts               # robots.txt generation
+    sitemap.ts              # XML sitemap generation
     services/
       page.tsx              # Services index
       executive-coaching/   # Executive coaching details
@@ -100,6 +108,8 @@ src/
       group-coaching/       # Group coaching
       virtual-series/       # Virtual coaching series
       performance-coaching/ # Performance coaching (RESET Method)
+  data/
+    blog-posts.ts           # Blog post content (TypeScript data, not MDX/CMS)
   components/
     index.ts                # Barrel export
     Header.tsx              # Fixed nav with mobile menu (client)
@@ -116,12 +126,40 @@ src/
   config.ts                 # basePath configuration
 ```
 
+## AI Tooling & Skills
+
+### Claude Code Skills (`.claude/skills/`)
+| Skill | Purpose |
+|-------|---------|
+| **cwc-brand-guide** | CWC-specific brand design system, color palette, component patterns, accessibility checklist. Auto-triggers on UI/design tasks. |
+| **ui-ux-pro-max** | Professional UI/UX design intelligence. 67 styles, 161 palettes, 57 font pairings, 99 UX guidelines. Enforces accessibility and responsive best practices. |
+
+### MCP Servers (`~/.claude/mcp.json`)
+| Server | Purpose |
+|--------|---------|
+| **stitch** | Google Stitch AI - Text-to-UI generation. Generates Tailwind + React layouts from prompts. Free (350/month). |
+| **nanobanana-mcp** | Google Gemini image generation/editing. AI-generated marketing visuals, social media graphics. |
+| **21st.dev (Magic MCP)** | AI component builder. Generates/refines React + Tailwind components. Also has logo search (SVG/TSX). |
+
+### Design References
+- **Component Gallery:** https://component.gallery/ (60 components, 95 design systems, 2,676 examples)
+- **21st.dev:** https://21st.dev/ (shadcn/ui component marketplace)
+- **Anthropic Skills Guide:** `The-Complete-Guide-to-Building-Skill-for-Claude.pdf` (skill development reference)
+
+### Blog
+- Blog posts stored as TypeScript data in `src/data/blog-posts.ts` (not MDX or CMS)
+- Each post has: slug, title, description, date, author, category, readTime, image (optional), content (HTML string)
+- Blog listing at `/blog/` with featured image cards (3-col grid)
+- Individual posts at `/blog/[slug]/` with Article structured data, breadcrumbs, author box, related posts
+- Featured images use `object-cover object-top` for consistent cropping
+- `@tailwindcss/typography` plugin provides prose styling for article content
+- To add a new post: add entry to `blogPosts` array in `blog-posts.ts`, add URL to `sitemap.ts`
+
 ## Non-Goals (Do NOT Build)
 - Server-side rendering or API routes (static export only)
 - CMS or database integration
 - User authentication or accounts
 - E-commerce or payment processing
-- Blog with dynamic content
 
 ## Current Branch: `staging`
 - Main branch for PRs: `main`

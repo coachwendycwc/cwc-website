@@ -32,7 +32,7 @@ function TestimonialCard({
       : testimonial.quote.slice(0, MAX_QUOTE_LENGTH).trim() + "...";
 
   return (
-    <div className="card flex-shrink-0 w-[400px] flex flex-col">
+    <div className="card flex-shrink-0 w-[85vw] sm:w-[400px] flex flex-col">
       {/* Stars */}
       <div className="flex gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
@@ -63,6 +63,9 @@ function TestimonialCard({
           <img
             src={`${siteConfig.basePath}/images/${testimonial.image}`}
             alt={testimonial.author}
+            loading="lazy"
+            width={80}
+            height={80}
             className="w-20 h-20 rounded-full object-cover"
           />
         ) : (
@@ -132,7 +135,7 @@ export default function TestimonialsCarousel({ testimonials }: TestimonialsCarou
       >
         {testimonials.map((testimonial, index) => (
           <TestimonialCard
-            key={index}
+            key={testimonial.author}
             testimonial={testimonial}
             isExpanded={expandedIndex === index}
             onToggle={() => handleToggle(index)}

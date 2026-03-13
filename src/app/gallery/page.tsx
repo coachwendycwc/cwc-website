@@ -173,13 +173,17 @@ export default function GalleryPage() {
             <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
               {galleryImages.map((image, index) => (
                 <div
-                  key={index}
+                  key={image}
                   className="mb-4 break-inside-avoid cursor-pointer group"
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View gallery photo ${index + 1}`}
                   onClick={() => openLightbox(index)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(index); } }}
                 >
                   <LazyImage
                     src={`${siteConfig.basePath}/images/gallery/${image}`}
-                    alt={`Gallery photo ${index + 1}`}
+                    alt={`CWC event photo ${index + 1}`}
                     className="w-full rounded-lg shadow-sm group-hover:shadow-lg transition-shadow duration-300"
                   />
                 </div>

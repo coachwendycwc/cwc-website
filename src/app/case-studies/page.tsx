@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Case Studies & Impact Stories",
   description:
     "See how organizations across industries have transformed their leadership culture through CWC coaching, keynotes, retreats, and development programs. Real impact, real results.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/case-studies/",
+  },
 };
 
 const successStories = [
@@ -63,7 +66,7 @@ const successStories = [
       "Now training team members for advancement",
     ],
     quote: "I wanted to share some amazing news. I am so grateful for your services and skills because I got an off cycle raise and it was huge. And they want to give more opportunities so I'm training my team up for the next level.",
-    color: "#E8478C",
+    color: "#E91E8C",
     category: "Executive Coaching",
   },
   {
@@ -77,7 +80,7 @@ const successStories = [
       "Maintained energy and enthusiasm for continued growth",
     ],
     quote: "Wendy pushed me to consider my strengths and how to apply myself for best results. She also helped me work through difficult issues that I encountered by brainstorming solutions that work for me. The customized attention and sage advice made all of the difference on my journey.",
-    color: "#9B59B6",
+    color: "#9333EA",
     category: "Leadership Development",
   },
   {
@@ -213,7 +216,7 @@ export default function CaseStudiesPage() {
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {organizationalImpact.map((item) => (
-                <div key={item.name} className="bg-[#F8FAFB] rounded-xl p-8 shadow-sm">
+                <div key={item.name} className="bg-[#F5F5F5] rounded-2xl p-8 shadow-sm">
                   <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-[#3EBCE8] text-white mb-4">
                     {item.type}
                   </span>
@@ -244,9 +247,9 @@ export default function CaseStudiesPage() {
             <div className="space-y-12">
               {successStories.map((story) => (
                 <div key={story.name} className="card-bordered">
-                  <div className="grid lg:grid-cols-3 gap-8">
+                  <div className="grid lg:grid-cols-[240px_1fr] gap-8 items-start">
                     {/* Client Info */}
-                    <div className="lg:col-span-1">
+                    <div>
                       <span
                         className="inline-block px-3 py-1 rounded-full text-xs font-medium text-white mb-4"
                         style={{ backgroundColor: story.color }}
@@ -259,7 +262,7 @@ export default function CaseStudiesPage() {
                     </div>
 
                     {/* Challenge & Results */}
-                    <div className="lg:col-span-2 space-y-6">
+                    <div className="space-y-6">
                       <div>
                         <h4 className="font-semibold text-[#1A1A1A] mb-2">The Challenge</h4>
                         <p className="text-[#737373]">{story.challenge}</p>
@@ -299,7 +302,7 @@ export default function CaseStudiesPage() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {additionalTestimonials.map((testimonial) => (
-                <div key={testimonial.name} className="bg-[#F8FAFB] rounded-xl p-6">
+                <div key={testimonial.name} className="bg-[#F5F5F5] rounded-2xl p-6">
                   <blockquote className="text-[#525252] text-sm mb-4">
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
@@ -331,7 +334,7 @@ export default function CaseStudiesPage() {
                 <p className="text-[#A3A3A3] mt-2">Organizations Served</p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-bold text-[#E8478C]">100%</p>
+                <p className="text-4xl md:text-5xl font-bold text-[#E91E8C]">100%</p>
                 <p className="text-[#A3A3A3] mt-2">Client Satisfaction</p>
               </div>
             </div>

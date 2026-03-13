@@ -29,7 +29,7 @@ export default function ContactPage() {
     "Workshops & Webinars",
     "Group Coaching",
     "Virtual Series",
-    "Performance Coaching (RESET Method™)",
+    "Performance Coaching (RESET Method®)",
     "Other",
   ];
 
@@ -180,11 +180,11 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-[#1A1A1A] mb-2">
+                  <fieldset>
+                    <legend className="block text-sm font-medium text-[#1A1A1A] mb-2">
                       I&apos;m interested in *
-                    </label>
-                    <div className="flex gap-4">
+                    </legend>
+                    <div className="flex gap-4" role="radiogroup" aria-label="Service type">
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="radio"
@@ -208,7 +208,7 @@ export default function ContactPage() {
                         <span className="text-[#525252]">Individual Coaching</span>
                       </label>
                     </div>
-                  </div>
+                  </fieldset>
 
                   {formData.type === "organization" && (
                     <div>
@@ -257,9 +257,9 @@ export default function ContactPage() {
               </div>
 
               {/* Contact Info */}
-              <div className="lg:pl-8">
-                <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12">
-                  <h3 className="heading-card mb-6">Other Ways to Connect</h3>
+              <div>
+                <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12 lg:sticky lg:top-32">
+                  <h2 className="heading-card mb-6">Other Ways to Connect</h2>
 
                   <div className="space-y-6">
                     <div>

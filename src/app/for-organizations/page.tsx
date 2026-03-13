@@ -4,9 +4,12 @@ import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "For Organizations",
+  title: "Leadership Development for Organizations | Coaching Women of Color®",
   description:
-    "High-impact coaching, keynote speaking, workshops, retreats, and performance coaching for organizations. Customized leadership development programs from Coaching Women of Color.",
+    "Retain and advance women of color in your organization. Keynote speaking, executive coaching, workshops, retreats, and the RESET Method® — trusted by Fortune 500 companies, nonprofits, and universities.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/for-organizations/",
+  },
 };
 
 const clientLogos = [
@@ -149,7 +152,7 @@ const solutions = [
   {
     id: "performance-coaching",
     title: "Performance-Based Coaching",
-    subtitle: "The RESET Method™",
+    subtitle: "The RESET Method®",
     description: "Leaders navigating team member(s) that are underperforming who need a structured, confidential coaching framework that drives accountability and real behavior change—without defaulting to avoidance or escalation.",
     outcomes: [
       "A team member who takes full ownership of their performance",
@@ -158,7 +161,7 @@ const solutions = [
       "Alignment between leader and team member that closes performance gaps",
       "Talent retained instead of replaced—saving your organization time and cost",
     ],
-    details: "The RESET Method™ doesn't choose sides—it closes gaps. By engaging both the leader and the team member from the start, this framework surfaces blind spots, builds shared understanding, and produces real, lasting shifts in how people show up and deliver.",
+    details: "The RESET Method® doesn't choose sides—it closes gaps. By engaging both the leader and the team member from the start, this framework surfaces blind spots, builds shared understanding, and produces real, lasting shifts in how people show up and deliver.",
     formats: ["Virtual (Zoom)", "Dual-engagement model", "Mid-point checkpoint", "Comprehensive outcome summary"],
   },
 ];
@@ -352,6 +355,9 @@ export default function ForOrganizationsPage() {
                   <img
                     src={`${siteConfig.basePath}/images/${org.image}`}
                     alt={org.name}
+                    loading="lazy"
+                    width={180}
+                    height={90}
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
@@ -369,8 +375,8 @@ export default function ForOrganizationsPage() {
         <section className="section-tight bg-[#F5F5F5]">
           <div className="container-wide">
             <div className="grid md:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {benefits.map((benefit) => (
+                <div key={benefit} className="flex items-start gap-3">
                   <svg
                     className="w-5 h-5 text-[#3EBCE8] flex-shrink-0 mt-1"
                     fill="none"
@@ -406,7 +412,7 @@ export default function ForOrganizationsPage() {
                   id={solution.id}
                   className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-10"
                 >
-                  <div className="grid lg:grid-cols-3 gap-8">
+                  <div className="grid lg:grid-cols-[5fr_5fr_3fr] gap-8">
                     {/* Left: Title & Description */}
                     <div>
                       <span className="text-xs font-semibold uppercase tracking-wider text-[#3EBCE8]">
@@ -449,7 +455,7 @@ export default function ForOrganizationsPage() {
                     </div>
 
                     {/* Right: Formats */}
-                    <div>
+                    <div className="self-start">
                       <h4 className="text-sm font-semibold text-[#1A1A1A] uppercase tracking-wider mb-4">
                         How It Works
                       </h4>
@@ -483,22 +489,10 @@ export default function ForOrganizationsPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              {processSteps.slice(0, 3).map((item) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+              {processSteps.map((item) => (
                 <div key={item.step} className="bg-white rounded-2xl p-6 shadow-sm">
-                  <div className="w-12 h-12 bg-[#1A365D] rounded-lg flex items-center justify-center mb-4 rotate-45">
-                    <span className="text-xl font-bold text-white -rotate-45">{item.step}</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-[#1A1A1A] uppercase tracking-wide">{item.title}</h3>
-                  <p className="text-[#737373] mt-2 text-sm leading-relaxed">{item.description}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {processSteps.slice(3, 6).map((item) => (
-                <div key={item.step} className="bg-white rounded-2xl p-6 shadow-sm">
-                  <div className="w-12 h-12 bg-[#1A365D] rounded-lg flex items-center justify-center mb-4 rotate-45">
+                  <div className="w-12 h-12 bg-[#1A1A1A] rounded-lg flex items-center justify-center mb-4 rotate-45">
                     <span className="text-xl font-bold text-white -rotate-45">{item.step}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-[#1A1A1A] uppercase tracking-wide">{item.title}</h3>

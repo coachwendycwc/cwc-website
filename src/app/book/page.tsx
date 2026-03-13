@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Book a Consultation",
   description:
     "Schedule a free discovery call with Wendy Perdomo. Discuss your coaching goals, leadership challenges, and explore the right program for you or your organization.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/book/",
+  },
 };
 
 export default function BookPage() {

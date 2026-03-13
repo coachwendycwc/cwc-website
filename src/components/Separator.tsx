@@ -19,7 +19,7 @@ export default function Separator({
     return (
       <div className={`flex items-center gap-4 ${className}`}>
         <div className={`flex-1 border-t ${variantClasses[variant]}`} />
-        <span className="text-xs font-medium text-[#A3A3A3] uppercase tracking-widest">
+        <span className="text-xs font-medium text-[#737373] uppercase tracking-widest">
           {label}
         </span>
         <div className={`flex-1 border-t ${variantClasses[variant]}`} />

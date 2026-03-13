@@ -4,9 +4,12 @@ import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Performance Coaching — RESET Method™",
+  title: "Performance Coaching — RESET Method®",
   description:
-    "The RESET Method™ closes performance gaps by coaching both the leader and the team member. A structured, dual-engagement framework that drives accountability and real behavior change.",
+    "The RESET Method® closes performance gaps by coaching both the leader and the team member. A structured, dual-engagement framework that drives accountability and real behavior change.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/performance-coaching/",
+  },
 };
 
 const outcomes = [
@@ -17,9 +20,26 @@ const outcomes = [
   "Talent retained instead of replaced—saving your organization time and cost",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Performance Coaching \u2014 RESET Method\u2122",
+  description: "The RESET Method\u2122 closes performance gaps by coaching both the leader and the team member. A structured, dual-engagement framework that drives accountability and real behavior change.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/performance-coaching/",
+};
+
 export default function PerformanceCoachingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">
@@ -32,7 +52,7 @@ export default function PerformanceCoachingPage() {
                 Performance Coaching
               </h1>
               <p className="mt-2 text-xl font-medium text-[#E91E8C]">
-                The RESET Method™
+                The RESET Method®
               </p>
               <p className="mt-6 text-xl text-[#525252] leading-relaxed">
                 A structured, dual-engagement coaching framework that closes performance gaps—without defaulting to avoidance or escalation.
@@ -61,7 +81,7 @@ export default function PerformanceCoachingPage() {
                   When a team member is underperforming, leaders often default to avoidance, vague feedback, or escalation to HR. None of these close the gap. The real issue usually lives in the space between the leader and the team member—misaligned expectations, unspoken frustrations, and blind spots on both sides.
                 </p>
                 <p className="mt-4 text-lg text-[#525252] leading-relaxed">
-                  The RESET Method™ doesn&apos;t choose sides—it closes gaps. By engaging both the leader and the team member from the start, this framework surfaces blind spots, builds shared understanding, and produces real, lasting shifts in how people show up and deliver.
+                  The RESET Method® doesn&apos;t choose sides—it closes gaps. By engaging both the leader and the team member from the start, this framework surfaces blind spots, builds shared understanding, and produces real, lasting shifts in how people show up and deliver.
                 </p>
               </div>
               <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12">
@@ -160,7 +180,7 @@ export default function PerformanceCoachingPage() {
               Close performance gaps. Retain your talent.
             </h2>
             <p className="mt-6 text-xl text-[#A3A3A3]">
-              Let&apos;s discuss how the RESET Method™ can transform your team dynamics.
+              Let&apos;s discuss how the RESET Method® can transform your team dynamics.
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">

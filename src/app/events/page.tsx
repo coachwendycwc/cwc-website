@@ -229,7 +229,11 @@ export default function EventsPage() {
                 >
                   <div
                     className="cursor-pointer"
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`View ${event.title} image`}
                     onClick={() => openLightbox(index)}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(index); } }}
                   >
                     <LazyImage
                       src={`${siteConfig.basePath}/images/events/${event.image}`}
@@ -289,7 +293,11 @@ export default function EventsPage() {
                 <div
                   key={`${event.title}-${index}`}
                   className="mb-6 break-inside-avoid bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View ${event.title} flyer`}
                   onClick={() => openLightbox(upcomingEvents.length + index)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(upcomingEvents.length + index); } }}
                 >
                   <LazyImage
                     src={`${siteConfig.basePath}/images/events/${event.image}`}

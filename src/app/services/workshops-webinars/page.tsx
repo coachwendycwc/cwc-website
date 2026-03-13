@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Workshops & Webinars",
   description:
     "Interactive workshops and webinars on psychological safety, communication, executive presence, and inclusive leadership. Customized to your organization's goals and culture.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/workshops-webinars/",
+  },
 };
 
 const outcomes = [
@@ -24,9 +27,26 @@ const topics = [
   "Building high-performing teams and accountability",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Workshops & Webinars",
+  description: "Interactive workshops and webinars on psychological safety, communication, executive presence, and inclusive leadership.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/workshops-webinars/",
+};
+
 export default function WorkshopsWebinarsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">

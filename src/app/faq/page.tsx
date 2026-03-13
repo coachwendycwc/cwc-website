@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useId } from "react";
 import Link from "next/link";
 import { Header, Footer } from "@/components";
 
@@ -31,11 +31,11 @@ const faqs = [
     questions: [
       {
         q: "What services do you offer for organizations?",
-        a: "We offer seven core solutions: Executive Coaching for Leaders (1:1), Group Coaching, Keynote Speaking, Customized Webinars & Workshops, Multi-Session Virtual Series, Strategic Leadership & Board Retreats, and Performance-Based Coaching (The RESET Method™).",
+        a: "We offer seven core solutions: Executive Coaching for Leaders (1:1), Group Coaching, Keynote Speaking, Customized Webinars & Workshops, Multi-Session Virtual Series, Strategic Leadership & Board Retreats, and Performance-Based Coaching (The RESET Method®).",
       },
       {
-        q: "What is The RESET Method™?",
-        a: "The RESET Method™ is our proprietary performance-based coaching framework. It engages both the leader and the team member from the start to close performance gaps, surface blind spots, build shared understanding, and produce lasting shifts in behavior and accountability—retaining talent instead of replacing it.",
+        q: "What is The RESET Method®?",
+        a: "The RESET Method® is our proprietary performance-based coaching framework. It engages both the leader and the team member from the start to close performance gaps, surface blind spots, build shared understanding, and produce lasting shifts in behavior and accountability—retaining talent instead of replacing it.",
       },
       {
         q: "How does the engagement process work?",
@@ -105,6 +105,7 @@ const faqs = [
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [isOpen, setIsOpen] = useState(false);
+  const panelId = useId();
 
   return (
     <div className="border-b border-[#E5E5E5]">
@@ -112,6 +113,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between py-6 text-left group"
         aria-expanded={isOpen}
+        aria-controls={panelId}
       >
         <span className="text-lg font-medium text-[#1A1A1A] group-hover:text-[#3EBCE8] transition-colors pr-4">
           {question}
@@ -123,12 +125,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {isOpen && (
-        <div className="pb-6">
+        <div id={panelId} role="region" aria-label={question} className="pb-6">
           <p className="text-[#525252] leading-relaxed">{answer}</p>
         </div>
       )}

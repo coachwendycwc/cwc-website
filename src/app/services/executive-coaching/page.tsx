@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Executive Coaching for Leaders",
   description:
     "1:1 high-impact coaching for senior leaders and high-potential talent. Build clarity, confidence, and executive presence with a strategic coaching partner.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/executive-coaching/",
+  },
 };
 
 const outcomes = [
@@ -17,9 +20,26 @@ const outcomes = [
   "A leadership approach that builds trust and drives results",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Executive Coaching for Leaders",
+  description: "1:1 high-impact coaching for senior leaders and high-potential talent. Build clarity, confidence, and executive presence with a strategic coaching partner.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/executive-coaching/",
+};
+
 export default function ExecutiveCoachingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">

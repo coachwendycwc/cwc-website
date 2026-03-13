@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* CWC Brand Color Palette - Based on Logo */
 @theme {
@@ -327,6 +328,11 @@ body {
   }
 }
 
+a.card-bordered,
+a .card-bordered {
+  cursor: pointer;
+}
+
 .card-bordered:hover {
   border-color: var(--color-blue-200);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
@@ -375,4 +381,29 @@ body {
 .link-arrow::after {
   content: "→";
   transition: transform 0.3s ease;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-scroll,
+  .animate-scroll-testimonials {
+    animation: none !important;
+  }
+
+  .card:hover,
+  .card-bordered:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-dark:hover {
+    transform: none !important;
+  }
 }

@@ -11,13 +11,13 @@ interface ToastProps {
 }
 
 const borderColors: Record<string, string> = {
-  success: "border-l-[#22C55E]",
+  success: "border-l-[#C4D82E]",
   info: "border-l-[#3EBCE8]",
   error: "border-l-[#E91E8C]",
 };
 
 const iconColors: Record<string, string> = {
-  success: "text-[#22C55E]",
+  success: "text-[#C4D82E]",
   info: "text-[#3EBCE8]",
   error: "text-[#E91E8C]",
 };
@@ -77,10 +77,10 @@ export default function Toast({
           setVisible(false);
           setTimeout(onClose, 300);
         }}
-        className="ml-auto text-[#A3A3A3] hover:text-[#525252] transition-colors"
+        className="ml-auto p-3 -mr-2 text-[#737373] hover:text-[#525252] transition-colors"
         aria-label="Dismiss"
       >
-        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
