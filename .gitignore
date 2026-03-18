@@ -46,3 +46,6 @@ content/pptx_extract/
 package-lock.json
 content/new-photos/
 content/~$*
+
+# Raw video source files (large, not for deployment)
+raw-videos/

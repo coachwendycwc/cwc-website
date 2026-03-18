@@ -1,6 +1,6 @@
 # Claude Session Notes - CWC Website
 
-**Last Updated:** 2026-03-03
+**Last Updated:** 2026-03-18
 
 ---
 
@@ -11,7 +11,7 @@
 | Environment | Branch | URL | Infrastructure |
 |-------------|--------|-----|----------------|
 | **Production** | `main` | https://coachingwomenofcolor.com | S3 + CloudFront (E2RMMPGLN2DEIG) |
-| **Staging** | `staging` | https://staging.coachingwomenofcolor.com | S3 + CloudFront (TBD) |
+| **Staging** | `staging` | https://staging.coachingwomenofcolor.com | S3 + CloudFront (E39U9T07BP67U4) |
 | **GitHub Pages** | `main` | https://mdx-vision.github.io/cwc-website/ | GitHub Pages (legacy) |
 
 ### Deploy Commands
@@ -20,7 +20,7 @@
 git checkout staging
 npm run build
 aws s3 sync out/ s3://staging.coachingwomenofcolor.com/ --delete
-aws cloudfront create-invalidation --distribution-id <STAGING_DIST_ID> --paths "/*"
+aws cloudfront create-invalidation --distribution-id E39U9T07BP67U4 --paths "/*"
 
 # Promote staging → production (after approval)
 git checkout main
@@ -36,6 +36,7 @@ aws cloudfront create-invalidation --distribution-id E2RMMPGLN2DEIG --paths "/*"
 | S3 (Production) | `coachingwomenofcolor.com` |
 | S3 (Staging) | `staging.coachingwomenofcolor.com` |
 | CloudFront (Production) | `E2RMMPGLN2DEIG` / `d3qdfaeu832kyz.cloudfront.net` |
+| CloudFront (Staging) | `E39U9T07BP67U4` / `d3gznmz4dyhwty.cloudfront.net` |
 | SSL Certificate | `arn:aws:acm:us-east-1:541801280754:certificate/604b51d5-a901-45ff-aff2-2cebb5e687ea` |
 | Route 53 Hosted Zone | `Z0786121WDTXROF6X6JP` |
 | Domain Registrar | Squarespace (nameservers pointed to Route 53) |
@@ -57,7 +58,58 @@ aws cloudfront create-invalidation --distribution-id E2RMMPGLN2DEIG --paths "/*"
 
 ---
 
-## Latest Session (Jan 5, 2026) - Project Review & Orientation
+## Latest Session (Mar 18, 2026) - Video Hero Implementation
+
+### Session Summary
+- Designed enterprise-style video hero strategy (Deloitte/Apple/Palantir hybrid approach)
+- Built reusable `VideoHero` component (`src/components/VideoHero.tsx`)
+- Encoded `wendy-keynote.mp4` from WhatsApp source via HandBrake (20s loop, 3.3MB, H.264, no audio)
+- Replaced static two-column homepage hero with video background hero
+- Added `.btn-secondary-light` CSS class for CTAs on dark backgrounds
+- Deployed to staging S3 + CloudFront (discovered staging CloudFront ID: `E39U9T07BP67U4`)
+- Moved 3 raw WhatsApp source videos (178MB) to `raw-videos/` folder
+
+### Changes Made
+- [x] Created `src/components/VideoHero.tsx` — configurable video hero with muted autoplay, poster fallback, dark overlay, fade-up animations
+- [x] Updated `src/app/page.tsx` — replaced static hero with `<VideoHero>` component
+- [x] Updated `src/app/globals.css` — added `.video-hero-*` animation classes, `.btn-secondary-light`, reduced-motion overrides
+- [x] Updated `src/components/index.ts` — added VideoHero barrel export
+- [x] Created `public/videos/wendy-keynote.mp4` — 20s homepage hero loop
+- [x] Created `public/videos/` directory structure
+- [x] Moved raw source videos to `raw-videos/` (outside `public/`)
+- [x] Deployed to staging: `aws s3 sync` + CloudFront invalidation
+
+### Video Hero Page Plan (Backlog)
+| Page | Hero Treatment | Status |
+|------|---------------|--------|
+| Homepage | Ambient video loop (Wendy keynoting) | ✅ Done — `wendy-keynote.mp4` |
+| Keynote Speaking | Video hero (best keynote clip) | ⏳ Pending — needs clip from raw videos |
+| Workshops/Retreats | Ambient loop of workshop in action | ⏳ Pending — needs clip from raw videos |
+| About | Cinematic still image (Apple style) | ⏳ Pending — no video, powerful still |
+| For Organizations | Data-driven hero (Deloitte style, no video) | ⏳ Pending — text/stats hero |
+| Executive Coaching | Text-driven (Palantir vibe, no video) | ⏳ Pending |
+
+### Raw Video Sources (in `raw-videos/`)
+| File | Size | Notes |
+|------|------|-------|
+| `WhatsApp Video 2026-03-13 at 15.56.42.mp4` | 90MB | Source for future clips |
+| `WhatsApp Video 2026-03-13 at 15.58.59.mp4` | 7.1MB | Source for future clips |
+| `WhatsApp Video 2026-03-13 at 16.01.18.mp4` | 81MB | Source for homepage hero (encoded) |
+
+### Video Encoding Spec (HandBrake)
+| Setting | Value |
+|---------|-------|
+| Format | MP4 (H.264) |
+| Quality | RF 22-24 |
+| FPS | 30 |
+| Duration | 10-20s loops |
+| Audio | Remove all tracks |
+| Target size | Under 10MB |
+| Save to | `public/videos/` |
+
+---
+
+## Previous Session (Jan 5, 2026) - Project Review & Orientation
 
 ### Session Summary
 - Reviewed full project structure and documentation

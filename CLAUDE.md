@@ -24,8 +24,9 @@ npm start          # Start production server on port 3001
 | Language | TypeScript 5.9.3 (strict mode) |
 | UI | React 19.2.3 |
 | Styling | Tailwind CSS v4.1.18 + custom globals.css |
-| Deployment | AWS Amplify / CloudFront (static HTML) |
+| Deployment | AWS S3 + CloudFront (static HTML) |
 | Images | Unoptimized (static export constraint) |
+| Videos | MP4 (H.264), muted autoplay, `public/videos/` |
 
 ### Key URLs & Integrations
 - **Calendly:** Used for booking calls (organizational + individual)
@@ -47,9 +48,22 @@ npm start          # Start production server on port 3001
 - **Data colocation:** Page data (testimonials, services, stats) lives in the page file as typed arrays
 - **No external data fetching** -- all content is hardcoded/static
 
+### Deployment
+- **Production:** `main` branch → S3 `coachingwomenofcolor.com` → CloudFront `E2RMMPGLN2DEIG`
+- **Staging:** `staging` branch → S3 `staging.coachingwomenofcolor.com` → CloudFront `E39U9T07BP67U4`
+- **Staging deploy is manual** -- no GitHub Actions for `staging` branch
+- Deploy commands:
+  ```bash
+  # Build & deploy to STAGING
+  npm run build
+  aws s3 sync out/ s3://staging.coachingwomenofcolor.com/ --delete
+  aws cloudfront create-invalidation --distribution-id E39U9T07BP67U4 --paths "/*"
+  ```
+- **NEVER push to `main` or production without explicit user approval**
+
 ### Styling Rules
 - Use Tailwind utility classes for component-level styles
-- Use global CSS classes (`.btn-primary`, `.section`, `.container-wide`, `.heading-section`) for reusable patterns
+- Use global CSS classes (`.btn-primary`, `.btn-secondary-light`, `.section`, `.container-wide`, `.heading-section`) for reusable patterns
 - Brand colors defined as CSS custom properties in `globals.css`:
   - Primary: `--color-primary` (#E91E8C - Hot Pink)
   - Secondary: `--color-secondary` (#3EBCE8 - Sky Blue)
@@ -123,8 +137,21 @@ src/
     LazyImage.tsx           # Lazy-loaded image with skeleton (client)
     AnimatedCounter.tsx     # Scroll-triggered counter animation (client)
     TestimonialsCarousel.tsx # Horizontal scroll testimonials (client)
+    VideoHero.tsx           # Video background hero section (client)
   config.ts                 # basePath configuration
+public/
+  videos/
+    wendy-keynote.mp4       # Homepage hero loop (20s, 3.3MB, H.264, no audio)
+raw-videos/                 # Source video files (NOT deployed, git-ignored)
 ```
+
+### Video Hero Pattern
+- `VideoHero` component: muted autoplay loop, dark overlay, poster fallback, fade-up animations
+- Videos go in `public/videos/`, raw source files in `raw-videos/` (git-ignored)
+- Naming: `wendy-keynote.mp4`, `wendy-workshop.mp4`, `wendy-retreat.mp4`
+- Encoding: HandBrake → H.264, RF 22, 30fps, no audio, 10-20s loops, under 10MB
+- CSS: `.btn-secondary-light` for CTAs on dark/video backgrounds
+- Accessibility: `aria-hidden` on decorative video, `prefers-reduced-motion` disables animations
 
 ## AI Tooling & Skills
 
