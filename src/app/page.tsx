@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Header, Footer, TestimonialsCarousel, AnimatedCounter } from "@/components";
+import { Header, Footer, TestimonialsCarousel, AnimatedCounter, VideoHero } from "@/components";
 import { siteConfig } from "@/config";
 
 // Organizational solutions - reordered by revenue potential
@@ -220,79 +220,22 @@ export default function Home() {
       <Header />
 
       <main id="main-content">
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-          {/* Subtle pink gradient background */}
-          <div
-            className="absolute inset-0"
-            style={{ background: "linear-gradient(135deg, #E8F8FD 0%, #ffffff 50%, #F3F0F8 100%)" }}
-          />
-
-          <div className="container-wide relative z-10 py-20 lg:py-32">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Text content */}
-              <div className="text-center lg:text-left">
-                {/* Consequence-first headline */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-[#1A1A1A] leading-[1.1]">
-                  Invest in
-                  <br />
-                  <span className="text-gradient">your leaders.</span>
-                </h1>
-
-                <p className="mt-8 text-xl md:text-2xl text-[#525252] max-w-2xl leading-relaxed">
-                  Invest in the leaders who are already transforming your organization—through executive coaching, keynotes, workshops, and strategic retreats.
-                </p>
-
-                {/* CTA Ladder */}
-                <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link href="/contact" className="btn-primary">
-                    Request a Proposal
-                  </Link>
-                  <a href={`${siteConfig.basePath}/cwc-capabilities-statement.pdf`} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                    Download Capabilities Brief
-                  </a>
-                </div>
-                <div className="mt-4 flex justify-center lg:justify-start">
-                  <Link href="/for-individuals" className="text-sm text-[#737373] hover:text-[#3EBCE8] transition-colors">
-                    Looking for individual coaching? Start here →
-                  </Link>
-                </div>
-              </div>
-
-              {/* Photo */}
-              <div className="flex justify-center lg:justify-end">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${siteConfig.basePath}/images/wendy-hero.jpg`}
-                    alt="Wendy Perdomo - Executive Leadership Coach"
-                    width={700}
-                    height={875}
-                    className="relative w-full md:w-[500px] lg:w-[600px] xl:w-[700px] h-auto rounded-2xl shadow-xl object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
-            <svg
-              className="w-6 h-6 text-[#737373]"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </section>
+        {/* Hero Section - Video Background */}
+        <VideoHero
+          videoSrc="videos/wendy-keynote.mp4"
+          posterSrc="images/wendy-hero.jpg"
+          headlineTop="Invest in"
+          headlineGradient="your leaders."
+          subheadline="Invest in the leaders who are already transforming your organization—through executive coaching, keynotes, workshops, and strategic retreats."
+          ctaLabel="Request a Proposal"
+          ctaHref="/contact"
+          secondaryCtaLabel="Download Capabilities Brief"
+          footerLink={{
+            label: "Looking for individual coaching? Start here →",
+            href: "/for-individuals",
+          }}
+          overlayOpacity={0.5}
+        />
 
         {/* Trusted By - Client Logos Carousel */}
         <section className="section-tight bg-white border-y border-[#E5E5E5] overflow-hidden">

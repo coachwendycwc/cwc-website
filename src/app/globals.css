@@ -384,6 +384,51 @@ a .card-bordered {
   transition: transform 0.3s ease;
 }
 
+/* Video Hero */
+.video-hero-headline {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.video-hero-gradient {
+  background: linear-gradient(90deg, var(--color-blue-600), var(--color-blue-200));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.video-hero-subheadline {
+  animation: fadeUp 0.8s ease-out 0.2s both;
+}
+
+.video-hero-ctas {
+  animation: fadeUp 0.8s ease-out 0.4s both;
+}
+
+/* Secondary Button - Light variant (for dark/video backgrounds) */
+.btn-secondary-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-out;
+}
+
+.btn-secondary-light:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: white;
+  transform: scale(1.05);
+}
+
+.btn-secondary-light:active {
+  transform: scale(1);
+}
+
 /* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -404,7 +449,15 @@ a .card-bordered {
   .card-bordered:hover,
   .btn-primary:hover,
   .btn-secondary:hover,
+  .btn-secondary-light:hover,
   .btn-dark:hover {
     transform: none !important;
+  }
+
+  .video-hero-headline,
+  .video-hero-subheadline,
+  .video-hero-ctas {
+    animation: none !important;
+    opacity: 1 !important;
   }
 }

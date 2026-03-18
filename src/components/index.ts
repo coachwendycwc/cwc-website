@@ -9,3 +9,4 @@ export { default as ImageLightbox } from "./ImageLightbox";
 export { default as AnimatedCounter } from "./AnimatedCounter";
 export { default as LazyImage } from "./LazyImage";
 export { default as Breadcrumbs } from "./Breadcrumbs";
+export { default as VideoHero } from "./VideoHero";
