@@ -64,10 +64,10 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <img
             src={`${siteConfig.basePath}/logo.webp`}
-            alt="Coaching Women of Color"
+            alt="Coaching Women of Color - Home"
             width={280}
             height={70}
-            className="h-16 md:h-20 w-auto"
+            className="h-14 md:h-16 w-auto scale-110 origin-left"
           />
         </Link>
 

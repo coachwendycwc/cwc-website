@@ -49,7 +49,7 @@ export default function Toast({
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-50 max-w-sm bg-white rounded-xl shadow-lg border border-[#E5E5E5] border-l-4 ${borderColors[type]} p-4 flex items-start gap-3 transition-all duration-300 ${
+      className={`fixed bottom-4 right-4 left-4 md:left-auto md:right-6 md:bottom-6 z-50 max-w-sm bg-white rounded-xl shadow-lg border border-[#E5E5E5] border-l-4 ${borderColors[type]} p-4 flex items-start gap-3 transition-all duration-300 ${
         visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       }`}
       role="alert"

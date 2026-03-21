@@ -74,7 +74,7 @@ export default function VideoHero({
       {!videoError && (
         <video
           ref={videoRef}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
             isVideoLoaded ? "opacity-100" : "opacity-0"
           }`}
           autoPlay

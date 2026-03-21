@@ -52,10 +52,10 @@ export default function ContactPage() {
 
     try {
       await emailjs.send(
-        "service_n62dsgh",
-        "template_xl8go0s",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_n62dsgh",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_xl8go0s",
         templateParams,
-        "y6UfKicpoRY2LvZNa"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "y6UfKicpoRY2LvZNa"
       );
       setToastMessage("Message sent successfully! We'll get back to you within 1 business day.");
       setToastType("success");
@@ -80,7 +80,7 @@ export default function ContactPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
+        <section className="pt-24 md:pt-32 pb-12 md:pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
               <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
@@ -240,15 +240,23 @@ export default function ContactPage() {
                       id="message"
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all resize-y"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us about your goals and how we can help..."
                     />
                   </div>
 
-                  <button type="submit" disabled={isSubmitting} className="btn-primary w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed">
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                  <button type="submit" disabled={isSubmitting} className="btn-primary w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:transform-none">
+                    {isSubmitting ? (
+                      <span className="inline-flex items-center gap-2">
+                        <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : "Send Message"}
                   </button>
                   <p className="text-sm text-[#737373] mt-3">
                     Typical response time: within 1 business day.

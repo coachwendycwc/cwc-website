@@ -107,7 +107,7 @@ export default function Modal({ open, onClose, children, ariaLabel }: ModalProps
         role="dialog"
         aria-modal="true"
         aria-label={ariaLabel || "Modal"}
-        className={`relative max-w-full max-h-full transition-all duration-300 ${
+        className={`relative max-w-full max-h-[90vh] overflow-y-auto transition-all duration-300 ${
           visible ? "scale-100 opacity-100" : "scale-95 opacity-0"
         }`}
       >
