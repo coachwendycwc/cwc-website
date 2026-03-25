@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
@@ -106,22 +106,51 @@ export default function AboutPage() {
       <Header />
 
       <main id="main-content">
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
-          <div className="container-wide">
-            <div className="max-w-4xl">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
-                About Us
+        {/* Hero Section — Cinematic Photo */}
+        <section className="relative pt-24 md:pt-0 min-h-[70vh] md:min-h-[70vh] flex items-end md:items-center overflow-hidden bg-[#1A1A1A]">
+          {/* Breadcrumbs — positioned over hero */}
+          <div className="absolute top-20 md:top-24 left-0 z-20 px-6 md:px-16 lg:px-24">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "About Wendy Perdomo" },
+              ]}
+            />
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`${siteConfig.basePath}/images/wendy-about.jpg`}
+            alt="Wendy Perdomo, Founder of Coaching Women of Color"
+            className="absolute inset-0 w-full h-full object-cover object-[50%_0%] md:object-[85%_0%] opacity-85"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-transparent from-0% via-[#1A1A1A]/40 via-40% to-[#1A1A1A] to-80% md:from-[#1A1A1A] md:from-30% md:via-[#1A1A1A]/60 md:via-45% md:to-transparent md:to-70%" />
+
+          {/* Text — left aligned */}
+          <div className="relative z-10 px-6 md:px-16 lg:px-24 pb-16 md:pb-0">
+            <div className="max-w-xs md:max-w-md">
+              <p className="text-xs md:text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                About the Founder
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                Transforming workplaces.
-                <br />
-                <span className="text-gradient">Empowering leaders.</span>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-tight">
+                Wendy Perdomo
               </h1>
-              <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
-                Coaching Women of Color was founded with a clear mission: to create
-                inclusive environments where women of color don&apos;t just survive—they thrive.
+              <p className="mt-4 text-base md:text-xl text-[#C0C0C0] leading-relaxed">
+                Executive coach, keynote speaker, and founder of Coaching
+                Women of Color&reg; — transforming how organizations develop
+                and retain women of color in leadership.
               </p>
+              <div className="mt-6 md:mt-8 flex flex-wrap gap-4 md:gap-12">
+                {[
+                  { value: "25+", label: "Years Experience" },
+                  { value: "500+", label: "Leaders Developed" },
+                  { value: "50+", label: "Organizations Served" },
+                ].map((stat) => (
+                  <div key={stat.label} className="md:whitespace-nowrap">
+                    <div className="text-2xl md:text-3xl font-semibold text-[#3EBCE8]">{stat.value}</div>
+                    <div className="text-xs md:text-sm text-[#9CA3AF]">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -131,14 +160,7 @@ export default function AboutPage() {
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
-                  Our Founder & Principal
-                </p>
-                <h2 className="heading-display">
-                  Wendy Perdomo
-                </h2>
-                <p className="text-lg text-[#737373] mt-2">M.P.A., M.S.Ed</p>
-                <p className="body-large mt-6">
+                <p className="body-large">
                   Wendy Perdomo is the Founder and Executive Leadership Coach at Coaching Women of Color, LLC, a premier coaching and leadership development firm committed to advancing the voice, visibility, and impact of professional women of color in today&apos;s workforce. With over two decades of experience across the nonprofit, education, and public sectors, Wendy is a master facilitator, certified executive coach, and organizational development strategist.
                 </p>
                 <p className="body-large mt-4">
@@ -148,14 +170,18 @@ export default function AboutPage() {
                   Widely regarded as a strategic thought partner, Wendy helps leaders at all levels refine their leadership presence, develop emotional intelligence, and navigate complex organizational challenges—from team transitions and workplace culture repair to bias incidents and courageous conversations. She is passionate about creating space for women of color to lead authentically, manage power with confidence, and move with clarity through all levels of leadership.
                 </p>
 
+              </div>
+
+              {/* Education & Certifications */}
+              <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12">
                 {/* Education */}
-                <div className="mt-8">
-                  <h3 className="font-semibold text-[#1A1A1A] mb-3">Education</h3>
+                <div>
+                  <h3 className="font-semibold text-[#1A1A1A] text-lg mb-4">Education</h3>
                   <div className="flex flex-wrap gap-2">
                     {credentials.map((cred) => (
                       <span
                         key={cred}
-                        className="px-3 py-1 bg-[#F5F5F5] text-[#525252] text-sm rounded-full"
+                        className="px-4 py-2 bg-white text-[#525252] text-sm rounded-full"
                       >
                         {cred}
                       </span>
@@ -164,45 +190,18 @@ export default function AboutPage() {
                 </div>
 
                 {/* Certifications */}
-                <div className="mt-6">
-                  <h3 className="font-semibold text-[#1A1A1A] mb-3">Certifications</h3>
+                <div className="mt-8">
+                  <h3 className="font-semibold text-[#1A1A1A] text-lg mb-4">Certifications</h3>
                   <div className="flex flex-wrap gap-2">
                     {certifications.map((cert) => (
                       <span
                         key={cert}
-                        className="px-3 py-1 bg-[#E8F8FD] text-[#1A9FCC] text-sm rounded-full"
+                        className="px-4 py-2 bg-[#E8F8FD] text-[#1A9FCC] text-sm rounded-full"
                       >
                         {cert}
                       </span>
                     ))}
                   </div>
-                </div>
-              </div>
-
-              {/* Photo and Stats */}
-              <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12">
-                <div className="text-center mb-8">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${siteConfig.basePath}/images/wendy-about.jpg`}
-                    alt="Wendy Perdomo"
-                    className="w-full max-w-xl h-auto mx-auto rounded-2xl object-cover"
-                  />
-                  <p className="text-sm text-[#737373] mt-4">
-                    Founder & Executive Leadership Coach
-                  </p>
-                </div>
-                <div className="space-y-6">
-                  {[
-                    { value: "25+", label: "Years Experience" },
-                    { value: "500+", label: "Leaders Developed" },
-                    { value: "50+", label: "Organizations Served" },
-                  ].map((stat) => (
-                    <div key={stat.label} className="border-b border-[#E5E5E5] pb-4 last:border-0 last:pb-0">
-                      <div className="text-3xl font-semibold text-[#3EBCE8]">{stat.value}</div>
-                      <div className="text-[#737373] text-sm mt-1">{stat.label}</div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
@@ -279,7 +278,7 @@ export default function AboutPage() {
         </section>
 
         {/* Affiliations & Clients Section */}
-        <section className="section bg-white">
+        <section className="section gradient-subtle">
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-16">
               <div>
@@ -366,7 +365,7 @@ export default function AboutPage() {
               <Link href="/contact" className="btn-primary">
                 Get in Touch
               </Link>
-              <Link href="/book" className="btn-secondary bg-transparent text-white border-white hover:bg-white hover:text-[#1A1A1A]">
+              <Link href="/book" className="btn-secondary-light">
                 Book a Consultation
               </Link>
             </div>
