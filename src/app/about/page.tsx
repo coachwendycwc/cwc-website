@@ -107,9 +107,9 @@ export default function AboutPage() {
 
       <main id="main-content">
         {/* Hero Section — Cinematic Photo */}
-        <section className="relative pt-24 md:pt-0 min-h-[70vh] md:min-h-[70vh] flex items-end md:items-center overflow-hidden bg-[#1A1A1A]">
+        <section className="relative pt-24 md:pt-0 min-h-[100svh] md:min-h-[70vh] flex items-end md:items-center overflow-hidden bg-[#1A1A1A]">
           {/* Breadcrumbs — positioned over hero */}
-          <div className="absolute top-20 md:top-24 left-0 z-20 px-6 md:px-16 lg:px-24">
+          <div className="absolute top-28 left-0 z-20 px-6 md:px-16 lg:px-24 hidden md:block">
             <Breadcrumbs
               items={[
                 { label: "Home", href: "/" },
@@ -121,9 +121,9 @@ export default function AboutPage() {
           <img
             src={`${siteConfig.basePath}/images/wendy-about.jpg`}
             alt="Wendy Perdomo, Founder of Coaching Women of Color"
-            className="absolute inset-0 w-full h-full object-cover object-[50%_0%] md:object-[85%_0%] opacity-85"
+            className="absolute inset-0 w-full h-full object-cover object-[50%_22%] md:object-[85%_0%] opacity-85"
           />
-          <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-transparent from-0% via-[#1A1A1A]/40 via-40% to-[#1A1A1A] to-80% md:from-[#1A1A1A] md:from-30% md:via-[#1A1A1A]/60 md:via-45% md:to-transparent md:to-70%" />
+          <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-transparent from-0% via-[#1A1A1A]/40 via-55% to-[#1A1A1A] to-85% md:from-[#1A1A1A] md:from-30% md:via-[#1A1A1A]/60 md:via-45% md:to-transparent md:to-70%" />
 
           {/* Text — left aligned */}
           <div className="relative z-10 px-6 md:px-16 lg:px-24 pb-16 md:pb-0">
@@ -139,15 +139,15 @@ export default function AboutPage() {
                 Women of Color&reg; — transforming how organizations develop
                 and retain women of color in leadership.
               </p>
-              <div className="mt-6 md:mt-8 flex flex-wrap gap-4 md:gap-12">
+              <div className="mt-6 md:mt-8 grid grid-cols-3 gap-4 md:flex md:gap-12">
                 {[
                   { value: "25+", label: "Years Experience" },
                   { value: "500+", label: "Leaders Developed" },
                   { value: "50+", label: "Organizations Served" },
                 ].map((stat) => (
-                  <div key={stat.label} className="md:whitespace-nowrap">
+                  <div key={stat.label}>
                     <div className="text-2xl md:text-3xl font-semibold text-[#3EBCE8]">{stat.value}</div>
-                    <div className="text-xs md:text-sm text-[#9CA3AF]">{stat.label}</div>
+                    <div className="text-xs md:text-sm text-[#9CA3AF] leading-tight">{stat.label}</div>
                   </div>
                 ))}
               </div>
