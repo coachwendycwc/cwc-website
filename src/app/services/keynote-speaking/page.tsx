@@ -287,7 +287,7 @@ export default function KeynoteSpeakingPage() {
                 "Reinvention: An Elevation Summit",
                 "Latina Emergence Conference",
               ].map((event) => (
-                <span key={event} className="px-5 py-2.5 bg-white text-[#525252] rounded-full border border-[#E5E5E5] text-sm font-medium">
+                <span key={event} className="px-5 py-2.5 bg-white text-[#525252] rounded-full text-sm font-medium">
                   {event}
                 </span>
               ))}

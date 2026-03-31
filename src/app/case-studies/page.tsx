@@ -221,9 +221,9 @@ export default function CaseStudiesPage() {
                     {item.type}
                   </span>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="text-xs text-[#737373] bg-[#F5F5F5] px-2 py-0.5 rounded">{item.engagementType}</span>
-                    <span className="text-xs text-[#737373] bg-[#F5F5F5] px-2 py-0.5 rounded">{item.industry}</span>
-                    <span className="text-xs text-[#737373] bg-[#F5F5F5] px-2 py-0.5 rounded">{item.scope}</span>
+                    <span className="text-xs text-[#737373] bg-white px-2 py-0.5 rounded">{item.engagementType}</span>
+                    <span className="text-xs text-[#737373] bg-white px-2 py-0.5 rounded">{item.industry}</span>
+                    <span className="text-xs text-[#737373] bg-white px-2 py-0.5 rounded">{item.scope}</span>
                   </div>
                   <blockquote className="text-[#525252] italic mb-6">
                     &ldquo;{item.quote}&rdquo;

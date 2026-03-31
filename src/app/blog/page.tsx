@@ -59,6 +59,7 @@ export default function BlogPage() {
                         <img
                           src={post.image}
                           alt={post.title}
+                          loading="lazy"
                           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
