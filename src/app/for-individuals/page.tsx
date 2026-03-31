@@ -207,37 +207,58 @@ export default function ForIndividualsPage() {
                   title: "Overlooked for Opportunities",
                   description:
                     "You consistently deliver results, yet promotions, stretch assignments, and leadership roles go to others. Your contributions are invisible until someone else takes credit.",
+                  icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z",
+                  color: "#E91E8C",
                 },
                 {
                   title: "The Only One in the Room",
                   description:
                     "You carry the weight of representation — navigating spaces where no one looks like you, constantly code-switching, and wondering if you truly belong at the table.",
+                  icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
+                  color: "#9333EA",
                 },
                 {
                   title: "Imposter Syndrome & Self-Doubt",
                   description:
                     "Despite your track record, a voice inside questions whether you're qualified enough, ready enough, or deserving enough — even when the evidence says otherwise.",
+                  icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+                  color: "#FFC425",
                 },
                 {
                   title: "Tone Policing & Respectability Pressure",
                   description:
                     "You've been told you're 'too much' or 'not enough.' You shrink your voice, soften your delivery, and manage everyone's comfort but your own.",
+                  icon: "M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2",
+                  color: "#3EBCE8",
                 },
                 {
                   title: "Burnout Without Boundaries",
                   description:
                     "You say yes to everything — mentoring, committees, extra projects — because you feel you have to prove your value twice as hard. The exhaustion is real.",
+                  icon: "M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z",
+                  color: "#E91E8C",
                 },
                 {
                   title: "Lack of Sponsorship & Advocacy",
                   description:
                     "You have mentors who listen, but no sponsors who advocate. Without someone in the room championing your name, opportunities stay out of reach.",
+                  icon: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z",
+                  color: "#C4D82E",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="bg-[#FFF9F5] border border-[#F5E6D8] rounded-2xl p-6"
+                  className="bg-[#FFF9F5] rounded-2xl p-6 border-l-4"
+                  style={{ borderLeftColor: item.color }}
                 >
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
+                    style={{ backgroundColor: `${item.color}15` }}
+                  >
+                    <svg className="w-5 h-5" style={{ color: item.color }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+                    </svg>
+                  </div>
                   <h3 className="font-semibold text-[#1A1A1A] text-lg mb-3">
                     {item.title}
                   </h3>
