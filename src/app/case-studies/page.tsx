@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Header, Footer, Badge } from "@/components";
+import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ const successStories = [
     quote: "Wendy's life and leadership coaching program has successfully equipped me with the effective mental mindset tools and techniques to overcome my own 'analysis paralysis.' She has supported me in developing a deeper self-awareness and increased accountability towards my proposed life and career goals.",
     color: "#3EBCE8",
     category: "Executive Coaching",
+    image: "testimonial-nicolecarr.png",
   },
   {
     name: "Morgan Bullock",
@@ -40,6 +42,7 @@ const successStories = [
     quote: "I recognize that because of the conversations that we've had and the calls that we've had, without them I wouldn't have gotten here, or I wouldn't have gotten here as quickly as I have. I appreciate you challenging me, showing me so much of myself and peeling back layers. I was able to really hone in on what's really in here to help others discover that as well.",
     color: "#FFC425",
     category: "Leadership Coaching",
+    image: "testimonial-morgan.png",
   },
   {
     name: "Lori Bennett",
@@ -54,6 +57,7 @@ const successStories = [
     quote: "Wendy helped me to create a blueprint for my second act after retirement. Her approach was uniquely crafted and tailored specifically to my needs. She helped me to quickly identify my stuck spots, challenge my limiting beliefs and recognize and embrace all of the tools and resources around me that would facilitate my transformation.",
     color: "#C4D82E",
     category: "Career Transition",
+    image: "testimonial-lori.png",
   },
   {
     name: "Melissa Delgado",
@@ -68,6 +72,7 @@ const successStories = [
     quote: "I wanted to share some amazing news. I am so grateful for your services and skills because I got an off cycle raise and it was huge. And they want to give more opportunities so I'm training my team up for the next level.",
     color: "#E91E8C",
     category: "Executive Coaching",
+    image: "testimonial-melissa.png",
   },
   {
     name: "Lisa Morgan",
@@ -82,6 +87,7 @@ const successStories = [
     quote: "Wendy pushed me to consider my strengths and how to apply myself for best results. She also helped me work through difficult issues that I encountered by brainstorming solutions that work for me. The customized attention and sage advice made all of the difference on my journey.",
     color: "#9333EA",
     category: "Leadership Development",
+    image: "testimonial-lisa.png",
   },
   {
     name: "Tiffany Cordero",
@@ -96,6 +102,7 @@ const successStories = [
     quote: "Being a part of the cohort and working on my action planning document allowed me to achieve my goals alongside others who would hold me accountable. She challenged me to not make excuses and to hold myself accountable. She reminded me that there is a beautiful life on the other side of fear.",
     color: "#3EBCE8",
     category: "Group Coaching",
+    image: "testimonial-tiffany.jpg",
   },
 ];
 
@@ -108,6 +115,7 @@ const organizationalImpact = [
     industry: "Nonprofit",
     scope: "Board of Directors",
     quote: "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. We were extremely pleased with the quality and clarity of Wendy's preparation, delivery, and follow up. She is in a class by herself!",
+    image: "testimonial-lynne.jpg",
   },
   {
     name: "Emily Kurtz",
@@ -117,15 +125,17 @@ const organizationalImpact = [
     industry: "Education",
     scope: "Team of 2 Leaders",
     quote: "Working with Wendy kept me steady in a very, very difficult year. And not just me, but my colleague as well. The relationship has changed the emotionality of the workplace, allowing for better collaboration and better outcomes.",
+    image: "testimonial-emily.png",
   },
   {
-    name: "CEO, Monique Burr Foundation",
+    name: "Tanya Ramos-Puig",
     location: "Florida",
     type: "Organizational Development",
     engagementType: "Organizational Development",
     industry: "Nonprofit",
     scope: "Organization-wide",
     quote: "Wendy's ability to connect with people and ensure that those she is working with get the most out of any engagement is truly unparalleled. She creates a collaborative atmosphere that is also thought provoking.",
+    image: "testimonial-tanya.png",
   },
 ];
 
@@ -144,31 +154,37 @@ const additionalTestimonials = [
     name: "Catarina Campbell",
     location: "Vermont",
     quote: "With your coaching, I feel a sense of responsibility and purpose, but also potency and power. You said something to me that changed everything: 'You are not there to become an executive in the way that you're imagining it, you are there to become you and for the system to shift around you.' I know who I am in the world now, and I know the ancestors I carry with me.",
+    image: "testimonial-catarina.png",
   },
   {
     name: "Stephanie Lopez",
     location: "California",
     quote: "Wendy is an incredible coach who understands women of color and helped me feel seen, heard, and understood. My experience with Wendy transformed coaching from a mere task on my to-do list into a nurturing experience that truly supported my growth.",
+    image: "testimonial-stephanie.png",
   },
   {
     name: "Alexis Brown",
     location: "Washington, D.C.",
     quote: "I feel deeply appreciative of Wendy's support during some professionally challenging months. She catered our sessions to my needs, even when I didn't know what I needed. I am better at identifying, setting and communicating my boundaries. I feel more confident in my decision-making skills as it relates to my professional growth.",
+    image: "testimonial-alexis.png",
   },
   {
     name: "Nicole Vlado",
     location: "Brooklyn, NY",
     quote: "I learned so much about myself while working with Wendy. Her careful listening and encouragement during each session combined with the innovative tools and resources that she shared helped guide me towards new ways of thinking about my strengths, skills, and abilities. Being able to connect so openly and honestly with someone who could relate how I moved through the world was an absolute gift.",
+    image: "testimonial-nicolev.png",
   },
   {
     name: "Patricia Quintero",
     location: "New York, NY",
     quote: "Wendy has a holistic approach to coaching, seeing me not only as a professional, but as the multi-faceted woman that I am. Wendy seamlessly creates a safe and non-judgmental approach all while thoughtfully holding the mirror to some of my thoughts and actions that did not serve me.",
+    image: "testimonial-patricia.png",
   },
   {
     name: "Teal Inzunza",
     location: "New York, NY",
     quote: "Wendy is an incredible coach and advocate for her clients. I worked with her for 6 months and found her guidance invaluable. She helped me grow as a professional and gave me tangible tools to use to better myself as a leader.",
+    image: "testimonial-teal.png",
   },
 ];
 
@@ -228,9 +244,22 @@ export default function CaseStudiesPage() {
                   <blockquote className="text-[#525252] italic mb-6">
                     &ldquo;{item.quote}&rdquo;
                   </blockquote>
-                  <div className="border-t border-gray-100 pt-4">
-                    <p className="font-semibold text-[#1A1A1A]">{item.name}</p>
-                    <p className="text-sm text-[#737373]">{item.location}</p>
+                  <div className="border-t border-gray-100 pt-4 flex items-center gap-3">
+                    {item.image ? (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img
+                        src={`${siteConfig.basePath}/images/${item.image}`}
+                        alt={item.name}
+                        loading="lazy"
+                        className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                      />
+                    ) : (
+                      <div className="w-10 h-10 rounded-full bg-[#3EBCE8]/20 flex-shrink-0" />
+                    )}
+                    <div>
+                      <p className="font-semibold text-[#1A1A1A]">{item.name}</p>
+                      <p className="text-sm text-[#737373]">{item.location}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -256,6 +285,15 @@ export default function CaseStudiesPage() {
                       >
                         {story.category}
                       </span>
+                      {story.image && (
+                        /* eslint-disable-next-line @next/next/no-img-element */
+                        <img
+                          src={`${siteConfig.basePath}/images/${story.image}`}
+                          alt={story.name}
+                          loading="lazy"
+                          className="w-20 h-20 rounded-full object-cover mb-4"
+                        />
+                      )}
                       <h3 className="heading-card">{story.name}</h3>
                       <p className="text-[#525252] font-medium">{story.title}</p>
                       <p className="text-sm text-[#737373]">{story.location}</p>
@@ -306,10 +344,22 @@ export default function CaseStudiesPage() {
                   <blockquote className="text-[#525252] text-sm mb-4">
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-[#3EBCE8]" />
-                    <p className="font-medium text-[#1A1A1A] text-sm">{testimonial.name}</p>
-                    <span className="text-[#737373] text-sm">• {testimonial.location}</span>
+                  <div className="flex items-center gap-3">
+                    {testimonial.image ? (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img
+                        src={`${siteConfig.basePath}/images/${testimonial.image}`}
+                        alt={testimonial.name}
+                        loading="lazy"
+                        className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                      />
+                    ) : (
+                      <div className="w-10 h-10 rounded-full bg-[#3EBCE8]/20 flex-shrink-0" />
+                    )}
+                    <div>
+                      <p className="font-medium text-[#1A1A1A] text-sm">{testimonial.name}</p>
+                      <span className="text-[#737373] text-xs">{testimonial.location}</span>
+                    </div>
                   </div>
                 </div>
               ))}
