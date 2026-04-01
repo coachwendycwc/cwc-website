@@ -66,8 +66,9 @@ const bookingOptions = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
       </svg>
     ),
-    accent: "#FFC425",
-    link: "https://app.usemotion.com/meet/wendy-perdomo/check-in",
+    accent: "#C4D82E",
+    link: "/schedule/check-in/",
+    internal: true,
   },
 ];
 
@@ -217,15 +218,25 @@ export default function SchedulePage() {
                     </ul>
 
                     {/* CTA */}
-                    <a
-                      href={option.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full text-center py-3 px-6 rounded-lg text-white text-sm font-semibold transition-opacity hover:opacity-90"
-                      style={{ backgroundColor: option.accent }}
-                    >
-                      Schedule a Call
-                    </a>
+                    {option.internal ? (
+                      <Link
+                        href={option.link}
+                        className="block w-full text-center py-3 px-6 rounded-lg text-white text-sm font-semibold transition-opacity hover:opacity-90"
+                        style={{ backgroundColor: option.accent }}
+                      >
+                        Schedule a Call
+                      </Link>
+                    ) : (
+                      <a
+                        href={option.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full text-center py-3 px-6 rounded-lg text-white text-sm font-semibold transition-opacity hover:opacity-90"
+                        style={{ backgroundColor: option.accent }}
+                      >
+                        Schedule a Call
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
