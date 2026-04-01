@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CWC Website — V1 vs V2 Enterprise Repositioning Comparison</title>
+<style>
+  @page { margin: 0.6in; size: letter; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 11px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Cover header */
+  .cover {
+    text-align: center;
+    padding: 40px 0 30px;
+    border-bottom: 3px solid #3EBCE8;
+    margin-bottom: 30px;
+  }
+  .cover h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+  }
+  .cover h1 span { color: #3EBCE8; }
+  .cover .subtitle {
+    font-size: 14px;
+    color: #737373;
+    margin-top: 8px;
+  }
+  .cover .meta {
+    font-size: 10px;
+    color: #a3a3a3;
+    margin-top: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Section headers */
+  .section {
+    margin-bottom: 28px;
+    page-break-inside: avoid;
+  }
+  .section-number {
+    display: inline-block;
+    background: #3EBCE8;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .section h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: inline;
+    vertical-align: middle;
+  }
+  .section-header {
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    font-size: 10.5px;
+  }
+  thead th {
+    background: #f5f5f5;
+    font-weight: 600;
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid #e5e5e5;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #525252;
+  }
+  thead th:first-child { border-radius: 6px 0 0 0; }
+  thead th:last-child { border-radius: 0 6px 0 0; }
+  tbody td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #fafafa; }
+
+  .v1-col { color: #737373; }
+  .v2-col { color: #1a1a1a; font-weight: 500; }
+
+  /* Callout box */
+  .callout {
+    background: #E8F8FD;
+    border-left: 3px solid #3EBCE8;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 0 6px 6px 0;
+    font-size: 10px;
+    color: #1A9FCC;
+  }
+  .callout strong { color: #0e7490; }
+
+  /* Arrow indicator */
+  .arrow { color: #3EBCE8; font-weight: 700; }
+
+  /* Tag pills */
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 9px;
+    font-weight: 600;
+    margin: 1px 2px;
+  }
+  .tag-v1 { background: #f5f5f5; color: #737373; }
+  .tag-v2 { background: #E8F8FD; color: #1A9FCC; }
+
+  /* Bottom line */
+  .bottom-line {
+    background: #1a1a1a;
+    color: white;
+    padding: 20px 24px;
+    border-radius: 12px;
+    margin-top: 30px;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  .bottom-line strong { color: #3EBCE8; }
+
+  /* Page break helper */
+  .page-break { page-break-before: always; }
+
+  /* Compact list */
+  .compact-list { padding-left: 16px; margin: 4px 0; }
+  .compact-list li { margin-bottom: 2px; font-size: 10.5px; }
+
+  /* Summary table at top */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .summary-card {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+  }
+  .summary-card .num {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3EBCE8;
+  }
+  .summary-card .label {
+    font-size: 9px;
+    color: #737373;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <h1>CWC Website — V1 vs <span>V2</span></h1>
+  <div class="subtitle">Enterprise Repositioning Comparison</div>
+  <div class="meta">
+    Production: coachingwomenofcolor.com &nbsp;|&nbsp; Staging: staging.coachingwomenofcolor.com &nbsp;|&nbsp; March 2026
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-grid">
+  <div class="summary-card">
+    <div class="num">16</div>
+    <div class="label">Files Modified</div>
+  </div>
+  <div class="summary-card">
+    <div class="num">4</div>
+    <div class="label">Phases Completed</div>
+  </div>
+  <div class="summary-card">
+    <div class="num">1</div>
+    <div class="label">New Page Created</div>
+  </div>
+</div>
+
+<!-- 1. NAVIGATION -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">1</span>
+    <h2>Navigation</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%">Element</th>
+        <th style="width:39%">V1 (Production)</th>
+        <th style="width:39%">V2 (Staging)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Nav Items</strong></td>
+        <td class="v1-col">For Organizations | For Individuals | About | Resources | Events | Gallery | FAQ <span class="tag tag-v1">7 items</span></td>
+        <td class="v2-col">Solutions | Speaking | About | Case Studies | Resources | For Individuals <span class="tag tag-v2">6 items</span></td>
+      </tr>
+      <tr>
+        <td><strong>CTA Button</strong></td>
+        <td class="v1-col">"Book a Consultation" <span class="arrow">→</span> /book</td>
+        <td class="v2-col">"Request a Proposal" <span class="arrow">→</span> /contact</td>
+      </tr>
+      <tr>
+        <td><strong>Key Changes</strong></td>
+        <td class="v1-col">Events, Gallery, FAQ in main nav</td>
+        <td class="v2-col">Speaking elevated to top nav; Case Studies elevated; Events/Gallery/FAQ moved to footer only</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 2. HERO SECTION -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">2</span>
+    <h2>Hero Section</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%">Element</th>
+        <th style="width:39%">V1 (Production)</th>
+        <th style="width:39%">V2 (Staging)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Headline</strong></td>
+        <td class="v1-col">"Transform. Elevate. Lead."</td>
+        <td class="v2-col">"Your leaders are leaving. We help you keep them."</td>
+      </tr>
+      <tr>
+        <td><strong>Subhead</strong></td>
+        <td class="v1-col">"Empowering organizations to build inclusive cultures where women of color don't just belong—they thrive."</td>
+        <td class="v2-col">"We partner with Fortune 500 companies and high-growth organizations to develop, retain, and advance women of color in leadership—through executive coaching, keynotes, workshops, and strategic retreats."</td>
+      </tr>
+      <tr>
+        <td><strong>Primary CTA</strong></td>
+        <td class="v1-col">[For Organizations] + [For Individuals] (equal weight)</td>
+        <td class="v2-col">[Request a Proposal] (dominant)</td>
+      </tr>
+      <tr>
+        <td><strong>Secondary CTA</strong></td>
+        <td class="v1-col">—</td>
+        <td class="v2-col">[Download Capabilities Brief]</td>
+      </tr>
+      <tr>
+        <td><strong>Tertiary</strong></td>
+        <td class="v1-col">—</td>
+        <td class="v2-col">"Looking for individual coaching? Start here" (text link)</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>Why it matters:</strong> V1 spoke to everyone equally. V2 leads with a consequence-first headline that gets VP-of-HR attention and funnels org buyers toward the proposal, with individual coaching as a soft secondary path.
+  </div>
+</div>
+
+<!-- 3. SOLUTIONS GRID -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">3</span>
+    <h2>Solutions Grid</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:15%">Position</th>
+        <th style="width:42%">V1 Order</th>
+        <th style="width:43%">V2 Order</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1st</strong></td><td class="v1-col">Executive Coaching</td><td class="v2-col">Keynote Speaking</td></tr>
+      <tr><td><strong>2nd</strong></td><td class="v1-col">Group Coaching</td><td class="v2-col">Strategic Retreats</td></tr>
+      <tr><td><strong>3rd</strong></td><td class="v1-col">Keynote Speaking</td><td class="v2-col">Executive Coaching</td></tr>
+      <tr><td><strong>4th</strong></td><td class="v1-col">Workshops & Webinars</td><td class="v2-col">Workshops & Webinars</td></tr>
+      <tr><td><strong>5th</strong></td><td class="v1-col">Strategic Retreats</td><td class="v2-col">Group Coaching</td></tr>
+      <tr><td><strong>6th</strong></td><td class="v1-col">Virtual Series</td><td class="v2-col">Virtual Series</td></tr>
+      <tr><td><strong>7th</strong></td><td class="v1-col">Performance Coaching</td><td class="v2-col">Performance Coaching</td></tr>
+      <tr>
+        <td><strong>Heading</strong></td>
+        <td class="v1-col">"Solutions that drive change"</td>
+        <td class="v2-col">"Solutions that close leadership gaps"</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>Why it matters:</strong> V2 leads with highest-revenue services (keynotes = quick event-planner decisions, retreats = high-ticket). Enterprise buyers scanning the grid see their biggest needs first.
+  </div>
+</div>
+
+<!-- 4. STATS SECTION -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">4</span>
+    <h2>Stats Section</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:50%">V1 Label</th>
+        <th style="width:50%">V2 Label</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="v1-col">Years Experience</td><td class="v2-col">Years in Leadership Development</td></tr>
+      <tr><td class="v1-col">Leaders Developed</td><td class="v2-col">Leaders Coached Across Industries</td></tr>
+      <tr><td class="v1-col">Organizations Served</td><td class="v2-col">Organizational Partnerships</td></tr>
+      <tr><td class="v1-col">Client Satisfaction</td><td class="v2-col">Client Satisfaction Rating</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>Why it matters:</strong> V2 labels signal enterprise credibility — "partnerships" > "served", "across industries" > just a number.
+  </div>
+</div>
+
+<!-- 5. CWC DIFFERENCE -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">5</span>
+    <h2>CWC Difference Section</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:50%">V1 Bullet Points</th>
+        <th style="width:50%">V2 Bullet Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="v1-col">Customized programs for your unique challenges</td><td class="v2-col">Customized engagements scoped to your organization's goals and timeline</td></tr>
+      <tr><td class="v1-col">Measurable outcomes that matter</td><td class="v2-col">Measurable outcomes tied to retention, engagement, and leadership readiness</td></tr>
+      <tr><td class="v1-col">Ongoing support beyond the workshop</td><td class="v2-col">Post-engagement strategic debriefs and sustained support</td></tr>
+      <tr><td class="v1-col">Real expertise, real experience, real results</td><td class="v2-col">25+ years of cross-industry expertise across 50+ organizations</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>Why it matters:</strong> V2 speaks procurement language — "scoped to goals and timeline", "tied to retention", "post-engagement debriefs". These are exactly the phrases HR/L&D leaders need to justify a PO.
+  </div>
+</div>
+
+<!-- 6. INDIVIDUAL COACHING -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">6</span>
+    <h2>Individual Coaching Section</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:50%">V1</th>
+        <th style="width:50%">V2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="v1-col">Full dedicated section with multiple cards, descriptions, and CTAs</td>
+        <td class="v2-col">Compressed to a single compact row: "Looking for individual coaching?" + [View Individual Programs] button</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>Why it matters:</strong> Individual coaching stays accessible but no longer competes for attention with org services.
+  </div>
+</div>
+
+<!-- 7. TESTIMONIALS -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">7</span>
+    <h2>Testimonials</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:50%">V1 Order</th>
+        <th style="width:50%">V2 Order</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="v1-col">Mixed — individual testimonials appeared first</td>
+        <td class="v2-col">
+          1. Lynne Toye (board retreat)<br>
+          2. Emily Kurtz (team coaching)<br>
+          3. Tanya Ramos-Puig (speaking/facilitation)<br>
+          4. Then individual testimonials
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>Why it matters:</strong> Org buyers see org social proof first. A board retreat testimonial is 10x more convincing for a VP of HR than an individual coaching one.
+  </div>
+</div>
+
+<!-- 8. RESOURCES -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">8</span>
+    <h2>Resources Section</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%">Element</th>
+        <th style="width:39%">V1</th>
+        <th style="width:39%">V2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Heading</strong></td>
+        <td class="v1-col">"Free Resources"</td>
+        <td class="v2-col">"Insights & Resources"</td>
+      </tr>
+      <tr>
+        <td><strong>Lead Asset</strong></td>
+        <td class="v1-col">Confidence Toolkit + Scorecard</td>
+        <td class="v2-col">CWC Capabilities Statement (enterprise asset), then Scorecard, then Newsletter</td>
+      </tr>
+      <tr>
+        <td><strong>Dedicated Page</strong></td>
+        <td class="v1-col">None — linked to homepage anchor #resources</td>
+        <td class="v2-col">New /resources page with downloadable assets + thought leadership</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 9. FINAL CTA -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">9</span>
+    <h2>Final CTA</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%">Element</th>
+        <th style="width:39%">V1</th>
+        <th style="width:39%">V2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Headline</strong></td>
+        <td class="v1-col">"Ready to transform?"</td>
+        <td class="v2-col">"Ready to invest in your leaders?"</td>
+      </tr>
+      <tr>
+        <td><strong>Body</strong></td>
+        <td class="v1-col">Generic</td>
+        <td class="v2-col">"From a single keynote to a year-long coaching engagement, we design programs that fit your organization's goals, culture, and budget."</td>
+      </tr>
+      <tr>
+        <td><strong>CTAs</strong></td>
+        <td class="v1-col">[Book a Consultation]</td>
+        <td class="v2-col">[Request a Proposal] + [Book a Discovery Call]</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 10. FOOTER -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">10</span>
+    <h2>Footer</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%">Element</th>
+        <th style="width:39%">V1 (4 columns)</th>
+        <th style="width:39%">V2 (5 columns)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Col 1</strong></td>
+        <td class="v1-col">Solutions (6 items, Executive Coaching first)</td>
+        <td class="v2-col">Solutions (7 items, Keynote Speaking first)</td>
+      </tr>
+      <tr>
+        <td><strong>Col 2</strong></td>
+        <td class="v1-col">Coaching (3 items)</td>
+        <td class="v2-col">Resources (Case Studies, Capabilities Brief, Newsletter, Events, Gallery)</td>
+      </tr>
+      <tr>
+        <td><strong>Col 3</strong></td>
+        <td class="v1-col">Company (About, FAQ, Contact)</td>
+        <td class="v2-col">Individual Coaching (3 items)</td>
+      </tr>
+      <tr>
+        <td><strong>Col 4</strong></td>
+        <td class="v1-col">—</td>
+        <td class="v2-col">Company (About, FAQ, Contact)</td>
+      </tr>
+      <tr>
+        <td><strong>Tagline</strong></td>
+        <td class="v1-col">"Empowering organizations to create inclusive cultures..."</td>
+        <td class="v2-col">"Leadership development, executive coaching, and keynote speaking for organizations committed to advancing women of color."</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>Why it matters:</strong> Footer absorbs Events/Gallery from main nav, adds a dedicated Resources column with enterprise assets, and the tagline leads with service types rather than mission language.
+  </div>
+</div>
+
+<!-- 11. OTHER PAGES -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">11</span>
+    <h2>Other Key Pages Updated</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:25%">Page</th>
+        <th style="width:75%">Key V2 Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>For Organizations</strong></td>
+        <td class="v2-col">Hero: "Your organization needs leaders who stay, grow, and deliver" + new Enterprise Readiness section (4 cards: Custom Scoping, Contracting Ready, Flexible Delivery, Post-Engagement Debrief)</td>
+      </tr>
+      <tr>
+        <td><strong>Case Studies</strong></td>
+        <td class="v2-col">Org impact flipped to top; industry badges added (Financial Services, Healthcare, Education, etc.); individual stories moved secondary</td>
+      </tr>
+      <tr>
+        <td><strong>Keynote Speaking</strong></td>
+        <td class="v2-col">Speaker Logistics section (What's Included + How to Book) + Past Speaking Engagements (8 events) + "Inquire About Availability" CTA</td>
+      </tr>
+      <tr>
+        <td><strong>About</strong></td>
+        <td class="v2-col">"Our Founder & Principal" + new "Why Organizations Choose CWC" section (6 enterprise credibility cards)</td>
+      </tr>
+      <tr>
+        <td><strong>Contact</strong></td>
+        <td class="v2-col">Added Role/Title field, Team Size dropdown, reordered services (Keynote first), response time indicator, Capabilities Statement download link</td>
+      </tr>
+      <tr>
+        <td><strong>Resources</strong></td>
+        <td class="v2-col"><span class="tag tag-v2">NEW PAGE</span> Dedicated page with downloadable assets (Capabilities Statement, Confidence Toolkit, Promotion Scorecard) + thought leadership section</td>
+      </tr>
+      <tr>
+        <td><strong>All 7 Service Pages</strong></td>
+        <td class="v2-col">Service-specific CTAs replacing generic "Get a Custom Quote" + buyer-title targeting in "Best For" sections (e.g., "VP of HR, L&D directors...")</td>
+      </tr>
+      <tr>
+        <td><strong>SEO / Metadata</strong></td>
+        <td class="v2-col">Title, description, keywords, OpenGraph, Twitter card, and JSON-LD schema all updated for enterprise positioning</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- BOTTOM LINE -->
+<div class="bottom-line">
+  <strong>Bottom line:</strong> V1 was a coaching practice website that treated organizations and individuals equally. V2 is an enterprise-services site that signals to procurement, HR, and L&D buyers: <strong>"We're ready for your PO."</strong> Individual coaching stays warm and accessible — just not front and center.
+</div>
+
+</body>
+</html>

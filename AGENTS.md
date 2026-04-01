@@ -1,4 +1,4 @@
-# CLAUDE.md - CWC Website (Coaching Women of Color)
+# AGENTS.md - CWC Website (Coaching Women of Color)
 
 ## Project Overview
 Marketing website for **Coaching Women of Color (CWC)**, a leadership coaching firm led by Wendy Perdomo. The site targets organizations seeking to retain and develop women of color in leadership, and individual women of color seeking executive coaching.
@@ -60,12 +60,6 @@ npm start          # Start production server on port 3001
   aws cloudfront create-invalidation --distribution-id E39U9T07BP67U4 --paths "/*"
   ```
 - **NEVER push to `main` or production without explicit user approval**
-- **Pre-deploy checklist (MANDATORY before any production deploy):**
-  1. Run `git status` — confirm there are no untracked or uncommitted files that belong to the site (new pages, images, components)
-  2. Run `git log --oneline staging..main` and `git log --oneline main..staging` — confirm `main` has everything it needs
-  3. If any new pages exist on `staging` that are not on `main`, bring them over before deploying
-  4. Never deploy to production from a branch that is missing pages that have public-facing links (LinkedIn, email, etc.)
-- **New pages must be committed to git before they can be deployed** — files that exist only on disk but are not committed will not survive a branch switch or deployment
 
 ### Styling Rules
 - Use Tailwind utility classes for component-level styles
@@ -161,13 +155,13 @@ raw-videos/                 # Source video files (NOT deployed, git-ignored)
 
 ## AI Tooling & Skills
 
-### Claude Code Skills (`.claude/skills/`)
+### Codex Skills (`.Codex/skills/`)
 | Skill | Purpose |
 |-------|---------|
 | **cwc-brand-guide** | CWC-specific brand design system, color palette, component patterns, accessibility checklist. Auto-triggers on UI/design tasks. |
 | **ui-ux-pro-max** | Professional UI/UX design intelligence. 67 styles, 161 palettes, 57 font pairings, 99 UX guidelines. Enforces accessibility and responsive best practices. |
 
-### MCP Servers (`~/.claude/mcp.json`)
+### MCP Servers (`~/.Codex/mcp.json`)
 | Server | Purpose |
 |--------|---------|
 | **stitch** | Google Stitch AI - Text-to-UI generation. Generates Tailwind + React layouts from prompts. Free (350/month). |
@@ -177,7 +171,7 @@ raw-videos/                 # Source video files (NOT deployed, git-ignored)
 ### Design References
 - **Component Gallery:** https://component.gallery/ (60 components, 95 design systems, 2,676 examples)
 - **21st.dev:** https://21st.dev/ (shadcn/ui component marketplace)
-- **Anthropic Skills Guide:** `The-Complete-Guide-to-Building-Skill-for-Claude.pdf` (skill development reference)
+- **Anthropic Skills Guide:** `The-Complete-Guide-to-Building-Skill-for-Codex.pdf` (skill development reference)
 
 ### Blog
 - Blog posts stored as TypeScript data in `src/data/blog-posts.ts` (not MDX or CMS)

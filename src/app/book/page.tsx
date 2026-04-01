@@ -70,7 +70,7 @@ export default function BookPage() {
                 </ul>
                 <div className="mt-8">
                   <a
-                    href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call"
+                    href="https://app.usemotion.com/meet/wendy-perdomo/organizations"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary inline-block"
@@ -97,7 +97,7 @@ export default function BookPage() {
                     <svg className="w-4 h-4 text-[#3EBCE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    30-minute chemistry call
+                    30-minute discovery call
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-4 h-4 text-[#3EBCE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,7 +114,7 @@ export default function BookPage() {
                 </ul>
                 <div className="mt-8">
                   <a
-                    href="https://calendly.com/coachingwomenofcolor/coaching-consultation-with-wendy"
+                    href="https://app.usemotion.com/meet/wendy-perdomo/individuals"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary inline-block"
