@@ -373,9 +373,9 @@ export default function ForOrganizationsPage() {
             </div>
 
             <div className="text-center mt-12">
-              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <Link href="/contact" className="btn-primary">
                 Request a Proposal
-              </a>
+              </Link>
             </div>
           </div>
         </section>
