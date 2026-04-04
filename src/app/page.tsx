@@ -227,7 +227,8 @@ export default function Home() {
           subheadline="Invest in the leaders who are already transforming your organization—through executive coaching, keynotes, workshops, and strategic retreats."
           ctaLabel="Request a Proposal"
           ctaHref="/contact"
-          secondaryCtaLabel="Download Capabilities Brief"
+          secondaryCtaLabel="Take the Free Confidence Assessment"
+          secondaryCtaHref="/scorecard.html"
           footerLink={{
             label: "Looking for individual coaching? Start here →",
             href: "/for-individuals",
@@ -466,7 +467,7 @@ export default function Home() {
 
               {/* Promotion Readiness Scorecard */}
               <a
-                href="https://coachwendycwc.github.io/CWC-automation-platform/cwc-executive-lab/promotion-readiness-scorecard.html"
+                href="/scorecard.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-bordered group hover:border-[#3EBCE8] flex flex-col"

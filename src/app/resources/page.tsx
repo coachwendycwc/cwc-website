@@ -72,30 +72,9 @@ export default function ResourcesPage() {
                 <span className="link-arrow mt-6 text-sm">Download free →</span>
               </a>
 
-              {/* Leadership Confidence Toolkit */}
-              <a
-                href={`${siteConfig.basePath}/confidence-resource-tool.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
-              >
-                <div className="w-12 h-12 bg-[#FFF4E8] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#FFC425]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
-                  Leadership Confidence Toolkit
-                </h3>
-                <p className="text-[#737373] mt-2 flex-grow">
-                  A practical guide with tools and strategies to build unshakable confidence in your leadership. Download your free copy.
-                </p>
-                <span className="link-arrow mt-6 text-sm">Download PDF →</span>
-              </a>
-
               {/* Promotion Readiness Scorecard */}
               <a
-                href="https://coachwendycwc.github.io/CWC-automation-platform/cwc-executive-lab/promotion-readiness-scorecard.html"
+                href="/scorecard.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-bordered group hover:border-[#3EBCE8] flex flex-col"

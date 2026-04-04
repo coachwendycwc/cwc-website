@@ -81,7 +81,6 @@ const expertise = [
 const affiliations = [
   "Faculty Member & Coach Affiliate, Surge Institute",
   "Faculty Member, International Coaching Leadership Institute",
-  "Lead Facilitator, WOCIP Global Leadership Accelerator Program",
   "Lead Facilitator, onewereach Global Leadership Accelerator Program",
   "Developing Capacity Coach Affiliate",
 ];
@@ -121,7 +120,7 @@ export default function AboutPage() {
           <img
             src={`${siteConfig.basePath}/images/wendy-about.jpg`}
             alt="Wendy Perdomo, Founder of Coaching Women of Color"
-            className="absolute inset-0 w-full h-full object-cover object-[50%_22%] md:object-[85%_0%] opacity-85"
+            className="absolute inset-0 w-full h-full object-contain object-center opacity-85"
           />
           <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-transparent from-0% via-[#1A1A1A]/40 via-55% to-[#1A1A1A] to-85% md:from-[#1A1A1A] md:from-30% md:via-[#1A1A1A]/60 md:via-45% md:to-transparent md:to-70%" />
 

@@ -108,9 +108,9 @@ export default function ForOrganizationsPage() {
                   and transform culture. Every engagement is scoped, measured, and built for your timeline.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                  <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                    Schedule a Consultation
-                  </a>
+                  <Link href="/contact" className="btn-primary">
+                    Request a Proposal
+                  </Link>
                   <a href={`${siteConfig.basePath}/cwc-capabilities-statement-v2.html`} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                     Download Capabilities Statement
                   </a>

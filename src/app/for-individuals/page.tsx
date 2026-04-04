@@ -477,7 +477,7 @@ export default function ForIndividualsPage() {
             </p>
             <div className="mt-10">
               <a href="https://app.usemotion.com/meet/wendy-perdomo/individuals" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Book Your Free Consultation
+                Book Your Free Discovery Call
               </a>
             </div>
           </div>
