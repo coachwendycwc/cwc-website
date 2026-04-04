@@ -81,7 +81,7 @@ const expertise = [
 const affiliations = [
   "Faculty Member & Coach Affiliate, Surge Institute",
   "Faculty Member, International Coaching Leadership Institute",
-  "Lead Facilitator, onewereach Global Leadership Accelerator Program",
+  "Lead Facilitator, One We Reach Global Leadership Accelerator Program",
   "Developing Capacity Coach Affiliate",
 ];
 
