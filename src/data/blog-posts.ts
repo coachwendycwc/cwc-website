@@ -158,6 +158,8 @@ export const blogPosts: BlogPost[] = [
 
       <p>Imposter syndrome was first identified by psychologists Pauline Clance and Suzanne Imes in 1978. They observed a pattern in high-achieving women who were unable to internalize their own success, attributing it instead to luck, timing, or deceiving others into thinking they were smarter than they "really" were. Studies since then suggest it affects up to 82% of people at some point in their careers — across every industry, income level, and background.</p>
 
+      <p><em>Sources: Clance, P.R. &amp; Imes, S.A. (1978). "The Imposter Phenomenon in High Achieving Women." Psychotherapy, 15(3), 241–247. Bravata, D.M. et al. (2020). "Prevalence, Predictors, and Treatment of Impostor Syndrome: A Systematic Review." Journal of General Internal Medicine, 35, 1252–1275.</em></p>
+
       <p>But for women of color, the experience is distinct. It's not just a mental pattern to be reframed. It's a rational response to environments that send consistent signals — subtle and overt — that you don't fully belong.</p>
 
       <h2>Understanding Imposter Syndrome</h2>
@@ -183,9 +185,9 @@ export const blogPosts: BlogPost[] = [
       <p>Make the wins file specific. Not "I did a good job on the project" but "I led the team through a 6-week sprint that launched on time and under budget, which the VP called out in the all-hands as a model for how we should operate." Specific wins are harder to dismiss than vague ones.</p>
 
       <h3>3. Find Your People</h3>
-      <p>Isolation fuels imposter syndrome. Connect with other women of color in leadership — through coaching groups, professional networks, or communities like the Executive Leadership Lab. Hearing "me too" from someone you respect is powerful.</p>
+      <p>Isolation fuels imposter syndrome. Connect with other women of color in leadership — through coaching groups, professional networks, or peer communities. Hearing "me too" from someone you respect is powerful.</p>
       <p>There's a specific kind of relief that comes from sharing your experience with someone who doesn't need it explained. When you tell a white male colleague that you're worried about being taken seriously in a meeting, they may offer reassurance, but they often can't fully understand. When you tell another woman of color at a similar level, she often knows exactly what you mean — and more importantly, she can help you strategize rather than just sympathize.</p>
-      <p>Peer groups and coaching cohorts also normalize ambition. If you're surrounded by women of color who are openly building toward senior leadership, your own ambition feels less presumptuous. The ceiling becomes a collective challenge rather than a personal ceiling.</p>
+      <p>Peer groups and coaching cohorts also normalize ambition. If you're surrounded by women of color who are openly building toward senior leadership, your own ambition feels less presumptuous. The ceiling becomes a collective challenge rather than a personal one.</p>
 
       <h3>4. Separate Feelings from Facts</h3>
       <p>Feeling like you don't belong is not the same as not belonging. You were hired, promoted, or invited for a reason. Your feelings are valid, but they're not always accurate reflections of reality.</p>
@@ -195,12 +197,9 @@ export const blogPosts: BlogPost[] = [
       <p>A coach who understands the intersection of identity, leadership, and workplace dynamics can help you develop strategies specific to your situation. This isn't generic advice — it's targeted support for how <em>you</em> navigate <em>your</em> environment.</p>
       <p>The value of coaching for imposter syndrome isn't just the strategies — it's the relationship. Having a consistent space where you can be honest about what you're experiencing, without code-switching or managing how you're perceived, creates a kind of psychological safety that's rare in most professional environments. Over time, that safety becomes internalized. You start to build a relationship with yourself that's as honest and generous as the one you have in coaching.</p>
 
-      <h2>When Imposter Syndrome Is Actually Useful</h2>
-      <p>Not all imposter syndrome is negative. Research by Basima Tewfik at MIT found that people who experience imposter thoughts — when managed well — tend to be perceived as more interpersonally effective by colleagues. They ask more questions, they listen more carefully, and they're more open to feedback. The key is channeling the energy of imposter syndrome into curiosity rather than paralysis.</p>
-      <p>The goal isn't to eliminate every moment of self-doubt. It's to stop letting self-doubt make decisions for you. You can feel uncertain and still raise your hand. You can feel like a fraud and still apply for the role. You can feel out of place and still speak up in the meeting. The feeling doesn't have to drive the behavior.</p>
-
       <h2>Moving Forward</h2>
       <p>Imposter syndrome may never fully disappear — but it doesn't have to run the show. With the right tools, support, and self-awareness, you can lead with confidence and authenticity.</p>
+      <p>The goal isn't to eliminate every moment of self-doubt. It's to stop letting self-doubt make decisions for you. You can feel uncertain and still raise your hand. You can feel like a fraud and still apply for the role. You can feel out of place and still speak up in the meeting. The feeling doesn't have to drive the behavior.</p>
       <p>If imposter syndrome is holding you back from your next move, <a href="/for-individuals/">explore our coaching programs</a> designed specifically for women of color in leadership.</p>
     `,
   },
@@ -217,7 +216,9 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p>Every year, organizations spend billions on diversity, equity, and inclusion training. And every year, the numbers barely move. Retention of diverse talent remains stagnant. Leadership pipelines stay homogeneous. Employees report the same frustrations in engagement surveys. So what's going wrong?</p>
 
-      <p>U.S. companies spend approximately $8 billion annually on diversity training. Despite this investment, a Harvard Business Review analysis found that mandatory diversity training is among the least effective interventions for changing workplace demographics — and in some cases, actually backfires. The problem isn't the intention. It's the model.</p>
+      <p>According to McKinsey &amp; Company, U.S. companies spend approximately $8 billion annually on diversity training. Despite this investment, research published in Harvard Business Review by sociologists Frank Dobbin of Harvard University and Alexandra Kalev of Tel Aviv University found that mandatory diversity training is among the least effective interventions for changing workplace demographics — and in some cases, actually makes things worse. The problem isn't the intention. It's the model.</p>
+
+      <p><em>Sources: McKinsey &amp; Company, "Focusing on What Works for Workplace Diversity" (2017); Dobbin, F. &amp; Kalev, A. (2016). "Why Diversity Programs Fail." Harvard Business Review, July–August 2016.</em></p>
 
       <h2>The Problem with One-Off Training</h2>
       <p>A two-hour workshop on unconscious bias doesn't change how a manager gives feedback on Monday morning. A keynote about inclusive leadership doesn't rewire the decision-making process for promotions. Training creates awareness — but awareness without sustained practice, accountability, and support doesn't produce behavior change.</p>
@@ -226,8 +227,9 @@ export const blogPosts: BlogPost[] = [
       <p>One-off DEI training violates every principle of effective behavior change. It provides information without application, awareness without accountability, and insight without a path to integration. And because it happens in a group setting, individual leaders never have to confront how their specific behaviors are affecting their specific team.</p>
 
       <h2>Why Mandatory Training Often Makes Things Worse</h2>
-      <p>Multiple studies — including research from sociologists Alexandra Kalev, Frank Dobbin, and Erin Kelly — have found that mandatory diversity training programs frequently produce backlash among white male employees. When people feel coerced into attending training, they often become more resistant to the ideas being presented, not less.</p>
-      <p>There's also the "moral licensing" effect: after completing a diversity training, many people feel they've fulfilled their obligation and are less likely to take additional pro-diversity actions. The training becomes a psychological substitute for actual change rather than a catalyst for it.</p>
+      <p>Two bodies of research are particularly instructive here. The first: Dobbin and Kalev's analysis of data from 829 firms over three decades, published in Harvard Business Review in 2016, found that mandatory diversity training frequently produces backlash — participants often become more resistant to the ideas being presented, not less. The second: an earlier study by Kalev, Dobbin, and Erin Kelly, published in the American Sociological Review in 2006, found that of all the diversity interventions studied, efforts to moderate managerial bias through training were the least effective at increasing the representation of women and people of color in management.</p>
+      <p><em>Sources: Dobbin, F. &amp; Kalev, A. (2016). "Why Diversity Programs Fail." Harvard Business Review. Kalev, A., Dobbin, F. &amp; Kelly, E. (2006). "Best Practices or Best Guesses? Assessing the Efficacy of Corporate Affirmative Action and Diversity Policies." American Sociological Review, 71(4), 589–617.</em></p>
+      <p>There's also the "moral licensing" effect: after completing a diversity training, many people feel they've fulfilled their obligation and are less likely to take additional pro-diversity actions. Research in organizational psychology has documented this pattern — the existence of a diversity program can function as a psychological substitute for actual change rather than a catalyst for it.</p>
       <p>This doesn't mean all training is bad. Short, voluntary, skill-based training — focused on specific behaviors rather than attitudes — can be a useful component of a larger strategy. But when training is the entire strategy, it almost never produces the outcomes organizations want.</p>
 
       <h2>What Actually Works</h2>
@@ -261,62 +263,67 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "what-to-expect-from-your-first-coaching-session",
-    title: "What to Expect from Your First Coaching Session",
+    title: "What It's Actually Like to Work with Me",
     description:
-      "Nervous about your first coaching session? Here's exactly what happens, what to prepare, and how to get the most out of your first conversation with an executive coach.",
+      "Before we talk about what coaching with me looks like, let me tell you something important: our first conversation isn't a formality. It's a real exchange — and it's where the real work begins.",
     date: "2026-02-25",
     author: "Wendy Perdomo",
     category: "Career Growth",
     readTime: "8 min read",
     image: "/images/new/action-pitch.jpg",
     content: `
-      <p>You've made the decision to invest in coaching. The session is booked. And now the questions start: What do I talk about? What if I don't know what I need? Will I have to share everything? If this sounds familiar, you're not alone — and the good news is that your first coaching session is designed to meet you exactly where you are.</p>
+      <p>You've been managing it alone. The career that should feel more rewarding than it does. The leadership role that feels heavier than anyone around you seems to notice. The inner voice that keeps asking whether you're really as ready as everyone seems to think. And the exhaustion of navigating spaces that were never quite designed for someone who looks like you.</p>
 
-      <p>The pre-session jitters are completely normal, and they're often a sign that you're taking the work seriously. But they can also get in the way if you let them. This guide walks you through exactly what to expect — before, during, and after — so you can walk in (or log on) with confidence.</p>
+      <p>Maybe your organization has invested in coaching for you. Maybe you've decided to invest in yourself. Either way, you're here because something needs to change — and you're ready to do something about it.</p>
 
-      <h2>Before the Session</h2>
-      <p>You don't need to have everything figured out before your first session. That said, it helps to spend a few minutes reflecting on:</p>
+      <p>Before we talk about what coaching with me looks like, let me tell you something important: our first conversation isn't a formality. It's a real exchange — I'm listening for what's beneath the surface, and I'm genuinely assessing whether we're the right fit for each other. That matters to me, because this work only produces results when both people are fully invested in it.</p>
+
+      <h2>The Discovery Conversation: Where It Really Begins</h2>
+      <p>Our first conversation isn't a sales call. It's a genuine assessment — for both of us. I come in with questions designed to get to what's real, quickly:</p>
       <ul>
-        <li><strong>What prompted you to seek coaching?</strong> Was it a specific situation, a feeling, or a goal?</li>
-        <li><strong>What would success look like?</strong> If coaching went well, what would be different in 3-6 months?</li>
-        <li><strong>What's your biggest challenge right now?</strong> Not the polished version — the real one.</li>
+        <li>What's happening right now that made this the moment you decided to act?</li>
+        <li>Have you worked with a coach before, and what actually shifted — or didn't?</li>
+        <li>If this work goes well, what could genuinely be different for you in six months — in how you lead, how you show up, how you see yourself?</li>
+        <li>What do you already know might get in your own way?</li>
       </ul>
-      <p>You don't need to write a formal document. Just come with an open mind and a willingness to be honest.</p>
-      <p>One thing worth noting: many people come to their first session with a "presenting problem" — the thing they say they want to work on — that turns out not to be the most important thing. Maybe you say you want to work on executive presence, but as the conversation unfolds, it becomes clear that what's really at stake is your fear of being seen as too aggressive if you take up more space. A good coach helps you move from the surface issue to the underlying one, and that work often starts in the first session.</p>
 
-      <h2>During the Session</h2>
-      <p>Your first session is a conversation, not a test. Here's what typically happens:</p>
+      <p>That last question is the one I listen to most carefully. It tells me whether someone is ready to do the mirror work — the honest, sometimes uncomfortable examination of how our own patterns and beliefs contribute to the results we're frustrated by. That's not the only work we do. The systemic barriers are real, and I know them intimately. But the mirror work is where the deepest change happens, and not everyone is ready for it.</p>
 
-      <h3>Getting to Know Each Other</h3>
-      <p>Your coach will ask about your background, your current role, and what's on your mind. This isn't small talk — it's the foundation for understanding your context so the coaching is relevant and specific to your situation.</p>
-      <p>For women of color especially, this part matters deeply. There's a difference between a coach who asks polite questions and a coach who genuinely understands what it means to be the only person who looks like you in the leadership meeting, or to have your ideas consistently credited to someone else, or to feel like you have to work twice as hard to be seen as half as competent. The first session is partly about assessing whether your coach truly gets it — not just conceptually, but experientially.</p>
+      <p>While I'm assessing readiness, something else is usually happening. For many women of color, this is the first conversation in a long time where they haven't had to translate their experience, minimize what they're carrying, or justify why something that sounds small felt as significant as it did. I already understand the weight of being the only person who looks like you in the room. I already know what it costs to perform confidence you don't fully feel while managing the perception of everyone around you.</p>
 
-      <h3>Identifying What Matters Most</h3>
-      <p>Together, you'll explore what's most important to you right now. Sometimes the thing you came in wanting to work on reveals a deeper pattern underneath. A good coach helps you see connections you might miss on your own.</p>
-      <p>You might come in saying you need to work on your communication skills and leave realizing you've been making yourself smaller in meetings because you don't fully trust that your ideas will be received on their merits. You might come in focused on a specific conflict with a colleague and leave with clarity about a pattern in how you manage conflict that's been showing up throughout your career. First sessions have a way of opening up the real work.</p>
+      <blockquote><p>"Many of my clients tell me it felt like coming home — like a space where they could finally put it down. Sometimes there are tears. Not because the conversation is hard, but because the relief is real."</p></blockquote>
 
-      <h3>Setting the Tone</h3>
-      <p>Coaching is a partnership, not a lecture. Your coach will explain how sessions work, establish confidentiality, and create space for you to show up authentically. For women of color especially, this means a space where you don't have to translate your experience or justify your perspective.</p>
-      <p>Pay attention to how you feel during this part of the conversation. Do you feel like you can say what you actually think? Do you feel like you're being truly heard, or like you're being fit into a framework that doesn't quite apply? The quality of the coaching relationship is one of the strongest predictors of coaching outcomes. If something feels off, it's worth naming it — either in the session or in your own reflection afterward.</p>
+      <p>For organizations sponsoring this investment: that sense of safety is not incidental to the outcomes you're looking for. A leader who finally has a space to be honest — about what's working, what's not, and what she's been hiding behind — becomes a more decisive, more present, more effective leader. The emotional safety and the professional gains are not separate things.</p>
 
-      <h3>Leaving with Something Concrete</h3>
-      <p>You won't leave your first session with only good feelings — you'll leave with at least one actionable strategy or insight you can apply immediately. Coaching is practical. Every conversation should move you forward.</p>
-      <p>That concrete takeaway might be a reframe — a different way of thinking about a situation that's been causing you stress. It might be a specific action to take before your next session. It might be a question to sit with. But you should never leave a coaching session feeling like you just had a nice conversation with nothing to show for it. If that happens, say so — good coaches want that feedback.</p>
+      <h2>My Style: Tough Love with Full Presence</h2>
+      <p>I am not a coach who will tell you that everything you're doing is right and everyone else is the problem. If that were true, you wouldn't need coaching.</p>
+      <p>I hold a high bar for accountability, and I will challenge you. I will ask you to look honestly at how you might be contributing to the results you want to change — alongside the very real systemic dynamics working against you. I call this the mirror work, and it's often where the most important shifts happen.</p>
+      <p>At the same time: I am fully in your corner. I see you. I got you. My clients describe the combination as tough love — the kind that comes from someone who genuinely believes in what's possible for you, not someone going through the motions of a coaching framework.</p>
 
-      <h2>Common First-Session Concerns</h2>
-      <p><strong>"What if I get emotional?"</strong> That's completely normal and welcome. Coaching touches on things that matter deeply to you. A skilled coach knows how to hold space for emotion without making it the entire session.</p>
-      <p>If you've been carrying something — a career disappointment, an experience of being passed over or overlooked, the exhaustion of navigating a system that wasn't built for you — it's not unusual for that to come up in a first session. A good coach doesn't flinch from emotion. They help you use it as information, not avoid it as weakness.</p>
-      <p><strong>"What if I don't know what to work on?"</strong> That's fine. Your coach will guide the conversation. Often the most productive sessions start with "I'm not sure where to begin."</p>
-      <p><strong>"Is everything confidential?"</strong> Yes. What you share in coaching stays in coaching. If your organization is sponsoring the coaching, your coach may share high-level themes or progress with your sponsor, but never the details of your conversations. Before your first session, ask your coach to clarify exactly what confidentiality looks like in your specific situation so you can speak freely.</p>
-      <p><strong>"What if I don't connect with my coach?"</strong> Trust your instincts. Coaching only works when there's genuine trust between you and your coach. If after one or two sessions you don't feel like you're in the right coaching relationship, it's okay to say so. A professional coach will not take it personally — they want you to find the right fit, even if that's not them.</p>
+      <p>What tends to shift when this work lands:</p>
+      <ul>
+        <li>Confidence in decision-making that used to require twice the internal deliberation</li>
+        <li>Executive presence that's grounded and authentic, not performed</li>
+        <li>The capacity to hold difficult conversations rather than avoid them</li>
+        <li>Reduced imposter syndrome and the second-guessing that slows high-potential leaders down</li>
+        <li>A clearer sense of who you are as a leader — and what you're actually building toward</li>
+      </ul>
 
-      <h2>After the Session</h2>
-      <p>Take a few minutes after the session to jot down what resonated, what surprised you, and what you want to try before the next session. The space between sessions is where the real growth happens — coaching gives you the insight, and you bring it to life in your daily work.</p>
-      <p>Don't wait for your next session to process what came up. If you had a realization that's relevant to something happening at work this week, apply it this week. If an action you committed to feels harder than expected, note that — it's useful information to bring back to your coach. Some clients keep a brief coaching journal between sessions, just a few notes about what they noticed and what they tried. It doesn't have to be elaborate. Just enough to keep the thread alive between conversations.</p>
-      <p>And give yourself credit for showing up. Deciding to invest in yourself — to make time in a busy schedule, to be honest with a stranger about your challenges, to do something different than you've done before — is not a small thing. It's the first step in a process that, done well, changes how you lead, how you navigate difficulty, and how you see yourself.</p>
+      <p>For organizations: these are not soft outcomes. A leader who operates from genuine confidence rather than performed confidence makes faster decisions, leads her team more effectively, and stays — because she now sees a future in your organization worth building toward.</p>
 
-      <h2>Ready to Start?</h2>
-      <p>Your first session is a conversation about possibility. It's the beginning of investing in yourself as a leader. If you're ready, <a href="/book/">book a free consultation</a> and let's talk about what coaching could look like for you.</p>
+      <h2>You Are the Right Fit If…</h2>
+      <p>If any of these feel true, this is the right conversation to have:</p>
+      <ul>
+        <li>You're done managing alone and ready for real, sustained support</li>
+        <li>You're willing to look within — to examine your own role in your results alongside the barriers you're navigating</li>
+        <li>You welcome accountability because you know it's what closes the gap between where you are and where you want to be</li>
+        <li>You're ready to go deep, do the mirror work, and lead differently on the other side of it</li>
+        <li>You're ready to leave behind the version of yourself that was shrinking, performing, or playing it safe — and step fully into the leader you already know you can be</li>
+      </ul>
+
+      <p>If that's you — this is exactly the work we should be doing together.</p>
+
+      <p>Your first conversation is free. <a href="/book/">Book a discovery call</a> and let's find out if we're the right fit for each other.</p>
     `,
   },
 ];
