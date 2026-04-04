@@ -227,8 +227,8 @@ export default function Home() {
           subheadline="Invest in the leaders who are already transforming your organization—through executive coaching, keynotes, workshops, and strategic retreats."
           ctaLabel="Request a Proposal"
           ctaHref="/contact"
-          secondaryCtaLabel="Take the Free Confidence Assessment"
-          secondaryCtaHref="/scorecard.html"
+          secondaryCtaLabel="Download Capabilities Brief"
+          secondaryCtaHref="/cwc-capabilities-statement-v2.html"
           footerLink={{
             label: "Looking for individual coaching? Start here →",
             href: "/for-individuals",
