@@ -8,14 +8,14 @@ import { siteConfig } from "@/config";
 
 const navigation = [
   {
-    name: "Solutions",
+    name: "Organizations",
     href: "/for-organizations",
     matchPaths: ["/for-organizations", "/services"],
   },
   {
-    name: "Speaking",
-    href: "/services/keynote-speaking",
-    matchPaths: ["/services/keynote-speaking"],
+    name: "Individuals",
+    href: "/for-individuals",
+    matchPaths: ["/for-individuals", "/executive-coaching"],
   },
   {
     name: "About",
@@ -36,11 +36,6 @@ const navigation = [
     name: "Blog",
     href: "/blog",
     matchPaths: ["/blog"],
-  },
-  {
-    name: "For Individuals",
-    href: "/for-individuals",
-    matchPaths: ["/for-individuals", "/executive-coaching"],
   },
 ];
 
