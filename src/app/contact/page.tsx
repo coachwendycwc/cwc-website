@@ -180,35 +180,21 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <fieldset>
-                    <legend className="block text-sm font-medium text-[#1A1A1A] mb-2">
+                  <div>
+                    <label htmlFor="type" className="block text-sm font-medium text-[#1A1A1A] mb-2">
                       I&apos;m interested in *
-                    </legend>
-                    <div className="flex gap-4" role="radiogroup" aria-label="Service type">
-                      <label className="flex items-center gap-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="type"
-                          value="organization"
-                          checked={formData.type === "organization"}
-                          onChange={(e) => setFormData({ ...formData, type: e.target.value, service: "" })}
-                          className="w-4 h-4 text-[#3EBCE8] focus:ring-[#3EBCE8]"
-                        />
-                        <span className="text-[#525252]">Organizational Services</span>
-                      </label>
-                      <label className="flex items-center gap-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="type"
-                          value="individual"
-                          checked={formData.type === "individual"}
-                          onChange={(e) => setFormData({ ...formData, type: e.target.value, service: "" })}
-                          className="w-4 h-4 text-[#3EBCE8] focus:ring-[#3EBCE8]"
-                        />
-                        <span className="text-[#525252]">Individual Coaching</span>
-                      </label>
-                    </div>
-                  </fieldset>
+                    </label>
+                    <select
+                      id="type"
+                      required
+                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all bg-white"
+                      value={formData.type}
+                      onChange={(e) => setFormData({ ...formData, type: e.target.value, service: "" })}
+                    >
+                      <option value="organization">Organizational Services</option>
+                      <option value="individual">Individual Coaching</option>
+                    </select>
+                  </div>
 
                   {formData.type === "organization" && (
                     <div>
@@ -298,7 +284,7 @@ export default function ContactPage() {
                         For Your Team
                       </p>
                       <a
-                        href="/cwc-capabilities-statement.pdf"
+                        href="/cwc-capabilities-statement-v2.html"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-[#525252] hover:text-[#3EBCE8] transition-colors text-sm"

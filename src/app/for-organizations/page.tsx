@@ -109,9 +109,9 @@ export default function ForOrganizationsPage() {
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                    Book a Discovery Call
+                    Schedule a Consultation
                   </a>
-                  <a href={`${siteConfig.basePath}/cwc-capabilities-statement.pdf`} download className="btn-secondary">
+                  <a href={`${siteConfig.basePath}/cwc-capabilities-statement-v2.html`} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                     Download Capabilities Statement
                   </a>
                 </div>
@@ -443,7 +443,7 @@ export default function ForOrganizationsPage() {
             </p>
             <div className="mt-10">
               <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Book a Discovery Call
+                Schedule a Consultation
               </a>
             </div>
           </div>

@@ -82,8 +82,8 @@ const affiliations = [
   "Faculty Member & Coach Affiliate, Surge Institute",
   "Faculty Member, International Coaching Leadership Institute",
   "Lead Facilitator, WOCIP Global Leadership Accelerator Program",
+  "Lead Facilitator, onewereach Global Leadership Accelerator Program",
   "Developing Capacity Coach Affiliate",
-  "Featured on Bloomberg QuickTake",
 ];
 
 const industriesServed = [
@@ -323,8 +323,14 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
+                {
+                  title: "Integrity",
+                  description: "We lead with honesty, transparency, and a deep commitment to doing what is right — even when it's hard.",
+                  icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+                  color: "#3EBCE8",
+                },
                 {
                   title: "Authenticity Drives Impact",
                   description: "Success is most sustainable when leaders show up as their full, authentic selves.",
@@ -378,9 +384,9 @@ export default function AboutPage() {
               <Link href="/contact" className="btn-primary">
                 Get in Touch
               </Link>
-              <Link href="/book" className="btn-secondary-light">
-                Book a Consultation
-              </Link>
+              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call?month=2026-04" target="_blank" rel="noopener noreferrer" className="btn-secondary-light">
+                Schedule a Consultation
+              </a>
             </div>
           </div>
         </section>

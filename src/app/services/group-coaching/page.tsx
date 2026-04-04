@@ -144,7 +144,7 @@ export default function GroupCoachingPage() {
               {[
                 { title: "By Level", description: "Cohorts designed for emerging, mid-level, or senior leaders with relevant challenges." },
                 { title: "Virtual or In-Person", description: "Delivered where it works best for your team—remote, on-site, or hybrid." },
-                { title: "Short or Extended", description: "From focused 3-session sprints to longer engagements for deeper transformation." },
+                { title: "Short or Extended", description: "From focused 6-session sprints to longer engagements for deeper transformation." },
               ].map((format) => (
                 <div key={format.title} className="text-center">
                   <h3 className="text-lg font-semibold text-[#1A1A1A]">{format.title}</h3>

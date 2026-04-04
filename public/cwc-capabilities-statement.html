@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CWC Capabilities Statement — Coaching Women of Color®</title>
+  <title>CWC Capabilities Statement — Coaching Women of Color® (v2)</title>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
   <style>
@@ -71,9 +71,7 @@
       border-radius: 6px;
     }
 
-    .header-middle {
-      flex: 1;
-    }
+    .header-middle { flex: 1; }
 
     .header-middle .logo-img {
       height: 44px;
@@ -166,9 +164,7 @@
       display: inline-block;
     }
 
-    .capability {
-      margin-bottom: 8px;
-    }
+    .capability { margin-bottom: 8px; }
 
     .capability-name {
       font-size: 9px;
@@ -185,7 +181,7 @@
       color: var(--gray-600);
     }
 
-    /* ── KEY OUTCOMES (fills left column gap) ── */
+    /* ── KEY OUTCOMES ── */
     .outcomes {
       margin-top: 10px;
       padding-top: 10px;
@@ -221,19 +217,12 @@
       height: 5px;
       border-radius: 50%;
       flex-shrink: 0;
+      /* FIX v2: single unified color — no more 5 arbitrary dot colors */
+      background: var(--pink);
     }
-
-    .outcome-dot.pink { background: var(--pink); }
-    .outcome-dot.blue { background: var(--blue); }
-    .outcome-dot.green { background: var(--green); }
-    .outcome-dot.yellow { background: var(--yellow); }
-    .outcome-dot.purple { background: var(--purple); }
 
     /* ── RIGHT COLUMN ── */
-    .difference-list {
-      list-style: none;
-      margin-top: 2px;
-    }
+    .difference-list { list-style: none; margin-top: 2px; }
 
     .difference-list li {
       display: flex;
@@ -278,18 +267,15 @@
       margin-bottom: 6px;
     }
 
-    .sector-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-    }
+    .sector-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 
     .sector-tag {
       font-size: 7px;
       font-weight: 600;
       color: var(--gray-700);
       background: var(--gray-100);
-      border: 1px solid var(--gray-200);
+      /* FIX v2: teal border to tie into brand color system */
+      border: 1px solid var(--blue);
       padding: 3px 7px;
       border-radius: 3px;
       text-transform: uppercase;
@@ -328,6 +314,50 @@
       margin-top: 6px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+    }
+
+    /* ── v2 CTA BAND (new) ── */
+    .cta-band {
+      padding: 10px 36px;
+      background: linear-gradient(135deg, #fdf2f8 0%, #f0f9ff 100%);
+      border-top: 2px solid var(--pink);
+      border-bottom: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .cta-band-text {
+      font-size: 9.5px;
+      color: var(--dark);
+      font-weight: 600;
+      /* FIX: cap width so subline doesn't float loose on wide viewports */
+      max-width: 480px;
+    }
+
+    .cta-band-text span {
+      font-size: 8.5px;
+      color: var(--gray-600);
+      font-weight: 400;
+      display: block;
+      margin-top: 1px;
+    }
+
+    .cta-band-button {
+      display: inline-block;
+      padding: 7px 18px;
+      font-size: 8px;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--pink);
+      border-radius: 4px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     /* ── CLIENTS ── */
@@ -371,97 +401,50 @@
       flex-shrink: 0;
     }
 
-    .contact-name {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--white);
-    }
-
-    .contact-title {
-      font-size: 7px;
-      color: rgba(255,255,255,0.7);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .contact-info {
-      text-align: center;
-      font-size: 8.5px;
-      color: rgba(255,255,255,0.8);
-    }
-
-    .contact-info a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
+    .contact-name { font-size: 10px; font-weight: 700; color: var(--white); }
+    .contact-title { font-size: 7px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; }
+    .contact-info { text-align: center; font-size: 8.5px; color: rgba(255,255,255,0.8); }
+    .contact-info a { color: var(--blue); text-decoration: none; }
     .contact-right { text-align: right; }
+    .contact-url { font-size: 9px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.5px; }
+    .contact-naics { font-size: 7px; color: rgba(255,255,255,0.55); margin-top: 1px; }
 
-    .contact-url {
-      font-size: 9px;
+    .methodology-text { font-size: 8px; line-height: 1.5; color: var(--gray-600); }
+    .methodology-delivery { font-size: 8px; line-height: 1.5; color: var(--gray-500); margin-top: 6px; font-style: italic; }
+
+    /* ── v2 RESET METHOD BUTTON (inside methodology) ── */
+    .reset-method-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 7px;
+      padding: 5px 12px;
+      font-size: 7.5px;
       font-weight: 700;
-      color: var(--blue);
+      /* FIX: solid fill — ghost button was invisible against gray background */
+      color: var(--white);
+      background: var(--pink);
+      border: 1.5px solid var(--pink);
+      border-radius: 3px;
+      text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .contact-naics {
-      font-size: 7px;
-      color: rgba(255,255,255,0.55);
-      margin-top: 1px;
-    }
-
-    .methodology-text {
-      font-size: 8px;
-      line-height: 1.5;
-      color: var(--gray-600);
-    }
-
-    .methodology-delivery {
-      font-size: 8px;
-      line-height: 1.5;
-      color: var(--gray-500);
-      margin-top: 6px;
-      font-style: italic;
+      letter-spacing: 0.8px;
     }
 
     /* ── RESPONSIVE ── */
     @media screen and (max-width: 900px) {
-      .page {
-        width: 100%;
-        height: auto;
-        overflow: visible;
-      }
-      .header {
-        flex-wrap: wrap;
-        padding: 20px 24px 16px;
-      }
-      .header-photo img {
-        width: 100px;
-        height: 124px;
-      }
+      .page { width: 100%; height: auto; overflow: visible; }
+      .header { flex-wrap: wrap; padding: 20px 24px 16px; }
+      .header-photo img { width: 100px; height: 124px; }
       .header-name { font-size: 20px; }
       .header-tagline { font-size: 12px; max-width: 100%; }
       .header-middle .logo-img { height: 40px; }
-      .header-certs {
-        grid-template-columns: repeat(3, auto);
-        gap: 8px;
-        width: 100%;
-        justify-items: center;
-        margin-top: 8px;
-      }
+      .header-certs { grid-template-columns: repeat(3, auto); gap: 8px; width: 100%; justify-items: center; margin-top: 8px; }
       .header-certs img { height: 48px; }
       .intro { padding: 14px 24px; }
       .intro p { font-size: 13px; line-height: 1.6; }
-      .main {
-        grid-template-columns: 1fr;
-        flex: none;
-      }
-      .col-left {
-        padding: 20px 24px;
-        border-right: none;
-        border-bottom: 1px solid var(--gray-200);
-      }
+      .main { grid-template-columns: 1fr; flex: none; }
+      .col-left { padding: 20px 24px; border-right: none; border-bottom: 1px solid var(--gray-200); }
       .col-right { padding: 20px 24px; }
       .section-label { font-size: 13px; margin-bottom: 14px; }
       .capability { margin-bottom: 14px; }
@@ -479,25 +462,23 @@
       .testimonial { padding: 16px 18px; }
       .testimonial-quote { font-size: 13px; line-height: 1.6; }
       .testimonial-author { font-size: 11px; }
+      .cta-band { padding: 16px 24px; flex-direction: column; text-align: center; gap: 10px; }
+      .cta-band-text { font-size: 16px; max-width: 100%; }
+      .cta-band-text span { font-size: 13px; }
+      /* FIX: min 44px tap target on mobile (WCAG 2.5.5) */
+      .cta-band-button { font-size: 13px; padding: 10px 24px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
       .clients-section { padding: 16px 24px 12px; }
       .clients-header { font-size: 11px; margin-bottom: 12px; }
-      .logo-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-      }
+      .logo-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; }
       .logo-grid img { max-height: 40px; }
-      .contact-bar {
-        flex-direction: column;
-        gap: 8px;
-        padding: 16px 24px;
-        text-align: center;
-      }
+      .contact-bar { flex-direction: column; gap: 8px; padding: 16px 24px; text-align: center; }
       .contact-name { font-size: 13px; }
       .contact-title { font-size: 10px; }
       .contact-info { font-size: 12px; }
       .contact-right { text-align: center; }
       .contact-url { font-size: 12px; }
       .contact-naics { font-size: 9px; }
+      .reset-method-link { font-size: 12px; padding: 8px 16px; }
     }
 
     @media screen and (max-width: 480px) {
@@ -506,10 +487,7 @@
       .header-name { font-size: 18px; }
       .header-tagline { font-size: 11px; }
       .header-middle .logo-img { height: 34px; }
-      .header-certs {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
-      }
+      .header-certs { grid-template-columns: repeat(3, 1fr); gap: 6px; }
       .header-certs img { height: 40px; }
       .intro { padding: 12px 16px; }
       .intro p { font-size: 12px; }
@@ -520,10 +498,7 @@
       .outcomes-grid { grid-template-columns: 1fr; }
       .outcome-item { font-size: 11px; }
       .difference-list li { font-size: 12px; }
-      .logo-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-      }
+      .logo-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
       .logo-grid img { max-height: 36px; }
       .contact-bar { padding: 14px 16px; }
     }
@@ -536,21 +511,15 @@
       .stat-label { font-size: 9px !important; }
     }
 
-    /* Print - fixed letter size */
     @media print {
       body { background: white; }
       .page { width: 8.5in; height: 11in; box-shadow: none; margin: 0; overflow: hidden; }
     }
-    /* ── DESKTOP SCREEN — scale up to normal web sizes ── */
+
+    /* ── DESKTOP ── */
     @media screen and (min-width: 901px) {
       body { background: #e5e7eb; padding: 40px 0; }
-      .page {
-        width: 100%;
-        max-width: 1100px;
-        height: auto;
-        overflow: visible;
-        box-shadow: 0 2px 20px rgba(0,0,0,0.12);
-      }
+      .page { width: 100%; max-width: 1100px; height: auto; overflow: visible; box-shadow: 0 2px 20px rgba(0,0,0,0.12); }
       .accent-bar { height: 8px; }
       .header { padding: 28px 48px 24px; gap: 24px; }
       .header-photo img { width: 160px; height: 200px; border-radius: 8px; }
@@ -583,6 +552,10 @@
       .testimonial { padding: 20px 22px; border-radius: 10px; margin-top: 16px; }
       .testimonial-quote { font-size: 14px; line-height: 1.65; }
       .testimonial-author { font-size: 12px; margin-top: 10px; }
+      .cta-band { padding: 16px 48px; }
+      .cta-band-text { font-size: 15px; }
+      .cta-band-text span { font-size: 13px; margin-top: 2px; }
+      .cta-band-button { font-size: 12px; padding: 10px 24px; border-radius: 6px; }
       .clients-section { padding: 20px 48px 16px; }
       .clients-header { font-size: 12px; letter-spacing: 2px; margin-bottom: 14px; }
       .logo-grid { gap: 14px 20px; }
@@ -595,6 +568,7 @@
       .contact-naics { font-size: 9px; }
       .methodology-text { font-size: 14px; line-height: 1.6; }
       .methodology-delivery { font-size: 13px; margin-top: 8px; }
+      .reset-method-link { font-size: 11px; padding: 8px 18px; border-radius: 5px; margin-top: 10px; }
     }
   </style>
 </head>
@@ -661,25 +635,26 @@
           <p>Deliver high-impact keynotes, workshops, and webinars on leadership, equity, resilience, and navigating bias in the workplace.</p>
         </div>
 
-        <!-- KEY OUTCOMES -->
+        <!-- KEY OUTCOMES — v2: all dots unified to --pink -->
         <div class="outcomes">
           <div class="outcomes-label">Key Outcomes</div>
           <div class="outcomes-grid">
-            <div class="outcome-item"><span class="outcome-dot pink"></span>Increased leadership retention</div>
-            <div class="outcome-item"><span class="outcome-dot blue"></span>Stronger team engagement</div>
-            <div class="outcome-item"><span class="outcome-dot green"></span>Measurable behavior change</div>
-            <div class="outcome-item"><span class="outcome-dot yellow"></span>More inclusive culture</div>
-            <div class="outcome-item"><span class="outcome-dot purple"></span>Elevated executive presence</div>
-            <div class="outcome-item"><span class="outcome-dot pink"></span>Improved organizational equity</div>
-            <div class="outcome-item"><span class="outcome-dot blue"></span>Reduced leadership turnover</div>
-            <div class="outcome-item"><span class="outcome-dot green"></span>Enhanced cross-cultural competence</div>
+            <div class="outcome-item"><span class="outcome-dot"></span>Increased leadership retention</div>
+            <div class="outcome-item"><span class="outcome-dot"></span>Stronger team engagement</div>
+            <div class="outcome-item"><span class="outcome-dot"></span>Measurable behavior change</div>
+            <div class="outcome-item"><span class="outcome-dot"></span>More inclusive culture</div>
+            <div class="outcome-item"><span class="outcome-dot"></span>Elevated executive presence</div>
+            <div class="outcome-item"><span class="outcome-dot"></span>Improved organizational equity</div>
+            <div class="outcome-item"><span class="outcome-dot"></span>Reduced leadership turnover</div>
+            <div class="outcome-item"><span class="outcome-dot"></span>Enhanced cross-cultural competence</div>
           </div>
         </div>
 
-        <!-- METHODOLOGY -->
+        <!-- METHODOLOGY — v2: RESET Method® gets a visible button link -->
         <div class="outcomes" style="margin-top: 10px;">
           <div class="outcomes-label">Methodology</div>
           <p class="methodology-text">Our proprietary <strong style="color: var(--pink);">RESET Method&reg;</strong> combines evidence-based coaching with culturally responsive practices. Every engagement begins with a discovery phase to align goals, followed by tailored programming, ongoing measurement, and executive debrief to ensure lasting organizational impact.</p>
+          <a href="cwc-reset-method.html" class="reset-method-link">View the RESET Method&reg; &rarr;</a>
           <p class="methodology-delivery">Available virtually, in-person, or hybrid &mdash; nationwide.</p>
         </div>
       </div>
@@ -695,7 +670,7 @@
           <li><span class="check-circle">&#10003;</span>Empowering leaders &amp; teams</li>
         </ul>
 
-        <!-- SECTORS -->
+        <!-- SECTORS — v2: teal border on tags for brand cohesion -->
         <div class="sectors">
           <div class="sectors-label">Industries Served</div>
           <div class="sector-tags">
@@ -710,7 +685,7 @@
           </div>
         </div>
 
-        <!-- IMPACT STATS -->
+        <!-- IMPACT STATS — v2: unified to --pink (primary) + --blue (secondary) only -->
         <div class="sectors" style="margin-top: 10px;">
           <div class="sectors-label">Impact at a Glance</div>
           <div class="stat-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 4px;">
@@ -719,15 +694,18 @@
               <div class="stat-label" style="font-size: 7px; color: var(--gray-600); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px;">Corporate Clients</div>
             </div>
             <div class="stat-box" style="text-align: center; padding: 8px; background: var(--gray-100); border-radius: 5px;">
-              <div class="stat-number" style="font-size: 18px; font-weight: 800; color: var(--blue); line-height: 1; font-variant-numeric: tabular-nums;">500+</div>
+              <!-- FIX v2: was --blue, now --pink for consistent primary accent -->
+              <div class="stat-number" style="font-size: 18px; font-weight: 800; color: var(--pink); line-height: 1; font-variant-numeric: tabular-nums;">500+</div>
               <div class="stat-label" style="font-size: 7px; color: var(--gray-600); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px;">Leaders Coached</div>
             </div>
             <div class="stat-box" style="text-align: center; padding: 8px; background: var(--gray-100); border-radius: 5px;">
-              <div class="stat-number" style="font-size: 18px; font-weight: 800; color: var(--green); line-height: 1; font-variant-numeric: tabular-nums;">10+</div>
+              <!-- FIX v2: was --green, now --blue for secondary accent -->
+              <div class="stat-number" style="font-size: 18px; font-weight: 800; color: var(--blue); line-height: 1; font-variant-numeric: tabular-nums;">10+</div>
               <div class="stat-label" style="font-size: 7px; color: var(--gray-600); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px;">Years Experience</div>
             </div>
             <div class="stat-box" style="text-align: center; padding: 8px; background: var(--gray-100); border-radius: 5px;">
-              <div class="stat-number" style="font-size: 18px; font-weight: 800; color: var(--purple); line-height: 1; font-variant-numeric: tabular-nums;">98%</div>
+              <!-- FIX v2: was --purple, now --blue for secondary accent -->
+              <div class="stat-number" style="font-size: 18px; font-weight: 800; color: var(--blue); line-height: 1; font-variant-numeric: tabular-nums;">98%</div>
               <div class="stat-label" style="font-size: 7px; color: var(--gray-600); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px;">Client Satisfaction</div>
             </div>
           </div>
@@ -739,6 +717,15 @@
           <div class="testimonial-author">&mdash; Lynne Toye, Board Leadership</div>
         </div>
       </div>
+    </div>
+
+    <!-- v2 CTA BAND — new addition above client logos -->
+    <div class="cta-band">
+      <div class="cta-band-text">
+        Ready to work together?
+        <span>Contact Wendy to schedule a discovery call and explore how CWC can support your organization.</span>
+      </div>
+      <a href="https://coachingwomenofcolor.com/schedule/" target="_blank" rel="noopener noreferrer" class="cta-band-button">Schedule a Discovery Call &rarr;</a>
     </div>
 
     <!-- CLIENTS -->
@@ -755,17 +742,17 @@
         <img src="images/logos/ALPFA.png" alt="ALPFA" loading="lazy" />
         <img src="images/logos/Bloomberg-Quicktake.png" alt="Bloomberg Quicktake" loading="lazy" />
         <img src="images/logos/Surge-Institute.png" alt="SURGE Institute" loading="lazy" />
-        <img src="images/logos/VaynerMedia.png" class="logo-tall" alt="VaynerMedia" loading="lazy" />
+        <img src="images/logos/VaynerMedia.png" alt="VaynerMedia" loading="lazy" />
         <img src="images/logos/ATD-Maryland.png" alt="ATD Maryland" loading="lazy" />
         <img src="images/logos/DataRobot.png" alt="DataRobot" loading="lazy" />
         <img src="images/logos/Latinas-Represent.png" alt="Latinas Represent" loading="lazy" />
         <img src="images/logos/Monique-Burr-Foundation.png" alt="Monique Burr Foundation" loading="lazy" />
         <img src="images/logos/Howard-Center.png" alt="Howard Center" loading="lazy" />
-        <img src="images/logos/VillageCareMAX.png" class="logo-tall" alt="VillageCareMAX" loading="lazy" />
-        <img src="images/logos/Ellevate.jpg" class="logo-tall" alt="Ellevate" loading="lazy" />
-        <img src="images/logos/Johnson-and-Johnson.jpg" class="logo-tall" alt="Johnson &amp; Johnson" loading="lazy" />
-        <img src="images/logos/Genentech.jpg" class="logo-tall" alt="Genentech" loading="lazy" />
-        <img src="images/logos/Colgate-University.jpg" class="logo-tall" alt="Colgate University" loading="lazy" />
+        <img src="images/logos/VillageCareMAX.png" alt="VillageCareMAX" loading="lazy" />
+        <img src="images/logos/Ellevate.jpg" alt="Ellevate" loading="lazy" />
+        <img src="images/logos/Johnson-and-Johnson.jpg" alt="Johnson &amp; Johnson" loading="lazy" />
+        <img src="images/logos/Genentech.jpg" alt="Genentech" loading="lazy" />
+        <img src="images/logos/Colgate-University.jpg" alt="Colgate University" loading="lazy" />
         <img src="images/logos/Proud-To-Be-Latina.png" alt="Proud To Be Latina" loading="lazy" />
         <img src="images/logos/URI-NYC-Urban-Resource-Institute.png" alt="URI NYC" loading="lazy" />
         <img src="images/logos/University-of-Michigan.png" alt="University of Michigan" loading="lazy" />

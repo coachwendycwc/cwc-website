@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     author: "Wendy Perdomo",
     category: "Executive Coaching",
     readTime: "7 min read",
-    image: "/images/new/headshot-professional-1.jpg",
+    image: "/images/new/action-woc-leaders.jpg",
     content: `
       <p>Executive coaching is a professional development partnership between a trained coach and a leader — but executive coaching <em>for women of color</em> goes deeper. It addresses the unique, layered challenges that women of color face in the workplace: navigating bias and microaggressions, building executive presence on their own terms, overcoming imposter syndrome, and leading authentically without code-switching.</p>
 
@@ -98,7 +98,7 @@ export const blogPosts: BlogPost[] = [
     author: "Wendy Perdomo",
     category: "Career Growth",
     readTime: "6 min read",
-    image: "/images/new/headshot-retouched.jpg",
+    image: "/images/new/action-women-club.jpg",
     content: `
       <p>You got the promotion, landed the role, or were invited to the table — and yet a voice in your head whispers, "You don't belong here." That's imposter syndrome, and if you're a woman of color in a professional setting, you're not imagining it. The environments you're navigating were often not designed with you in mind, which makes the feeling even more intense.</p>
 

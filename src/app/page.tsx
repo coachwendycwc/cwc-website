@@ -349,7 +349,7 @@ export default function Home() {
               </div>
               <div className="space-y-8">
                 <p className="text-xl text-[#A3A3A3] leading-relaxed">
-                  Every organization says they value diversity. We help you live it. Our approach goes beyond checkboxes and compliance to create environments where women of color genuinely thrive in leadership.
+                  Every organization says they value diversity. We help you live it. Our approach goes beyond checkboxes and compliance to create environments where all leaders genuinely thrive.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -445,23 +445,23 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               {/* CWC Capabilities Statement */}
               <a
-                href={`${siteConfig.basePath}/cwc-capabilities-statement.pdf`}
+                href={`${siteConfig.basePath}/confidence-resource-tool.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
               >
-                <div className="w-12 h-12 bg-[#E8F8FD] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#3EBCE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <div className="w-12 h-12 bg-[#FFF4E8] rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#FFC425]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
                 <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
-                  CWC Capabilities Statement
+                  Leadership Confidence Toolkit
                 </h3>
                 <p className="text-[#737373] mt-2 flex-grow">
-                  A comprehensive overview of our services, credentials, and organizational partnerships. Share with your procurement or HR team.
+                  A practical guide with tools and strategies to build unshakable confidence in your leadership. Download your free copy.
                 </p>
-                <span className="link-arrow mt-6 text-sm">Download PDF →</span>
+                <span className="link-arrow mt-6 text-sm">Download free →</span>
               </a>
 
               {/* Promotion Readiness Scorecard */}
@@ -522,8 +522,8 @@ export default function Home() {
               <Link href="/contact" className="btn-primary">
                 Request a Proposal
               </Link>
-              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                Book a Discovery Call
+              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call?month=2026-04" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                Schedule a Consultation
               </a>
             </div>
           </div>

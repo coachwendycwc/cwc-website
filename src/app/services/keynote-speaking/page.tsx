@@ -25,6 +25,7 @@ const topics = [
   "Psychological safety: what it is, what it isn't, and how to build it",
   "Communication that strengthens trust and performance",
   "Confidence, visibility, and leading authentically",
+  "Personal branding for leaders",
 ];
 
 const jsonLd = {
@@ -157,7 +158,7 @@ export default function KeynoteSpeakingPage() {
                 { title: "Keynote + Workshop", duration: "Half day", description: "Combine inspiration with hands-on skill building for deeper impact." },
               ].map((format) => (
                 <div key={format.title} className="text-center">
-                  <p className="text-sm font-medium text-[#C4D82E] uppercase tracking-wider">{format.duration}</p>
+                  <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider">{format.duration}</p>
                   <h3 className="text-lg font-semibold text-[#1A1A1A] mt-2">{format.title}</h3>
                   <p className="text-[#737373] mt-2">{format.description}</p>
                 </div>
@@ -276,20 +277,29 @@ export default function KeynoteSpeakingPage() {
                 Past <span className="text-gradient">Engagements</span>
               </h2>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center items-center gap-8">
               {[
-                "Bloomberg QuickTake",
-                "WOCIP Conference",
-                "R.I.S.E Women's Leadership Conference",
-                "Proud to Be Latina Empowerment Conference",
-                "Colgate University",
-                "Ellevate Network",
-                "Reinvention: An Elevation Summit",
-                "Latina Emergence Conference",
-              ].map((event) => (
-                <span key={event} className="px-5 py-2.5 bg-white text-[#525252] rounded-full text-sm font-medium">
-                  {event}
-                </span>
+                { name: "onewereach", image: "logos/onewereach.png" },
+                { name: "R.I.S.E Women's Leadership Conference", image: "logos/RISE-Womens-Leadership-Conference.png" },
+                { name: "Proud to Be Latina Empowerment Conference", image: "logos/Proud-To-Be-Latina.jpg" },
+                { name: "Colgate University", image: "logos/Colgate-University.jpg" },
+                { name: "Ellevate Network", image: "logos/Ellevate.jpg" },
+                { name: "TD Bank", image: "logos/TD-Bank.jpg" },
+                { name: "Pet Hills Nutrition", image: "logos/Hills.jpg" },
+                { name: "ATD Maryland", image: "logos/ATD-Maryland.jpg" },
+                { name: "Women in Housing and Finance", image: "logos/Women-in-Housing-and-Finance.jpg" },
+                { name: "NYC Department of Education", image: "logos/NYC-Department-of-Education.jpg" },
+                { name: "SURGE Institute", image: "logos/Surge-Institute.jpg" },
+                { name: "URI NYC", image: "logos/URI-NYC-Urban-Resource-Institute.jpg" },
+              ].map((org) => (
+                <div key={org.name} className="flex items-center justify-center" style={{ width: "140px", height: "70px" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${siteConfig.basePath}/images/${org.image}`}
+                    alt={org.name}
+                    className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+                  />
+                </div>
               ))}
             </div>
           </div>

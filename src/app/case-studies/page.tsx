@@ -55,7 +55,7 @@ const successStories = [
       "Created a powerful growth plan with self-created timeframes",
     ],
     quote: "Wendy helped me to create a blueprint for my second act after retirement. Her approach was uniquely crafted and tailored specifically to my needs. She helped me to quickly identify my stuck spots, challenge my limiting beliefs and recognize and embrace all of the tools and resources around me that would facilitate my transformation.",
-    color: "#C4D82E",
+    color: "#5A7A00",
     category: "Career Transition",
     image: "testimonial-lori.png",
   },

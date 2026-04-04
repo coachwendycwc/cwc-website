@@ -51,25 +51,25 @@ export default function ResourcesPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {/* Capabilities Statement */}
+              {/* Leadership Confidence Toolkit */}
               <a
-                href={`${siteConfig.basePath}/cwc-capabilities-statement.pdf`}
+                href={`${siteConfig.basePath}/confidence-resource-tool.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
               >
-                <div className="w-12 h-12 bg-[#E8F8FD] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#3EBCE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <div className="w-12 h-12 bg-[#FFF4E8] rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#FFC425]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
                 <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
-                  CWC Capabilities Statement
+                  Leadership Confidence Toolkit
                 </h3>
                 <p className="text-[#737373] mt-2 flex-grow">
-                  A comprehensive overview of our services, credentials, and organizational partnerships. Ideal for sharing with your procurement or HR team.
+                  A practical guide with tools and strategies to build unshakable confidence in your leadership. Download your free copy.
                 </p>
-                <span className="link-arrow mt-6 text-sm">Download PDF →</span>
+                <span className="link-arrow mt-6 text-sm">Download free →</span>
               </a>
 
               {/* Leadership Confidence Toolkit */}
@@ -126,7 +126,7 @@ export default function ResourcesPage() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {/* Newsletter */}
               <a
                 href="https://www.linkedin.com/newsletters/leading-while-woc-7301328637058842624/"
@@ -148,20 +148,47 @@ export default function ResourcesPage() {
                 <span className="link-arrow mt-6 text-sm">Subscribe on LinkedIn →</span>
               </a>
 
-              {/* Bloomberg Feature */}
-              <div className="card-bordered flex flex-col">
+              {/* We Are Pharma Feature */}
+              <a
+                href="https://issuu.com/wocip/docs/we_are_pharma_advancing_equity_2024_?ff"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
+              >
                 <div className="w-12 h-12 bg-[#FFF4E8] rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-[#FFC425]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className="heading-card">
-                  Bloomberg QuickTake Feature
+                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
+                  We Are Pharma Feature
                 </h3>
                 <p className="text-[#737373] mt-2 flex-grow">
-                  Wendy Perdomo was featured on Bloomberg QuickTake discussing leadership development and the experiences of women of color in the workplace.
+                  Wendy Perdomo featured in <em>We Are Pharma: Advancing Equity 2024</em> — a spotlight on leaders driving inclusion and equity in the pharmaceutical industry.
                 </p>
-              </div>
+                <span className="link-arrow mt-6 text-sm">Read the feature →</span>
+              </a>
+
+              {/* Apple Podcast */}
+              <a
+                href="https://podcasts.apple.com/us/podcast/celebrating-wendy-perdomo-a-trailblazer-in-her-family/id1572493336?i=1000716566079"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
+              >
+                <div className="w-12 h-12 bg-[#EDE8FD] rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#9333EA]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                </div>
+                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
+                  Celebrating Wendy Perdomo: A Trailblazer
+                </h3>
+                <p className="text-[#737373] mt-2 flex-grow">
+                  Listen to this Apple Podcast episode celebrating Wendy Perdomo as a trailblazer in her family and community.
+                </p>
+                <span className="link-arrow mt-6 text-sm">Listen on Apple Podcasts →</span>
+              </a>
             </div>
           </div>
         </section>
