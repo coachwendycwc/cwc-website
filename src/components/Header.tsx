@@ -18,6 +18,11 @@ const navigation = [
     matchPaths: ["/for-individuals", "/executive-coaching"],
   },
   {
+    name: "Speaking",
+    href: "/services/keynote-speaking",
+    matchPaths: ["/services/keynote-speaking"],
+  },
+  {
     name: "About",
     href: "/about",
     matchPaths: ["/about"],
