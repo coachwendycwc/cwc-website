@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Header, Footer, Breadcrumbs } from "@/components";
-import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

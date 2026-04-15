@@ -28,7 +28,8 @@ export default function LazyImage({
   // Handle images that load from cache before React attaches onLoad
   useEffect(() => {
     if (imgRef.current?.complete && imgRef.current.naturalWidth > 0) {
-      setLoaded(true);
+      const frame = requestAnimationFrame(() => setLoaded(true));
+      return () => cancelAnimationFrame(frame);
     }
   }, [src]);
 

@@ -105,8 +105,9 @@ export default function AboutPage() {
       <Header />
 
       <main id="main-content">
-        {/* Hero Section — Cinematic Photo */}
-        <section className="relative pt-24 md:pt-0 min-h-[100svh] md:min-h-[70vh] flex items-end md:items-center overflow-hidden bg-[#1A1A1A]">
+        {/* Hero Section — Editorial Founder Portrait */}
+        <section className="relative overflow-hidden bg-[var(--color-neutral-900)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_28%,rgba(233,30,140,0.22),transparent_30%),radial-gradient(circle_at_70%_62%,rgba(62,188,232,0.2),transparent_34%)]" />
           {/* Breadcrumbs — positioned over hero */}
           <div className="absolute top-28 left-0 z-20 px-6 md:px-16 lg:px-24 hidden md:block">
             <Breadcrumbs
@@ -116,39 +117,54 @@ export default function AboutPage() {
               ]}
             />
           </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`${siteConfig.basePath}/images/wendy-about.jpg`}
-            alt="Wendy Perdomo, Founder of Coaching Women of Color"
-            className="absolute inset-0 w-full h-full object-contain object-center opacity-85"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-transparent from-0% via-[#1A1A1A]/40 via-55% to-[#1A1A1A] to-85% md:from-[#1A1A1A] md:from-30% md:via-[#1A1A1A]/60 md:via-45% md:to-transparent md:to-70%" />
 
-          {/* Text — left aligned */}
-          <div className="relative z-10 px-6 md:px-16 lg:px-24 pb-16 md:pb-0">
-            <div className="max-w-xs md:max-w-md">
-              <p className="text-xs md:text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
-                About the Founder
-              </p>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-tight">
-                Wendy Perdomo
-              </h1>
-              <p className="mt-4 text-base md:text-xl text-[#C0C0C0] leading-relaxed">
-                Executive coach, keynote speaker, and founder of Coaching
-                Women of Color&reg; — transforming how organizations develop
-                and retain women of color in leadership.
-              </p>
-              <div className="mt-6 md:mt-8 grid grid-cols-3 gap-4 md:flex md:gap-12">
-                {[
-                  { value: "25+", label: "Years Experience" },
-                  { value: "500+", label: "Leaders Developed" },
-                  { value: "50+", label: "Organizations Served" },
-                ].map((stat) => (
-                  <div key={stat.label}>
-                    <div className="text-2xl md:text-3xl font-semibold text-[#3EBCE8]">{stat.value}</div>
-                    <div className="text-xs md:text-sm text-[#9CA3AF] leading-tight">{stat.label}</div>
-                  </div>
-                ))}
+          <div className="relative flex flex-col md:flex-row items-stretch">
+            {/* Text — left side */}
+            <div className="relative z-10 flex w-full md:w-[44%] items-center px-6 pt-32 pb-14 md:px-16 md:pt-36 md:pb-[4.5rem] lg:px-24 lg:pt-40 lg:pb-20">
+              <div className="max-w-xl">
+                <p className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-[var(--color-blue-600)] md:text-sm">
+                  About the Founder
+                </p>
+                <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
+                  Wendy Perdomo
+                </h1>
+                <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/78 md:text-xl">
+                  Executive coach, keynote speaker, and founder of Coaching
+                  Women of Color&reg; transforming how organizations develop and
+                  retain women of color in leadership.
+                </p>
+                <div className="mt-8 grid grid-cols-3 gap-4 border-t border-white/12 pt-6 md:mt-9 md:max-w-xl md:gap-8 md:pt-7">
+                  {[
+                    { value: "25+", label: "Years Experience" },
+                    { value: "500+", label: "Leaders Developed" },
+                    { value: "50+", label: "Organizations Served" },
+                  ].map((stat) => (
+                    <div key={stat.label}>
+                      <div className="text-2xl font-semibold text-[var(--color-blue-600)] md:text-3xl">
+                        {stat.value}
+                      </div>
+                      <div className="mt-1 text-xs leading-tight text-white/58 md:text-sm">
+                        {stat.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Image — right side, editorial portrait framing */}
+            <div className="relative flex w-full md:w-[56%] items-end justify-center px-6 pb-0 md:px-8 lg:px-12">
+              <div className="absolute inset-x-8 bottom-0 top-[4.5rem] rounded-t-[2rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] md:left-6 md:right-8 md:top-20 lg:left-10 lg:right-12" />
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-[linear-gradient(90deg,rgba(26,26,26,0.72),transparent)] md:w-24 lg:w-28" />
+              <div className="pointer-events-none absolute right-4 bottom-16 h-40 w-40 rounded-full bg-[var(--color-pink-500)]/14 blur-3xl md:right-12 md:h-52 md:w-52" />
+              <div className="pointer-events-none absolute left-6 bottom-24 h-32 w-32 rounded-full bg-[var(--color-blue-600)]/14 blur-3xl md:left-10 md:h-44 md:w-44" />
+              <div className="relative z-10 flex min-h-[23rem] w-full items-end justify-center pt-6 md:min-h-[38rem] md:pt-12 lg:min-h-[42rem] lg:pt-14">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${siteConfig.basePath}/images/wendy-about.jpg`}
+                  alt="Wendy Perdomo, Founder of Coaching Women of Color"
+                  className="max-h-[25rem] w-auto object-contain object-bottom md:max-h-[37rem] lg:max-h-[41rem]"
+                />
               </div>
             </div>
           </div>
@@ -159,7 +175,13 @@ export default function AboutPage() {
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="body-large">
+                <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-blue-600)]">
+                  Meet Wendy
+                </p>
+                <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-tight text-[var(--color-neutral-900)] md:text-4xl">
+                  Executive coaching rooted in clarity, courage, and organizational impact.
+                </h2>
+                <p className="body-large mt-6">
                   Wendy Perdomo is the Founder and Executive Leadership Coach at Coaching Women of Color, LLC, a premier coaching and leadership development firm committed to advancing the voice, visibility, and impact of professional women of color in today&apos;s workforce. With over two decades of experience across the nonprofit, education, and public sectors, Wendy is a master facilitator, certified executive coach, and organizational development strategist.
                 </p>
                 <p className="body-large mt-4">
@@ -168,19 +190,18 @@ export default function AboutPage() {
                 <p className="body-large mt-4">
                   Widely regarded as a strategic thought partner, Wendy helps leaders at all levels refine their leadership presence, develop emotional intelligence, and navigate complex organizational challenges—from team transitions and workplace culture repair to bias incidents and courageous conversations. She is passionate about creating space for women of color to lead authentically, manage power with confidence, and move with clarity through all levels of leadership.
                 </p>
-
               </div>
 
               {/* Education & Certifications */}
-              <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12">
+              <div className="rounded-[2rem] border border-[var(--color-neutral-200)] bg-[linear-gradient(180deg,#fafafa,white)] p-8 shadow-[0_20px_60px_rgba(26,26,26,0.06)] lg:p-12">
                 {/* Education */}
                 <div>
-                  <h3 className="font-semibold text-[#1A1A1A] text-lg mb-4">Education</h3>
-                  <div className="flex flex-wrap gap-2">
+                  <h3 className="mb-4 text-lg font-semibold text-[var(--color-neutral-900)]">Education</h3>
+                  <div className="flex flex-wrap gap-3">
                     {credentials.map((cred) => (
                       <span
                         key={cred}
-                        className="px-4 py-2 bg-white text-[#525252] text-sm rounded-full"
+                        className="rounded-full border border-[var(--color-neutral-200)] bg-white px-4 py-2 text-sm text-[var(--color-neutral-600)]"
                       >
                         {cred}
                       </span>
@@ -190,12 +211,12 @@ export default function AboutPage() {
 
                 {/* Certifications */}
                 <div className="mt-8">
-                  <h3 className="font-semibold text-[#1A1A1A] text-lg mb-4">Certifications</h3>
-                  <div className="flex flex-wrap gap-2">
+                  <h3 className="mb-4 text-lg font-semibold text-[var(--color-neutral-900)]">Certifications</h3>
+                  <div className="flex flex-wrap gap-3">
                     {certifications.map((cert) => (
                       <span
                         key={cert}
-                        className="px-4 py-2 bg-[#E8F8FD] text-[#1A9FCC] text-sm rounded-full"
+                        className="rounded-full bg-[var(--color-blue-50)] px-4 py-2 text-sm text-[var(--color-blue-700)]"
                       >
                         {cert}
                       </span>
@@ -208,9 +229,12 @@ export default function AboutPage() {
         </section>
 
         {/* Expertise Section */}
-        <section className="section gradient-subtle">
+        <section className="section bg-[linear-gradient(180deg,#fafafa_0%,#f3f7fa_100%)]">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-blue-600)]">
+                What Wendy Brings
+              </p>
               <h2 className="heading-display">
                 Areas of <span className="text-gradient">Expertise</span>
               </h2>
@@ -218,13 +242,13 @@ export default function AboutPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {expertise.map((item) => (
-                <div key={item} className="card text-center">
-                  <div className="w-10 h-10 bg-[#E8F8FD] rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#3EBCE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div key={item} className="rounded-3xl border border-white/70 bg-white p-8 text-center shadow-[0_18px_50px_rgba(26,26,26,0.06)] transition-transform duration-300 hover:-translate-y-1">
+                  <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-blue-50)]">
+                    <svg className="h-5 w-5 text-[var(--color-blue-600)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-[#525252] font-medium">{item}</p>
+                  <p className="font-medium text-[var(--color-neutral-700)]">{item}</p>
                 </div>
               ))}
             </div>
@@ -235,6 +259,9 @@ export default function AboutPage() {
         <section className="section bg-white">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-blue-600)]">
+                Trusted By Leaders
+              </p>
               <h2 className="heading-display">
                 Why Organizations <span className="text-gradient">Choose CWC</span>
               </h2>
@@ -266,10 +293,13 @@ export default function AboutPage() {
                   title: "Enterprise-Ready Operations",
                   description: "Custom scoping, W-9 and insurance documentation, engagement letters, and post-engagement strategic debriefs.",
                 },
-              ].map((item) => (
-                <div key={item.title} className="bg-[#F5F5F5] rounded-2xl p-6">
-                  <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">{item.title}</h3>
-                  <p className="text-sm text-[#737373] leading-relaxed">{item.description}</p>
+              ].map((item, index) => (
+                <div key={item.title} className="rounded-3xl border border-[var(--color-neutral-200)] bg-[var(--color-neutral-50)] p-6">
+                  <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm font-semibold text-[var(--color-blue-600)] shadow-sm">
+                    0{index + 1}
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold text-[var(--color-neutral-900)]">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-[var(--color-neutral-500)]">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -277,29 +307,29 @@ export default function AboutPage() {
         </section>
 
         {/* Affiliations & Clients Section */}
-        <section className="section gradient-subtle">
+        <section className="section bg-[var(--color-neutral-50)]">
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-16">
-              <div>
+              <div className="rounded-3xl bg-white p-8 shadow-[0_16px_45px_rgba(26,26,26,0.05)]">
                 <h2 className="heading-card mb-6">Affiliations</h2>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {affiliations.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-[#3EBCE8] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-[var(--color-blue-600)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-[#525252]">{item}</span>
+                      <span className="text-[var(--color-neutral-600)]">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div>
+              <div className="rounded-3xl bg-white p-8 shadow-[0_16px_45px_rgba(26,26,26,0.05)]">
                 <h2 className="heading-card mb-6">Industries Served</h2>
                 <div className="flex flex-wrap gap-3">
                   {industriesServed.map((industry) => (
                     <span
                       key={industry}
-                      className="px-4 py-2 bg-[#F5F5F5] text-[#525252] rounded-full"
+                      className="rounded-full bg-[var(--color-neutral-100)] px-4 py-2 text-[var(--color-neutral-600)]"
                     >
                       {industry}
                     </span>
@@ -311,9 +341,12 @@ export default function AboutPage() {
         </section>
 
         {/* Values Section */}
-        <section className="section gradient-subtle">
+        <section className="section bg-[linear-gradient(180deg,#ffffff_0%,#faf7fb_100%)]">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-blue-600)]">
+                Coaching Philosophy
+              </p>
               <h2 className="heading-display">
                 What We <span className="text-gradient">Stand For</span>
               </h2>
@@ -370,12 +403,13 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="section bg-[#1A1A1A] text-white">
-          <div className="container-tight text-center">
+        <section className="section relative overflow-hidden bg-[var(--color-neutral-900)] text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(62,188,232,0.16),transparent_24%),radial-gradient(circle_at_80%_28%,rgba(233,30,140,0.16),transparent_24%)]" />
+          <div className="container-tight relative text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
               Ready to partner with us?
             </h2>
-            <p className="mt-6 text-xl text-[#A3A3A3] max-w-2xl mx-auto">
+            <p className="mt-6 max-w-2xl mx-auto text-xl text-white/70">
               Whether you&apos;re an organization seeking transformation or an individual
               ready for breakthrough—let&apos;s start the conversation.
             </p>

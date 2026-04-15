@@ -50,10 +50,10 @@ export default function ResourcesPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               {/* Leadership Confidence Toolkit */}
               <a
-                href={`${siteConfig.basePath}/confidence-resource-tool.pdf`}
+                href={`${siteConfig.basePath}/confidence-building-tool.html`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
@@ -64,7 +64,7 @@ export default function ResourcesPage() {
                   </svg>
                 </div>
                 <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
-                  Leadership Confidence Toolkit
+                  Confidence Building Tool
                 </h3>
                 <p className="text-[#737373] mt-2 flex-grow">
                   A practical guide with tools and strategies to build unshakable confidence in your leadership. Download your free copy.

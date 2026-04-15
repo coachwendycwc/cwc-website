@@ -15,7 +15,7 @@ const footerNavigation = {
   resources: [
     { name: "Blog", href: "/blog" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "Confidence Toolkit", href: "/confidence-resource-tool.pdf" },
+    { name: "Confidence Building Tool", href: "/confidence-building-tool.html" },
     { name: "Newsletter", href: "https://www.linkedin.com/newsletters/leading-while-woc-7301328637058842624/" },
     { name: "Events", href: "/events" },
     { name: "Gallery", href: "/gallery" },

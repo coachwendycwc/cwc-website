@@ -11,23 +11,20 @@ interface ModalProps {
 }
 
 export default function Modal({ open, onClose, children, ariaLabel }: ModalProps) {
-  const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   // Fade in/out
   useEffect(() => {
-    if (open) {
-      requestAnimationFrame(() => setVisible(true));
-    } else {
-      setVisible(false);
+    if (!open) {
+      return;
     }
+
+    const frame = requestAnimationFrame(() => setVisible(true));
+
+    return () => cancelAnimationFrame(frame);
   }, [open]);
 
   // Escape key + focus trap
@@ -90,7 +87,7 @@ export default function Modal({ open, onClose, children, ariaLabel }: ModalProps
     }
   }, [open, handleKeyDown]);
 
-  if (!mounted || !open) return null;
+  if (typeof document === "undefined" || !open) return null;
 
   return createPortal(
     <div

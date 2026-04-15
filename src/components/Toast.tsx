@@ -34,14 +34,15 @@ export default function Toast({
   useEffect(() => {
     if (show) {
       // Trigger slide-up animation
-      requestAnimationFrame(() => setVisible(true));
+      const frame = requestAnimationFrame(() => setVisible(true));
       const timer = setTimeout(() => {
         setVisible(false);
         setTimeout(onClose, 300); // Wait for exit animation
       }, duration);
-      return () => clearTimeout(timer);
-    } else {
-      setVisible(false);
+      return () => {
+        cancelAnimationFrame(frame);
+        clearTimeout(timer);
+      };
     }
   }, [show, duration, onClose]);
 

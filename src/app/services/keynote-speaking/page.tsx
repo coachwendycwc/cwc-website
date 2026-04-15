@@ -73,8 +73,8 @@ export default function KeynoteSpeakingPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#C4D82E]/20 to-[#3EBCE8]/20 rounded-3xl blur-2xl" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`${siteConfig.basePath}/images/new/action-summit-talk.jpg`}
-                  alt="Wendy Perdomo delivering a keynote presentation"
+                  src={`${siteConfig.basePath}/images/new/wendy-keynote-panel.jpg`}
+                  alt="Wendy Perdomo speaking on a panel"
                   className="relative w-full h-auto rounded-2xl shadow-xl object-cover"
                 />
               </div>
@@ -120,7 +120,7 @@ export default function KeynoteSpeakingPage() {
         </section>
 
         {/* Topics */}
-        <section className="section gradient-subtle">
+        <section className="section gradient-pink">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
@@ -270,7 +270,7 @@ export default function KeynoteSpeakingPage() {
         </section>
 
         {/* Past Speaking Engagements */}
-        <section className="section bg-[#F5F5F5]">
+        <section className="section bg-white">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-display">
@@ -279,8 +279,6 @@ export default function KeynoteSpeakingPage() {
             </div>
             <div className="flex flex-wrap justify-center items-center gap-8">
               {[
-                { name: "onewereach", image: "logos/onewereach.png" },
-                { name: "R.I.S.E Women's Leadership Conference", image: "logos/RISE-Womens-Leadership-Conference.png" },
                 { name: "Proud to Be Latina Empowerment Conference", image: "logos/Proud-To-Be-Latina.jpg" },
                 { name: "Colgate University", image: "logos/Colgate-University.jpg" },
                 { name: "Ellevate Network", image: "logos/Ellevate.jpg" },
@@ -297,7 +295,7 @@ export default function KeynoteSpeakingPage() {
                   <img
                     src={`${siteConfig.basePath}/images/${org.image}`}
                     alt={org.name}
-                    className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+                    className="max-w-full max-h-full object-contain"
                   />
                 </div>
               ))}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header, Footer, Badge } from "@/components";
+import { Header, Footer } from "@/components";
 import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
@@ -400,7 +400,7 @@ export default function CaseStudiesPage() {
                   Request a Proposal
                 </Link>
                 <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-secondary bg-transparent text-white border-white hover:bg-white hover:text-[#1A1A1A]">
-                  Schedule an Executive Briefing
+                  Schedule a Consultation Call
                 </a>
               </div>
             </div>

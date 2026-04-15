@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react"; // useState kept for videoError
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config";
 
@@ -64,27 +64,27 @@ export default function VideoHero({
     secondaryCtaHref ?? `${siteConfig.basePath}/cwc-capabilities-statement-v2.html`;
 
   return (
-    <section className="video-hero min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="video-hero min-h-screen flex items-center justify-start relative overflow-hidden" style={{ backgroundColor: '#1a1a1a' }}>
       {/* Video Background */}
       {!videoError && (
         <video
           ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[72%_80%] lg:object-[80%_center]"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
           aria-hidden="true"
+          poster={posterSrc ? `${siteConfig.basePath}/${posterSrc}` : undefined}
         >
           <source src={`${siteConfig.basePath}/${videoSrc}`} type="video/mp4" />
         </video>
       )}
 
-
-      {/* Dark overlay for text readability */}
+      {/* Dark overlay — uniform on mobile, left-heavy on desktop so right side shows Wendy through video */}
       <div
-        className="absolute inset-0 bg-black"
+        className="absolute inset-0 bg-black lg:bg-gradient-to-r lg:from-black/80 lg:via-black/55 lg:to-black/10"
         style={{ opacity: overlayOpacity }}
         aria-hidden="true"
       />
@@ -95,18 +95,29 @@ export default function VideoHero({
         aria-hidden="true"
       />
 
-      {/* Content */}
+      {/* Content — left half only so Wendy's face in the video shows on the right */}
       <div className="container-wide relative z-10 py-20 lg:py-32">
-        <div className="max-w-4xl">
+        <div className="max-w-xl lg:max-w-2xl">
           {/* Headline */}
-          <h1 className="video-hero-headline text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-white leading-[1.1]">
-            {headlineTop}
-            <br />
-            <span className="video-hero-gradient">{headlineGradient}</span>
+          <h1 className="video-hero-headline text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-white leading-[1.1]">
+            {headlineGradient ? (
+              <>
+                {headlineTop}
+                <br />
+                <span className="video-hero-gradient">{headlineGradient}</span>
+              </>
+            ) : (
+              <>
+                <span className="block">{headlineTop}</span>
+                <span className="block invisible" aria-hidden="true">
+                  your leaders.
+                </span>
+              </>
+            )}
           </h1>
 
           {/* Subheadline */}
-          <p className="video-hero-subheadline mt-8 text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed">
+          <p className="video-hero-subheadline mt-8 text-xl md:text-2xl text-white/80 max-w-lg leading-relaxed">
             {subheadline}
           </p>
 
