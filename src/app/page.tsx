@@ -576,9 +576,9 @@ export default function Home() {
               <Link href="/contact" className="btn-primary">
                 Request a Proposal
               </Link>
-              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call?month=2026-04" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+              <Link href="/schedule/organizations/" className="btn-secondary">
                 Schedule a Consultation
-              </a>
+              </Link>
             </div>
           </div>
         </section>

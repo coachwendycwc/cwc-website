@@ -417,9 +417,9 @@ export default function AboutPage() {
               <Link href="/contact" className="btn-primary">
                 Get in Touch
               </Link>
-              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call?month=2026-04" target="_blank" rel="noopener noreferrer" className="btn-secondary-light">
+              <Link href="/schedule/organizations/" className="btn-secondary-light">
                 Schedule a Consultation
-              </a>
+              </Link>
             </div>
           </div>
         </section>

@@ -124,7 +124,7 @@ export default function BlogPage() {
               love to hear from you.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/book/" className="btn-primary">
+              <Link href="/schedule/" className="btn-primary">
                 Book a Free Consultation
               </Link>
               <Link

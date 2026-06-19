@@ -30,7 +30,7 @@ export default function ExecutiveCoachingPage() {
                 roles with confidence and authenticity.
               </p>
               <div className="mt-10">
-                <Link href="/book" className="btn-primary">
+                <Link href="/schedule/" className="btn-primary">
                   Book a Discovery Call
                 </Link>
               </div>
@@ -200,7 +200,7 @@ export default function ExecutiveCoachingPage() {
               can help you achieve your goals.
             </p>
             <div className="mt-10">
-              <Link href="/book" className="btn-primary">
+              <Link href="/schedule/" className="btn-primary">
                 Book Your Discovery Call
               </Link>
             </div>

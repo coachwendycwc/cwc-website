@@ -399,9 +399,9 @@ export default function CaseStudiesPage() {
                 <Link href="/contact" className="btn-primary">
                   Request a Proposal
                 </Link>
-                <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-secondary bg-transparent text-white border-white hover:bg-white hover:text-[#1A1A1A]">
+                <Link href="/schedule/organizations/" className="btn-secondary-light">
                   Schedule a Consultation Call
-                </a>
+                </Link>
               </div>
             </div>
           </div>

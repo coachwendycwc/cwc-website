@@ -442,9 +442,9 @@ export default function ForOrganizationsPage() {
               Book a discovery call to explore the best-fit format and scope for your team.
             </p>
             <div className="mt-10">
-              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <Link href="/schedule/organizations/" className="btn-primary">
                 Schedule a Consultation
-              </a>
+              </Link>
             </div>
           </div>
         </section>

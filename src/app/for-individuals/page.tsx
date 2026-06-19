@@ -161,9 +161,9 @@ export default function ForIndividualsPage() {
                   and navigate workplace dynamics with clarity and power.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                  <a href="https://app.usemotion.com/meet/wendy-perdomo/individuals" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <Link href="/schedule/individuals/" className="btn-primary">
                     Schedule a Consultation
-                  </a>
+                  </Link>
                   <Link href="#programs" className="btn-secondary">
                     View Programs
                   </Link>
@@ -377,10 +377,8 @@ export default function ForIndividualsPage() {
                   )}
 
                   {/* CTA */}
-                  <a
-                    href="https://app.usemotion.com/meet/wendy-perdomo/individuals"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/schedule/individuals/"
                     className={`mt-8 block w-full text-center py-3 px-6 rounded-full font-medium transition-all ${
                       program.highlight
                         ? "bg-[#3EBCE8] text-white hover:bg-[#1A9FCC]"
@@ -388,7 +386,7 @@ export default function ForIndividualsPage() {
                     }`}
                   >
                     {program.cta}
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -459,9 +457,9 @@ export default function ForIndividualsPage() {
               your biggest blockers, and the best next step for your coaching journey.
             </p>
             <div className="mt-10">
-              <a href="https://app.usemotion.com/meet/wendy-perdomo/individuals" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <Link href="/schedule/individuals/" className="btn-primary">
                 Schedule a Consultation
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -476,9 +474,9 @@ export default function ForIndividualsPage() {
               Take the first step toward the career and leadership you deserve.
             </p>
             <div className="mt-10">
-              <a href="https://app.usemotion.com/meet/wendy-perdomo/individuals" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <Link href="/schedule/individuals/" className="btn-primary">
                 Book Your Free Discovery Call
-              </a>
+              </Link>
             </div>
           </div>
         </section>

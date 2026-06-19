@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     author: "Wendy Perdomo",
     category: "Executive Coaching",
     readTime: "10 min read",
-    image: "/images/new/action-woc-leaders.jpg",
+    image: "/images/blog/blog-executive-coaching.jpg",
     content: `
       <p>Executive coaching is a professional development partnership between a trained coach and a leader — but executive coaching <em>for women of color</em> goes deeper. It addresses the unique, layered challenges that women of color face in the workplace: navigating bias and microaggressions, building executive presence on their own terms, overcoming imposter syndrome, and leading authentically without code-switching.</p>
 
@@ -86,7 +86,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>The Bottom Line</h2>
       <p>Executive coaching for women of color isn't a luxury — it's a strategic investment in leadership that acknowledges the full picture. When women of color thrive in leadership, organizations see stronger retention, better decision-making, and more inclusive cultures.</p>
-      <p>If you're ready to explore what coaching could look like for you, <a href="/book/">book a free consultation</a> to start the conversation.</p>
+      <p>If you're ready to explore what coaching could look like for you, <a href="/schedule/">book a free consultation</a> to start the conversation.</p>
     `,
   },
   {
@@ -98,7 +98,7 @@ export const blogPosts: BlogPost[] = [
     author: "Wendy Perdomo",
     category: "Organizations",
     readTime: "8 min read",
-    image: "/images/new/action-awards.jpg",
+    image: "/images/blog/blog-leadership-development.jpg",
     content: `
       <p>Most organizations invest in leadership development at some point. But there's a difference between running an annual training workshop and partnering with someone who can transform how your leaders show up, retain talent, and build inclusive teams. Here are five signs it's time for the latter.</p>
 
@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
     author: "Wendy Perdomo",
     category: "Career Growth",
     readTime: "9 min read",
-    image: "/images/new/action-women-club.jpg",
+    image: "/images/blog/blog-imposter-syndrome.jpg",
     content: `
       <p>You got the promotion, landed the role, or were invited to the table — and yet a voice in your head whispers, "You don't belong here." That's imposter syndrome, and if you're a woman of color in a professional setting, you're not imagining it. The environments you're navigating were often not designed with you in mind, which makes the feeling even more intense.</p>
 
@@ -212,7 +212,7 @@ export const blogPosts: BlogPost[] = [
     author: "Wendy Perdomo",
     category: "Organizations",
     readTime: "9 min read",
-    image: "/images/new/action-woc-leaders.jpg",
+    image: "/images/blog/blog-dei-training.jpg",
     content: `
       <p>Every year, organizations spend billions on diversity, equity, and inclusion training. And every year, the numbers barely move. Retention of diverse talent remains stagnant. Leadership pipelines stay homogeneous. Employees report the same frustrations in engagement surveys. So what's going wrong?</p>
 
@@ -270,7 +270,7 @@ export const blogPosts: BlogPost[] = [
     author: "Wendy Perdomo",
     category: "Career Growth",
     readTime: "8 min read",
-    image: "/images/new/action-pitch.jpg",
+    image: "/images/blog/blog-coaching-experience.jpg",
     content: `
       <p>You've been managing it alone. The career that should feel more rewarding than it does. The leadership role that feels heavier than anyone around you seems to notice. The inner voice that keeps asking whether you're really as ready as everyone seems to think. And the exhaustion of navigating spaces that were never quite designed for someone who looks like you.</p>
 
@@ -323,7 +323,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>If that's you — this is exactly the work we should be doing together.</p>
 
-      <p>Your first conversation is free. <a href="/book/">Book a discovery call</a> and let's find out if we're the right fit for each other.</p>
+      <p>Your first conversation is free. <a href="/schedule/">Book a discovery call</a> and let's find out if we're the right fit for each other.</p>
     `,
   },
 ];
