@@ -290,12 +290,12 @@ export default function KeynoteSpeakingPage() {
                 { name: "SURGE Institute", image: "logos/Surge-Institute.jpg" },
                 { name: "URI NYC", image: "logos/URI-NYC-Urban-Resource-Institute.jpg" },
               ].map((org) => (
-                <div key={org.name} className="flex items-center justify-center" style={{ width: "140px", height: "70px" }}>
+                <div key={org.name} className="flex items-center justify-center px-3 py-1.5" style={{ width: "140px", height: "70px" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`${siteConfig.basePath}/images/${org.image}`}
                     alt={org.name}
-                    className="max-w-full max-h-full object-contain"
+                    className="max-h-full max-w-full object-contain"
                   />
                 </div>
               ))}

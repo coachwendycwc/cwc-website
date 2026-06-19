@@ -251,7 +251,7 @@ export default function Home() {
             {/* Scrolling container - logos repeat twice for seamless loop */}
             <div className="flex animate-scroll hover:[animation-play-state:paused]" style={{ width: "max-content", animationDuration: "70s" }}>
               {[...clientLogos, ...clientLogos].map((org, index) => (
-                <div key={`${org.name}-${index}`} className="flex items-center justify-center mx-8 flex-shrink-0" style={{ width: "180px", height: "90px" }}>
+                <div key={`${org.name}-${index}`} className="flex items-center justify-center mx-8 flex-shrink-0 px-4 py-2" style={{ width: "180px", height: "90px" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`${siteConfig.basePath}/images/${org.image}`}
@@ -259,7 +259,7 @@ export default function Home() {
                     loading="lazy"
                     width={180}
                     height={90}
-                    className="max-w-full max-h-[52px] w-auto object-contain"
+                    className="max-h-full max-w-full object-contain"
                   />
                 </div>
               ))}
