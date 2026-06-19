@@ -310,6 +310,20 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
 }
 
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-blue-600), var(--color-purple-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-calm {
+  background: linear-gradient(90deg, var(--color-blue-500), var(--color-purple-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @media (min-width: 768px) {
   .heading-display {
     font-size: 3rem;
@@ -441,6 +455,13 @@ a .card-bordered {
 }
 
 /* ─── Video Hero animations ───────────────────────────────────────────────── */
+.video-hero-gradient {
+  background: linear-gradient(90deg, var(--color-blue-600), var(--color-blue-200));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .video-hero-headline {
   animation: fadeUp 0.7s var(--ease-out) both;
 }
