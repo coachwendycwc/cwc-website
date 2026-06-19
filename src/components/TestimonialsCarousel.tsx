@@ -20,10 +20,12 @@ function TestimonialCard({
   testimonial,
   isExpanded,
   onToggle,
+  index,
 }: {
   testimonial: Testimonial;
   isExpanded: boolean;
   onToggle: () => void;
+  index: number;
 }) {
   const isLong = testimonial.quote.length > MAX_QUOTE_LENGTH;
   const displayQuote =
@@ -32,7 +34,10 @@ function TestimonialCard({
       : testimonial.quote.slice(0, MAX_QUOTE_LENGTH).trim() + "...";
 
   return (
-    <div className="card flex-shrink-0 w-[85vw] sm:w-[400px] flex flex-col">
+    <div
+      className="card flex-shrink-0 w-[85vw] sm:w-[400px] flex flex-col animate-fade-up"
+      style={{ animationDelay: `${Math.min(index, 3) * 80}ms` }}
+    >
       {/* Stars */}
       <div className="flex gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
@@ -108,7 +113,8 @@ export default function TestimonialsCarousel({ testimonials }: TestimonialsCarou
       {/* Left Arrow */}
       <button
         onClick={() => scroll("left")}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors -ml-6"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center -ml-6 transition-[box-shadow,transform] duration-150 hover:shadow-xl active:scale-[0.93]"
+        style={{ transitionTimingFunction: "cubic-bezier(0.23, 1, 0.32, 1)" }}
         aria-label="Previous testimonial"
       >
         <svg className="w-6 h-6 text-[#1A1A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -119,7 +125,8 @@ export default function TestimonialsCarousel({ testimonials }: TestimonialsCarou
       {/* Right Arrow */}
       <button
         onClick={() => scroll("right")}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors -mr-6"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center -mr-6 transition-[box-shadow,transform] duration-150 hover:shadow-xl active:scale-[0.93]"
+        style={{ transitionTimingFunction: "cubic-bezier(0.23, 1, 0.32, 1)" }}
         aria-label="Next testimonial"
       >
         <svg className="w-6 h-6 text-[#1A1A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -139,6 +146,7 @@ export default function TestimonialsCarousel({ testimonials }: TestimonialsCarou
             testimonial={testimonial}
             isExpanded={expandedIndex === index}
             onToggle={() => handleToggle(index)}
+            index={index}
           />
         ))}
       </div>

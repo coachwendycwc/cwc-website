@@ -77,7 +77,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-medium transition-[color] duration-150 ${
                 isActive(item.matchPaths)
                   ? "text-[#3EBCE8] hover:text-[#1A9FCC]"
                   : "text-[#525252] hover:text-[#1A1A1A]"
@@ -92,7 +92,8 @@ export default function Header() {
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           <Link
             href="/contact"
-            className="px-6 py-2.5 bg-[#3EBCE8] text-white text-sm font-medium rounded-full transition-all hover:bg-[#1A9FCC] hover:scale-105"
+            className="px-6 py-2.5 bg-[#3EBCE8] text-white text-sm font-medium rounded-full transition-[background-color,transform] duration-200 hover:bg-[#1A9FCC] [@media(hover:hover)]:hover:scale-105 active:scale-[0.97]"
+            style={{ transitionTimingFunction: "cubic-bezier(0.23, 1, 0.32, 1)" }}
           >
             Request a Proposal
           </Link>
