@@ -1,22 +1,31 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
+
+// TODO: Replace with your actual GA4 Measurement ID from analytics.google.com
+const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://coachingwomenofcolor.com"),
   title: {
-    default: "Coaching Women of Color | Executive Coaching & Leadership Development",
+    default: "Coaching Women of Color® | Executive Coaching & Leadership Development",
     template: "%s | Coaching Women of Color",
   },
   description:
-    "Transform your organization with executive coaching, leadership development, and workshops designed to elevate women of color. Partner with CWC today.",
+    "Coaching Women of Color® — executive coaching, keynote speaking, workshops, and retreats for organizations and individuals. Trusted by 50+ organizations to develop, retain, and advance women of color in leadership.",
   keywords: [
-    "DEI training",
-    "diversity workshops",
+    "coaching women of color",
+    "executive coaching for women of color",
+    "leadership coaching women of color",
+    "keynote speaking",
     "leadership development",
     "women of color coaching",
-    "executive coaching",
+    "DEI training",
+    "diversity workshops",
     "inclusive workplace",
     "corporate training",
+    "strategic retreats",
+    "organizational development",
   ],
   authors: [{ name: "Coaching Women of Color" }],
   creator: "Coaching Women of Color",
@@ -25,9 +34,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://coachingwomenofcolor.com",
     siteName: "Coaching Women of Color",
-    title: "Coaching Women of Color | Executive Coaching & Leadership Development",
+    title: "Coaching Women of Color® | Executive Coaching & Leadership Development",
     description:
-      "Transform your organization with executive coaching, leadership development, and workshops designed to elevate women of color.",
+      "Coaching Women of Color® — executive coaching, keynote speaking, workshops, and retreats for organizations and individuals. Trusted by 50+ organizations to develop, retain, and advance women of color in leadership.",
     images: [
       {
         url: "/og-image.png",
@@ -39,14 +48,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coaching Women of Color | Executive Coaching & Leadership Development",
+    title: "Coaching Women of Color® | Executive Coaching & Leadership Development",
     description:
-      "Transform your organization with executive coaching, leadership development, and workshops designed to elevate women of color.",
+      "Coaching Women of Color® — executive coaching, keynote speaking, workshops, and retreats for organizations and individuals. Trusted by 50+ organizations to develop, retain, and advance women of color in leadership.",
     images: ["/og-image.png"],
   },
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
+  },
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com",
   },
   robots: {
     index: true,
@@ -69,7 +81,7 @@ const jsonLd = {
   alternateName: "CWC",
   url: "https://coachingwomenofcolor.com",
   description:
-    "Professional coaching and consulting firm specializing in executive coaching, leadership development, and organizational transformation for companies committed to empowering women of color.",
+    "Professional coaching and consulting firm specializing in executive coaching, keynote speaking, leadership development, and organizational transformation. Trusted by Fortune 500 companies and 50+ organizations to develop, retain, and advance women of color in leadership.",
   email: "wendy@coachingwomenofcolor.com",
   sameAs: [
     "https://www.linkedin.com/in/wendyperdomoleadershipcoach/",
@@ -86,6 +98,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics */}
+        {GA_MEASUREMENT_ID !== "G-XXXXXXXXXX" && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

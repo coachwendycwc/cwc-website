@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CWC Brand Voice — Quick Reference</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink:   #E91E8C;
+      --blue:   #3EBCE8;
+      --yellow: #FFC425;
+      --green:  #C4D82E;
+      --purple: #9333EA;
+      --dark:   #1A1A1A;
+      --mid:    #525252;
+      --light:  #F5F5F5;
+      --white:  #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #F0F0F0;
+      color: var(--dark);
+      padding: 32px 24px;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1020px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--dark);
+      padding: 32px 40px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .header-left h1 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .header-left h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+    }
+    .header-left h2 span { color: var(--pink); }
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+    .taglines {
+      display: flex;
+      gap: 12px;
+    }
+    .tagline {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.4;
+    }
+    .tagline span {
+      display: block;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 3px;
+    }
+
+    /* ── BODY GRID ── */
+    .body {
+      padding: 32px 40px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* ── SECTION CARD ── */
+    .card {
+      background: var(--light);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .card.span2 { grid-column: span 2; }
+    .card.span3 { grid-column: span 3; }
+    .card.dark { background: var(--dark); }
+    .card.pink-border { border-top: 4px solid var(--pink); }
+    .card.blue-border { border-top: 4px solid var(--blue); }
+    .card.yellow-border { border-top: 4px solid var(--yellow); }
+    .card.green-border { border-top: 4px solid var(--green); }
+    .card.purple-border { border-top: 4px solid var(--purple); }
+
+    .card-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 12px;
+    }
+    .card.dark .card-label { color: rgba(255,255,255,0.45); }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .card.dark .card-title { color: var(--white); }
+
+    /* ── WE ARE / WE ARE NOT ── */
+    .identity-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .identity-col-head {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-bottom: 4px;
+    }
+    .identity-col-head.are { background: var(--pink); color: var(--white); }
+    .identity-col-head.not { background: rgba(0,0,0,0.08); color: var(--mid); }
+    .identity-item {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--dark);
+      padding: 7px 10px;
+      border-radius: 6px;
+      line-height: 1.4;
+    }
+    .identity-item.are {
+      background: rgba(233,30,140,0.07);
+      border-left: 3px solid var(--pink);
+    }
+    .identity-item.not {
+      background: rgba(0,0,0,0.04);
+      border-left: 3px solid #d0d0d0;
+      color: var(--mid);
+      text-decoration: line-through;
+      text-decoration-color: #bbb;
+    }
+    .identity-item strong { font-weight: 700; }
+
+    /* ── THREE RULES ── */
+    .rules-list { display: flex; flex-direction: column; gap: 10px; }
+    .rule {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .rule-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--pink);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .rule-text { font-size: 12px; font-weight: 500; color: var(--dark); line-height: 1.5; }
+    .rule-text strong { font-weight: 700; color: var(--pink); }
+
+    /* ── TERMS ── */
+    .terms-grid { display: flex; flex-direction: column; gap: 6px; }
+    .term-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .term {
+      font-size: 11.5px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .term.use { background: rgba(62,188,232,0.1); color: #1a7da0; }
+    .term.avoid { background: rgba(0,0,0,0.05); color: #888; text-decoration: line-through; text-decoration-color: #aaa; }
+    .term-section-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 4px;
+      margin-bottom: 2px;
+    }
+    .term-section-label.use { color: var(--blue); }
+    .term-section-label.avoid { color: #aaa; }
+
+    /* ── TONE MATRIX ── */
+    .tone-table { width: 100%; border-collapse: collapse; }
+    .tone-table th {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      padding: 0 8px 8px;
+      text-align: left;
+    }
+    .tone-table td {
+      font-size: 11.5px;
+      padding: 7px 8px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      color: var(--dark);
+      vertical-align: top;
+      line-height: 1.4;
+    }
+    .tone-table td:first-child { font-weight: 600; color: var(--dark); }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.06);
+      color: var(--mid);
+    }
+    .badge.high { background: rgba(233,30,140,0.1); color: var(--pink); }
+    .badge.med  { background: rgba(62,188,232,0.1);  color: #1a7da0; }
+    .badge.low  { background: rgba(0,0,0,0.06);       color: var(--mid); }
+
+    /* ── COPY EXAMPLES ── */
+    .examples-grid { display: flex; flex-direction: column; gap: 8px; }
+    .example { border-radius: 8px; padding: 10px 12px; }
+    .example.good { background: rgba(196,216,46,0.12); border-left: 3px solid var(--green); }
+    .example.bad  { background: rgba(233,30,140,0.07); border-left: 3px solid #f4a0cc; }
+    .example-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .example.good .example-tag { color: #6b8c00; }
+    .example.bad  .example-tag { color: var(--pink); }
+    .example p { font-size: 11.5px; line-height: 1.5; color: var(--dark); font-style: italic; }
+    .example p strong { font-style: normal; font-weight: 600; }
+
+    /* ── NEVER EVER ── */
+    .never-list { display: flex; flex-direction: column; gap: 6px; }
+    .never-item {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.06);
+      line-height: 1.4;
+    }
+    .never-item strong {
+      font-weight: 700;
+      color: #ff8cc8;
+    }
+    .never-item::before {
+      content: "✗ ";
+      color: var(--pink);
+      font-weight: 800;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      border-top: 1px solid rgba(0,0,0,0.07);
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-note { font-size: 11px; color: #aaa; }
+    .footer-note strong { color: var(--pink); }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Coaching Women of Color®</h1>
+      <h2>Brand Voice <span>Quick Reference</span></h2>
+    </div>
+    <div class="taglines">
+      <div class="tagline">
+        <span>B2B</span>
+        "Your leaders are leaving.<br>We help you keep them."
+      </div>
+      <div class="tagline">
+        <span>B2C</span>
+        "You already have<br>everything you need."
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- WE ARE / WE ARE NOT -->
+    <div class="card span2 pink-border">
+      <div class="card-label">Brand Identity Anchor</div>
+      <div class="identity-grid">
+        <div>
+          <div class="identity-col-head are">We Are ✓</div>
+          <div class="identity-item are"><strong>Empowering</strong> — we activate what's already there</div>
+          <div class="identity-item are"><strong>Direct & naming</strong> — we say what others won't</div>
+          <div class="identity-item are"><strong>Credentialed</strong> — 25+ yrs, 500+ leaders, Fortune 500</div>
+          <div class="identity-item are"><strong>Warm & invested</strong> — we see the whole person</div>
+          <div class="identity-item are"><strong>Systemically aware</strong> — we name structural barriers</div>
+          <div class="identity-item are"><strong>Outcome-driven</strong> — promotions, raises, culture change</div>
+        </div>
+        <div>
+          <div class="identity-col-head not">We Are Not ✗</div>
+          <div class="identity-item not"><strong>Savior-coded</strong> — implying clients need fixing</div>
+          <div class="identity-item not"><strong>Corporate-euphemistic</strong> — "diverse talent," DEI buzzwords</div>
+          <div class="identity-item not"><strong>Boastful or cold</strong> — credential dumps without warmth</div>
+          <div class="identity-item not"><strong>Overly therapeutic</strong> — we also challenge and push</div>
+          <div class="identity-item not"><strong>Politically evasive</strong> — pretending challenges are just personal</div>
+          <div class="identity-item not"><strong>Vague inspiration</strong> — "unlock your potential" with no proof</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THREE RULES -->
+    <div class="card blue-border">
+      <div class="card-label">3 Rules to Live By</div>
+      <div class="rules-list">
+        <div class="rule">
+          <div class="rule-num">1</div>
+          <div class="rule-text"><strong>Always say "women of color."</strong> Never "diverse talent," "underrepresented," or "BIPOC" as a catch-all. The specificity is the brand.</div>
+        </div>
+        <div class="rule">
+          <div class="rule-num">2</div>
+          <div class="rule-text"><strong>Validate before you pitch.</strong> Name the pain → validate it → offer the solution. "We See You" before the program. Always.</div>
+        </div>
+        <div class="rule">
+          <div class="rule-num">3</div>
+          <div class="rule-text"><strong>Activate, never rescue.</strong> Wendy is a guide, not a savior. Copy that implies clients are broken is off-brand — even if well-intentioned.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TONE BY CONTEXT -->
+    <div class="card span3 yellow-border">
+      <div class="card-label">Tone by Context — Voice stays constant · Tone flexes</div>
+      <table class="tone-table">
+        <thead>
+          <tr>
+            <th style="width:18%">Context</th>
+            <th style="width:13%">Formality</th>
+            <th style="width:13%">Energy</th>
+            <th style="width:16%">Depth</th>
+            <th>Key Principle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>B2B cold outreach</td>
+            <td><span class="badge med">Med-High</span></td>
+            <td><span class="badge med">Medium</span></td>
+            <td><span class="badge low">Low-Med</span></td>
+            <td>Lead with the retention cost. Pain point first, credentials second.</td>
+          </tr>
+          <tr>
+            <td>B2B discovery call</td>
+            <td><span class="badge med">Medium</span></td>
+            <td><span class="badge high">Med-High</span></td>
+            <td><span class="badge med">Medium</span></td>
+            <td>Ask more than tell. Diagnose before prescribing.</td>
+          </tr>
+          <tr>
+            <td>B2B proposal / RFP</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge med">Medium</span></td>
+            <td><span class="badge high">High</span></td>
+            <td>ROI + named clients + scoped deliverables + process steps.</td>
+          </tr>
+          <tr>
+            <td>B2C social media</td>
+            <td><span class="badge low">Low-Med</span></td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge low">Low</span></td>
+            <td>Validate first. "We See You" energy. Short, punchy, specific.</td>
+          </tr>
+          <tr>
+            <td>B2C website / programs</td>
+            <td><span class="badge med">Medium</span></td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge med">Medium</span></td>
+            <td>Pain point → validation → solution. Never lead with the price.</td>
+          </tr>
+          <tr>
+            <td>Keynote / speaking</td>
+            <td><span class="badge med">Med-High</span></td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge med">Medium</span></td>
+            <td>Data to open authority. Story to close on emotion.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- WORDS TO USE / AVOID -->
+    <div class="card blue-border">
+      <div class="card-label">Terminology</div>
+      <div class="term-section-label use">Always say →</div>
+      <div class="terms-grid">
+        <div class="term-row">
+          <div class="term use">Women of color</div>
+          <div class="term use">Executive coaching</div>
+        </div>
+        <div class="term-row">
+          <div class="term use">Leadership development</div>
+          <div class="term use">Courageous conversations</div>
+        </div>
+        <div class="term-row">
+          <div class="term use">Psychological safety</div>
+          <div class="term use">The RESET Method®</div>
+        </div>
+        <div class="term-row">
+          <div class="term use">Retain and advance</div>
+          <div class="term use">Executive presence</div>
+        </div>
+      </div>
+      <div class="term-section-label avoid" style="margin-top:10px;">Never say →</div>
+      <div class="terms-grid">
+        <div class="term-row">
+          <div class="term avoid">Diverse talent</div>
+          <div class="term avoid">Life coaching</div>
+        </div>
+        <div class="term-row">
+          <div class="term avoid">Underrepresented groups</div>
+          <div class="term avoid">Soft skills</div>
+        </div>
+        <div class="term-row">
+          <div class="term avoid">Unlock your potential</div>
+          <div class="term avoid">Training</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COPY EXAMPLES -->
+    <div class="card span2 green-border">
+      <div class="card-label">Copy Examples — Good vs. Off-Brand</div>
+      <div class="examples-grid">
+        <div class="example good">
+          <div class="example-tag">✓ On-brand — B2B opening</div>
+          <p>"Your leaders are leaving. Women of color are among your highest performers — and among the most likely to leave when they're not developed. We help organizations retain them before that talent walks out the door."</p>
+        </div>
+        <div class="example bad">
+          <div class="example-tag">✗ Off-brand — generic DEI vendor</div>
+          <p>"We help organizations build more inclusive cultures and empower diverse talent to unlock their full potential." <strong>→ Fix:</strong> Name the specific audience, specific outcome, and specific cost of inaction.</p>
+        </div>
+        <div class="example good">
+          <div class="example-tag">✓ On-brand — B2C validation opener</div>
+          <p>"Women of color in the workplace face challenges that are <em>rarely named out loud</em> — but deeply felt every day. You're not imagining it. And you don't have to navigate it alone."</p>
+        </div>
+        <div class="example bad">
+          <div class="example-tag">✗ Off-brand — rescue framing</div>
+          <p>"Let Wendy help you find your voice and step into your greatness." <strong>→ Fix:</strong> "Wendy helps you amplify the leadership voice you've already built." Client has it — Wendy amplifies it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEVER DO -->
+    <div class="card dark">
+      <div class="card-label">Never Ever</div>
+      <div class="never-list">
+        <div class="never-item">Start with <strong>Wendy's bio</strong> before the client's problem</div>
+        <div class="never-item">Use <strong>"BIPOC"</strong> as a default — say "women of color"</div>
+        <div class="never-item">Imply clients are <strong>broken or need fixing</strong></div>
+        <div class="never-item">Use <strong>"soft skills"</strong> — leadership is not soft</div>
+        <div class="never-item">Reference <strong>"life coaching"</strong> — positioning removed</div>
+        <div class="never-item">Pretend challenges are <strong>purely personal</strong> — name the system</div>
+        <div class="never-item">Vague promises without a <strong>specific outcome</strong></div>
+      </div>
+    </div>
+
+    <!-- SIGNATURE PHRASES -->
+    <div class="card span2 pink-border">
+      <div class="card-label">Wendy's Signature Phrases — Use These, Don't Paraphrase</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <div style="background:rgba(233,30,140,0.06); border-left:3px solid var(--pink); border-radius:6px; padding:9px 11px;">
+          <div style="font-size:10px;font-weight:700;color:var(--pink);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;">From Social / LinkedIn</div>
+          <p style="font-size:11.5px;font-style:italic;line-height:1.5;color:var(--dark);">"Closed mouths don't get fed."</p>
+        </div>
+        <div style="background:rgba(233,30,140,0.06); border-left:3px solid var(--pink); border-radius:6px; padding:9px 11px;">
+          <div style="font-size:10px;font-weight:700;color:var(--pink);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;">From Social / LinkedIn</div>
+          <p style="font-size:11.5px;font-style:italic;line-height:1.5;color:var(--dark);">"Grateful does not always mean aligned."</p>
+        </div>
+        <div style="background:rgba(62,188,232,0.07); border-left:3px solid var(--blue); border-radius:6px; padding:9px 11px;">
+          <div style="font-size:10px;font-weight:700;color:#1a7da0;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;">From Course Content</div>
+          <p style="font-size:11.5px;font-style:italic;line-height:1.5;color:var(--dark);">"Good work doesn't speak for itself. Good work needs a microphone."</p>
+        </div>
+        <div style="background:rgba(62,188,232,0.07); border-left:3px solid var(--blue); border-radius:6px; padding:9px 11px;">
+          <div style="font-size:10px;font-weight:700;color:#1a7da0;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;">From Course Content</div>
+          <p style="font-size:11.5px;font-style:italic;line-height:1.5;color:var(--dark);">"You are not starting over. You are starting from experience."</p>
+        </div>
+        <div style="background:rgba(62,188,232,0.07); border-left:3px solid var(--blue); border-radius:6px; padding:9px 11px;">
+          <div style="font-size:10px;font-weight:700;color:#1a7da0;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;">From Course Content</div>
+          <p style="font-size:11.5px;font-style:italic;line-height:1.5;color:var(--dark);">"Composure is not silence. It is choosing when and how to use your voice for maximum impact."</p>
+        </div>
+        <div style="background:rgba(62,188,232,0.07); border-left:3px solid var(--blue); border-radius:6px; padding:9px 11px;">
+          <div style="font-size:10px;font-weight:700;color:#1a7da0;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;">From Course Content</div>
+          <p style="font-size:11.5px;font-style:italic;line-height:1.5;color:var(--dark);">"Visibility isn't bragging. It's ensuring your contributions are known by those who make decisions about your future."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESET METHOD -->
+    <div class="card purple-border">
+      <div class="card-label">The RESET Method® — Proprietary Framework</div>
+      <div style="margin-bottom:10px;">
+        <p style="font-size:12px;font-weight:600;color:var(--dark);line-height:1.5;">Closes performance gaps by coaching <em>both</em> the leader and the team member simultaneously.</p>
+        <p style="font-size:11px;color:var(--mid);margin-top:4px;line-height:1.4;font-style:italic;">"Doesn't choose sides — it closes gaps."</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--purple);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px;">1</div>
+          <div style="font-size:11.5px;color:var(--dark);line-height:1.4;"><strong>Discovery & Assessment</strong> — Separate sessions, both sides, no assumptions</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--purple);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px;">2</div>
+          <div style="font-size:11.5px;color:var(--dark);line-height:1.4;"><strong>Parallel Coaching</strong> — Leader on managing, team member on ownership</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--purple);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px;">3</div>
+          <div style="font-size:11.5px;color:var(--dark);line-height:1.4;"><strong>Alignment & Outcome</strong> — Mid-point checkpoint + outcome summary</div>
+        </div>
+      </div>
+      <div style="background:rgba(147,51,234,0.08);border-radius:6px;padding:8px 10px;">
+        <p style="font-size:11px;font-weight:600;color:var(--purple);">Best for: VP of HR · Directors · HR Business Partners</p>
+        <p style="font-size:11px;color:var(--mid);margin-top:2px;">ROI frame: "Close performance gaps. Retain your talent."</p>
+      </div>
+    </div>
+
+    <!-- TEACHING PATTERN -->
+    <div class="card span3" style="background:rgba(255,196,37,0.08);border-top:4px solid var(--yellow);">
+      <div class="card-label">The CWC Teaching Voice Pattern — Use in Any Content That Names a Problem</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+        <div style="background:white;border-radius:8px;padding:12px;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);margin-bottom:6px;">Step 1: Challenge</div>
+          <p style="font-size:12px;line-height:1.5;color:var(--dark);">Name the dynamic — <em>"The Silent Achiever: you deliver results but no one outside your team knows your name."</em></p>
+        </div>
+        <div style="background:white;border-radius:8px;padding:12px;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);margin-bottom:6px;">Step 2: Root Causes</div>
+          <p style="font-size:12px;line-height:1.5;color:var(--dark);">Name why it happens — cite data, validate experience, don't individualize the problem.</p>
+        </div>
+        <div style="background:white;border-radius:8px;padding:12px;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);margin-bottom:6px;">Step 3: The Breakthrough</div>
+          <p style="font-size:12px;line-height:1.5;color:var(--dark);">Provide a practical tool, script, or framework. Always actionable — never just inspiration.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-note">CWC Brand Voice Guidelines <strong>v3</strong> · Updated 2026-04-01 · Full guidelines: <strong>.claude/brand-voice-guidelines.md</strong></div>
+    <div class="footer-note">Wendy Perdomo · <strong>wendy@coachingwomenofcolor.com</strong> · coachingwomenofcolor.com</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,12 +1,14 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
-import { siteConfig } from "@/config";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Workshops & Webinars",
   description:
     "Interactive workshops and webinars on psychological safety, communication, executive presence, and inclusive leadership. Customized to your organization's goals and culture.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/workshops-webinars/",
+  },
 };
 
 const outcomes = [
@@ -24,9 +26,26 @@ const topics = [
   "Building high-performing teams and accountability",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Workshops & Webinars",
+  description: "Interactive workshops and webinars on psychological safety, communication, executive presence, and inclusive leadership.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/workshops-webinars/",
+};
+
 export default function WorkshopsWebinarsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">
@@ -34,9 +53,7 @@ export default function WorkshopsWebinarsPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#FCE8F3] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Solutions
-              </Link>
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions", href: "/for-organizations" }, { label: "Workshops & Webinars" }]} />
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                 Workshops & Webinars
               </h1>
@@ -45,7 +62,7 @@ export default function WorkshopsWebinarsPage() {
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
-                  Get a Custom Quote
+                  Request a Workshop Proposal
                 </Link>
               </div>
             </div>
@@ -119,7 +136,7 @@ export default function WorkshopsWebinarsPage() {
               Best For
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
-              Leadership teams, people managers, ERGs, high-potential cohorts, or cross-functional teams needing practical skill-building.
+              VP of HR, L&D directors, and talent development leaders seeking practical skill-building for leadership teams, people managers, ERGs, and high-potential cohorts.
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {["Leadership Teams", "People Managers", "ERGs", "High-Potential Cohorts", "Cross-Functional Teams"].map((tag) => (
@@ -167,7 +184,7 @@ export default function WorkshopsWebinarsPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Get a Custom Quote
+                Request a Workshop Proposal
               </Link>
             </div>
           </div>

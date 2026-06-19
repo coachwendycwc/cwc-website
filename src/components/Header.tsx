@@ -8,39 +8,39 @@ import { siteConfig } from "@/config";
 
 const navigation = [
   {
-    name: "For Organizations",
+    name: "Organizations",
     href: "/for-organizations",
     matchPaths: ["/for-organizations", "/services"],
   },
   {
-    name: "For Individuals",
+    name: "Individuals",
     href: "/for-individuals",
     matchPaths: ["/for-individuals", "/executive-coaching"],
   },
   {
+    name: "Speaking",
+    href: "/services/keynote-speaking",
+    matchPaths: ["/services/keynote-speaking"],
+  },
+  {
     name: "About",
     href: "/about",
-    matchPaths: ["/about", "/case-studies"],
+    matchPaths: ["/about"],
+  },
+  {
+    name: "Case Studies",
+    href: "/case-studies",
+    matchPaths: ["/case-studies"],
   },
   {
     name: "Resources",
-    href: "/#resources",
-    matchPaths: [],
+    href: "/resources",
+    matchPaths: ["/resources"],
   },
   {
-    name: "Events",
-    href: "/events",
-    matchPaths: ["/events"],
-  },
-  {
-    name: "Gallery",
-    href: "/gallery",
-    matchPaths: ["/gallery"],
-  },
-  {
-    name: "FAQ",
-    href: "/faq",
-    matchPaths: ["/faq"],
+    name: "Blog",
+    href: "/blog",
+    matchPaths: ["/blog"],
   },
 ];
 
@@ -64,10 +64,10 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <img
             src={`${siteConfig.basePath}/logo.webp`}
-            alt="Coaching Women of Color"
+            alt="Coaching Women of Color - Home"
             width={280}
             height={70}
-            className="h-16 md:h-20 w-auto"
+            className="h-14 md:h-16 w-auto scale-110 origin-left"
           />
         </Link>
 
@@ -91,17 +91,17 @@ export default function Header() {
         {/* CTA Button */}
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           <Link
-            href="/book"
+            href="/contact"
             className="px-6 py-2.5 bg-[#3EBCE8] text-white text-sm font-medium rounded-full transition-all hover:bg-[#1A9FCC] hover:scale-105"
           >
-            Book a Consultation
+            Request a Proposal
           </Link>
         </div>
 
         {/* Mobile menu button */}
         <button
           type="button"
-          className="lg:hidden p-2 text-[#525252]"
+          className="lg:hidden p-2.5 -mr-2.5 text-[#525252]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
           aria-label="Toggle navigation menu"
@@ -149,11 +149,11 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/book"
+              href="/contact"
               className="block w-full text-center px-6 py-3 bg-[#3EBCE8] text-white font-medium rounded-full mt-6"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Book a Consultation
+              Request a Proposal
             </Link>
           </div>
         </div>

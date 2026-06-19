@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1584">
+<title>LinkedIn Banner Slides — Wendy Perdomo | Coaching Women of Color</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  body {
+    width: 1584px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #e8e8e8;
+  }
+
+  .label {
+    text-align: center;
+    padding: 40px 0 14px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  /* ================================================
+     BASE SLIDE: 1584 x 396 px
+     ================================================ */
+  .slide {
+    position: relative;
+    width: 1584px;
+    height: 396px;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  /* Warm dark base */
+  .warm-base {
+    background: linear-gradient(135deg, #1A0A12 0%, #2D1024 25%, #1A1A2E 55%, #0F1923 100%);
+  }
+
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right,
+      #E91E8C 0%, #E91E8C 25%,
+      #3EBCE8 25%, #3EBCE8 50%,
+      #FFC425 50%, #FFC425 75%,
+      #C4D82E 75%, #C4D82E 100%
+    );
+  }
+
+  .trademark {
+    font-size: 9px;
+    vertical-align: super;
+    opacity: 0.6;
+  }
+
+  /* ================================================
+     SLIDE 1: HERO — Bold personal brand
+     "Elevating Women of Color Into Senior Leadership"
+     ================================================ */
+  .s1-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 550px;
+    height: 396px;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+
+  .s1-photo-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 550px;
+    height: 396px;
+    background: linear-gradient(to right, transparent 30%, #1A0A12 100%);
+  }
+
+  .s1-glow {
+    position: absolute;
+    top: -80px;
+    left: 400px;
+    width: 600px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(233, 30, 140, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .s1-content {
+    position: absolute;
+    top: 0;
+    left: 500px;
+    right: 0;
+    height: 396px;
+    display: flex;
+    align-items: center;
+    padding: 0 70px 0 60px;
+  }
+
+  .s1-left { flex: 1; }
+
+  .s1-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #E91E8C;
+    margin-bottom: 12px;
+  }
+
+  .s1-headline {
+    font-size: 46px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  .s1-headline em {
+    font-style: normal;
+    color: #E91E8C;
+  }
+
+  .s1-services {
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .s1-services .dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .s1-url {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3EBCE8;
+    letter-spacing: 0.2px;
+  }
+
+  /* ================================================
+     SLIDE 2: NEWSLETTER — "Leading While WOC"
+     ================================================ */
+  .s2-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #1A0A12 0%, #2D1024 30%, #1A1A2E 100%);
+  }
+
+  .s2-glow1 {
+    position: absolute;
+    top: -100px;
+    right: 200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(62, 188, 232, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .s2-glow2 {
+    position: absolute;
+    bottom: -80px;
+    left: 600px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(233, 30, 140, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .s2-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 396px;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+  }
+
+  .s2-left {
+    flex: 1;
+    padding-left: 460px; /* clear profile photo zone */
+  }
+
+  .s2-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(62, 188, 232, 0.15);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  .s2-icon svg {
+    width: 26px;
+    height: 26px;
+    color: #3EBCE8;
+  }
+
+  .s2-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #3EBCE8;
+    margin-bottom: 8px;
+  }
+
+  .s2-headline {
+    font-size: 40px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .s2-headline em {
+    font-style: normal;
+    color: #E91E8C;
+  }
+
+  .s2-desc {
+    margin-top: 12px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.5;
+    max-width: 520px;
+  }
+
+  .s2-cta-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+    flex-shrink: 0;
+    margin-left: 50px;
+  }
+
+  .s2-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 30px;
+    background: #3EBCE8;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+  }
+
+  .s2-cta svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .s2-stat {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .s2-stat strong {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+  }
+
+  /* ================================================
+     SLIDE 3: SPEAKING & KEYNOTES
+     ================================================ */
+  .s3-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 650px;
+    height: 396px;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .s3-photo-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 650px;
+    height: 396px;
+    background: linear-gradient(to right, transparent 20%, #1A0A12 100%);
+  }
+
+  .s3-glow {
+    position: absolute;
+    top: -60px;
+    left: 500px;
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(233, 30, 140, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .s3-content {
+    position: absolute;
+    top: 0;
+    left: 560px;
+    right: 0;
+    height: 396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 70px 0 40px;
+  }
+
+  .s3-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #FFC425;
+    margin-bottom: 10px;
+  }
+
+  .s3-headline {
+    font-size: 40px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .s3-headline em {
+    font-style: normal;
+    color: #E91E8C;
+  }
+
+  .s3-stats {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+  }
+
+  .s3-stat-item {
+    text-align: left;
+  }
+
+  .s3-stat-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: #E91E8C;
+    letter-spacing: -0.5px;
+  }
+
+  .s3-stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .s3-cta {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 26px;
+    background: #E91E8C;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 10px;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  .s3-cta svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* ================================================
+     SLIDE 4: FOR ORGANIZATIONS
+     ================================================ */
+  .s4-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 580px;
+    height: 396px;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .s4-photo-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 580px;
+    height: 396px;
+    background: linear-gradient(to right, transparent 15%, #1A0A12 100%);
+  }
+
+  .s4-content {
+    position: absolute;
+    top: 0;
+    left: 500px;
+    right: 0;
+    height: 396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 70px 0 50px;
+  }
+
+  .s4-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #3EBCE8;
+    margin-bottom: 10px;
+  }
+
+  .s4-headline {
+    font-size: 38px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .s4-headline em {
+    font-style: normal;
+    color: #E91E8C;
+  }
+
+  .s4-offerings {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .s4-tag {
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+  }
+
+  .s4-logos {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .s4-logos-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.25);
+    margin-right: 4px;
+  }
+
+  .s4-logos-names {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .s4-logos-names .sep {
+    color: rgba(255, 255, 255, 0.12);
+    font-size: 9px;
+  }
+
+  .s4-cta {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 26px;
+    background: #E91E8C;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 10px;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  .s4-cta svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* ================================================
+     SLIDE 5: RESET METHOD® — Individual Coaching
+     ================================================ */
+  .s5-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #1A0A12 0%, #2D1024 25%, #1A1A2E 55%, #0F1923 100%);
+  }
+
+  .s5-photo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 396px;
+    object-fit: cover;
+    object-position: center 15%;
+  }
+
+  .s5-photo-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 396px;
+    background: linear-gradient(to left, transparent 10%, #1A0A12 100%);
+  }
+
+  .s5-glow {
+    position: absolute;
+    top: -60px;
+    right: 300px;
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(156, 51, 234, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .s5-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 500px;
+    height: 396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px 0 80px;
+    /* leave room for profile photo */
+    padding-left: 460px;
+  }
+
+  .s5-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    background: rgba(147, 51, 234, 0.15);
+    border: 1px solid rgba(147, 51, 234, 0.25);
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9333EA;
+    margin-bottom: 14px;
+    align-self: flex-start;
+  }
+
+  .s5-headline {
+    font-size: 42px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .s5-headline em {
+    font-style: normal;
+    color: #9333EA;
+  }
+
+  .s5-desc {
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.5;
+    max-width: 480px;
+  }
+
+  .s5-steps {
+    margin-top: 16px;
+    display: flex;
+    gap: 6px;
+  }
+
+  .s5-step {
+    padding: 6px 14px;
+    background: rgba(147, 51, 234, 0.12);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #9333EA;
+    white-space: nowrap;
+  }
+
+  .s5-cta {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 26px;
+    background: #9333EA;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 10px;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  .s5-cta svg {
+    width: 14px;
+    height: 14px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ==================== SLIDE 1: HERO (Original Option C) ==================== -->
+<p class="label">Slide 1 — Hero (Main Brand — Option C)</p>
+<div class="slide warm-base">
+  <img src="images/wendy-hero.jpg" alt="" class="s1-photo" style="width:660px; object-position:60% top; opacity:0.5; mask-image:linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 55%, transparent 100%); -webkit-mask-image:linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 55%, transparent 100%);" />
+  <div class="s1-glow"></div>
+
+  <!-- Pink accent line -->
+  <div style="position:absolute; top:50px; left:520px; width:3px; height:296px; background:linear-gradient(to bottom, #E91E8C, rgba(233,30,140,0.3), transparent); opacity:0.5; border-radius:2px;"></div>
+
+  <div class="s1-content" style="left:560px; padding:0 70px 0 30px;">
+    <div class="s1-left">
+      <p class="s1-label">Executive Coaching &amp; Leadership Development</p>
+      <h1 class="s1-headline" style="font-size:42px;">
+        Elevating Women of Color<br/>
+        Into <em>Senior Leadership</em>
+      </h1>
+      <div class="s1-services">
+        <span>Executive Coaching</span><span class="dot"></span>
+        <span>Workshops &amp; Retreats</span><span class="dot"></span>
+        <span>Keynote Speaking</span><span class="dot"></span>
+        <span>RESET Method<sup class="trademark">&reg;</sup></span>
+      </div>
+      <!-- Trusted By — Logos -->
+      <div style="margin-top:20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-right:2px; white-space:nowrap;">Trusted by</span>
+        <img src="images/logos-white/Bloomberg-Quicktake.png" alt="Bloomberg" style="height:22px; object-fit:contain; opacity:0.55;" />
+        <img src="images/logos-white/Johnson-and-Johnson.png" alt="J&amp;J" style="height:18px; object-fit:contain; opacity:0.55;" />
+        <img src="images/logos-white/TD-Bank.png" alt="TD Bank" style="height:24px; object-fit:contain; opacity:0.55;" />
+        <img src="images/logos-white/University-of-Michigan.png" alt="U of Michigan" style="height:24px; object-fit:contain; opacity:0.55;" />
+        <img src="images/logos-white/NYC-Department-of-Education.png" alt="NYC DOE" style="height:22px; object-fit:contain; opacity:0.55;" />
+        <img src="images/logos-white/ALPFA.png" alt="ALPFA" style="height:24px; object-fit:contain; opacity:0.55;" />
+        <img src="images/logos-white/Ellevate.png" alt="Ellevate" style="height:22px; object-fit:contain; opacity:0.55;" />
+      </div>
+    </div>
+    <!-- QR Code -->
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; margin-left:40px; flex-shrink:0;">
+      <span style="font-size:12px; font-weight:700; color:#E91E8C; letter-spacing:1.5px; text-transform:uppercase; text-align:center; white-space:nowrap;">Book a Call</span>
+      <div style="width:130px; height:130px; background:white; border-radius:12px; padding:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+        <img src="images/qr-individuals.svg" alt="Scan to book" style="width:100%; height:100%; image-rendering:pixelated;" />
+      </div>
+      <span style="font-size:11px; font-weight:500; color:rgba(255,255,255,0.45); white-space:nowrap;">coachingwomenofcolor.com/schedule</span>
+    </div>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+
+
+<!-- ==================== SLIDE 2: NEWSLETTER ==================== -->
+<p class="label">Slide 2 — Newsletter (Leading While WOC)</p>
+<div class="slide">
+  <div class="s2-bg"></div>
+  <div class="s2-glow1"></div>
+  <div class="s2-glow2"></div>
+
+  <!-- Background: dark desk workspace -->
+  <img src="images/newsletter-bg.jpg" alt="" style="position:absolute; left:0; top:0; width:500px; height:396px; object-fit:cover; object-position:center; opacity:0.35; mask-image:linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); -webkit-mask-image:linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);" />
+
+  <div class="s2-content">
+    <div class="s2-left">
+      <div class="s2-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+        </svg>
+      </div>
+      <p class="s2-label">LinkedIn Newsletter</p>
+      <h2 class="s2-headline">
+        Leading While <em>WOC</em>
+      </h2>
+      <p class="s2-desc">
+        Monthly insights on leadership, navigating bias, building visibility, and thriving as a woman of color in the workplace.
+      </p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; flex-shrink:0; margin-left:50px;">
+      <span style="font-size:12px; font-weight:700; color:#3EBCE8; letter-spacing:1.5px; text-transform:uppercase; text-align:center; white-space:nowrap;">Subscribe</span>
+      <div style="width:130px; height:130px; background:white; border-radius:12px; padding:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+        <img src="images/qr-newsletter.svg" alt="Scan to subscribe" style="width:100%; height:100%; image-rendering:pixelated;" />
+      </div>
+      <p class="s2-stat">Join <strong>5,000+</strong> leaders reading</p>
+    </div>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+
+
+<!-- ==================== SLIDE 3: ORGANIZATIONS ==================== -->
+<p class="label">Slide 3 — For Organizations</p>
+<div class="slide warm-base">
+  <img src="images/gallery/wocip-accelerator.jpg" alt="" class="s4-photo" style="object-position: center center;" />
+  <div class="s4-photo-overlay"></div>
+
+  <div style="position:absolute; top:0; left:500px; right:0; height:396px; display:flex; align-items:center; padding:0 70px 0 50px;">
+    <div style="flex:1;">
+      <p class="s4-label">For Organizations</p>
+      <h2 class="s4-headline">
+        Retain &amp; Develop Your<br/>
+        <em>Top Talent</em>
+      </h2>
+
+      <div class="s4-offerings">
+        <span class="s4-tag">Leadership Workshops</span>
+        <span class="s4-tag">Strategic Retreats</span>
+        <span class="s4-tag">Group Coaching</span>
+        <span class="s4-tag">Executive Coaching</span>
+        <span class="s4-tag">DEI Consulting</span>
+      </div>
+
+      <div class="s4-logos">
+        <span class="s4-logos-label">Trusted by</span>
+        <div class="s4-logos-names">
+          <span>Bloomberg</span><span class="sep">|</span>
+          <span>Genentech</span><span class="sep">|</span>
+          <span>J&amp;J</span><span class="sep">|</span>
+          <span>Novo Nordisk</span><span class="sep">|</span>
+          <span>VaynerMedia</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- QR Code — same layout as Slide 1 -->
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; margin-left:40px; flex-shrink:0;">
+      <span style="font-size:12px; font-weight:700; color:#E91E8C; letter-spacing:1.5px; text-transform:uppercase; text-align:center; white-space:nowrap;">Book a Call</span>
+      <div style="width:130px; height:130px; background:white; border-radius:12px; padding:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+        <img src="images/qr-organizations.svg" alt="Scan to book" style="width:100%; height:100%; image-rendering:pixelated;" />
+      </div>
+      <span style="font-size:11px; font-weight:500; color:rgba(255,255,255,0.45); white-space:nowrap;">coachingwomenofcolor.com/schedule</span>
+    </div>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+
+
+<!-- ==================== SLIDE 4: SPEAKING ==================== -->
+<p class="label">Slide 4 — Keynote Speaking</p>
+<div class="slide warm-base">
+  <img src="images/gallery/IMG_0271.jpg" alt="" class="s3-photo" />
+  <div class="s3-photo-overlay"></div>
+  <div class="s3-glow"></div>
+
+  <div style="position:absolute; top:0; left:560px; right:0; height:396px; display:flex; align-items:center; padding:0 70px 0 40px;">
+    <div style="flex:1;">
+      <p class="s3-label">Keynote Speaker</p>
+      <h2 class="s3-headline">
+        Book Wendy for<br/>
+        Your Next <em>Event</em>
+      </h2>
+
+      <div class="s3-stats">
+        <div class="s3-stat-item">
+          <div class="s3-stat-num">50+</div>
+          <div class="s3-stat-label">Events &amp; Keynotes</div>
+        </div>
+        <div class="s3-stat-item">
+          <div class="s3-stat-num">5,000+</div>
+          <div class="s3-stat-label">Audience Members</div>
+        </div>
+        <div class="s3-stat-item">
+          <div class="s3-stat-num">20+</div>
+          <div class="s3-stat-label">Organizations Served</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QR Code — same layout as Slide 1 -->
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; margin-left:40px; flex-shrink:0;">
+      <span style="font-size:12px; font-weight:700; color:#FFC425; letter-spacing:1.5px; text-transform:uppercase; text-align:center; white-space:nowrap;">Book a Call</span>
+      <div style="width:130px; height:130px; background:white; border-radius:12px; padding:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+        <img src="images/qr-speaking.svg" alt="Scan to book" style="width:100%; height:100%; image-rendering:pixelated;" />
+      </div>
+      <span style="font-size:11px; font-weight:500; color:rgba(255,255,255,0.45); white-space:nowrap;">coachingwomenofcolor.com/schedule</span>
+    </div>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+
+<!-- ==================== SLIDE 5: RESET METHOD ==================== -->
+<p class="label">Slide 5 — RESET Method® (Individual Coaching)</p>
+<div class="slide">
+  <div class="s5-bg"></div>
+  <img src="images/wendy-about.jpg" alt="" class="s5-photo" />
+  <div class="s5-photo-overlay"></div>
+  <div class="s5-glow"></div>
+
+  <div style="position:absolute; top:0; left:0; right:500px; height:396px; display:flex; align-items:center; padding:0 40px 0 460px;">
+    <!-- QR Code — left side -->
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; margin-right:40px; flex-shrink:0;">
+      <span style="font-size:12px; font-weight:700; color:#9333EA; letter-spacing:1.5px; text-transform:uppercase; text-align:center; white-space:nowrap;">Book a Call</span>
+      <div style="width:130px; height:130px; background:white; border-radius:12px; padding:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+        <img src="images/qr-organizations.svg" alt="Scan to book" style="width:100%; height:100%; image-rendering:pixelated;" />
+      </div>
+      <span style="font-size:11px; font-weight:500; color:rgba(255,255,255,0.45); white-space:nowrap;">coachingwomenofcolor.com/schedule</span>
+    </div>
+
+    <!-- Content -->
+    <div style="flex:1;">
+      <div class="s5-badge">Signature Framework</div>
+      <h2 class="s5-headline">
+        The <em>RESET</em><br/>
+        Method<sup class="trademark">&reg;</sup>
+      </h2>
+      <p class="s5-desc">
+        A proven 5-step coaching framework designed to help women of color reclaim their power and accelerate into leadership.
+      </p>
+      <div class="s5-steps">
+        <span class="s5-step">R</span>
+        <span class="s5-step">E</span>
+        <span class="s5-step">S</span>
+        <span class="s5-step">E</span>
+        <span class="s5-step">T</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+
+<div style="height: 60px;"></div>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Header, Footer } from "@/components";
+import { useState, useCallback } from "react";
+import { Header, Footer, ImageLightbox, LazyImage } from "@/components";
 import { siteConfig } from "@/config";
 
 const galleryImages = [
@@ -123,7 +123,28 @@ const galleryImages = [
 ];
 
 export default function GalleryPage() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const lightboxImages = galleryImages.map((image, index) => ({
+    src: `${siteConfig.basePath}/images/gallery/${image}`,
+    alt: `Gallery photo ${index + 1}`,
+  }));
+
+  const openLightbox = (index: number) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const handlePrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
+  }, []);
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
+  }, []);
+
+  const handleClose = useCallback(() => setLightboxOpen(false), []);
 
   return (
     <>
@@ -152,16 +173,18 @@ export default function GalleryPage() {
             <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
               {galleryImages.map((image, index) => (
                 <div
-                  key={index}
+                  key={image}
                   className="mb-4 break-inside-avoid cursor-pointer group"
-                  onClick={() => setSelectedImage(image)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View gallery photo ${index + 1}`}
+                  onClick={() => openLightbox(index)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(index); } }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <LazyImage
                     src={`${siteConfig.basePath}/images/gallery/${image}`}
-                    alt={`Gallery photo ${index + 1}`}
+                    alt={`CWC event photo ${index + 1}`}
                     className="w-full rounded-lg shadow-sm group-hover:shadow-lg transition-shadow duration-300"
-                    loading="lazy"
                   />
                 </div>
               ))}
@@ -170,52 +193,14 @@ export default function GalleryPage() {
         </section>
       </main>
 
-      {/* Lightbox */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="absolute top-6 right-6 text-white text-4xl hover:text-[#3EBCE8] transition-colors"
-            onClick={() => setSelectedImage(null)}
-            aria-label="Close"
-          >
-            &times;
-          </button>
-          <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-[#3EBCE8] transition-colors p-2"
-            onClick={(e) => {
-              e.stopPropagation();
-              const currentIndex = galleryImages.indexOf(selectedImage);
-              const prevIndex = currentIndex > 0 ? currentIndex - 1 : galleryImages.length - 1;
-              setSelectedImage(galleryImages[prevIndex]);
-            }}
-            aria-label="Previous image"
-          >
-            &#8249;
-          </button>
-          <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-[#3EBCE8] transition-colors p-2"
-            onClick={(e) => {
-              e.stopPropagation();
-              const currentIndex = galleryImages.indexOf(selectedImage);
-              const nextIndex = currentIndex < galleryImages.length - 1 ? currentIndex + 1 : 0;
-              setSelectedImage(galleryImages[nextIndex]);
-            }}
-            aria-label="Next image"
-          >
-            &#8250;
-          </button>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`${siteConfig.basePath}/images/gallery/${selectedImage}`}
-            alt="Gallery photo"
-            className="max-w-full max-h-[90vh] object-contain rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
+      <ImageLightbox
+        images={lightboxImages}
+        currentIndex={currentIndex}
+        open={lightboxOpen}
+        onClose={handleClose}
+        onPrev={handlePrev}
+        onNext={handleNext}
+      />
 
       <Footer />
     </>

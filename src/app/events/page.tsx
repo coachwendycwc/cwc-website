@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Header, Footer } from "@/components";
+import { useState, useCallback } from "react";
+import { Header, Footer, ImageLightbox, LazyImage } from "@/components";
 import { siteConfig } from "@/config";
 
 const upcomingEvents = [
@@ -161,7 +161,35 @@ const pastEventFlyers = [
 ];
 
 export default function EventsPage() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Combine all event images for lightbox navigation
+  const allEventImages = [
+    ...upcomingEvents.map((e) => ({
+      src: `${siteConfig.basePath}/images/events/${e.image}`,
+      alt: e.title,
+    })),
+    ...pastEventFlyers.map((e) => ({
+      src: `${siteConfig.basePath}/images/events/${e.image}`,
+      alt: e.title,
+    })),
+  ];
+
+  const openLightbox = (index: number) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const handlePrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? allEventImages.length - 1 : prev - 1));
+  }, [allEventImages.length]);
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === allEventImages.length - 1 ? 0 : prev + 1));
+  }, [allEventImages.length]);
+
+  const handleClose = useCallback(() => setLightboxOpen(false), []);
 
   return (
     <>
@@ -194,21 +222,23 @@ export default function EventsPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {upcomingEvents.map((event) => (
+              {upcomingEvents.map((event, index) => (
                 <div
-                  key={event.title}
+                  key={`${event.title}-${index}`}
                   className="bg-white border border-[#E5E5E5] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
                 >
                   <div
                     className="cursor-pointer"
-                    onClick={() => setSelectedImage(event.image)}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`View ${event.title} image`}
+                    onClick={() => openLightbox(index)}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(index); } }}
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <LazyImage
                       src={`${siteConfig.basePath}/images/events/${event.image}`}
                       alt={event.title}
                       className="w-full h-auto object-cover"
-                      loading="lazy"
                     />
                   </div>
                   <div className="p-6">
@@ -259,17 +289,20 @@ export default function EventsPage() {
             </div>
 
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
-              {pastEventFlyers.map((event) => (
+              {pastEventFlyers.map((event, index) => (
                 <div
-                  key={event.title}
-                  className="mb-6 break-inside-avoid bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+                  key={`${event.title}-${index}`}
+                  className="mb-6 break-inside-avoid bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View ${event.title} flyer`}
+                  onClick={() => openLightbox(upcomingEvents.length + index)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(upcomingEvents.length + index); } }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <LazyImage
                     src={`${siteConfig.basePath}/images/events/${event.image}`}
                     alt={event.title}
                     className="w-full h-auto"
-                    loading="lazy"
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-[#1A1A1A] text-sm">{event.title}</h3>
@@ -282,28 +315,14 @@ export default function EventsPage() {
         </section>
       </main>
 
-      {/* Lightbox */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="absolute top-6 right-6 text-white text-4xl hover:text-[#3EBCE8] transition-colors"
-            onClick={() => setSelectedImage(null)}
-            aria-label="Close"
-          >
-            &times;
-          </button>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`${siteConfig.basePath}/images/events/${selectedImage}`}
-            alt="Event flyer"
-            className="max-w-full max-h-[90vh] object-contain rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
+      <ImageLightbox
+        images={allEventImages}
+        currentIndex={currentIndex}
+        open={lightboxOpen}
+        onClose={handleClose}
+        onPrev={handlePrev}
+        onNext={handleNext}
+      />
 
       <Footer />
     </>

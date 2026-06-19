@@ -1,12 +1,14 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
-import { siteConfig } from "@/config";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Multi-Session Virtual Series",
   description:
     "Sustained leadership development through multi-session virtual programs. Leaders learn, apply, and refine skills over time for lasting behavior change.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/virtual-series/",
+  },
 };
 
 const outcomes = [
@@ -17,9 +19,26 @@ const outcomes = [
   "Momentum and reinforcement that supports culture change",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Multi-Session Virtual Series",
+  description: "Sustained leadership development through multi-session virtual programs. Leaders learn, apply, and refine skills over time for lasting behavior change.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/virtual-series/",
+};
+
 export default function VirtualSeriesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">
@@ -27,9 +46,7 @@ export default function VirtualSeriesPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#F3E8FF] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Solutions
-              </Link>
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions", href: "/for-organizations" }, { label: "Virtual Series" }]} />
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                 Virtual Series
               </h1>
@@ -38,7 +55,7 @@ export default function VirtualSeriesPage() {
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
-                  Get a Custom Quote
+                  Request a Coaching Proposal
                 </Link>
               </div>
             </div>
@@ -145,7 +162,7 @@ export default function VirtualSeriesPage() {
               Best For
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
-              Organizations wanting sustainable leadership development, measurable growth over time, and a clear path from learning to implementation.
+              Chief People Officers, L&D directors, and HR leaders seeking sustainable leadership development with measurable growth and a clear path from learning to implementation.
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {["Leadership Cohorts", "People Managers", "High-Potential Groups", "Cross-Functional Teams"].map((tag) => (
@@ -153,29 +170,6 @@ export default function VirtualSeriesPage() {
                   {tag}
                 </span>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonial */}
-        <section className="section bg-white">
-          <div className="container-wide max-w-3xl mx-auto">
-            <div className="bg-[#F8FAFB] rounded-2xl p-8 lg:p-10">
-              <blockquote className="text-lg text-[#525252] leading-relaxed">
-                &ldquo;I really appreciate you and the coaching that I&apos;ve had with you. I recognize that because of the conversations that we&apos;ve had and the calls that we&apos;ve had, without them I wouldn&apos;t have gotten here, or I wouldn&apos;t have gotten here as quickly as I have. I appreciate you challenging me, showing me so much of myself and peeling back layers. I was able to really hone in on what&apos;s really in here to help others discover that as well.&rdquo;
-              </blockquote>
-              <div className="mt-6 pt-6 border-t border-[#E5E5E5] flex items-center gap-4">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`${siteConfig.basePath}/images/testimonial-morgan.png`}
-                  alt="Morgan Bullock"
-                  className="w-14 h-14 rounded-full object-cover"
-                />
-                <div>
-                  <p className="font-semibold text-[#1A1A1A]">Morgan Bullock</p>
-                  <p className="text-sm text-[#737373]">Atlanta, GA</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -191,7 +185,7 @@ export default function VirtualSeriesPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Get a Custom Quote
+                Request a Coaching Proposal
               </Link>
             </div>
           </div>

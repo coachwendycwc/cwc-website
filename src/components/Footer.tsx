@@ -4,12 +4,21 @@ import { siteConfig } from "@/config";
 
 const footerNavigation = {
   solutions: [
-    { name: "Executive Coaching", href: "/services/executive-coaching" },
-    { name: "Group Coaching", href: "/services/group-coaching" },
     { name: "Keynote Speaking", href: "/services/keynote-speaking" },
-    { name: "Workshops & Webinars", href: "/services/workshops-webinars" },
     { name: "Strategic Retreats", href: "/services/strategic-retreats" },
+    { name: "Executive Coaching", href: "/services/executive-coaching" },
+    { name: "Workshops & Webinars", href: "/services/workshops-webinars" },
+    { name: "Group Coaching", href: "/services/group-coaching" },
+    { name: "Virtual Series", href: "/services/virtual-series" },
     { name: "Performance Coaching", href: "/services/performance-coaching" },
+  ],
+  resources: [
+    { name: "Blog", href: "/blog" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Confidence Building Tool", href: "/confidence-building-tool.html" },
+    { name: "Newsletter", href: "https://www.linkedin.com/newsletters/leading-while-woc-7301328637058842624/" },
+    { name: "Events", href: "/events" },
+    { name: "Gallery", href: "/gallery" },
   ],
   coaching: [
     { name: "Executive Coaching", href: "/executive-coaching" },
@@ -69,20 +78,20 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="container-wide py-16 lg:py-20">
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
           {/* Brand Column */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center">
               <img
                 src={`${siteConfig.basePath}/logo.webp`}
-                alt="Coaching Women of Color"
+                alt="Coaching Women of Color - Home"
                 width={220}
                 height={55}
-                className="h-20 w-auto brightness-0 invert"
+                className="h-24 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="mt-6 text-[#A3A3A3] text-sm leading-relaxed max-w-xs">
-              Empowering organizations to create inclusive cultures where women of color thrive and lead.
+            <p className="mt-6 text-[#C0C0C0] text-sm leading-relaxed max-w-xs">
+              Leadership development, executive coaching, and keynote speaking for organizations committed to advancing women of color.
             </p>
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
@@ -90,7 +99,7 @@ export default function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-[#737373] hover:text-white transition-colors"
+                  className="text-[#C0C0C0] hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit our ${item.name} page`}
@@ -103,7 +112,7 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#A3A3A3]">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#C0C0C0]">
               Solutions
             </h3>
             <ul role="list" className="mt-4 space-y-3">
@@ -111,7 +120,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[#737373] hover:text-white transition-colors"
+                    className="text-sm text-[#C0C0C0] hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -120,17 +129,47 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Coaching */}
+          {/* Resources */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#A3A3A3]">
-              Coaching
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#C0C0C0]">
+              Resources
+            </h3>
+            <ul role="list" className="mt-4 space-y-3">
+              {footerNavigation.resources.map((item) => (
+                <li key={item.name}>
+                  {item.href.startsWith("http") ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-[#C0C0C0] hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-sm text-[#C0C0C0] hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Individual Coaching */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#C0C0C0]">
+              Individual Coaching
             </h3>
             <ul role="list" className="mt-4 space-y-3">
               {footerNavigation.coaching.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[#737373] hover:text-white transition-colors"
+                    className="text-sm text-[#C0C0C0] hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -141,7 +180,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#A3A3A3]">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#C0C0C0]">
               Company
             </h3>
             <ul role="list" className="mt-4 space-y-3">
@@ -149,7 +188,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[#737373] hover:text-white transition-colors"
+                    className="text-sm text-[#C0C0C0] hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -163,19 +202,19 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-[#404040]">
         <div className="container-wide py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-[#737373]">
-            &copy; {new Date().getFullYear()} Coaching Women of Color. All rights reserved.
+          <p className="text-sm text-[#9CA3AF]">
+            &copy; 2017-{new Date().getFullYear()} Coaching Women of Color&reg;. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link
               href="/privacy"
-              className="text-sm text-[#737373] hover:text-white transition-colors"
+              className="text-sm text-[#C0C0C0] hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-sm text-[#737373] hover:text-white transition-colors"
+              className="text-sm text-[#C0C0C0] hover:text-white transition-colors"
             >
               Terms of Service
             </Link>

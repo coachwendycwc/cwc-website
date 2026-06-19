@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Strategic Leadership & Board Retreats",
   description:
     "Facilitated retreats that align your leadership team, clarify strategic direction, and turn honest dialogue into actionable outcomes. Half-day or full-day, in-person or hybrid.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/strategic-retreats/",
+  },
 };
 
 const outcomes = [
@@ -17,9 +20,26 @@ const outcomes = [
   "Strategic clarity on critical decisions and direction",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Strategic Leadership & Board Retreats",
+  description: "Facilitated retreats that align your leadership team, clarify strategic direction, and turn honest dialogue into actionable outcomes.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/strategic-retreats/",
+};
+
 export default function StrategicRetreatsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">
@@ -27,9 +47,7 @@ export default function StrategicRetreatsPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Solutions
-              </Link>
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions", href: "/for-organizations" }, { label: "Strategic Retreats" }]} />
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                 Strategic Leadership & Board Retreats
               </h1>
@@ -38,7 +56,7 @@ export default function StrategicRetreatsPage() {
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
-                  Get a Custom Quote
+                  Request a Retreat Proposal
                 </Link>
               </div>
             </div>
@@ -170,7 +188,7 @@ export default function StrategicRetreatsPage() {
               Best For
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
-              Executive teams, boards of directors, and senior leadership groups seeking clarity, alignment, and actionable strategy.
+              CEOs, board chairs, and Chief People Officers seeking clarity, alignment, and actionable strategy for executive teams and boards of directors.
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {["Executive Teams", "Boards of Directors", "Senior Leadership", "Founding Teams"].map((tag) => (
@@ -216,7 +234,7 @@ export default function StrategicRetreatsPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Get a Custom Quote
+                Request a Retreat Proposal
               </Link>
             </div>
           </div>

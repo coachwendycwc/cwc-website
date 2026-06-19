@@ -1,77 +1,70 @@
+"use client";
+
 import Link from "next/link";
-import { Header, Footer, TestimonialsCarousel } from "@/components";
+import { Header, Footer, TestimonialsCarousel, AnimatedCounter, VideoHero } from "@/components";
 import { siteConfig } from "@/config";
 
-// Organizational solutions - simple cards
+// Organizational solutions - reordered by revenue potential
 const solutions = [
-  {
-    id: "executive-coaching",
-    title: "Executive Coaching",
-    description: "1:1 high-impact coaching for leaders.",
-    color: "blue",
-  },
-  {
-    id: "group-coaching",
-    title: "Group Coaching",
-    description: "Leadership development at scale.",
-    color: "yellow",
-  },
   {
     id: "keynote-speaking",
     title: "Keynote Speaking",
     description: "Inspire change. Ignite action.",
-    color: "green",
-  },
-  {
-    id: "workshops",
-    title: "Workshops & Webinars",
-    description: "Interactive learning experiences.",
-    color: "pink",
-  },
-  {
-    id: "virtual-series",
-    title: "Virtual Series",
-    description: "Sustained behavior change.",
-    color: "purple",
+    color: "#C4D82E",
+    icon: "M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z",
   },
   {
     id: "strategic-retreats",
     title: "Strategic Retreats",
     description: "Align, strategize, and move forward together.",
-    color: "yellow",
+    color: "#FFC425",
+    icon: "M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7",
+  },
+  {
+    id: "executive-coaching",
+    title: "Executive Coaching",
+    description: "1:1 high-impact coaching for leaders.",
+    color: "#3EBCE8",
+    icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  },
+  {
+    id: "workshops",
+    title: "Workshops & Webinars",
+    description: "Interactive learning experiences.",
+    color: "#E91E8C",
+    icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  },
+  {
+    id: "group-coaching",
+    title: "Group Coaching",
+    description: "Leadership development at scale.",
+    color: "#FFC425",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
+  },
+  {
+    id: "virtual-series",
+    title: "Virtual Series",
+    description: "Sustained behavior change.",
+    color: "#9333EA",
+    icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z",
   },
   {
     id: "performance-coaching",
     title: "Performance Coaching",
-    description: "The RESET Method™ for navigating underperformance.",
-    color: "pink",
+    description: "The RESET Method® for navigating underperformance.",
+    color: "#E91E8C",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
   },
 ];
 
-// Color mapping for solution cards
-const colorClasses: Record<string, { dot: string }> = {
-  pink: { dot: "#E91E8C" },
-  yellow: { dot: "#FFC425" },
-  green: { dot: "#C4D82E" },
-  blue: { dot: "#3EBCE8" },
-  purple: { dot: "#9333EA" },
-};
-
 const stats = [
-  { value: "25+", label: "Years Experience" },
-  { value: "500+", label: "Leaders Developed" },
-  { value: "50+", label: "Organizations Served" },
-  { value: "100%", label: "Client Satisfaction" },
+  { value: 25, suffix: "+", label: "Years in Leadership Development" },
+  { value: 500, suffix: "+", label: "Leaders Coached Across Industries" },
+  { value: 50, suffix: "+", label: "Organizational Partnerships" },
+  { value: 100, suffix: "%", label: "Client Satisfaction Rating" },
 ];
 
 const testimonials = [
-  {
-    quote:
-      "Wendy is an incredible coach and advocate for her clients. I worked with her for 6 months and found her guidance invaluable. She helped me grow as a professional and gave me tangible tools to use to better myself as a leader. I highly recommend working with Wendy, she is the absolute best!",
-    author: "Teal Inzunza",
-    role: "New York, NY",
-    image: "testimonial-teal.png",
-  },
   {
     quote:
       "Wendy facilitated a board retreat for us. She is a brilliant facilitator whose empathetic approach builds trust quickly. Wendy's superpower is the speed with which she is able to assess needs, navigate dynamics, and coalesce groups around shared goals. We were extremely pleased with the quality and clarity of Wendy's preparation, delivery, and follow up. She is in a class by herself! I would recommend her without hesitation.",
@@ -81,10 +74,24 @@ const testimonials = [
   },
   {
     quote:
+      "Working with Wendy kept me steady in a very, very difficult year. And not just me, but my colleague as well. The relationship has changed the emotionality of the workplace, allowing for better collaboration and better outcomes.",
+    author: "Emily Kurtz",
+    role: "Brooklyn, NY",
+    image: "testimonial-emily.png",
+  },
+  {
+    quote:
       "Wendy Perdomo is in a class by herself; they truly broke the \"mold\" with her. Ms. Perdomo's level of expertise, compassion and ability to engage, inform and foster meaningful connections, and discussion, sets her apart from other coaches and facilitators. Her ability to connect with people and ensure that those she is working with get the most out of any engagement is truly unparalleled. She creates a collaborative atmosphere that is also thought provoking. I can't thank her enough for creating a space where growth and learning could thrive. It has been both an honor and privilege to work with Wendy. I have left all our interactions inspired and excited for what is yet to come. Wendy is a thoughtful leader who truly cares about supporting and developing her team, her colleagues, her clients and any organization that she serves. She is a high impact leader who authentically mentors and coaches. I can not recommend her enough!",
     author: "Tanya Ramos-Puig",
     role: "Florida",
     image: "testimonial-tanya.png",
+  },
+  {
+    quote:
+      "Wendy is an incredible coach and advocate for her clients. I worked with her for 6 months and found her guidance invaluable. She helped me grow as a professional and gave me tangible tools to use to better myself as a leader. I highly recommend working with Wendy, she is the absolute best!",
+    author: "Teal Inzunza",
+    role: "New York, NY",
+    image: "testimonial-teal.png",
   },
   {
     quote:
@@ -106,13 +113,6 @@ const testimonials = [
     author: "Catarina Campbell",
     role: "Vermont",
     image: "testimonial-catarina.png",
-  },
-  {
-    quote:
-      "Working with Wendy kept me steady in a very, very difficult year. And not just me, but my colleague as well. The relationship has changed the emotionality of the workplace, allowing for better collaboration and better outcomes.",
-    author: "Emily Kurtz",
-    role: "Brooklyn, NY",
-    image: "testimonial-emily.png",
   },
   {
     quote:
@@ -218,74 +218,23 @@ export default function Home() {
       <Header />
 
       <main id="main-content">
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-          {/* Subtle pink gradient background */}
-          <div
-            className="absolute inset-0"
-            style={{ background: "linear-gradient(135deg, #E8F8FD 0%, #ffffff 50%, #F3F0F8 100%)" }}
-          />
-
-          <div className="container-wide relative z-10 py-20 lg:py-32">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Text content */}
-              <div className="text-center lg:text-left">
-                {/* Power words headline */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-[#1A1A1A] leading-[1.1]">
-                  Transform.
-                  <br />
-                  <span className="text-gradient">Elevate.</span>
-                  <br />
-                  Lead.
-                </h1>
-
-                <p className="mt-8 text-xl md:text-2xl text-[#525252] max-w-2xl leading-relaxed">
-                  Empowering organizations to build inclusive cultures where women of color don&apos;t just belong—they thrive.
-                </p>
-
-                {/* Dual CTA */}
-                <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link href="/for-organizations" className="btn-primary">
-                    For Organizations
-                  </Link>
-                  <Link href="/for-individuals" className="btn-secondary">
-                    For Individuals
-                  </Link>
-                </div>
-              </div>
-
-              {/* Photo */}
-              <div className="flex justify-center lg:justify-end">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${siteConfig.basePath}/images/wendy-hero.jpg`}
-                    alt="Wendy Perdomo - Executive Leadership Coach"
-                    className="relative w-full md:w-[500px] lg:w-[600px] xl:w-[700px] h-auto rounded-2xl shadow-xl object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <svg
-              className="w-6 h-6 text-[#A3A3A3]"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </section>
+        {/* Hero Section - Video Background */}
+        <VideoHero
+          videoSrc="videos/wendy-workshop.mp4"
+          posterSrc="images/wendy-hero.jpg"
+          headlineTop="Invest in your leaders."
+          headlineGradient=""
+          subheadline="Invest in the leaders who are already transforming your organization—through executive coaching, keynotes, workshops, and strategic retreats."
+          ctaLabel="Request a Proposal"
+          ctaHref="/contact"
+          secondaryCtaLabel="Download Capabilities Brief"
+          secondaryCtaHref="/cwc-capabilities-statement-v2.html"
+          footerLink={{
+            label: "Looking for individual coaching? Start here →",
+            href: "/for-individuals",
+          }}
+          overlayOpacity={0.5}
+        />
 
         {/* Trusted By - Client Logos Carousel */}
         <section className="section-tight bg-white border-y border-[#E5E5E5] overflow-hidden">
@@ -307,15 +256,18 @@ export default function Home() {
                   <img
                     src={`${siteConfig.basePath}/images/${org.image}`}
                     alt={org.name}
-                    className="max-w-full max-h-full object-contain"
+                    loading="lazy"
+                    width={180}
+                    height={90}
+                    className="max-w-full max-h-[52px] w-auto object-contain"
                   />
                 </div>
               ))}
             </div>
           </div>
           <div className="container-wide">
-            <p className="text-center text-xs text-[#A3A3A3] mt-8">
-              And many more across Fortune 500, Healthcare, Technology, Finance & Non-Profit sectors
+            <p className="text-center text-xs text-[#737373] mt-8">
+              And many more across Fortune 500, Government, Higher Education, Healthcare, Technology, Finance & Non-Profit sectors
             </p>
           </div>
         </section>
@@ -325,12 +277,12 @@ export default function Home() {
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
-                Solutions that
+                Solutions that close
                 <br />
-                <span className="text-gradient">drive change.</span>
+                <span className="text-gradient">leadership gaps.</span>
               </h2>
               <p className="body-large mt-6">
-                Comprehensive programs designed to transform your organization from the inside out.
+                From keynotes to year-long coaching engagements—programs designed to develop, retain, and advance your leaders.
               </p>
             </div>
 
@@ -342,11 +294,14 @@ export default function Home() {
                   href={`/for-organizations#${solution.id}`}
                   className="card-bordered group hover:border-[#3EBCE8] w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
                 >
-                  {/* Color accent dot */}
                   <div
-                    className="w-3 h-3 rounded-full mb-4"
-                    style={{ backgroundColor: colorClasses[solution.color].dot }}
-                  />
+                    className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
+                    style={{ backgroundColor: `${solution.color}15` }}
+                  >
+                    <svg className="w-5 h-5" style={{ color: solution.color }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={solution.icon} />
+                    </svg>
+                  </div>
                   <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
                     {solution.title}
                   </h3>
@@ -371,7 +326,7 @@ export default function Home() {
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-5xl md:text-6xl lg:text-7xl font-semibold text-[#1A1A1A] tracking-tight">
-                    {stat.value}
+                    <AnimatedCounter value={stat.value} suffix={stat.suffix} duration={2000} />
                   </div>
                   <div className="text-base md:text-lg text-[#737373] mt-2">{stat.label}</div>
                 </div>
@@ -395,14 +350,14 @@ export default function Home() {
               </div>
               <div className="space-y-8">
                 <p className="text-xl text-[#A3A3A3] leading-relaxed">
-                  Every organization says they value diversity. We help you live it. Our approach goes beyond checkboxes and compliance to create environments where women of color genuinely thrive in leadership.
+                  Every organization says they value diversity. We help you live it. Our approach goes beyond checkboxes and compliance to create environments where all leaders genuinely thrive.
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Customized programs for your unique challenges",
-                    "Measurable outcomes that matter",
-                    "Ongoing support beyond the workshop",
-                    "Real expertise, real experience, real results",
+                    "Customized engagements scoped to your organization's goals and timeline",
+                    "Measurable outcomes tied to retention, engagement, and leadership readiness",
+                    "Post-engagement strategic debriefs and sustained support",
+                    "25+ years of cross-industry expertise across 50+ organizations",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[#D4D4D4]">
                       <svg
@@ -434,27 +389,77 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Individual Coaching Section */}
-        <section className="section bg-white">
+        {/* Individual Coaching — Full Section */}
+        <section className="section bg-[#F9F9F9]">
           <div className="container-wide">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
-                For Individuals
-              </p>
+            <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
-                You already have everything you need.
+                Coaching built
+                <br />
+                <span className="text-gradient">for you.</span>
               </h2>
-              <p className="body-large mt-6 max-w-2xl mx-auto">
-                Executive coaching designed specifically for women of color ready to break through barriers, silence imposter syndrome, and step fully into their power.
+              <p className="body-large mt-6">
+                1:1 and group coaching programs designed exclusively for women of color ready to lead with clarity, confidence, and intention.
               </p>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/executive-coaching" className="btn-secondary">
-                  Executive Coaching
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6">
+              {[
+                {
+                  title: "Leadership Clarity Session",
+                  description: "A focused 90-minute deep dive to identify your biggest leadership challenge and leave with a clear action plan.",
+                  color: "#E91E8C",
+                  icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+                  href: "/for-individuals#clarity-session",
+                },
+                {
+                  title: "90-Day Momentum Sprint",
+                  description: "Six private coaching sessions over 90 days to build executive presence, navigate key challenges, and accelerate your next move.",
+                  color: "#3EBCE8",
+                  icon: "M13 10V3L4 14h7v7l9-11h-7z",
+                  href: "/for-individuals#momentum-sprint",
+                },
+                {
+                  title: "Executive Leadership Coaching",
+                  description: "Our flagship 1:1 premium program — sustained coaching over six months to transform how you lead, communicate, and advance.",
+                  color: "#FFC425",
+                  icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+                  href: "/for-individuals#executive-program",
+                },
+                {
+                  title: "Executive Leadership Lab",
+                  description: "Community-powered coaching with monthly live sessions, leadership labs, and peer accountability — at an accessible price point.",
+                  color: "#9333EA",
+                  icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
+                  href: "/for-individuals#coaching-lab",
+                },
+              ].map((program) => (
+                <Link
+                  key={program.title}
+                  href={program.href}
+                  className="card-bordered group hover:border-[#E91E8C] w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+                >
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
+                    style={{ backgroundColor: `${program.color}15` }}
+                  >
+                    <svg className="w-5 h-5" style={{ color: program.color }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={program.icon} />
+                    </svg>
+                  </div>
+                  <h3 className="heading-card group-hover:text-[#E91E8C] transition-colors">
+                    {program.title}
+                  </h3>
+                  <p className="text-[#737373] mt-2">{program.description}</p>
+                  <span className="link-arrow mt-6 text-sm">Learn more</span>
                 </Link>
-                <Link href="/for-individuals" className="btn-secondary">
-                  View All Programs
-                </Link>
-              </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link href="/for-individuals" className="btn-primary">
+                Explore All Individual Programs
+              </Link>
             </div>
           </div>
         </section>
@@ -479,43 +484,22 @@ export default function Home() {
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
-                Free Resources
+                Resources
               </p>
               <h2 className="heading-display">
-                Tools to help you
+                Insights &
                 <br />
-                <span className="text-gradient">lead with confidence.</span>
+                <span className="text-gradient">Resources.</span>
               </h2>
               <p className="body-large mt-6">
-                Start your leadership journey with these complimentary resources.
+                Tools and frameworks for HR leaders, L&D professionals, and executives building inclusive cultures.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {/* Promotion Readiness Scorecard */}
+              {/* CWC Capabilities Statement */}
               <a
-                href="https://coachwendycwc.github.io/CWC-automation-platform/cwc-executive-lab/promotion-readiness-scorecard.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
-              >
-                <div className="w-12 h-12 bg-[#E8F8FD] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#3EBCE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                  </svg>
-                </div>
-                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
-                  Promotion Readiness Scorecard
-                </h3>
-                <p className="text-[#737373] mt-2 flex-grow">
-                  A 2-minute assessment that evaluates your visibility, strategic positioning, and confidence across 5 key dimensions. Get your personalized score instantly.
-                </p>
-                <span className="link-arrow mt-6 text-sm">Take the assessment →</span>
-              </a>
-
-              {/* Confidence Resource Tool */}
-              <a
-                href={`${siteConfig.basePath}/confidence-resource-tool.pdf`}
+                href={`${siteConfig.basePath}/confidence-building-tool.html`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
@@ -526,12 +510,33 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
-                  Confidence Resource Tool
+                  Confidence Building Tool
                 </h3>
                 <p className="text-[#737373] mt-2 flex-grow">
                   A practical guide with tools and strategies to build unshakable confidence in your leadership. Download your free copy.
                 </p>
-                <span className="link-arrow mt-6 text-sm">Download PDF →</span>
+                <span className="link-arrow mt-6 text-sm">Download free →</span>
+              </a>
+
+              {/* Promotion Readiness Scorecard */}
+              <a
+                href="/scorecard.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
+              >
+                <div className="w-12 h-12 bg-[#FFF4E8] rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#FFC425]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                </div>
+                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
+                  Promotion Readiness Scorecard
+                </h3>
+                <p className="text-[#737373] mt-2 flex-grow">
+                  A 2-minute assessment that evaluates visibility, strategic positioning, and confidence across 5 key dimensions.
+                </p>
+                <span className="link-arrow mt-6 text-sm">Take the assessment →</span>
               </a>
 
               {/* LinkedIn Newsletter */}
@@ -562,14 +567,17 @@ export default function Home() {
         <section className="section bg-white">
           <div className="container-tight text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A]">
-              Ready to transform?
+              Ready to invest in your leaders?
             </h2>
-            <p className="body-large mt-6 max-w-xl mx-auto">
-              Whether you&apos;re an organization seeking culture change or an individual ready for breakthrough—we&apos;re here.
+            <p className="body-large mt-6 max-w-2xl mx-auto">
+              From a single keynote to a year-long coaching engagement, we design programs that fit your organization&apos;s goals, culture, and budget.
             </p>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
-                Start the Conversation
+                Request a Proposal
+              </Link>
+              <Link href="/schedule/organizations/" className="btn-secondary">
+                Schedule a Consultation
               </Link>
             </div>
           </div>

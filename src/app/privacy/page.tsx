@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy policy for Coaching Women of Color. Learn how we collect, use, and protect your personal information.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/privacy/",
+  },
 };
 
 export default function PrivacyPage() {

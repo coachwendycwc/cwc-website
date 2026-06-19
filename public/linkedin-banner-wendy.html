@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1584">
+<title>LinkedIn Banner — Wendy Perdomo | Coaching Women of Color</title>
+<style>
+  /* ================================================
+     LinkedIn Banner: 1584 x 396 px
+     Safe zone: center 1350 x 220 px
+     Profile photo overlap: bottom-left ~400x300px
+     ================================================ */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  body {
+    width: 1584px;
+    height: 396px;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .banner {
+    position: relative;
+    width: 1584px;
+    height: 396px;
+    background: linear-gradient(135deg, #0D0D0D 0%, #1A1A2E 40%, #16213E 70%, #0D0D0D 100%);
+    overflow: hidden;
+  }
+
+  /* ---- Background Elements ---- */
+
+  /* Wendy's speaking photo — left side */
+  .bg-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 620px;
+    height: 396px;
+    object-fit: cover;
+    object-position: 60% top;
+    opacity: 0.4;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  }
+
+  /* Accent glow — hot pink */
+  .glow-pink {
+    position: absolute;
+    top: -120px;
+    left: 600px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(233, 30, 140, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  /* Accent glow — sky blue */
+  .glow-blue {
+    position: absolute;
+    bottom: -150px;
+    right: 100px;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(62, 188, 232, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  /* Subtle pink vertical accent */
+  .accent-line {
+    position: absolute;
+    top: 50px;
+    left: 520px;
+    width: 3px;
+    height: 296px;
+    background: linear-gradient(to bottom, #E91E8C, rgba(233, 30, 140, 0.15), transparent);
+    opacity: 0.4;
+    border-radius: 2px;
+  }
+
+  /* ---- Main Content ---- */
+  .content {
+    position: absolute;
+    top: 0;
+    left: 560px;
+    right: 0;
+    height: 396px;
+    display: flex;
+    align-items: center;
+    padding: 0 70px 0 30px;
+  }
+
+  .content-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+    margin-left: 40px;
+    flex-shrink: 0;
+  }
+
+  /* Tagline label */
+  .tagline-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #E91E8C;
+    margin-bottom: 10px;
+  }
+
+  /* Primary headline */
+  .headline {
+    font-size: 42px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+  .headline em {
+    font-style: normal;
+    color: #3EBCE8;
+  }
+
+  /* Sub-headline: services */
+  .services {
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .services .dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    display: inline-block;
+  }
+
+  /* Client logos row */
+  .logos-row {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logos-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.25);
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+
+  .client-names {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .client-names .sep {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 10px;
+  }
+
+  /* ---- CTA Block (right side) ---- */
+  .cta-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .qr-wrapper {
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 12px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  .qr-wrapper img {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+  }
+
+  .cta-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #E91E8C;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .cta-url {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  /* ---- Bottom accent bar (brand colors) ---- */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right,
+      #E91E8C 0%, #E91E8C 25%,
+      #3EBCE8 25%, #3EBCE8 50%,
+      #FFC425 50%, #FFC425 75%,
+      #C4D82E 75%, #C4D82E 100%
+    );
+  }
+
+  /* ---- Registered trademark ---- */
+  .trademark {
+    font-size: 9px;
+    vertical-align: super;
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <!-- Background: Wendy speaking (subtle, left side) -->
+  <img src="images/wendy-hero.jpg" alt="" class="bg-photo" />
+
+  <!-- Background effects -->
+  <div class="glow-pink"></div>
+  <div class="glow-blue"></div>
+  <div class="accent-line"></div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- LEFT: Headline + services + logos -->
+    <div class="content-left">
+      <p class="tagline-label">Executive Coaching &amp; Leadership Development</p>
+
+      <h1 class="headline">
+        Elevating Women of Color<br/>
+        Into <em>Senior Leadership</em>
+      </h1>
+
+      <div class="services">
+        <span>Keynote Speaking</span>
+        <span class="dot"></span>
+        <span>Executive Coaching</span>
+        <span class="dot"></span>
+        <span>Workshops &amp; Retreats</span>
+        <span class="dot"></span>
+        <span>RESET Method<sup class="trademark">&reg;</sup></span>
+      </div>
+
+      <!-- Client Names Row -->
+      <div class="logos-row">
+        <span class="logos-label">Trusted by</span>
+        <div class="client-names">
+          <span>Bloomberg</span>
+          <span class="sep">|</span>
+          <span>Genentech</span>
+          <span class="sep">|</span>
+          <span>Johnson &amp; Johnson</span>
+          <span class="sep">|</span>
+          <span>Novo Nordisk</span>
+          <span class="sep">|</span>
+          <span>VaynerMedia</span>
+          <span class="sep">|</span>
+          <span>Colgate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: QR Code block -->
+    <div class="content-right">
+      <div class="cta-block">
+        <span class="cta-label">Subscribe to Newsletter</span>
+        <div class="qr-wrapper">
+          <img src="images/qr-newsletter.svg" alt="Scan to subscribe to Leading While WOC newsletter" />
+        </div>
+        <span class="cta-url">linkedin.com/newsletters/leading-while-woc</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom brand accent bar -->
+  <div class="bottom-bar"></div>
+</div>
+
+</body>
+</html>

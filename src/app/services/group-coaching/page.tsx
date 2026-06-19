@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Group Coaching for Leaders",
   description:
     "Leadership development at scale. Build capability across your organization with group coaching that creates shared language, peer accountability, and lasting behavior change.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/group-coaching/",
+  },
 };
 
 const outcomes = [
@@ -25,9 +28,26 @@ const topics = [
   "Navigating conflict, team dynamics, and performance challenges",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Group Coaching for Leaders",
+  description: "Leadership development at scale. Build capability across your organization with group coaching that creates shared language, peer accountability, and lasting behavior change.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/group-coaching/",
+};
+
 export default function GroupCoachingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">
@@ -35,9 +55,7 @@ export default function GroupCoachingPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#FFF8E8] to-white">
           <div className="container-wide">
             <div className="max-w-3xl">
-              <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Solutions
-              </Link>
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions", href: "/for-organizations" }, { label: "Group Coaching" }]} />
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                 Group Coaching
               </h1>
@@ -46,7 +64,7 @@ export default function GroupCoachingPage() {
               </p>
               <div className="mt-10">
                 <Link href="/contact" className="btn-primary">
-                  Get a Custom Quote
+                  Request a Coaching Proposal
                 </Link>
               </div>
             </div>
@@ -126,7 +144,7 @@ export default function GroupCoachingPage() {
               {[
                 { title: "By Level", description: "Cohorts designed for emerging, mid-level, or senior leaders with relevant challenges." },
                 { title: "Virtual or In-Person", description: "Delivered where it works best for your team—remote, on-site, or hybrid." },
-                { title: "Short or Extended", description: "From focused 3-session sprints to longer engagements for deeper transformation." },
+                { title: "Short or Extended", description: "From focused 6-session sprints to longer engagements for deeper transformation." },
               ].map((format) => (
                 <div key={format.title} className="text-center">
                   <h3 className="text-lg font-semibold text-[#1A1A1A]">{format.title}</h3>
@@ -140,7 +158,7 @@ export default function GroupCoachingPage() {
         {/* Testimonial */}
         <section className="section bg-white">
           <div className="container-wide max-w-3xl mx-auto">
-            <div className="bg-[#F8FAFB] rounded-2xl p-8 lg:p-10">
+            <div className="bg-[#F5F5F5] rounded-2xl p-8 lg:p-10">
               <blockquote className="text-lg text-[#525252] leading-relaxed">
                 &ldquo;I was able to accomplish nearly everything in my action planning document. At the beginning of the cohort, I was jobless and depressed. Being a part of the cohort and working on my action planning document allowed me to achieve my goals alongside others who would hold me accountable. If there is anyone I would recommend as a coach, it&apos;s Wendy. She challenged me to not make excuses and to hold myself accountable. She reminded me that there is a beautiful life on the other side of fear.&rdquo;
               </blockquote>
@@ -171,7 +189,7 @@ export default function GroupCoachingPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Get a Custom Quote
+                Request a Coaching Proposal
               </Link>
             </div>
           </div>

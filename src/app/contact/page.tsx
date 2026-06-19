@@ -1,38 +1,77 @@
 "use client";
 
-import { useState } from "react";
-import { Header, Footer } from "@/components";
+import { useState, useCallback } from "react";
+import emailjs from "@emailjs/browser";
+import { Header, Footer, Toast } from "@/components";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
+    role: "",
+    teamSize: "",
     type: "organization",
     service: "",
     message: "",
   });
 
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastType, setToastType] = useState<"success" | "error">("success");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleCloseToast = useCallback(() => setShowToast(false), []);
+
   const organizationalServices = [
-    "Executive Coaching",
-    "Group Coaching",
     "Keynote Speaking",
-    "Workshops & Webinars",
-    "Virtual Series",
     "Strategic Leadership & Board Retreats",
-    "Performance Coaching (RESET Method™)",
+    "Executive Coaching",
+    "Workshops & Webinars",
+    "Group Coaching",
+    "Virtual Series",
+    "Performance Coaching (RESET Method®)",
     "Other",
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `New Inquiry from ${formData.name}${formData.service ? ` — ${formData.service}` : ""}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}\nInterested In: ${formData.type === "organization" ? "Organizational Services" : "Individual Coaching"}\nService: ${formData.service || "N/A"}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:wendy@coachingwomenofcolor.com?subject=${subject}&body=${body}`;
+    setIsSubmitting(true);
+
+    const templateParams = {
+      to_email: "wendy@coachingwomenofcolor.com",
+      from_name: formData.name,
+      from_email: formData.email,
+      reply_to: formData.email,
+      company: formData.company || "N/A",
+      role: formData.role || "N/A",
+      team_size: formData.teamSize || "N/A",
+      interest_type: formData.type === "organization" ? "Organizational Services" : "Individual Coaching",
+      service: formData.service || "N/A",
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_n62dsgh",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_xl8go0s",
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "y6UfKicpoRY2LvZNa"
+      );
+      setToastMessage("Message sent successfully! We'll get back to you within 1 business day.");
+      setToastType("success");
+      setShowToast(true);
+      setFormData({ name: "", email: "", company: "", role: "", teamSize: "", type: "organization", service: "", message: "" });
+    } catch (error: unknown) {
+      const err = error as { status?: number; text?: string };
+      console.error("EmailJS Error Status:", err?.status);
+      console.error("EmailJS Error Text:", err?.text);
+      console.error("EmailJS Error Full:", JSON.stringify(error));
+      setToastMessage("Something went wrong. Please try again or email us directly at wendy@coachingwomenofcolor.com");
+      setToastType("error");
+      setShowToast(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -41,7 +80,7 @@ export default function ContactPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
+        <section className="pt-24 md:pt-32 pb-12 md:pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
               <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
@@ -108,34 +147,53 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="role" className="block text-sm font-medium text-[#1A1A1A] mb-2">
+                        Role/Title
+                      </label>
+                      <input
+                        type="text"
+                        id="role"
+                        placeholder="e.g., VP of HR, L&D Director"
+                        className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all"
+                        value={formData.role}
+                        onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="teamSize" className="block text-sm font-medium text-[#1A1A1A] mb-2">
+                        Team Size
+                      </label>
+                      <select
+                        id="teamSize"
+                        className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all bg-white"
+                        value={formData.teamSize}
+                        onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
+                      >
+                        <option value="">Select...</option>
+                        <option value="Individual">Individual</option>
+                        <option value="Team (5-20)">Team (5-20)</option>
+                        <option value="Department (20-100)">Department (20-100)</option>
+                        <option value="Organization-wide (100+)">Organization-wide (100+)</option>
+                      </select>
+                    </div>
+                  </div>
+
                   <div>
-                    <label className="block text-sm font-medium text-[#1A1A1A] mb-2">
+                    <label htmlFor="type" className="block text-sm font-medium text-[#1A1A1A] mb-2">
                       I&apos;m interested in *
                     </label>
-                    <div className="flex gap-4">
-                      <label className="flex items-center gap-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="type"
-                          value="organization"
-                          checked={formData.type === "organization"}
-                          onChange={(e) => setFormData({ ...formData, type: e.target.value, service: "" })}
-                          className="w-4 h-4 text-[#3EBCE8] focus:ring-[#3EBCE8]"
-                        />
-                        <span className="text-[#525252]">Organizational Services</span>
-                      </label>
-                      <label className="flex items-center gap-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="type"
-                          value="individual"
-                          checked={formData.type === "individual"}
-                          onChange={(e) => setFormData({ ...formData, type: e.target.value, service: "" })}
-                          className="w-4 h-4 text-[#3EBCE8] focus:ring-[#3EBCE8]"
-                        />
-                        <span className="text-[#525252]">Individual Coaching</span>
-                      </label>
-                    </div>
+                    <select
+                      id="type"
+                      required
+                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all bg-white"
+                      value={formData.type}
+                      onChange={(e) => setFormData({ ...formData, type: e.target.value, service: "" })}
+                    >
+                      <option value="organization">Organizational Services</option>
+                      <option value="individual">Individual Coaching</option>
+                    </select>
                   </div>
 
                   {formData.type === "organization" && (
@@ -168,23 +226,34 @@ export default function ContactPage() {
                       id="message"
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 border border-[#E5E5E5] rounded-xl focus:border-[#3EBCE8] focus:ring-2 focus:ring-[#3EBCE8]/20 outline-none transition-all resize-y"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us about your goals and how we can help..."
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary w-full sm:w-auto">
-                    Send Message
+                  <button type="submit" disabled={isSubmitting} className="btn-primary w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:transform-none">
+                    {isSubmitting ? (
+                      <span className="inline-flex items-center gap-2">
+                        <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : "Send Message"}
                   </button>
+                  <p className="text-sm text-[#737373] mt-3">
+                    Typical response time: within 1 business day.
+                  </p>
                 </form>
               </div>
 
               {/* Contact Info */}
-              <div className="lg:pl-8">
-                <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12">
-                  <h3 className="heading-card mb-6">Other Ways to Connect</h3>
+              <div>
+                <div className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-12 lg:sticky lg:top-32">
+                  <h2 className="heading-card mb-6">Other Ways to Connect</h2>
 
                   <div className="space-y-6">
                     <div>
@@ -209,6 +278,23 @@ export default function ContactPage() {
                         </a>
                       </div>
                     </div>
+
+                    <div className="border-t border-[#E5E5E5] pt-6">
+                      <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
+                        For Your Team
+                      </p>
+                      <a
+                        href="/cwc-capabilities-statement-v2.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[#525252] hover:text-[#3EBCE8] transition-colors text-sm"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download our Capabilities Statement
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -218,6 +304,13 @@ export default function ContactPage() {
       </main>
 
       <Footer />
+
+      <Toast
+        message={toastMessage}
+        type={toastType}
+        show={showToast}
+        onClose={handleCloseToast}
+      />
     </>
   );
 }

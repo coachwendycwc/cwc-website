@@ -1,11 +1,14 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Executive Coaching for Women of Color",
   description:
     "1:1 executive coaching for women of color professionals ready to break through barriers, silence imposter syndrome, and step fully into their leadership power.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/executive-coaching/",
+  },
 };
 
 export default function ExecutiveCoachingPage() {
@@ -18,9 +21,7 @@ export default function ExecutiveCoachingPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
-              <Link href="/for-individuals" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                ← Back to Individual Services
-              </Link>
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Coaching", href: "/for-individuals" }, { label: "Executive Coaching" }]} />
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                 Executive Coaching
               </h1>
@@ -29,7 +30,7 @@ export default function ExecutiveCoachingPage() {
                 roles with confidence and authenticity.
               </p>
               <div className="mt-10">
-                <Link href="/book" className="btn-primary">
+                <Link href="/schedule/" className="btn-primary">
                   Book a Discovery Call
                 </Link>
               </div>
@@ -199,7 +200,7 @@ export default function ExecutiveCoachingPage() {
               can help you achieve your goals.
             </p>
             <div className="mt-10">
-              <Link href="/book" className="btn-primary">
+              <Link href="/schedule/" className="btn-primary">
                 Book Your Discovery Call
               </Link>
             </div>

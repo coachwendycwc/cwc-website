@@ -4,9 +4,12 @@ import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "For Organizations",
+  title: "Leadership Development for Organizations | Coaching Women of Color®",
   description:
-    "High-impact coaching, keynote speaking, workshops, retreats, and performance coaching for organizations. Customized leadership development programs from Coaching Women of Color.",
+    "Retain and advance women of color in your organization. Keynote speaking, executive coaching, workshops, retreats, and the RESET Method® — trusted by Fortune 500 companies, nonprofits, and universities.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/for-organizations/",
+  },
 };
 
 const clientLogos = [
@@ -40,128 +43,6 @@ const clientLogos = [
   { name: "Women in Housing & Finance", image: "logos/Women-in-Housing-and-Finance.jpg" },
 ];
 
-const solutions = [
-  {
-    id: "executive-coaching",
-    title: "Executive Coaching for Leaders",
-    subtitle: "1:1 High-Impact Coaching",
-    description: "Senior leaders and high-potential talent who need a confidential, strategic space to think clearly, lead with confidence, and translate insight into action.",
-    outcomes: [
-      "Clear leadership identity and decision-making confidence",
-      "Stronger communication, influence, and executive presence",
-      "Boundary-setting and sustainable performance (without burnout)",
-      "Strategies to navigate bias, conflict, and high-stakes conversations",
-      "A leadership approach that improves trust, accountability, and team outcomes",
-    ],
-    details: "Sessions are grounded in real workplace dynamics—stakeholder management, decision-making, boundaries, team performance, and navigating bias and politics without losing authenticity.",
-    formats: ["Virtual (Zoom)", "Customized cadence", "Goal-setting & progress tracking"],
-  },
-  {
-    id: "group-coaching",
-    title: "Group Coaching for Leaders",
-    subtitle: "Leadership Development at Scale",
-    description: "Organizations wanting to develop leaders at scale while creating shared language and stronger peer connection across the organization.",
-    outcomes: [
-      "Practical strategies leaders can apply immediately",
-      "Increased confidence and clarity in leadership decisions",
-      "Peer support and accountability that accelerates growth",
-      "Stronger ability to lead teams with trust and consistency",
-    ],
-    topics: [
-      "Leading through change and uncertainty",
-      "Executive presence, influence, and visibility",
-      "Communication, feedback, and courageous conversations",
-      "Boundaries, workload management, and sustainable leadership",
-      "Navigating conflict, team dynamics, and performance challenges",
-    ],
-    formats: ["By level (emerging, mid, senior)", "Virtual or in-person", "Short series or longer engagement"],
-  },
-  {
-    id: "keynote-speaking",
-    title: "Keynote Speaking",
-    subtitle: "From Awareness to Action",
-    description: "Organizations wanting an engaging, high-impact experience that sparks real conversation and meaningful action.",
-    outcomes: [
-      "Clear insights and language they can use immediately",
-      "Practical frameworks for communication and leadership decisions",
-      "A renewed sense of responsibility and possibility",
-      "Action steps that support culture change, not just motivation",
-    ],
-    topics: [
-      "Leading with executive presence and influence",
-      "Navigating workplace bias and microaggressions",
-      "Psychological safety: what it is, what it isn't, and how to build it",
-      "Communication that strengthens trust and performance",
-      "Confidence, visibility, and leading without shrinking",
-    ],
-    formats: ["In-person or virtual", "Keynote + Q&A", "Keynote + workshop"],
-  },
-  {
-    id: "workshops",
-    title: "Customized Webinars & Workshops",
-    subtitle: "Interactive Learning Experiences",
-    description: "Leadership teams, people managers, ERGs, high-potential cohorts, or cross-functional teams needing practical skill-building.",
-    outcomes: [
-      "Customized to your goals, audience, and culture",
-      "Trauma-informed facilitation that supports participation and trust",
-      "Tools, templates, and action steps leaders can use immediately",
-      "Options for pre-surveys and follow-up resources",
-    ],
-    topics: [
-      "Psychological safety and team norms",
-      "Communication, feedback, and conflict navigation",
-      "Executive presence and leadership visibility",
-      "Bias navigation and inclusive leadership practices",
-      "Building high-performing teams and accountability",
-    ],
-    formats: ["Standalone webinar", "Interactive workshop", "Workshop + coaching series"],
-  },
-  {
-    id: "virtual-series",
-    title: "Multi-Session Virtual Series",
-    subtitle: "Sustained Behavior Change",
-    description: "Organizations wanting sustainable leadership development, measurable growth over time, and a clear path from learning to implementation.",
-    outcomes: [
-      "Stronger communication and leadership consistency",
-      "Increased trust, accountability, and team alignment",
-      "Improved ability to navigate conflict and high-stakes conversations",
-      "Practical tools leaders can use across real scenarios",
-      "Momentum and reinforcement that supports culture change",
-    ],
-    details: "Leaders return to the room, apply what they learned, and refine their approach with support. Series can be designed for leadership cohorts, people managers, high-potential groups, or cross-functional teams.",
-    formats: ["3+ sessions (60-90 min each)", "Pre-session surveys", "Workbooks & action plans", "Optional coaching add-ons"],
-  },
-  {
-    id: "strategic-retreats",
-    title: "Strategic Leadership & Board Retreats",
-    subtitle: "Align, Strategize, and Move Forward Together",
-    description: "Executive teams, boards of directors, and senior leadership groups seeking clarity, alignment, and actionable strategy in a focused, facilitated environment.",
-    outcomes: [
-      "Aligned vision and shared priorities across leadership",
-      "Strengthened trust, communication, and team cohesion",
-      "Clear action plans with defined ownership and accountability",
-      "Renewed energy and commitment to organizational goals",
-      "Strategic clarity on critical decisions and direction",
-    ],
-    details: "Retreats are fully customized to your team's needs—whether you're navigating a transition, setting annual strategy, resolving tension, or building stronger board dynamics. We create a space where honest dialogue leads to meaningful outcomes.",
-    formats: ["Half-day or full-day sessions", "In-person or hybrid", "Pre-retreat assessments", "Post-retreat action planning"],
-  },
-  {
-    id: "performance-coaching",
-    title: "Performance-Based Coaching",
-    subtitle: "The RESET Method™",
-    description: "Leaders navigating team member(s) that are underperforming who need a structured, confidential coaching framework that drives accountability and real behavior change—without defaulting to avoidance or escalation.",
-    outcomes: [
-      "A team member who takes full ownership of their performance",
-      "A leader who gains confidence in managing underperformance",
-      "Measurable shifts in behavior, communication, and accountability",
-      "Alignment between leader and team member that closes performance gaps",
-      "Talent retained instead of replaced—saving your organization time and cost",
-    ],
-    details: "The RESET Method™ doesn't choose sides—it closes gaps. By engaging both the leader and the team member from the start, this framework surfaces blind spots, builds shared understanding, and produces real, lasting shifts in how people show up and deliver.",
-    formats: ["Virtual (Zoom)", "Dual-engagement model", "Mid-point checkpoint", "Comprehensive outcome summary"],
-  },
-];
 
 const processSteps = [
   {
@@ -218,19 +99,19 @@ export default function ForOrganizationsPage() {
                   For Organizations
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                  Build cultures where
+                  Your organization needs leaders who
                   <br />
-                  <span className="text-gradient">everyone thrives.</span>
+                  <span className="text-gradient">stay, grow, and deliver.</span>
                 </h1>
                 <p className="mt-6 text-xl text-[#525252] leading-relaxed">
                   High-impact coaching and development programs that strengthen leaders
-                  and transform culture. Every engagement is customized to your needs.
+                  and transform culture. Every engagement is scoped, measured, and built for your timeline.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                  <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                    Book a Discovery Call
-                  </a>
-                  <a href={`${siteConfig.basePath}/cwc-capabilities-statement.pdf`} download className="btn-secondary">
+                  <Link href="/contact" className="btn-primary">
+                    Request a Proposal
+                  </Link>
+                  <a href={`${siteConfig.basePath}/cwc-capabilities-statement-v2.html`} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                     Download Capabilities Statement
                   </a>
                 </div>
@@ -262,8 +143,8 @@ export default function ForOrganizationsPage() {
                 <span className="text-gradient">your organization faces.</span>
               </h2>
               <p className="body-large mt-6">
-                Leaders and HR executives are seeing these patterns across their
-                teams — and traditional approaches aren&apos;t solving them.
+                These challenges cost organizations billions annually in turnover, disengagement, and lost productivity. Leaders and HR executives are seeing these patterns across their
+                teams—and traditional approaches aren&apos;t solving them.
               </p>
             </div>
 
@@ -273,37 +154,58 @@ export default function ForOrganizationsPage() {
                   title: "Retention of Top Talent",
                   description:
                     "You're losing high-performing women of color to competitors who invest in their development. The cost of turnover goes far beyond recruitment — it erodes institutional knowledge and team morale.",
+                  icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+                  color: "#E91E8C",
                 },
                 {
                   title: "Disengaged Teams",
                   description:
                     "Low morale, quiet quitting, and a lack of psychological safety are silently undermining your culture. People show up but aren't fully present, and trust across teams is fragile.",
+                  icon: "M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636",
+                  color: "#3EBCE8",
                 },
                 {
                   title: "Performance & Productivity Gaps",
                   description:
                     "Staff members are struggling to execute the work with a manager who is uncertain or has tried everything and is unable to move the needle. Without the right coaching framework, both sides stay stuck.",
+                  icon: "M13 17h8m0 0V9m0 8l-8-8-4 4-6-6",
+                  color: "#FFC425",
                 },
                 {
                   title: "Leadership Pipeline Gaps",
                   description:
                     "There's no diverse bench for senior roles. High-potential leaders aren't being developed intentionally, and the path from mid-level to executive remains unclear and inequitable.",
+                  icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
+                  color: "#9333EA",
                 },
                 {
                   title: "Communication Breakdowns",
                   description:
                     "Conflict avoidance, silos, and a lack of trust are creating friction across teams. Leaders struggle to have courageous conversations, and unresolved tension compounds over time.",
+                  icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z",
+                  color: "#C4D82E",
                 },
                 {
                   title: "Manager Ineffectiveness",
                   description:
                     "Managers were promoted for technical skills but struggle to lead. They lack the tools for giving feedback, navigating difficult dynamics, and developing their direct reports.",
+                  icon: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z",
+                  color: "#E91E8C",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="bg-white border border-[#E5E5E5] rounded-2xl p-6 shadow-sm"
+                  className="bg-white rounded-2xl p-6 shadow-sm border-l-4"
+                  style={{ borderLeftColor: item.color }}
                 >
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
+                    style={{ backgroundColor: `${item.color}15` }}
+                  >
+                    <svg className="w-5 h-5" style={{ color: item.color }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+                    </svg>
+                  </div>
                   <h3 className="font-semibold text-[#1A1A1A] text-lg mb-3">
                     {item.title}
                   </h3>
@@ -314,7 +216,12 @@ export default function ForOrganizationsPage() {
               ))}
             </div>
             <div className="flex justify-center mt-6">
-              <div className="bg-white border border-[#E5E5E5] rounded-2xl p-6 shadow-sm md:max-w-md lg:max-w-lg">
+              <div className="bg-white rounded-2xl p-6 shadow-sm border-l-4 md:max-w-md lg:max-w-lg" style={{ borderLeftColor: "#3EBCE8" }}>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: "rgba(62, 188, 232, 0.08)" }}>
+                  <svg className="w-5 h-5 text-[#3EBCE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
                 <h3 className="font-semibold text-[#1A1A1A] text-lg mb-3">
                   New Managers in the Storming Phase
                 </h3>
@@ -352,6 +259,9 @@ export default function ForOrganizationsPage() {
                   <img
                     src={`${siteConfig.basePath}/images/${org.image}`}
                     alt={org.name}
+                    loading="lazy"
+                    width={180}
+                    height={90}
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
@@ -369,8 +279,8 @@ export default function ForOrganizationsPage() {
         <section className="section-tight bg-[#F5F5F5]">
           <div className="container-wide">
             <div className="grid md:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {benefits.map((benefit) => (
+                <div key={benefit} className="flex items-start gap-3">
                   <svg
                     className="w-5 h-5 text-[#3EBCE8] flex-shrink-0 mt-1"
                     fill="none"
@@ -399,73 +309,40 @@ export default function ForOrganizationsPage() {
               </p>
             </div>
 
-            <div className="space-y-8">
-              {solutions.map((solution, index) => (
-                <div
-                  key={solution.id}
-                  id={solution.id}
-                  className="bg-[#F5F5F5] rounded-3xl p-8 lg:p-10"
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: "Executive Coaching", subtitle: "1:1 High-Impact Coaching", href: "/services/executive-coaching", icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", color: "#E91E8C" },
+                { title: "Group Coaching", subtitle: "Leadership Development at Scale", href: "/services/group-coaching", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z", color: "#3EBCE8" },
+                { title: "Keynote Speaking", subtitle: "From Awareness to Action", href: "/services/keynote-speaking", icon: "M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z", color: "#FFC425" },
+                { title: "Workshops & Webinars", subtitle: "Interactive Learning Experiences", href: "/services/workshops-webinars", icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", color: "#9333EA" },
+                { title: "Virtual Series", subtitle: "Sustained Behavior Change", href: "/services/virtual-series", icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z", color: "#C4D82E" },
+                { title: "Strategic Retreats", subtitle: "Align, Strategize, Move Forward", href: "/services/strategic-retreats", icon: "M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7", color: "#E91E8C" },
+                { title: "Performance Coaching", subtitle: "The RESET Method®", href: "/services/performance-coaching", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", color: "#3EBCE8" },
+              ].map((solution) => (
+                <Link
+                  key={solution.title}
+                  href={solution.href}
+                  className="group bg-[#F5F5F5] rounded-2xl p-6 hover:shadow-md transition-all hover:bg-white hover:border-[#E5E5E5] border border-transparent"
                 >
-                  <div className="grid lg:grid-cols-3 gap-8">
-                    {/* Left: Title & Description */}
-                    <div>
-                      <span className="text-xs font-semibold uppercase tracking-wider text-[#3EBCE8]">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <h3 className="text-2xl font-semibold text-[#1A1A1A] mt-2">
-                        {solution.title}
-                      </h3>
-                      <p className="text-sm text-[#737373] mt-1">{solution.subtitle}</p>
-                      <p className="text-[#525252] mt-4 leading-relaxed">
-                        <strong>Best for:</strong> {solution.description}
-                      </p>
-                      {solution.details && (
-                        <p className="text-[#737373] mt-3 text-sm leading-relaxed">
-                          {solution.details}
-                        </p>
-                      )}
-                    </div>
-
-                    {/* Middle: Outcomes or Topics */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-[#1A1A1A] uppercase tracking-wider mb-4">
-                        {solution.topics ? "Focus Areas" : "What Leaders Gain"}
-                      </h4>
-                      <ul className="space-y-2">
-                        {(solution.outcomes || solution.topics)?.slice(0, 5).map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <svg
-                              className="w-4 h-4 text-[#3EBCE8] flex-shrink-0 mt-1"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span className="text-sm text-[#525252]">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Right: Formats */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-[#1A1A1A] uppercase tracking-wider mb-4">
-                        How It Works
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {solution.formats.map((format, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1 bg-white text-[#525252] text-sm rounded-full border border-[#E5E5E5]"
-                          >
-                            {format}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                    style={{ backgroundColor: `${solution.color}15` }}
+                  >
+                    <svg className="w-6 h-6" style={{ color: solution.color }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={solution.icon} />
+                    </svg>
                   </div>
-                </div>
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] group-hover:text-[#E91E8C] transition-colors">
+                    {solution.title}
+                  </h3>
+                  <p className="text-sm text-[#737373] mt-1">{solution.subtitle}</p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-[#3EBCE8] mt-4">
+                    Learn more
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
@@ -483,22 +360,10 @@ export default function ForOrganizationsPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              {processSteps.slice(0, 3).map((item) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+              {processSteps.map((item) => (
                 <div key={item.step} className="bg-white rounded-2xl p-6 shadow-sm">
-                  <div className="w-12 h-12 bg-[#1A365D] rounded-lg flex items-center justify-center mb-4 rotate-45">
-                    <span className="text-xl font-bold text-white -rotate-45">{item.step}</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-[#1A1A1A] uppercase tracking-wide">{item.title}</h3>
-                  <p className="text-[#737373] mt-2 text-sm leading-relaxed">{item.description}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {processSteps.slice(3, 6).map((item) => (
-                <div key={item.step} className="bg-white rounded-2xl p-6 shadow-sm">
-                  <div className="w-12 h-12 bg-[#1A365D] rounded-lg flex items-center justify-center mb-4 rotate-45">
+                  <div className="w-12 h-12 bg-[#1A1A1A] rounded-lg flex items-center justify-center mb-4 rotate-45">
                     <span className="text-xl font-bold text-white -rotate-45">{item.step}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-[#1A1A1A] uppercase tracking-wide">{item.title}</h3>
@@ -508,38 +373,60 @@ export default function ForOrganizationsPage() {
             </div>
 
             <div className="text-center mt-12">
-              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Get a Custom Quote
-              </a>
+              <Link href="/contact" className="btn-primary">
+                Request a Proposal
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Service Pages Links */}
-        <section className="section-tight bg-[#F5F5F5]">
+        {/* Enterprise Readiness */}
+        <section className="section bg-white">
           <div className="container-wide">
-            <div className="text-center mb-8">
-              <p className="text-sm font-medium text-[#737373] uppercase tracking-widest">
-                Explore Our Services
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                Enterprise Ready
+              </p>
+              <h2 className="heading-display">
+                Built for <span className="text-gradient">how you work.</span>
+              </h2>
+              <p className="body-large mt-6">
+                We understand the procurement, compliance, and logistics requirements of organizational buyers.
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { name: "Executive Coaching", href: "/services/executive-coaching" },
-                { name: "Group Coaching", href: "/services/group-coaching" },
-                { name: "Keynote Speaking", href: "/services/keynote-speaking" },
-                { name: "Workshops & Webinars", href: "/services/workshops-webinars" },
-                { name: "Virtual Series", href: "/services/virtual-series" },
-                { name: "Strategic Retreats", href: "/services/strategic-retreats" },
-                { name: "Performance Coaching", href: "/services/performance-coaching" },
-              ].map((service) => (
-                <Link
-                  key={service.name}
-                  href={service.href}
-                  className="px-6 py-3 bg-white text-[#525252] rounded-full border border-[#E5E5E5] hover:border-[#3EBCE8] hover:text-[#3EBCE8] transition-all"
-                >
-                  {service.name}
-                </Link>
+                {
+                  title: "Custom Scoping",
+                  description: "Every engagement starts with a discovery process to align on goals, audience, format, and success metrics.",
+                  icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+                },
+                {
+                  title: "Contracting Ready",
+                  description: "W-9, insurance documentation, and capabilities statements available. We work with your procurement process.",
+                  icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+                },
+                {
+                  title: "Flexible Delivery",
+                  description: "Virtual, in-person, or hybrid. Single sessions or multi-month engagements. Designed around your calendar.",
+                  icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
+                },
+                {
+                  title: "Post-Engagement Debrief",
+                  description: "Every engagement concludes with a strategic debrief—key findings, recommendations, and next steps for sustained impact.",
+                  icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+                },
+              ].map((card) => (
+                <div key={card.title} className="bg-[#F5F5F5] rounded-2xl p-6">
+                  <div className="w-10 h-10 bg-[#E8F8FD] rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-5 h-5 text-[#3EBCE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={card.icon} />
+                    </svg>
+                  </div>
+                  <h3 className="font-semibold text-[#1A1A1A] mb-2">{card.title}</h3>
+                  <p className="text-sm text-[#737373] leading-relaxed">{card.description}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -555,9 +442,9 @@ export default function ForOrganizationsPage() {
               Book a discovery call to explore the best-fit format and scope for your team.
             </p>
             <div className="mt-10">
-              <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Book a Discovery Call
-              </a>
+              <Link href="/schedule/organizations/" className="btn-primary">
+                Schedule a Consultation
+              </Link>
             </div>
           </div>
         </section>

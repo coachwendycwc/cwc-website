@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Breadcrumbs } from "@/components";
 import { siteConfig } from "@/config";
 import type { Metadata } from "next";
 
@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Keynote Speaking",
   description:
     "Book Wendy Perdomo for your next conference or event. High-impact keynotes on executive presence, psychological safety, navigating bias, and inclusive leadership.",
+  alternates: {
+    canonical: "https://coachingwomenofcolor.com/services/keynote-speaking/",
+  },
 };
 
 const outcomes = [
@@ -22,11 +25,29 @@ const topics = [
   "Psychological safety: what it is, what it isn't, and how to build it",
   "Communication that strengthens trust and performance",
   "Confidence, visibility, and leading authentically",
+  "Personal branding for leaders",
 ];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Keynote Speaking",
+  description: "High-impact keynotes on executive presence, psychological safety, navigating bias, and inclusive leadership.",
+  provider: {
+    "@type": "Organization",
+    name: "Coaching Women of Color",
+    url: "https://coachingwomenofcolor.com",
+  },
+  url: "https://coachingwomenofcolor.com/services/keynote-speaking/",
+};
 
 export default function KeynoteSpeakingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main id="main-content">
@@ -35,9 +56,7 @@ export default function KeynoteSpeakingPage() {
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Link href="/for-organizations" className="text-sm font-medium text-[#3EBCE8] hover:text-[#1A9FCC] transition-colors">
-                  ← Back to Solutions
-                </Link>
+                <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions", href: "/for-organizations" }, { label: "Keynote Speaking" }]} />
                 <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
                   Keynote Speaking
                 </h1>
@@ -46,7 +65,7 @@ export default function KeynoteSpeakingPage() {
                 </p>
                 <div className="mt-10">
                   <Link href="/contact" className="btn-primary">
-                    Get a Custom Quote
+                    Inquire About Availability
                   </Link>
                 </div>
               </div>
@@ -54,8 +73,8 @@ export default function KeynoteSpeakingPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#C4D82E]/20 to-[#3EBCE8]/20 rounded-3xl blur-2xl" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`${siteConfig.basePath}/images/new/action-summit-talk.jpg`}
-                  alt="Wendy Perdomo delivering a keynote presentation"
+                  src={`${siteConfig.basePath}/images/new/wendy-keynote-panel.jpg`}
+                  alt="Wendy Perdomo speaking on a panel"
                   className="relative w-full h-auto rounded-2xl shadow-xl object-cover"
                 />
               </div>
@@ -101,7 +120,7 @@ export default function KeynoteSpeakingPage() {
         </section>
 
         {/* Topics */}
-        <section className="section gradient-subtle">
+        <section className="section gradient-pink">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
@@ -139,7 +158,7 @@ export default function KeynoteSpeakingPage() {
                 { title: "Keynote + Workshop", duration: "Half day", description: "Combine inspiration with hands-on skill building for deeper impact." },
               ].map((format) => (
                 <div key={format.title} className="text-center">
-                  <p className="text-sm font-medium text-[#C4D82E] uppercase tracking-wider">{format.duration}</p>
+                  <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider">{format.duration}</p>
                   <h3 className="text-lg font-semibold text-[#1A1A1A] mt-2">{format.title}</h3>
                   <p className="text-[#737373] mt-2">{format.description}</p>
                 </div>
@@ -171,6 +190,119 @@ export default function KeynoteSpeakingPage() {
           </div>
         </section>
 
+        {/* Speaker Logistics */}
+        <section className="section bg-white">
+          <div className="container-wide">
+            <div className="grid lg:grid-cols-2 gap-16">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A] mb-8">
+                  What&apos;s Included
+                </h2>
+                <ul className="space-y-4">
+                  {[
+                    "Pre-event discovery call to align on audience, goals, and key messages",
+                    "Customized presentation tailored to your organization and industry",
+                    "Attendee handouts and actionable frameworks",
+                    "Post-event summary with key takeaways and recommended next steps",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-[#C4D82E] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-[#525252]">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A] mb-8">
+                  Logistics
+                </h2>
+                <ul className="space-y-4">
+                  {[
+                    "Available for in-person and virtual events",
+                    "Travel arrangements coordinated upon booking",
+                    "A/V requirements provided in advance",
+                    "Media availability and press coordination as needed",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-[#C4D82E] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-[#525252]">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How to Book */}
+        <section className="section gradient-subtle">
+          <div className="container-wide">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="heading-display">
+                How to <span className="text-gradient">Book</span>
+              </h2>
+              <p className="body-large mt-4">
+                Four simple steps to bring a transformative keynote to your event.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { step: "1", title: "Inquiry", description: "Submit your event details and preferred dates" },
+                { step: "2", title: "Scoping Call", description: "Align on audience, goals, and key messages" },
+                { step: "3", title: "Proposal", description: "Receive a custom proposal and engagement plan" },
+                { step: "4", title: "Confirm", description: "Book, prepare, and get ready for impact" },
+              ].map((item) => (
+                <div key={item.step} className="text-center">
+                  <div className="w-12 h-12 bg-[#C4D82E] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-lg font-bold text-white">{item.step}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#1A1A1A]">{item.title}</h3>
+                  <p className="text-sm text-[#525252] mt-2 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Past Speaking Engagements */}
+        <section className="section bg-white">
+          <div className="container-wide">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="heading-display">
+                Past <span className="text-gradient">Engagements</span>
+              </h2>
+            </div>
+            <div className="flex flex-wrap justify-center items-center gap-8">
+              {[
+                { name: "Proud to Be Latina Empowerment Conference", image: "logos/Proud-To-Be-Latina.jpg" },
+                { name: "Colgate University", image: "logos/Colgate-University.jpg" },
+                { name: "Ellevate Network", image: "logos/Ellevate.jpg" },
+                { name: "TD Bank", image: "logos/TD-Bank.jpg" },
+                { name: "Pet Hills Nutrition", image: "logos/Hills.jpg" },
+                { name: "ATD Maryland", image: "logos/ATD-Maryland.jpg" },
+                { name: "Women in Housing and Finance", image: "logos/Women-in-Housing-and-Finance.jpg" },
+                { name: "NYC Department of Education", image: "logos/NYC-Department-of-Education.jpg" },
+                { name: "SURGE Institute", image: "logos/Surge-Institute.jpg" },
+                { name: "URI NYC", image: "logos/URI-NYC-Urban-Resource-Institute.jpg" },
+              ].map((org) => (
+                <div key={org.name} className="flex items-center justify-center" style={{ width: "140px", height: "70px" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${siteConfig.basePath}/images/${org.image}`}
+                    alt={org.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="section bg-[#1A1A1A] text-white">
           <div className="container-tight text-center">
@@ -182,7 +314,7 @@ export default function KeynoteSpeakingPage() {
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn-primary">
-                Get a Custom Quote
+                Inquire About Availability
               </Link>
             </div>
           </div>

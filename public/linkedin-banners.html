@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1584">
+<title>LinkedIn Banners — Wendy Perdomo | Dark vs Light</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  body {
+    width: 1584px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #f5f5f5;
+  }
+
+  .label {
+    text-align: center;
+    padding: 30px 0 14px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  .label:first-child { padding-top: 40px; }
+
+  /* ================================================
+     SHARED BANNER STYLES
+     1584 x 396 px — LinkedIn spec
+     ================================================ */
+  .banner {
+    position: relative;
+    width: 1584px;
+    height: 396px;
+    overflow: hidden;
+  }
+
+  /* Background photo */
+  .bg-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 620px;
+    height: 396px;
+    object-fit: cover;
+    object-position: 60% top;
+  }
+
+  /* Accent line */
+  .accent-line {
+    position: absolute;
+    top: 50px;
+    left: 520px;
+    width: 3px;
+    height: 296px;
+    border-radius: 2px;
+  }
+
+  /* Content */
+  .content {
+    position: absolute;
+    top: 0;
+    left: 560px;
+    right: 0;
+    height: 396px;
+    display: flex;
+    align-items: center;
+    padding: 0 70px 0 30px;
+  }
+
+  .content-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+    margin-left: 40px;
+    flex-shrink: 0;
+  }
+
+  .tagline-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .headline {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+  .headline em {
+    font-style: normal;
+  }
+
+  .services {
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .services .dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .logos-row {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logos-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+
+  .client-names {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .client-names .sep {
+    font-size: 10px;
+  }
+
+  .cta-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+  }
+
+  .cta-action svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .cta-url {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .cta-tagline {
+    font-size: 10px;
+    font-weight: 500;
+    text-align: right;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .trademark {
+    font-size: 9px;
+    vertical-align: super;
+    opacity: 0.5;
+  }
+
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right,
+      #E91E8C 0%, #E91E8C 25%,
+      #3EBCE8 25%, #3EBCE8 50%,
+      #FFC425 50%, #FFC425 75%,
+      #C4D82E 75%, #C4D82E 100%
+    );
+  }
+
+  /* ================================================
+     OPTION A — DARK (Enterprise / Authority)
+     ================================================ */
+  .banner-dark {
+    background: linear-gradient(135deg, #0D0D0D 0%, #1A1A2E 40%, #16213E 70%, #0D0D0D 100%);
+  }
+
+  .banner-dark .bg-photo {
+    opacity: 0.4;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  }
+
+  .banner-dark .glow-1 {
+    position: absolute;
+    top: -120px;
+    left: 600px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(233, 30, 140, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .banner-dark .glow-2 {
+    position: absolute;
+    bottom: -150px;
+    right: 100px;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(62, 188, 232, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .banner-dark .accent-line {
+    background: linear-gradient(to bottom, #E91E8C, rgba(233, 30, 140, 0.15), transparent);
+    opacity: 0.4;
+  }
+
+  .banner-dark .tagline-label { color: #E91E8C; }
+  .banner-dark .headline { color: #FFFFFF; }
+  .banner-dark .headline em { color: #3EBCE8; }
+  .banner-dark .services { color: rgba(255, 255, 255, 0.5); }
+  .banner-dark .services .dot { background: rgba(255, 255, 255, 0.25); }
+  .banner-dark .logos-label { color: rgba(255, 255, 255, 0.25); }
+  .banner-dark .client-names { color: rgba(255, 255, 255, 0.4); }
+  .banner-dark .client-names .sep { color: rgba(255, 255, 255, 0.15); }
+  .banner-dark .cta-action { background: #E91E8C; }
+  .banner-dark .cta-url { color: #3EBCE8; }
+  .banner-dark .cta-tagline { color: rgba(255, 255, 255, 0.35); }
+
+  /* ================================================
+     OPTION B — LIGHT (Warm / Approachable / Personal)
+     ================================================ */
+  .banner-light {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFF8FB 30%, #F8FAFF 60%, #FFFFFF 100%);
+  }
+
+  .banner-light .bg-photo {
+    opacity: 0.18;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+  }
+
+  .banner-light .glow-1 {
+    position: absolute;
+    top: -100px;
+    left: 500px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(233, 30, 140, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .banner-light .glow-2 {
+    position: absolute;
+    bottom: -120px;
+    right: 200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(62, 188, 232, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .banner-light .accent-line {
+    background: linear-gradient(to bottom, #E91E8C, rgba(233, 30, 140, 0.15), transparent);
+    opacity: 0.3;
+  }
+
+  .banner-light .tagline-label { color: #E91E8C; }
+  .banner-light .headline { color: #1A1A1A; }
+  .banner-light .headline em { color: #E91E8C; }
+  .banner-light .services { color: rgba(0, 0, 0, 0.4); }
+  .banner-light .services .dot { background: rgba(0, 0, 0, 0.2); }
+  .banner-light .logos-label { color: rgba(0, 0, 0, 0.25); }
+  .banner-light .client-names { color: rgba(0, 0, 0, 0.35); }
+  .banner-light .client-names .sep { color: rgba(0, 0, 0, 0.12); }
+  .banner-light .cta-action { background: #E91E8C; }
+  .banner-light .cta-url { color: #3EBCE8; }
+  .banner-light .cta-tagline { color: rgba(0, 0, 0, 0.3); }
+
+  /* Light version — top accent bar instead of bottom (brand colors show better on white) */
+  .banner-light .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right,
+      #E91E8C 0%, #E91E8C 25%,
+      #3EBCE8 25%, #3EBCE8 50%,
+      #FFC425 50%, #FFC425 75%,
+      #C4D82E 75%, #C4D82E 100%
+    );
+  }
+
+  /* Light bottom bar — subtle gray line */
+  .banner-light .bottom-bar {
+    height: 2px;
+    background: linear-gradient(to right,
+      rgba(233, 30, 140, 0.2) 0%, rgba(233, 30, 140, 0.2) 25%,
+      rgba(62, 188, 232, 0.2) 25%, rgba(62, 188, 232, 0.2) 50%,
+      rgba(255, 196, 37, 0.2) 50%, rgba(255, 196, 37, 0.2) 75%,
+      rgba(196, 216, 46, 0.2) 75%, rgba(196, 216, 46, 0.2) 100%
+    );
+  }
+
+  /* ================================================
+     OPTION C — WARM GRADIENT (Best of Both)
+     ================================================ */
+  .banner-warm {
+    background: linear-gradient(135deg, #1A0A12 0%, #2D1024 25%, #1A1A2E 55%, #0F1923 100%);
+  }
+
+  .banner-warm .bg-photo {
+    width: 660px;
+    opacity: 0.5;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 55%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 55%, transparent 100%);
+  }
+
+  .banner-warm .glow-1 {
+    position: absolute;
+    top: -80px;
+    left: 450px;
+    width: 600px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(233, 30, 140, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .banner-warm .glow-2 {
+    position: absolute;
+    bottom: -100px;
+    right: 300px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(62, 188, 232, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .banner-warm .accent-line {
+    background: linear-gradient(to bottom, #E91E8C, rgba(233, 30, 140, 0.3), transparent);
+    opacity: 0.5;
+  }
+
+  .banner-warm .tagline-label { color: #E91E8C; }
+  .banner-warm .headline { color: #FFFFFF; }
+  .banner-warm .headline em { color: #E91E8C; }
+  .banner-warm .services { color: rgba(255, 255, 255, 0.55); }
+  .banner-warm .services .dot { background: rgba(255, 255, 255, 0.25); }
+  .banner-warm .logos-label { color: rgba(255, 255, 255, 0.3); }
+  .banner-warm .client-names { color: rgba(255, 255, 255, 0.45); }
+  .banner-warm .client-names .sep { color: rgba(255, 255, 255, 0.15); }
+  .banner-warm .cta-action { background: #E91E8C; }
+  .banner-warm .cta-url { color: #3EBCE8; }
+  .banner-warm .cta-tagline { color: rgba(255, 255, 255, 0.4); }
+
+</style>
+</head>
+<body>
+
+<!-- ==================== OPTION A: DARK ==================== -->
+<p class="label">Option A — Dark (Enterprise / Authority)</p>
+<div class="banner banner-dark">
+  <img src="images/wendy-hero.jpg" alt="" class="bg-photo" />
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="accent-line"></div>
+
+  <div class="content">
+    <div class="content-left">
+      <p class="tagline-label">Executive Coaching &amp; Leadership Development</p>
+      <h1 class="headline">Elevating Women of Color<br/>Into <em>Senior Leadership</em></h1>
+      <div class="services">
+        <span>Keynote Speaking</span><span class="dot"></span>
+        <span>Executive Coaching</span><span class="dot"></span>
+        <span>Workshops &amp; Retreats</span><span class="dot"></span>
+        <span>RESET Method<sup class="trademark">&reg;</sup></span>
+      </div>
+      <div class="logos-row">
+        <span class="logos-label">Trusted by</span>
+        <div class="client-names">
+          <span>Bloomberg</span><span class="sep">|</span>
+          <span>Genentech</span><span class="sep">|</span>
+          <span>Johnson &amp; Johnson</span><span class="sep">|</span>
+          <span>Novo Nordisk</span><span class="sep">|</span>
+          <span>VaynerMedia</span><span class="sep">|</span>
+          <span>Colgate</span>
+        </div>
+      </div>
+    </div>
+    <div class="content-right">
+      <div class="cta-action">
+        <span>Book a Discovery Call</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+      </div>
+      <span class="cta-url">coachingwomenofcolor.com</span>
+      <span class="cta-tagline">Coaching Women of Color<sup style="font-size:7px;">&reg;</sup></span>
+    </div>
+  </div>
+  <div class="bottom-bar"></div>
+</div>
+
+
+<!-- ==================== OPTION B: LIGHT ==================== -->
+<p class="label">Option B — Light (Warm / Approachable)</p>
+<div class="banner banner-light">
+  <div class="top-bar"></div>
+  <img src="images/wendy-hero.jpg" alt="" class="bg-photo" />
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="accent-line"></div>
+
+  <div class="content">
+    <div class="content-left">
+      <p class="tagline-label">Executive Coaching &amp; Leadership Development</p>
+      <h1 class="headline">Elevating Women of Color<br/>Into <em>Senior Leadership</em></h1>
+      <div class="services">
+        <span>Keynote Speaking</span><span class="dot"></span>
+        <span>Executive Coaching</span><span class="dot"></span>
+        <span>Workshops &amp; Retreats</span><span class="dot"></span>
+        <span>RESET Method<sup class="trademark">&reg;</sup></span>
+      </div>
+      <div class="logos-row">
+        <span class="logos-label">Trusted by</span>
+        <div class="client-names">
+          <span>Bloomberg</span><span class="sep">|</span>
+          <span>Genentech</span><span class="sep">|</span>
+          <span>Johnson &amp; Johnson</span><span class="sep">|</span>
+          <span>Novo Nordisk</span><span class="sep">|</span>
+          <span>VaynerMedia</span><span class="sep">|</span>
+          <span>Colgate</span>
+        </div>
+      </div>
+    </div>
+    <div class="content-right">
+      <div class="cta-action">
+        <span>Book a Discovery Call</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+      </div>
+      <span class="cta-url">coachingwomenofcolor.com</span>
+      <span class="cta-tagline">Coaching Women of Color<sup style="font-size:7px;">&reg;</sup></span>
+    </div>
+  </div>
+  <div class="bottom-bar"></div>
+</div>
+
+
+<!-- ==================== OPTION C: WARM DARK ==================== -->
+<p class="label">Option C — Warm Dark (Best of Both — Premium + Empowering)</p>
+<div class="banner banner-warm">
+  <img src="images/wendy-hero.jpg" alt="" class="bg-photo" />
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="accent-line"></div>
+
+  <div class="content">
+    <div class="content-left">
+      <p class="tagline-label">Executive Coaching &amp; Leadership Development</p>
+      <h1 class="headline">Elevating Women of Color<br/>Into <em>Senior Leadership</em></h1>
+      <div class="services">
+        <span>Keynote Speaking</span><span class="dot"></span>
+        <span>Executive Coaching</span><span class="dot"></span>
+        <span>Workshops &amp; Retreats</span><span class="dot"></span>
+        <span>RESET Method<sup class="trademark">&reg;</sup></span>
+      </div>
+      <div class="logos-row">
+        <span class="logos-label">Trusted by</span>
+        <div class="client-names">
+          <span>Bloomberg</span><span class="sep">|</span>
+          <span>Genentech</span><span class="sep">|</span>
+          <span>Johnson &amp; Johnson</span><span class="sep">|</span>
+          <span>Novo Nordisk</span><span class="sep">|</span>
+          <span>VaynerMedia</span><span class="sep">|</span>
+          <span>Colgate</span>
+        </div>
+      </div>
+    </div>
+    <div class="content-right">
+      <div class="cta-action">
+        <span>Book a Discovery Call</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+      </div>
+      <span class="cta-url">coachingwomenofcolor.com</span>
+      <span class="cta-tagline">Coaching Women of Color<sup style="font-size:7px;">&reg;</sup></span>
+    </div>
+  </div>
+  <div class="bottom-bar"></div>
+</div>
+
+<div style="height: 60px;"></div>
+
+</body>
+</html>

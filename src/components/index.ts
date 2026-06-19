@@ -1,3 +1,12 @@
 export { default as Header } from "./Header";
 export { default as Footer } from "./Footer";
 export { default as TestimonialsCarousel } from "./TestimonialsCarousel";
+export { default as Badge } from "./Badge";
+export { default as Toast } from "./Toast";
+export { default as Separator } from "./Separator";
+export { default as Modal } from "./Modal";
+export { default as ImageLightbox } from "./ImageLightbox";
+export { default as AnimatedCounter } from "./AnimatedCounter";
+export { default as LazyImage } from "./LazyImage";
+export { default as Breadcrumbs } from "./Breadcrumbs";
+export { default as VideoHero } from "./VideoHero";

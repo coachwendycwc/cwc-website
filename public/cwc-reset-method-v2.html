@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The RESET Method® — Coaching Women of Color® (v2)</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+  <style>
+    :root {
+      --pink: #D01A7D;
+      --blue: #3EBCE8;
+      --yellow: #FFC425;
+      --green: #C4D82E;
+      --purple: #8B7BB5;
+      --dark: #1A1A1A;
+      --gray-700: #404040;
+      --gray-600: #525252;
+      --gray-500: #737373;
+      --gray-400: #9CA3AF;
+      --gray-200: #E5E7EB;
+      --gray-100: #F5F5F5;
+      --white: #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @page { size: letter; margin: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .accent-bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--pink) 0%, var(--pink) 20%, var(--blue) 20%, var(--blue) 40%, var(--green) 40%, var(--green) 60%, var(--yellow) 60%, var(--yellow) 80%, var(--purple) 80%, var(--purple) 100%);
+      flex-shrink: 0;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 14px 36px 12px;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .header-logo { height: 48px; width: auto; }
+
+    /* v2: back-link nav in header — FIX: increased size + pink default so it's actually usable */
+    .header-back {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--pink);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 8px;
+      border: 1px solid rgba(208, 26, 125, 0.25);
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+
+    .header-back:hover { background: rgba(208, 26, 125, 0.06); }
+
+    .header-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-left: auto;
+    }
+
+    /* ── HERO ── */
+    .hero-band {
+      background: var(--white);
+      padding: 14px 36px;
+      border-bottom: 1px solid var(--gray-200);
+      flex-shrink: 0;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .hero-top span {
+      font-size: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gray-500);
+    }
+
+    .hero-h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+
+    .hero-h1 em {
+      color: var(--pink);
+      font-style: normal;
+    }
+
+    .hero-sub {
+      font-size: 9px;
+      color: var(--gray-500);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* ── PROBLEM ── */
+    .problem-bar {
+      padding: 10px 36px;
+      background: var(--gray-100);
+      border-bottom: 1px solid var(--gray-200);
+      flex-shrink: 0;
+    }
+
+    .problem-bar p { font-size: 8.5px; line-height: 1.6; color: var(--gray-600); }
+    .problem-bar strong { color: var(--pink); font-weight: 700; }
+
+    /* ── MAIN ── */
+    .main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .col-left {
+      padding: 12px 16px 8px 36px;
+      border-right: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col-right {
+      padding: 12px 36px 8px 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--pink);
+      display: inline-block;
+    }
+
+    /* ── RESET FRAMEWORK ── */
+    .reset-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .reset-step:last-child { border-bottom: none; }
+
+    /* v2: R, S, T box — standard solid pink border, transparent bg */
+    .reset-letter {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--pink);
+      flex-shrink: 0;
+      border: 2px solid var(--pink);
+      background: transparent;
+      position: relative;
+    }
+
+    /* Evaluate — same style as all other letters; word label is sufficient distinction */
+    .reset-letter.evaluate {
+      background: transparent;
+      color: var(--pink);
+      border-color: var(--pink);
+    }
+
+    /* badge removed — light pink fill on .evaluate is sufficient distinction */
+    .reset-letter .step-badge { display: none; }
+
+    .reset-word {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .reset-desc {
+      font-size: 7.5px;
+      line-height: 1.45;
+      color: var(--gray-600);
+      margin-top: 1px;
+    }
+
+    /* ── DIFFERENTIATORS — v2: titles uppercase to match other section labels ── */
+    .diff-item { margin-bottom: 8px; }
+
+    /* FIX v2: was sentence-case; now uppercase to match all other section sub-labels */
+    .diff-title {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: 0.6px;
+      margin-bottom: 1px;
+      text-transform: uppercase;
+    }
+
+    .diff-desc { font-size: 8px; line-height: 1.5; color: var(--gray-600); }
+
+    /* ── GAINS ── */
+    .gains-list { list-style: none; margin-top: 2px; }
+
+    .gains-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 10px;
+      margin-bottom: 4px;
+      font-size: 8.5px;
+      color: var(--gray-700);
+      line-height: 1.3;
+      background: var(--gray-100);
+      border-radius: 5px;
+    }
+
+    .gain-check {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── v2 MID-PAGE CTA (after gains list, before audience box) ── */
+    .mid-cta {
+      margin-top: 8px;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, #fdf2f8 0%, #f0f9ff 100%);
+      border: 1.5px solid var(--pink);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .mid-cta-text {
+      font-size: 8px;
+      color: var(--dark);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .mid-cta-text span {
+      font-size: 7.5px;
+      font-weight: 400;
+      color: var(--gray-600);
+      display: block;
+      margin-top: 1px;
+    }
+
+    .mid-cta-button {
+      display: inline-block;
+      padding: 5px 12px;
+      font-size: 7px;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--pink);
+      border-radius: 3px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ── AUDIENCE ── */
+    .audience-box {
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: var(--gray-100);
+      border-radius: 5px;
+      /* FIX v2: was purple, now pink to match primary accent */
+      border-left: 3px solid var(--pink);
+    }
+
+    .audience-label {
+      font-size: 8px;
+      font-weight: 800;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 3px;
+    }
+
+    .audience-text { font-size: 7.5px; line-height: 1.5; color: var(--gray-600); }
+
+    /* ── DELIVERY ── */
+    .delivery-row { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+
+    .delivery-tag {
+      font-size: 6.5px;
+      font-weight: 600;
+      color: var(--gray-700);
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 2px 7px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── TIMELINE — v2: drastically improved font sizes & visual treatment ── */
+    .timeline-wrapper {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 5px;
+      padding: 5px 8px;
+      border-radius: 4px;
+      background: var(--gray-100);
+    }
+
+    .timeline-week {
+      font-size: 9px;
+      font-weight: 800;
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .timeline-detail {
+      /* FIX v2: was 7.5px — now readable 9px (13px+ at desktop) */
+      font-size: 9px;
+      color: var(--gray-700);
+      line-height: 1.3;
+    }
+
+    .timeline-detail strong {
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      padding: 10px 36px;
+      text-align: center;
+      background: var(--gray-100);
+      border-top: 1px solid var(--gray-200);
+      flex-shrink: 0;
+    }
+
+    .cta-text { font-size: 9px; color: var(--gray-600); }
+    .cta-text strong { color: var(--dark); }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 6px 20px;
+      font-size: 8px;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--pink);
+      border-radius: 4px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ── CONTACT ── */
+    .contact-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 36px;
+      background: var(--dark);
+      flex-shrink: 0;
+    }
+
+    .contact-name { font-size: 10px; font-weight: 700; color: var(--white); }
+    .contact-title { font-size: 7px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; }
+    .contact-info { text-align: center; font-size: 8.5px; color: rgba(255,255,255,0.8); }
+    .contact-info a { color: var(--blue); text-decoration: none; }
+    .contact-right { text-align: right; }
+    .contact-url { font-size: 9px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── RESPONSIVE ── */
+    @media screen and (max-width: 900px) {
+      .page { width: 100%; height: auto; overflow: visible; }
+      .header { padding: 16px 24px 12px; }
+      .header-logo { height: 36px; }
+      .header-back { font-size: 12px; }
+      .header-title { font-size: 11px; }
+      .hero-band { padding: 20px 24px; }
+      .hero-h1 { font-size: 26px; }
+      .hero-sub { font-size: 12px; }
+      .problem-bar { padding: 14px 24px; }
+      .problem-bar p { font-size: 13px; }
+      .main { grid-template-columns: 1fr; flex: none; }
+      .col-left { padding: 20px 24px; border-right: none; border-bottom: 1px solid var(--gray-200); }
+      .col-right { padding: 20px 24px; }
+      .section-label { font-size: 13px; }
+      .reset-step { padding: 10px 0; }
+      .reset-letter { width: 36px; height: 36px; font-size: 18px; }
+      .reset-word { font-size: 14px; }
+      .reset-desc { font-size: 13px; }
+      .diff-title { font-size: 12px; }
+      .diff-desc { font-size: 13px; }
+      .gains-list li { font-size: 13px; padding: 10px 14px; }
+      .gain-check { width: 22px; height: 22px; font-size: 12px; }
+      .mid-cta { flex-direction: column; align-items: flex-start; padding: 14px 16px; gap: 8px; }
+      .mid-cta-text { font-size: 14px; }
+      .mid-cta-text span { font-size: 12px; }
+      /* FIX: min 44px tap target (WCAG 2.5.5) */
+      .mid-cta-button { font-size: 12px; padding: 8px 20px; min-height: 44px; display: inline-flex; align-items: center; }
+      .audience-box { padding: 14px 16px; }
+      .audience-label { font-size: 11px; }
+      .audience-text { font-size: 13px; }
+      .delivery-tag { font-size: 10px; padding: 4px 10px; }
+      .timeline-week { font-size: 13px; }
+      .timeline-detail { font-size: 13px; }
+      .cta-band { padding: 18px 24px; }
+      .cta-text { font-size: 14px; }
+      .cta-button { font-size: 12px; padding: 8px 24px; margin-top: 8px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+      .contact-bar { flex-direction: column; gap: 8px; padding: 16px 24px; text-align: center; }
+      .contact-name { font-size: 13px; }
+      .contact-info { font-size: 12px; }
+      .contact-right { text-align: center; }
+      .contact-url { font-size: 12px; }
+    }
+
+    @media screen and (max-width: 480px) {
+      .header { padding: 12px 16px; gap: 10px; }
+      .hero-band { padding: 16px; }
+      .hero-h1 { font-size: 22px; }
+      .problem-bar { padding: 12px 16px; }
+      .col-left, .col-right { padding: 16px; }
+      .cta-band { padding: 14px 16px; }
+      .contact-bar { padding: 14px 16px; }
+    }
+
+    /* ── DESKTOP ── */
+    @media screen and (min-width: 901px) {
+      body { background: #e5e7eb; padding: 40px 0; }
+      .page { width: 100%; max-width: 1100px; height: auto; overflow: visible; box-shadow: 0 2px 20px rgba(0,0,0,0.12); }
+      .accent-bar { height: 8px; }
+      .header { padding: 20px 48px 16px; gap: 20px; }
+      .header-logo { height: 60px; }
+      .header-back { font-size: 11px; letter-spacing: 1px; }
+      .header-title { font-size: 15px; letter-spacing: 3px; }
+      .hero-band { padding: 24px 48px; }
+      .hero-top span { font-size: 10px; }
+      .hero-h1 { font-size: 34px; }
+      .hero-sub { font-size: 14px; margin-top: 6px; }
+      .problem-bar { padding: 16px 48px; }
+      .problem-bar p { font-size: 15px; line-height: 1.7; }
+      .col-left { padding: 24px 24px 16px 48px; }
+      .col-right { padding: 24px 48px 16px 24px; }
+      .section-label { font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; padding-bottom: 6px; }
+      .reset-step { padding: 10px 0; gap: 14px; }
+      .reset-letter { width: 40px; height: 40px; font-size: 20px; border-radius: 8px; border-width: 2.5px; }
+      .reset-word { font-size: 15px; }
+      .reset-desc { font-size: 13px; line-height: 1.5; }
+      .diff-item { margin-bottom: 14px; }
+      .diff-title { font-size: 12px; margin-bottom: 3px; letter-spacing: 0.8px; }
+      .diff-desc { font-size: 14px; line-height: 1.6; }
+      .gains-list li { font-size: 14px; padding: 10px 16px; margin-bottom: 6px; gap: 10px; }
+      .gain-check { width: 24px; height: 24px; font-size: 13px; }
+      .mid-cta { padding: 14px 18px; border-radius: 8px; margin-top: 12px; }
+      .mid-cta-text { font-size: 14px; }
+      .mid-cta-text span { font-size: 12px; margin-top: 2px; }
+      .mid-cta-button { font-size: 11px; padding: 7px 16px; border-radius: 5px; }
+      .audience-box { padding: 14px 18px; margin-top: 14px; }
+      .audience-label { font-size: 11px; }
+      .audience-text { font-size: 13px; line-height: 1.6; }
+      .delivery-tag { font-size: 10px; padding: 4px 10px; }
+      .delivery-row { margin-top: 12px; gap: 6px; }
+      .timeline-wrapper { padding-top: 12px; }
+      .timeline-item { padding: 7px 10px; gap: 14px; border-radius: 6px; margin-bottom: 6px; }
+      .timeline-week { font-size: 11px; }
+      .timeline-detail { font-size: 13px; }
+      .cta-band { padding: 18px 48px; }
+      .cta-text { font-size: 15px; }
+      .cta-button { font-size: 13px; padding: 10px 28px; margin-top: 10px; border-radius: 6px; }
+      .contact-bar { padding: 14px 48px; }
+      .contact-name { font-size: 14px; }
+      .contact-title { font-size: 10px; }
+      .contact-info { font-size: 13px; }
+      .contact-url { font-size: 13px; }
+    }
+
+    @media print {
+      body { background: white; }
+      .page { width: 8.5in; height: 11in; box-shadow: none; margin: 0; overflow: hidden; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="accent-bar"></div>
+
+    <!-- HEADER — v2: added back-link to capabilities page -->
+    <div class="header">
+      <img class="header-logo" src="logo.webp" alt="Coaching Women of Color®" />
+      <!-- v2 cross-page navigation -->
+      <a href="cwc-capabilities-statement.html" class="header-back">&#8592; Capabilities</a>
+      <div style="margin-left: auto; text-align: right;">
+        <div class="header-title">The RESET Method&reg;</div>
+        <div style="font-size: 7px; color: var(--gray-500); margin-top: 3px; line-height: 1.4;">Wendy Perdomo &mdash; Certified Executive Coach | ICF Coach | DiSC Facilitator<br>Trauma Informed Advocate | Keynote Speaker</div>
+      </div>
+    </div>
+
+    <!-- HERO BAND -->
+    <div class="hero-band">
+      <div class="hero-top"><span>Performance-Based Coaching</span></div>
+      <h1 class="hero-h1">Reset expectations. Restore accountability.<br><em>Transform performance.</em></h1>
+      <div class="hero-sub">A proprietary five-phase coaching framework that engages both the leader and the team member from the start.</div>
+    </div>
+
+    <!-- PROBLEM -->
+    <div class="problem-bar">
+      <p><strong>The problem:</strong> Traditional performance management focuses on documentation and compliance. It rarely addresses root causes or equips leaders to coach their people through it. Most default to avoidance or escalation — neither builds accountability, neither drives change.</p>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div class="col-left">
+        <h2 class="section-label">The Framework</h2>
+
+        <div class="reset-step">
+          <div class="reset-letter">R</div>
+          <div>
+            <div class="reset-word">Reveal</div>
+            <div class="reset-desc">Diagnostic conversation with the leader to uncover the real performance gaps, patterns, and pain points.</div>
+          </div>
+        </div>
+
+        <!-- v2: Engage is first E — standard style -->
+        <div class="reset-step">
+          <div class="reset-letter">E</div>
+          <div>
+            <div class="reset-word">Engage</div>
+            <div class="reset-desc">Dedicated intake with the team member to hear their perspective, establish trust, and co-create a working agreement.</div>
+          </div>
+        </div>
+
+        <div class="reset-step">
+          <div class="reset-letter">S</div>
+          <div>
+            <div class="reset-word">Shift</div>
+            <div class="reset-desc">Targeted coaching sessions to build new behaviors, communication patterns, and accountability practices.</div>
+          </div>
+        </div>
+
+        <!-- v2: Evaluate is second E — visually distinct with lighter fill + blue badge -->
+        <div class="reset-step">
+          <div class="reset-letter evaluate">E</div>
+          <div>
+            <div class="reset-word">Evaluate</div>
+            <div class="reset-desc">Mid-point checkpoint with the leader to assess progress, share observations, and recalibrate as needed.</div>
+          </div>
+        </div>
+
+        <div class="reset-step">
+          <div class="reset-letter">T</div>
+          <div>
+            <div class="reset-word">Transform</div>
+            <div class="reset-desc">Comprehensive summary report documenting key behavioral shifts, ownership gains, and measurable outcomes.</div>
+          </div>
+        </div>
+
+        <!-- WHAT MAKES IT DIFFERENT — v2: diff-title is now uppercase -->
+        <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--gray-200);">
+          <h2 class="section-label">What Makes This Different</h2>
+
+          <div class="diff-item">
+            <!-- FIX v2: was "Dual-Perspective Intake" sentence case; now uppercase via CSS -->
+            <div class="diff-title">Dual-Perspective Intake</div>
+            <div class="diff-desc">Most performance coaches only engage the coachee. RESET starts by hearing both sides — producing more accurate diagnosis and faster results.</div>
+          </div>
+
+          <div class="diff-item">
+            <div class="diff-title">Leader &amp; Team Member Alignment</div>
+            <div class="diff-desc">The mid-point evaluation keeps the manager informed and invested, ensuring coaching stays connected to organizational expectations.</div>
+          </div>
+
+          <div class="diff-item">
+            <div class="diff-title">Documented Outcomes</div>
+            <div class="diff-desc">Every engagement closes with a transformation report — giving leaders tangible evidence of behavioral change and ROI.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <h2 class="section-label">What Leaders Gain</h2>
+
+        <ul class="gains-list">
+          <li><span class="gain-check">&#10003;</span>A team member who takes full ownership of their performance</li>
+          <li><span class="gain-check">&#10003;</span>A leader who gains confidence in managing underperformance</li>
+          <li><span class="gain-check">&#10003;</span>Measurable shifts in behavior, communication, and accountability</li>
+          <li><span class="gain-check">&#10003;</span>Alignment between leader and team member that closes performance gaps</li>
+          <li><span class="gain-check">&#10003;</span>Talent retained instead of replaced — saving time and cost</li>
+        </ul>
+
+        <!-- v2: MID-PAGE CTA — appears right after gains list at peak persuasion moment -->
+        <div class="mid-cta">
+          <div class="mid-cta-text">
+            Ready to reset performance on your team?
+            <span>Schedule a discovery call with Wendy to explore fit.</span>
+          </div>
+          <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" class="mid-cta-button">Schedule Call &rarr;</a>
+        </div>
+
+        <!-- AUDIENCE — v2: border-left changed from --purple to --pink -->
+        <div class="audience-box">
+          <div class="audience-label">Designed For</div>
+          <div class="audience-text">Organizational Leaders, People Managers, District Administrators, University Department Heads, and HR Partners who want a structured, human-centered framework for supporting employee growth and addressing performance gaps with clarity and care.</div>
+        </div>
+
+        <!-- DELIVERY -->
+        <div class="delivery-row">
+          <span class="delivery-tag">Virtual (Zoom)</span>
+          <span class="delivery-tag">Dual-Engagement</span>
+          <span class="delivery-tag">Mid-Point Check</span>
+          <span class="delivery-tag">Outcome Summary</span>
+        </div>
+
+        <!-- THIS IS NOT -->
+        <div class="audience-box" style="margin-top: 8px; border-left-color: var(--gray-400);">
+          <div class="audience-label">This Is Not</div>
+          <div class="audience-text">This is not a punitive process. It's a structured support engagement designed to develop capability, restore clarity, and retain talent.</div>
+        </div>
+
+        <!-- TYPICAL ENGAGEMENT TIMELINE — v2: redesigned with readable font sizes -->
+        <div class="timeline-wrapper">
+          <div class="audience-label" style="margin-bottom: 6px;">Typical Engagement</div>
+
+          <div class="timeline-item">
+            <div class="timeline-week">Week 1</div>
+            <div class="timeline-detail"><strong>Reveal</strong> &mdash; Leader diagnostic</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-week">Week 2</div>
+            <div class="timeline-detail"><strong>Engage</strong> &mdash; Team member intake</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-week">Wks 3–6</div>
+            <div class="timeline-detail"><strong>Shift</strong> &mdash; Coaching sessions</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-week">Week 7</div>
+            <div class="timeline-detail"><strong>Evaluate</strong> &mdash; Mid-point check</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-week">Week 8</div>
+            <div class="timeline-detail"><strong>Transform</strong> &mdash; Summary report</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM CTA BAND -->
+    <div class="cta-band">
+      <p class="cta-text">Ready to reset? <strong>Schedule a discovery call.</strong></p>
+      <a href="https://calendly.com/coachingwomenofcolor/organizational-inquiry-call" target="_blank" rel="noopener noreferrer" class="cta-button">Schedule a Discovery Call &rarr;</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-bar">
+      <div>
+        <div class="contact-name">Wendy Perdomo, CEO</div>
+        <div class="contact-title">Coaching Women of Color&reg;</div>
+      </div>
+      <div class="contact-info">
+        <a href="mailto:Wendy@CoachingWomenOfColor.com">Wendy@CoachingWomenOfColor.com</a>&nbsp; / &nbsp;(917) 224-1343
+      </div>
+      <div class="contact-right">
+        <div class="contact-url">coachingwomenofcolor.com</div>
+      </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div style="text-align: center; padding: 6px 36px; font-size: 7px; color: var(--gray-400); background: var(--dark); border-top: 1px solid rgba(255,255,255,0.1);">
+      The RESET Method&reg; &copy; Coaching Women of Color&reg;. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
