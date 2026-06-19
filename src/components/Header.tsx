@@ -10,7 +10,7 @@ const navigation = [
   {
     name: "Organizations",
     href: "/for-organizations",
-    matchPaths: ["/for-organizations", "/services"],
+    matchPaths: ["/for-organizations", "/services/strategic-retreats", "/services/executive-coaching", "/services/group-coaching", "/services/performance-coaching", "/services/virtual-series", "/services/workshops-webinars"],
   },
   {
     name: "Individuals",
