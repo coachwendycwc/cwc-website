@@ -496,69 +496,73 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* CWC Capabilities Statement */}
+            <div className="grid lg:grid-cols-5 gap-6">
+              {/* Featured card — Confidence Building Tool */}
               <a
                 href={`${siteConfig.basePath}/confidence-building-tool.html`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
+                className="card-bordered group hover:border-[#3EBCE8] flex flex-col lg:col-span-3"
               >
-                <div className="w-12 h-12 bg-[#FFF4E8] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#FFC425]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-[#FFC425] mb-4">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </div>
-                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
+                  Free Download
+                </span>
+                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-[color] duration-150 mb-3">
                   Confidence Building Tool
                 </h3>
-                <p className="text-[#737373] mt-2 flex-grow">
+                <p className="text-[#737373] flex-grow text-base leading-relaxed">
                   A practical guide with tools and strategies to build unshakable confidence in your leadership. Download your free copy.
                 </p>
-                <span className="link-arrow mt-6 text-sm">Download free →</span>
+                <span className="link-arrow mt-8 text-sm font-medium">Download free</span>
               </a>
 
-              {/* Promotion Readiness Scorecard */}
-              <a
-                href="/scorecard.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
-              >
-                <div className="w-12 h-12 bg-[#FFF4E8] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#FFC425]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                  </svg>
-                </div>
-                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
-                  Promotion Readiness Scorecard
-                </h3>
-                <p className="text-[#737373] mt-2 flex-grow">
-                  A 2-minute assessment that evaluates visibility, strategic positioning, and confidence across 5 key dimensions.
-                </p>
-                <span className="link-arrow mt-6 text-sm">Take the assessment →</span>
-              </a>
+              {/* Right column — 2 stacked cards */}
+              <div className="lg:col-span-2 flex flex-col gap-6">
+                {/* Promotion Readiness Scorecard */}
+                <a
+                  href="/scorecard.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-bordered group hover:border-[#3EBCE8] flex flex-col flex-1"
+                >
+                  <div className="w-10 h-10 bg-[#FFF4E8] rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-5 h-5 text-[#FFC425]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <h3 className="heading-card group-hover:text-[#3EBCE8] transition-[color] duration-150 mb-2">
+                    Promotion Readiness Scorecard
+                  </h3>
+                  <p className="text-[#737373] text-sm flex-grow leading-relaxed">
+                    A 2-minute assessment that evaluates visibility, strategic positioning, and confidence across 5 key dimensions.
+                  </p>
+                  <span className="link-arrow mt-4 text-sm">Take the assessment</span>
+                </a>
 
-              {/* LinkedIn Newsletter */}
-              <a
-                href="https://www.linkedin.com/newsletters/leading-while-woc-7301328637058842624/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
-              >
-                <div className="w-12 h-12 bg-[#EDE8FD] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#8B7BB5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                  </svg>
-                </div>
-                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-colors">
-                  Leading While WOC Newsletter
-                </h3>
-                <p className="text-[#737373] mt-2 flex-grow">
-                  Insights on leadership, navigating bias, and thriving as a woman of color in the workplace. Subscribe on LinkedIn.
-                </p>
-                <span className="link-arrow mt-6 text-sm">Subscribe on LinkedIn →</span>
-              </a>
+                {/* LinkedIn Newsletter */}
+                <a
+                  href="https://www.linkedin.com/newsletters/leading-while-woc-7301328637058842624/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-bordered group hover:border-[#3EBCE8] flex flex-col flex-1"
+                >
+                  <div className="w-10 h-10 bg-[#EDE8FD] rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-5 h-5 text-[#8B7BB5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                  <h3 className="heading-card group-hover:text-[#3EBCE8] transition-[color] duration-150 mb-2">
+                    Leading While WOC Newsletter
+                  </h3>
+                  <p className="text-[#737373] text-sm flex-grow leading-relaxed">
+                    Insights on leadership, navigating bias, and thriving as a woman of color in the workplace.
+                  </p>
+                  <span className="link-arrow mt-4 text-sm">Subscribe on LinkedIn</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
