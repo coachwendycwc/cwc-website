@@ -85,7 +85,7 @@ const successStories = [
       "Maintained energy and enthusiasm for continued growth",
     ],
     quote: "Wendy pushed me to consider my strengths and how to apply myself for best results. She also helped me work through difficult issues that I encountered by brainstorming solutions that work for me. The customized attention and sage advice made all of the difference on my journey.",
-    color: "#9333EA",
+    color: "#8B7BB5",
     category: "Leadership Development",
     image: "testimonial-lisa.png",
   },

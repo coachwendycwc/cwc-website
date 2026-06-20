@@ -87,7 +87,7 @@ export default function VirtualSeriesPage() {
                 <ul className="space-y-4">
                   {outcomes.map((outcome) => (
                     <li key={outcome} className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-[#9333EA] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-5 h-5 text-[#8B7BB5] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span className="text-[#525252]">{outcome}</span>
@@ -119,7 +119,7 @@ export default function VirtualSeriesPage() {
                 { step: "4", title: "Refine", description: "Adjust approach based on feedback and results." },
               ].map((item) => (
                 <div key={item.step} className="bg-white rounded-2xl p-6 text-center shadow-sm">
-                  <div className="w-10 h-10 bg-[#9333EA] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-10 h-10 bg-[#8B7BB5] rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-lg font-semibold text-white">{item.step}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-[#1A1A1A]">{item.title}</h3>
@@ -147,7 +147,7 @@ export default function VirtualSeriesPage() {
                 "Optional coaching add-ons",
               ].map((item) => (
                 <div key={item} className="text-center p-6">
-                  <div className="w-2 h-2 bg-[#9333EA] rounded-full mx-auto mb-4" />
+                  <div className="w-2 h-2 bg-[#8B7BB5] rounded-full mx-auto mb-4" />
                   <p className="text-[#1A1A1A] font-medium">{item}</p>
                 </div>
               ))}

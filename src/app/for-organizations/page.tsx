@@ -118,7 +118,7 @@ export default function ForOrganizationsPage() {
               </div>
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
+                  <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#8B7BB5]/20 rounded-3xl blur-2xl" />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`${siteConfig.basePath}/images/hero-organizations.jpg`}
@@ -176,7 +176,7 @@ export default function ForOrganizationsPage() {
                   description:
                     "There's no diverse bench for senior roles. High-potential leaders aren't being developed intentionally, and the path from mid-level to executive remains unclear and inequitable.",
                   icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
-                  color: "#9333EA",
+                  color: "#8B7BB5",
                 },
                 {
                   title: "Communication Breakdowns",
@@ -314,7 +314,7 @@ export default function ForOrganizationsPage() {
                 { title: "Executive Coaching", subtitle: "1:1 High-Impact Coaching", href: "/services/executive-coaching", icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", color: "#E91E8C" },
                 { title: "Group Coaching", subtitle: "Leadership Development at Scale", href: "/services/group-coaching", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z", color: "#3EBCE8" },
                 { title: "Keynote Speaking", subtitle: "From Awareness to Action", href: "/services/keynote-speaking", icon: "M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z", color: "#FFC425" },
-                { title: "Workshops & Webinars", subtitle: "Interactive Learning Experiences", href: "/services/workshops-webinars", icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", color: "#9333EA" },
+                { title: "Workshops & Webinars", subtitle: "Interactive Learning Experiences", href: "/services/workshops-webinars", icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", color: "#8B7BB5" },
                 { title: "Virtual Series", subtitle: "Sustained Behavior Change", href: "/services/virtual-series", icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z", color: "#C4D82E" },
                 { title: "Strategic Retreats", subtitle: "Align, Strategize, Move Forward", href: "/services/strategic-retreats", icon: "M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7", color: "#E91E8C" },
                 { title: "Performance Coaching", subtitle: "The RESET Method®", href: "/services/performance-coaching", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", color: "#3EBCE8" },

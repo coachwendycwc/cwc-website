@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Don't scan leftover git worktrees — they contain stale classes (e.g. off-brand #9333EA) that pollute the bundle with dead CSS. */
+@source not "../../.claude";
+
 /* CWC Brand Color Palette - Based on Logo */
 @theme {
   /* Hot Pink - PRIMARY ACCENT (Hero Color) */

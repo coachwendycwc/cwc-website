@@ -171,7 +171,7 @@ export default function ForIndividualsPage() {
               </div>
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#9333EA]/20 rounded-3xl blur-2xl" />
+                  <div className="absolute -inset-4 bg-gradient-to-br from-[#3EBCE8]/20 to-[#8B7BB5]/20 rounded-3xl blur-2xl" />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`${siteConfig.basePath}/images/hero-individuals.jpg`}
@@ -215,7 +215,7 @@ export default function ForIndividualsPage() {
                   description:
                     "You carry the weight of representation — navigating spaces where no one looks like you, constantly code-switching, and wondering if you truly belong at the table.",
                   icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
-                  color: "#9333EA",
+                  color: "#8B7BB5",
                 },
                 {
                   title: "Imposter Syndrome & Self-Doubt",

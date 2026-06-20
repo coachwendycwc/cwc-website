@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function SpeakingSchedulePage() {
   const motionLink =
     "https://app.usemotion.com/meet/wendy-perdomo/speaking-events";
-  const accent = "#9333EA";
+  const accent = "#8B7BB5";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0D0D0D] via-[#1A1A2E] to-[#0D0D0D] flex flex-col">
@@ -41,7 +41,7 @@ export default function SpeakingSchedulePage() {
 
       <main id="main-content" className="flex-1 flex flex-col items-center justify-center px-6 md:px-10">
         <div className="relative max-w-md w-full text-center">
-          <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#9333EA]/10 rounded-full blur-[120px]" />
+          <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#8B7BB5]/10 rounded-full blur-[120px]" />
 
           <div className="relative z-10">
             <div className="mb-6">
