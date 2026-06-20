@@ -275,7 +275,7 @@ export default function Home() {
         {/* Organizational Solutions */}
         <section className="section bg-white">
           <div className="container-wide">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-display">
                 Solutions that close
                 <br />
@@ -392,7 +392,7 @@ export default function Home() {
         {/* Individual Coaching — Full Section */}
         <section className="section bg-[#F9F9F9]">
           <div className="container-wide">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-display">
                 Coaching built
                 <br />
@@ -467,7 +467,7 @@ export default function Home() {
         {/* Testimonials */}
         <section className="section gradient-pink">
           <div className="container-wide">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="heading-display">
                 Real impact.
                 <br />
@@ -482,7 +482,7 @@ export default function Home() {
         {/* Free Resources */}
         <section id="resources" className="section bg-[#F5F5F5]">
           <div className="container-wide">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
                 Resources
               </p>
@@ -502,21 +502,35 @@ export default function Home() {
                 href={`${siteConfig.basePath}/confidence-building-tool.html`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-bordered group hover:border-[#3EBCE8] flex flex-col lg:col-span-3"
+                className="card-bordered group hover:border-[#3EBCE8] lg:col-span-3 flex flex-col !p-0 overflow-hidden"
               >
-                <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-[#FFC425] mb-4">
-                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                  Free Download
-                </span>
-                <h3 className="heading-card group-hover:text-[#3EBCE8] transition-[color] duration-150 mb-3">
-                  Confidence Building Tool
-                </h3>
-                <p className="text-[#737373] flex-grow text-base leading-relaxed">
-                  A practical guide with tools and strategies to build unshakable confidence in your leadership. Download your free copy.
-                </p>
-                <span className="link-arrow mt-8 text-sm font-medium">Download free</span>
+                {/* Document preview banner */}
+                <div className="overflow-hidden border-b border-[#EDEDED]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${siteConfig.basePath}/images/confidence-tool-cover.png`}
+                    alt="Preview of the Confidence Building Tool document"
+                    width={1000}
+                    height={466}
+                    loading="lazy"
+                    className="w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div className="flex flex-col flex-grow p-8">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-[#FFC425] mb-4">
+                    <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                    Free Download
+                  </span>
+                  <h3 className="heading-card group-hover:text-[#3EBCE8] transition-[color] duration-150 mb-3">
+                    Confidence Building Tool
+                  </h3>
+                  <p className="text-[#737373] text-base leading-relaxed flex-grow">
+                    Six practical tools to quiet imposter syndrome and build unshakable confidence — name self-doubt, build your confidence bank, reframe setbacks, and show up fully in every room.
+                  </p>
+                  <span className="link-arrow mt-6 text-sm font-medium">Download free</span>
+                </div>
               </a>
 
               {/* Right column — 2 stacked cards */}
