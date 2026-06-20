@@ -132,9 +132,9 @@ export default function ForOrganizationsPage() {
         </section>
 
         {/* Pain Points Section */}
-        <section className="section gradient-subtle">
+        <section className="section gradient-subtle !pb-12 md:!pb-16">
           <div className="container-wide">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                 Sound Familiar?
               </p>

@@ -19,18 +19,16 @@ export default function ResourcesPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
+        <section className="pt-28 pb-16 md:pt-32 md:pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
-            <div className="max-w-4xl">
+            <div className="max-w-3xl mx-auto text-center">
               <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                 Resources
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                Insights &
-                <br />
-                <span className="text-gradient">Resources</span>
+                Insights &amp; <span className="text-gradient">Resources</span>
               </h1>
-              <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
+              <p className="mt-6 text-xl text-[#525252] max-w-2xl mx-auto leading-relaxed">
                 Practical tools and frameworks for HR leaders, L&D professionals,
                 and executives building inclusive cultures.
               </p>
@@ -39,9 +37,9 @@ export default function ResourcesPage() {
         </section>
 
         {/* Downloadable Resources */}
-        <section className="section bg-white">
+        <section className="section bg-white !pt-8 md:!pt-10">
           <div className="container-wide">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-display">
                 Downloadable <span className="text-gradient">Resources</span>
               </h2>
