@@ -87,7 +87,7 @@ export default function KeynoteSpeakingPage() {
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                   The Challenge
                 </p>
                 <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -158,7 +158,7 @@ export default function KeynoteSpeakingPage() {
                 { title: "Keynote + Workshop", duration: "Half day", description: "Combine inspiration with hands-on skill building for deeper impact." },
               ].map((format) => (
                 <div key={format.title} className="text-center">
-                  <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider">{format.duration}</p>
+                  <p className="text-sm font-medium text-[#14739C] uppercase tracking-wider">{format.duration}</p>
                   <h3 className="text-lg font-semibold text-[#1A1A1A] mt-2">{format.title}</h3>
                   <p className="text-[#737373] mt-2">{format.description}</p>
                 </div>

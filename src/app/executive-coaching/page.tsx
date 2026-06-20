@@ -112,7 +112,7 @@ export default function ExecutiveCoachingPage() {
                   { step: "04", title: "Integration", description: "Apply insights in real-time with ongoing support." },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
-                    <div className="text-2xl font-semibold text-[#3EBCE8]">{item.step}</div>
+                    <div className="text-2xl font-semibold text-[#14739C]">{item.step}</div>
                     <div>
                       <h3 className="font-semibold text-[#1A1A1A]">{item.title}</h3>
                       <p className="text-[#737373] text-sm">{item.description}</p>
@@ -154,7 +154,7 @@ export default function ExecutiveCoachingPage() {
               <div className="card-bordered">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
-                    <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-2">
+                    <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-2">
                       6-Month Program
                     </p>
                     <div className="text-4xl md:text-5xl font-semibold text-[#1A1A1A]">

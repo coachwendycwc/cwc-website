@@ -95,7 +95,7 @@ export default function ForOrganizationsPage() {
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="max-w-2xl">
-                <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                   For Organizations
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -135,7 +135,7 @@ export default function ForOrganizationsPage() {
         <section className="section gradient-subtle">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                 Sound Familiar?
               </p>
               <h2 className="heading-display">
@@ -336,7 +336,7 @@ export default function ForOrganizationsPage() {
                     {solution.title}
                   </h3>
                   <p className="text-sm text-[#737373] mt-1">{solution.subtitle}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium text-[#3EBCE8] mt-4">
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-[#14739C] mt-4">
                     Learn more
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -384,7 +384,7 @@ export default function ForOrganizationsPage() {
         <section className="section bg-white">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                 Enterprise Ready
               </p>
               <h2 className="heading-display">

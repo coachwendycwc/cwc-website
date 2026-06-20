@@ -76,7 +76,7 @@ export default function GroupCoachingPage() {
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                   The Challenge
                 </p>
                 <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">

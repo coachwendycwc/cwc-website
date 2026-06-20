@@ -147,7 +147,7 @@ export default function ForIndividualsPage() {
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="max-w-2xl">
-                <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                   Coaching Programs
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -188,7 +188,7 @@ export default function ForIndividualsPage() {
         <section className="section bg-white">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                 We See You
               </p>
               <h2 className="heading-display">
@@ -370,7 +370,7 @@ export default function ForIndividualsPage() {
                   {/* Bonus */}
                   {program.bonus && (
                     <div className={`mt-6 p-4 rounded-xl ${program.highlight ? "bg-[#262626]" : "bg-white"}`}>
-                      <p className={`text-sm ${program.highlight ? "text-[#3EBCE8]" : "text-[#3EBCE8]"}`}>
+                      <p className={`text-sm ${program.highlight ? "text-[#3EBCE8]" : "text-[#14739C]"}`}>
                         <strong>Bonus:</strong> {program.bonus}
                       </p>
                     </div>

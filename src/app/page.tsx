@@ -483,7 +483,7 @@ export default function Home() {
         <section id="resources" className="section bg-[#F5F5F5]">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                 Resources
               </p>
               <h2 className="heading-display">

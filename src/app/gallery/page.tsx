@@ -154,7 +154,7 @@ export default function GalleryPage() {
         {/* Hero Section */}
         <section className="pt-32 pb-12 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide text-center">
-            <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+            <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
               In Action
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
