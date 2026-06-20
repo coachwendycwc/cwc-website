@@ -254,8 +254,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ─── Section containers ──────────────────────────────────────────────────── */
 .section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
 }
 
 @media (min-width: 768px) {
