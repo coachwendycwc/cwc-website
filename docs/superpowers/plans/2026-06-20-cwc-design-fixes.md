@@ -23,13 +23,13 @@
 ### Task 1: Fix double-arrow bug on /resources
 **Why:** `.link-arrow::after { content:"→" }` (globals.css:463) appends an arrow, but 5 spans ALSO have a literal "→" in their text → renders "Download free → →". VERIFIED.
 **Files:** Modify `src/app/resources/page.tsx` lines 72, 93, 127, 148, 169
-- [ ] Remove the trailing ` →` from each of the 5 `.link-arrow` span texts:
+- [x] Remove the trailing ` →` from each of the 5 `.link-arrow` span texts:
   - L72 `Download free →` → `Download free`
   - L93 `Take the assessment →` → `Take the assessment`
   - L127 `Subscribe on LinkedIn →` → `Subscribe on LinkedIn`
   - L148 `Read the feature →` → `Read the feature`
   - L169 `Listen on Apple Podcasts →` → `Listen on Apple Podcasts`
-- [ ] Grep sitewide for any other `.link-arrow` span containing a literal `→`; fix those too.
+- [x] Grep sitewide for any other `.link-arrow` span containing a literal `→`; fix those too.
   Run: `grep -rn 'link-arrow' src/app/ | grep '→'` → expect empty after fix
 - [ ] `npm run build` → 37/37
 - [ ] Verify on staging: /resources cards show ONE arrow each
@@ -37,7 +37,7 @@
 ### Task 2: Off-brand #9333EA purple → brand purple #8B7BB5
 **Why:** `#9333EA` is NOT in the CWC palette (brand purple = `#8B7BB5` / --color-purple-500). VERIFIED 19 occurrences / 12 files. Both audits flagged.
 **Files:** all under `src/app/`: page.tsx (48, 432), schedule/page.tsx (52), schedule/speaking/page.tsx (14, 44), resources/page.tsx (83, 159), case-studies/page.tsx (88), for-organizations/page.tsx (121, 179, 317), for-individuals/page.tsx (174, 218), services/page.tsx (47), services/virtual-series/page.tsx (90, 122, 150)
-- [ ] Replace all `#9333EA` → `#8B7BB5` sitewide (it's used as fill/stroke/accent/gradient-stop — same role, just on-brand).
+- [x] Replace all `#9333EA` → `#8B7BB5` sitewide (it's used as fill/stroke/accent/gradient-stop — same role, just on-brand).
   Run: `grep -rl '9333EA' src/app/ | while read f; do perl -i -pe 's/9333EA/8B7BB5/g' "$f"; done`
 - [ ] Verify: `grep -rn '9333EA' src/app/` → expect empty
 - [ ] `npm run build` → 37/37
@@ -49,16 +49,16 @@
 
 ### Task 3: /resources empty hero
 **Why:** hero is `pt-32 pb-20` with content only in the left column → right half empty, big void. VERIFIED (resources/page.tsx:22).
-- [ ] Options to evaluate in-browser (pick one, preview before commit):
+- [x] Options to evaluate in-browser (pick one, preview before commit):
   (a) reduce hero padding to match `.section` rhythm; OR
   (b) add a right-column visual (e.g. a resource-cover collage) to balance; OR
   (c) center the hero content instead of left-aligning so the empty right isn't conspicuous.
-- [ ] Preview on local, then staging.
+- [x] Preview on local, then staging.
 
 ### Task 4: Section-gap voids on /for-organizations
 **Why:** large empty gaps between bridge text → logo strip, and before "Organizational Solutions". VERIFIED visually.
-- [ ] Inspect the stacked section paddings (bottom of one + top of next) at those seams; reduce where they double up.
-- [ ] Preview; ensure no other page regresses (it's the shared `.section` — change page-level margins, not the global class, unless global is intended).
+- [x] Inspect the stacked section paddings (bottom of one + top of next) at those seams; reduce where they double up.
+- [x] Preview; ensure no other page regresses (it's the shared `.section` — change page-level margins, not the global class, unless global is intended).
 
 ---
 
