@@ -67,14 +67,14 @@
 ### Task 5: role="button" on <div> → native <button> (events, gallery)
 **Why:** accessibility — custom `role="button"` divs for lightbox triggers. Both audits flagged.
 **Files:** `src/app/events/page.tsx` (~232-236, 296-300), `src/app/gallery/page.tsx` (~175-183)
-- [ ] VERIFY exact lines first (audit line numbers may have drifted).
-- [ ] Convert to native `<button type="button">`, keep onClick, ensure visible focus ring.
+- [x] VERIFY exact lines first (audit line numbers may have drifted).
+- [x] Convert to native `<button type="button">`, keep onClick, ensure visible focus ring.
 - [ ] `npm run build` → 37/37.
 
 ### Task 6: performance-coaching CTA label/destination mismatch
 **Why:** "Learn About the RESET Method" → `/contact` (a proposal form). Label promises info, link is a form. Claude flagged; VERIFIED.
 **Files:** `src/app/services/performance-coaching/page.tsx` (~60, 185)
-- [ ] Decide: relabel to "Request a Coaching Proposal" (match destination) OR point to an info section. Confirm intent with Rafael.
+- [x] Decide: relabel to "Request a Coaching Proposal" (match destination) OR point to an info section. Confirm intent with Rafael.
 
 ### Task 7: generic gallery alt text
 **Why:** `"CWC event photo {index}"` carries no meaning. Lower priority (real but large effort to do well).
