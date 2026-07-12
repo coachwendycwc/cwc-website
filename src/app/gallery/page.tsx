@@ -172,21 +172,19 @@ export default function GalleryPage() {
           <div className="container-wide">
             <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
               {galleryImages.map((image, index) => (
-                <div
+                <button
                   key={image}
-                  className="mb-4 break-inside-avoid cursor-pointer group"
-                  role="button"
-                  tabIndex={0}
+                  type="button"
+                  className="block w-full mb-4 break-inside-avoid cursor-pointer group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3EBCE8] focus-visible:ring-offset-2"
                   aria-label={`View gallery photo ${index + 1}`}
                   onClick={() => openLightbox(index)}
-                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(index); } }}
                 >
                   <LazyImage
                     src={`${siteConfig.basePath}/images/gallery/${image}`}
                     alt={`CWC event photo ${index + 1}`}
                     className="w-full rounded-lg shadow-sm group-hover:shadow-lg transition-shadow duration-300"
                   />
-                </div>
+                </button>
               ))}
             </div>
           </div>
