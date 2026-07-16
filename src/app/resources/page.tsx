@@ -41,10 +41,10 @@ export default function ResourcesPage() {
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-display">
-                Downloadable <span className="text-gradient">Resources</span>
+                Free Tools &amp; <span className="text-gradient">Guides</span>
               </h2>
               <p className="body-large mt-6">
-                Share these with your team, procurement department, or leadership to start the conversation.
+                Practical, ready-to-use resources — share them with your team, procurement department, or leadership to start the conversation.
               </p>
             </div>
 

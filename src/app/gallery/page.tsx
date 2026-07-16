@@ -128,7 +128,7 @@ export default function GalleryPage() {
 
   const lightboxImages = galleryImages.map((image, index) => ({
     src: `${siteConfig.basePath}/images/gallery/${image}`,
-    alt: `Gallery photo ${index + 1}`,
+    alt: `CWC event photo ${index + 1} of ${galleryImages.length}`,
   }));
 
   const openLightbox = (index: number) => {
@@ -170,18 +170,22 @@ export default function GalleryPage() {
         {/* Gallery Grid */}
         <section className="section bg-white">
           <div className="container-wide">
-            <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
+            <div
+              className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4"
+              role="group"
+              aria-label="Photos from CWC keynotes, workshops, retreats, and coaching sessions"
+            >
               {galleryImages.map((image, index) => (
                 <button
                   key={image}
                   type="button"
                   className="block w-full mb-4 break-inside-avoid cursor-pointer group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3EBCE8] focus-visible:ring-offset-2"
-                  aria-label={`View gallery photo ${index + 1}`}
+                  aria-label={`Enlarge photo ${index + 1} of ${galleryImages.length}`}
                   onClick={() => openLightbox(index)}
                 >
                   <LazyImage
                     src={`${siteConfig.basePath}/images/gallery/${image}`}
-                    alt={`CWC event photo ${index + 1}`}
+                    alt=""
                     className="w-full rounded-lg shadow-sm group-hover:shadow-lg transition-shadow duration-300"
                   />
                 </button>
