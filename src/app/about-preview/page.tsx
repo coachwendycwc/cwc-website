@@ -50,14 +50,18 @@ export default function AboutPreviewPage() {
               </div>
             </div>
 
-            {/* Photo — the anchor that fills the space */}
+            {/* Photo — warm close portrait; soft warm panel bridges it to the cream page */}
             <div className="relative">
+              <div
+                className="absolute -inset-3 -z-0 rounded-[2.5rem] bg-gradient-to-br from-[#F3E4D8] via-[#F7EDE3] to-[#EDE3F0]"
+                aria-hidden="true"
+              />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`${siteConfig.basePath}/images/wendy-about.jpg`}
+                src={`${siteConfig.basePath}/images/wendy-about-face.jpg`}
                 alt="Wendy Perdomo, founder of Coaching Women of Color"
-                className="w-full rounded-[2rem] object-cover shadow-xl"
-                style={{ aspectRatio: "4 / 5" }}
+                className="relative z-10 w-full rounded-[2rem] object-cover shadow-xl"
+                style={{ aspectRatio: "1 / 1" }}
               />
             </div>
           </div>
@@ -90,10 +94,10 @@ export default function AboutPreviewPage() {
             <div className="order-2 md:order-1">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`${siteConfig.basePath}/images/wendy-about-cropped.jpg`}
-                alt="Wendy Perdomo speaking with leaders"
+                src={`${siteConfig.basePath}/images/wendy-hero.jpg`}
+                alt="Wendy Perdomo facilitating a leadership workshop"
                 className="w-full rounded-[2rem] object-cover shadow-lg"
-                style={{ aspectRatio: "1 / 1" }}
+                style={{ aspectRatio: "4 / 5" }}
               />
             </div>
 
