@@ -78,7 +78,7 @@
 
 ### Task 7: generic gallery alt text
 **Why:** `"CWC event photo {index}"` carries no meaning. Lower priority (real but large effort to do well).
-- [ ] Defer unless Rafael wants it; would need per-image categorization.
+- [x] DONE (group label + decorative): was — Defer unless Rafael wants it; would need per-image categorization.
 
 ---
 
