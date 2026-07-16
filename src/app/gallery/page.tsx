@@ -128,7 +128,7 @@ export default function GalleryPage() {
 
   const lightboxImages = galleryImages.map((image, index) => ({
     src: `${siteConfig.basePath}/images/gallery/${image}`,
-    alt: `Gallery photo ${index + 1}`,
+    alt: `CWC event photo ${index + 1} of ${galleryImages.length}`,
   }));
 
   const openLightbox = (index: number) => {
@@ -154,7 +154,7 @@ export default function GalleryPage() {
         {/* Hero Section */}
         <section className="pt-32 pb-12 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide text-center">
-            <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+            <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
               In Action
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -170,23 +170,25 @@ export default function GalleryPage() {
         {/* Gallery Grid */}
         <section className="section bg-white">
           <div className="container-wide">
-            <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
+            <div
+              className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4"
+              role="group"
+              aria-label="Photos from CWC keynotes, workshops, retreats, and coaching sessions"
+            >
               {galleryImages.map((image, index) => (
-                <div
+                <button
                   key={image}
-                  className="mb-4 break-inside-avoid cursor-pointer group"
-                  role="button"
-                  tabIndex={0}
-                  aria-label={`View gallery photo ${index + 1}`}
+                  type="button"
+                  className="block w-full mb-4 break-inside-avoid cursor-pointer group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3EBCE8] focus-visible:ring-offset-2"
+                  aria-label={`Enlarge photo ${index + 1} of ${galleryImages.length}`}
                   onClick={() => openLightbox(index)}
-                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(index); } }}
                 >
                   <LazyImage
                     src={`${siteConfig.basePath}/images/gallery/${image}`}
-                    alt={`CWC event photo ${index + 1}`}
+                    alt=""
                     className="w-full rounded-lg shadow-sm group-hover:shadow-lg transition-shadow duration-300"
                   />
-                </div>
+                </button>
               ))}
             </div>
           </div>

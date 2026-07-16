@@ -149,7 +149,7 @@ export default function FAQPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                 FAQ
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -160,7 +160,7 @@ export default function FAQPage() {
               <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
                 Everything you need to know about working with Coaching Women of Color.
                 Can&apos;t find the answer you&apos;re looking for?{" "}
-                <Link href="/contact" className="text-[#3EBCE8] hover:text-[#1A9FCC] font-medium">
+                <Link href="/contact" className="text-[#14739C] hover:text-[#0F5A7A] font-medium">
                   Reach out to us
                 </Link>.
               </p>

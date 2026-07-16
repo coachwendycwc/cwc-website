@@ -19,18 +19,16 @@ export default function ResourcesPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
+        <section className="pt-28 pb-16 md:pt-32 md:pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
-            <div className="max-w-4xl">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                 Resources
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                Insights &
-                <br />
-                <span className="text-gradient">Resources</span>
+                Insights &amp; <span className="text-gradient">Resources</span>
               </h1>
-              <p className="mt-6 text-xl text-[#525252] max-w-2xl leading-relaxed">
+              <p className="mt-6 text-xl text-[#525252] max-w-2xl mx-auto leading-relaxed">
                 Practical tools and frameworks for HR leaders, L&D professionals,
                 and executives building inclusive cultures.
               </p>
@@ -39,14 +37,14 @@ export default function ResourcesPage() {
         </section>
 
         {/* Downloadable Resources */}
-        <section className="section bg-white">
+        <section className="section bg-white !pt-8 md:!pt-10">
           <div className="container-wide">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-display">
-                Downloadable <span className="text-gradient">Resources</span>
+                Free Tools &amp; <span className="text-gradient">Guides</span>
               </h2>
               <p className="body-large mt-6">
-                Share these with your team, procurement department, or leadership to start the conversation.
+                Practical, ready-to-use resources — share them with your team, procurement department, or leadership to start the conversation.
               </p>
             </div>
 
@@ -69,7 +67,7 @@ export default function ResourcesPage() {
                 <p className="text-[#737373] mt-2 flex-grow">
                   A practical guide with tools and strategies to build unshakable confidence in your leadership. Download your free copy.
                 </p>
-                <span className="link-arrow mt-6 text-sm">Download free →</span>
+                <span className="link-arrow mt-6 text-sm">Download free</span>
               </a>
 
               {/* Promotion Readiness Scorecard */}
@@ -80,7 +78,7 @@ export default function ResourcesPage() {
                 className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
               >
                 <div className="w-12 h-12 bg-[#EDE8FD] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#9333EA]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-[#8B7BB5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                   </svg>
                 </div>
@@ -90,7 +88,7 @@ export default function ResourcesPage() {
                 <p className="text-[#737373] mt-2 flex-grow">
                   A 2-minute assessment that evaluates visibility, strategic positioning, and confidence across 5 key dimensions.
                 </p>
-                <span className="link-arrow mt-6 text-sm">Take the assessment →</span>
+                <span className="link-arrow mt-6 text-sm">Take the assessment</span>
               </a>
             </div>
           </div>
@@ -124,7 +122,7 @@ export default function ResourcesPage() {
                 <p className="text-[#737373] mt-2 flex-grow">
                   Insights on leadership, navigating bias, and thriving as a woman of color in the workplace. Published on LinkedIn.
                 </p>
-                <span className="link-arrow mt-6 text-sm">Subscribe on LinkedIn →</span>
+                <span className="link-arrow mt-6 text-sm">Subscribe on LinkedIn</span>
               </a>
 
               {/* We Are Pharma Feature */}
@@ -145,7 +143,7 @@ export default function ResourcesPage() {
                 <p className="text-[#737373] mt-2 flex-grow">
                   Wendy Perdomo featured in <em>We Are Pharma: Advancing Equity 2024</em> — a spotlight on leaders driving inclusion and equity in the pharmaceutical industry.
                 </p>
-                <span className="link-arrow mt-6 text-sm">Read the feature →</span>
+                <span className="link-arrow mt-6 text-sm">Read the feature</span>
               </a>
 
               {/* Apple Podcast */}
@@ -156,7 +154,7 @@ export default function ResourcesPage() {
                 className="card-bordered group hover:border-[#3EBCE8] flex flex-col"
               >
                 <div className="w-12 h-12 bg-[#EDE8FD] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#9333EA]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-[#8B7BB5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                   </svg>
                 </div>
@@ -166,7 +164,7 @@ export default function ResourcesPage() {
                 <p className="text-[#737373] mt-2 flex-grow">
                   Listen to this Apple Podcast episode celebrating Wendy Perdomo as a trailblazer in her family and community.
                 </p>
-                <span className="link-arrow mt-6 text-sm">Listen on Apple Podcasts →</span>
+                <span className="link-arrow mt-6 text-sm">Listen on Apple Podcasts</span>
               </a>
             </div>
           </div>

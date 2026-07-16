@@ -112,7 +112,7 @@ export default async function BlogPostPage({
                 />
               </div>
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-xs font-medium text-[#3EBCE8] uppercase tracking-wider bg-[#E8F8FD] px-3 py-1 rounded-full">
+                <span className="text-xs font-medium text-[#14739C] uppercase tracking-wider bg-[#E8F8FD] px-3 py-1 rounded-full">
                   {post.category}
                 </span>
                 <span className="text-xs text-[#737373]">{post.readTime}</span>
@@ -182,7 +182,7 @@ export default async function BlogPostPage({
           <div className="container-wide">
             <div className="max-w-3xl">
               <div className="bg-[#F5F5F5] rounded-2xl p-8">
-                <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-wider mb-2">
+                <p className="text-sm font-medium text-[#14739C] uppercase tracking-wider mb-2">
                   About the Author
                 </p>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">
@@ -222,7 +222,7 @@ export default async function BlogPostPage({
                       href={`/blog/${related.slug}/`}
                       className="block p-8"
                     >
-                      <span className="text-xs font-medium text-[#3EBCE8] uppercase tracking-wider">
+                      <span className="text-xs font-medium text-[#14739C] uppercase tracking-wider">
                         {related.category}
                       </span>
                       <h3 className="mt-2 text-lg font-semibold text-[#1A1A1A] group-hover:text-[#3EBCE8] transition-colors leading-snug">

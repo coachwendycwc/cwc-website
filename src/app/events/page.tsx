@@ -199,7 +199,7 @@ export default function EventsPage() {
         {/* Hero Section */}
         <section className="pt-32 pb-12 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide text-center">
-            <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+            <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
               Workshops, Webinars & Speaking Engagements
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -227,22 +227,20 @@ export default function EventsPage() {
                   key={`${event.title}-${index}`}
                   className="bg-white border border-[#E5E5E5] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div
-                    className="cursor-pointer"
-                    role="button"
-                    tabIndex={0}
+                  <button
+                    type="button"
+                    className="block w-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3EBCE8] focus-visible:ring-inset"
                     aria-label={`View ${event.title} image`}
                     onClick={() => openLightbox(index)}
-                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(index); } }}
                   >
                     <LazyImage
                       src={`${siteConfig.basePath}/images/events/${event.image}`}
                       alt={event.title}
                       className="w-full h-auto object-cover"
                     />
-                  </div>
+                  </button>
                   <div className="p-6">
-                    <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-2">
+                    <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-2">
                       {event.subtitle}
                     </p>
                     <h3 className="text-xl font-semibold text-[#1A1A1A] mb-3">
@@ -292,18 +290,20 @@ export default function EventsPage() {
               {pastEventFlyers.map((event, index) => (
                 <div
                   key={`${event.title}-${index}`}
-                  className="mb-6 break-inside-avoid bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                  role="button"
-                  tabIndex={0}
-                  aria-label={`View ${event.title} flyer`}
-                  onClick={() => openLightbox(upcomingEvents.length + index)}
-                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(upcomingEvents.length + index); } }}
+                  className="mb-6 break-inside-avoid bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
                 >
-                  <LazyImage
-                    src={`${siteConfig.basePath}/images/events/${event.image}`}
-                    alt={event.title}
-                    className="w-full h-auto"
-                  />
+                  <button
+                    type="button"
+                    className="block w-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3EBCE8] focus-visible:ring-inset"
+                    aria-label={`View ${event.title} flyer`}
+                    onClick={() => openLightbox(upcomingEvents.length + index)}
+                  >
+                    <LazyImage
+                      src={`${siteConfig.basePath}/images/events/${event.image}`}
+                      alt={event.title}
+                      className="w-full h-auto"
+                    />
+                  </button>
                   <div className="p-4">
                     <h3 className="font-semibold text-[#1A1A1A] text-sm">{event.title}</h3>
                     <p className="text-xs text-[#737373] mt-1">{event.date}</p>

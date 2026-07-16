@@ -27,7 +27,7 @@ export default function BlogPage() {
         <section className="pt-32 pb-20 bg-gradient-to-b from-[#E8F8FD] to-white">
           <div className="container-wide">
             <div className="max-w-4xl">
-              <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+              <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                 Blog
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -66,7 +66,7 @@ export default function BlogPage() {
                     )}
                     <div className="p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-xs font-medium text-[#3EBCE8] uppercase tracking-wider bg-[#E8F8FD] px-3 py-1 rounded-full">
+                      <span className="text-xs font-medium text-[#14739C] uppercase tracking-wider bg-[#E8F8FD] px-3 py-1 rounded-full">
                         {post.category}
                       </span>
                       <span className="text-xs text-[#737373]">
@@ -87,7 +87,7 @@ export default function BlogPage() {
                           year: "numeric",
                         })}
                       </span>
-                      <span className="text-sm font-medium text-[#3EBCE8] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                      <span className="text-sm font-medium text-[#14739C] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                         Read more
                         <svg
                           className="w-4 h-4"

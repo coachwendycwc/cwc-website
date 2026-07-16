@@ -56,9 +56,17 @@ export default function PerformanceCoachingPage() {
               <p className="mt-6 text-xl text-[#525252] leading-relaxed">
                 A structured, dual-engagement coaching framework that closes performance gaps—without defaulting to avoidance or escalation.
               </p>
-              <div className="mt-10">
-                <Link href="/contact" className="btn-primary">
-                  Learn About the RESET Method
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/cwc-reset-method-v2.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  View the RESET Method®
+                </a>
+                <Link href="/schedule/organizations/" className="btn-secondary">
+                  Book a Call
                 </Link>
               </div>
             </div>
@@ -70,7 +78,7 @@ export default function PerformanceCoachingPage() {
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+                <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
                   The Challenge
                 </p>
                 <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
@@ -156,7 +164,7 @@ export default function PerformanceCoachingPage() {
         {/* Best For */}
         <section className="section bg-white">
           <div className="container-tight text-center">
-            <p className="text-sm font-medium text-[#3EBCE8] uppercase tracking-widest mb-4">
+            <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
               Best For
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#1A1A1A]">
@@ -181,9 +189,17 @@ export default function PerformanceCoachingPage() {
             <p className="mt-6 text-xl text-[#A3A3A3]">
               Let&apos;s discuss how the RESET Method® can transform your team dynamics.
             </p>
-            <div className="mt-10">
-              <Link href="/contact" className="btn-primary">
-                Learn About the RESET Method
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/cwc-reset-method-v2.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                View the RESET Method®
+              </a>
+              <Link href="/schedule/organizations/" className="btn-secondary-light">
+                Book a Call
               </Link>
             </div>
           </div>

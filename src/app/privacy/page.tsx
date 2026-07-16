@@ -166,7 +166,7 @@ export default function PrivacyPage() {
                     please contact us:
                   </p>
                   <div className="mt-4">
-                    <Link href="/contact" className="text-[#3EBCE8] hover:text-[#1A9FCC] font-medium">
+                    <Link href="/contact" className="text-[#14739C] hover:text-[#0F5A7A] font-medium">
                       Contact Us →
                     </Link>
                   </div>
