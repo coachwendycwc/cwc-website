@@ -59,77 +59,58 @@ const individualTestimonials = [
 
 const coachingPrograms = [
   {
-    id: "clarity-session",
-    tier: "Entry",
-    title: "Leadership Clarity Session",
-    subtitle: "1:1 Deep Dive",
-    price: "$697",
-    duration: "90 minutes",
-    bestFor: "Emerging leaders or professionals feeling stuck, overwhelmed, or at a decision point who need expert guidance fast.",
-    features: [
-      "Deep-dive assessment of current challenges, blockers, and decision points",
-      "Strategic roadmap for your next steps (priorities, options, and best moves)",
-      "Actionable takeaways you can implement immediately",
-      "Curated resource recommendations (tools, frameworks, and next-step supports)",
-    ],
-    bonus: "$697 credit toward any 1:1 program when you enroll within 30 days",
-    cta: "Book Clarity Session",
-    highlight: false,
-  },
-  {
-    id: "momentum-sprint",
-    tier: "Mid-Tier",
-    title: "90-Day Executive Momentum Sprint",
-    subtitle: "1:1 Coaching",
-    price: "$5,000",
-    duration: "90 days (6 sessions)",
-    bestFor: "Professionals who need focused support, a clear plan, and accountability to create meaningful progress in the next 90 days.",
-    features: [
-      "6 private coaching sessions (1 hour each) over 90 days",
-      "30/60/90-day leadership plan with priorities and timelines",
-      "Stakeholder map + influence strategy",
-      "Practical scripts and tools (boundaries, visibility, tough conversations)",
-      "Action plans and accountability between sessions",
-    ],
-    cta: "Start Your Sprint",
-    highlight: false,
-  },
-  {
     id: "executive-program",
-    tier: "Anchor Program",
+    tier: "Signature Program",
     title: "Executive Leadership Coaching",
-    subtitle: "1:1 Premium",
-    price: "$1,650/month",
-    priceNote: "$9,900 total",
+    subtitle: "Deep, sustained transformation",
+    price: "$1,500/month",
+    priceNote: "$9,000 for 6 months",
     duration: "6 months (12 sessions)",
-    bestFor: "Women of color executives and senior leaders ready for deep, sustained transformation with private, high-touch support.",
+    bestFor: "Women of color executives and senior leaders ready for real, lasting transformation — not a band-aid.",
     features: [
-      "2 private coaching calls per month (1 hour each)",
-      "Customized strategies for leadership, confidence, boundaries, and executive presence",
-      "Direct email access between sessions",
-      "Tailored action plans and accountability",
-      "Tools and frameworks aligned with your goals",
-      "Support navigating bias, imposter syndrome, and organizational dynamics",
+      "Two 1:1 coaching sessions every month (12 sessions over 6 months)",
+      "Direct access to me between sessions for the moments that can't wait",
+      "Customized strategies and tailored action plans built around your goals",
+      "Tools and frameworks you'll keep using long after we're done",
+      "Dedicated support navigating bias, visibility, and organizational dynamics",
+      "Accountability and milestone check-ins to keep your momentum",
     ],
-    cta: "Apply Now",
+    cta: "Apply for the Program",
     highlight: true,
   },
   {
-    id: "coaching-lab",
-    tier: "Group Program",
-    title: "Executive Leadership Lab",
-    subtitle: "Community + Coaching",
-    price: "$997",
-    priceNote: "$100/month",
-    duration: "12 months (July & August are integration months)",
-    bestFor: "Self-directed mid-tier professionals who want proven tools, frameworks, and a supportive community to elevate their career.",
+    id: "leadership-intensive",
+    tier: "6-Week Reset",
+    title: "The Leadership Intensive",
+    subtitle: "A focused reset to move through what's in front of you",
+    price: "$3,500",
+    duration: "6 weeks (4 sessions)",
+    bestFor: "Professionals at a decision point who want focused support, a clear plan, and accountability to make real progress fast. A one-time first step.",
     features: [
-      "10 asynchronous leadership labs",
-      "1 live monthly group coaching call",
-      "Career tools, worksheets, and frameworks",
-      "Private Skool community for support and accountability",
-      "Lifetime access to replays",
-      "Learn at your own pace with expert guidance",
+      "Four 1:1 sessions over 6 weeks — beginning with a 90-minute deep-dive assessment, then three 60-minute working sessions",
+      "A focused leadership roadmap for your next 30/60/90 days",
+      "A stakeholder map with a practical influence strategy",
+      "Real scripts and tools for the conversations that matter",
+      "Clear action steps with built-in accountability",
+    ],
+    cta: "Book Your Intensive",
+    highlight: false,
+  },
+  {
+    id: "coaching-lab",
+    tier: "Community Program",
+    title: "Executive Leadership Lab",
+    subtitle: "Grow alongside a community of women who get it",
+    price: "$997",
+    priceNote: "for the year (about $100/month)",
+    duration: "12 months (July & August are integration months)",
+    bestFor: "Self-directed professionals who want to keep growing with structure, resources, and community behind them.",
+    features: [
+      "Monthly live group coaching",
+      "Ten self-paced leadership labs (July and August are integration months)",
+      "Career tools and worksheets you can put to work immediately",
+      "Private community access",
+      "Lifetime replay access to everything",
     ],
     cta: "Join the Lab",
     highlight: false,
@@ -151,18 +132,19 @@ export default function ForIndividualsPage() {
                   Coaching Programs
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] leading-tight">
-                  You already have
-                  <br />
-                  <span className="text-gradient">everything you need.</span>
+                  Lead like the room was{" "}
+                  <span className="text-gradient">built for you.</span>
                 </h1>
                 <p className="mt-6 text-xl text-[#525252] leading-relaxed">
-                  Executive coaching designed specifically for women of color professionals,
-                  senior leaders, and executives ready to lead with confidence, set boundaries,
-                  and navigate workplace dynamics with clarity and power.
+                  You&apos;ve earned your seat. Now let&apos;s make sure you thrive in it —
+                  without shrinking, code-switching, or burning out to prove you belong.
+                  Coaching Women of Color helps women of color leaders step into their next
+                  level with clarity, strategy, and support built for the realities you
+                  actually navigate.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <Link href="/schedule/individuals/" className="btn-primary">
-                    Schedule a Consultation
+                    Book a Discovery Call
                   </Link>
                   <Link href="#programs" className="btn-secondary">
                     View Programs
@@ -286,15 +268,16 @@ export default function ForIndividualsPage() {
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-display">
-                Choose Your <span className="text-gradient">Pathway</span>
+                How We <span className="text-gradient">Work Together</span>
               </h2>
               <p className="body-large mt-6">
-                Whether you need a focused session or sustained transformation,
-                there&apos;s a program designed for where you are right now.
+                There are three ways to work with me, depending on where you are right
+                now. Not sure which fits? Start with a discovery call and we&apos;ll
+                figure it out together.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {coachingPrograms.map((program) => (
                 <div
                   key={program.id}
@@ -367,15 +350,6 @@ export default function ForIndividualsPage() {
                     ))}
                   </ul>
 
-                  {/* Bonus */}
-                  {program.bonus && (
-                    <div className={`mt-6 p-4 rounded-xl ${program.highlight ? "bg-[#262626]" : "bg-white"}`}>
-                      <p className={`text-sm ${program.highlight ? "text-[#3EBCE8]" : "text-[#14739C]"}`}>
-                        <strong>Bonus:</strong> {program.bonus}
-                      </p>
-                    </div>
-                  )}
-
                   {/* CTA */}
                   <Link
                     href="/schedule/individuals/"
@@ -393,34 +367,56 @@ export default function ForIndividualsPage() {
           </div>
         </section>
 
+        {/* Investment & Access */}
+        <section className="section bg-white">
+          <div className="container-tight text-center">
+            <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-4">
+              Investment &amp; Access
+            </p>
+            <h2 className="heading-display">
+              This work should be <span className="text-gradient">within reach.</span>
+            </h2>
+            <p className="body-large mt-6 max-w-2xl mx-auto">
+              Every 1:1 program offers <strong>flexible, interest-free payment plans</strong>,
+              and <strong>financing options</strong> are available if you&apos;d like a longer
+              runway with a lower monthly payment. Many of my clients also have their coaching
+              <strong> sponsored by their employer</strong> — if that might be an option for
+              you, ask me on our call and I&apos;ll help you make the case.
+            </p>
+          </div>
+        </section>
+
         {/* Comparison Section */}
         <section className="section gradient-subtle">
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-display">
-                90-Day vs 6-Month: <span className="text-gradient">What&apos;s Right for You?</span>
+                Intensive or Signature: <span className="text-gradient">What&apos;s Right for You?</span>
               </h2>
             </div>
 
             <div className="overflow-x-auto">
               <table className="w-full min-w-[600px] bg-white rounded-2xl overflow-hidden shadow-sm">
+                <caption className="sr-only">
+                  Comparison of The Leadership Intensive and Executive Leadership Coaching programs
+                </caption>
                 <thead>
                   <tr className="bg-[#F5F5F5]">
-                    <th className="text-left p-4 font-semibold text-[#1A1A1A]">Category</th>
-                    <th className="text-left p-4 font-semibold text-[#1A1A1A]">90-Day Sprint ($5,000)</th>
-                    <th className="text-left p-4 font-semibold text-[#3EBCE8]">6-Month Program ($9,900)</th>
+                    <th scope="col" className="text-left p-4 font-semibold text-[#1A1A1A]">Category</th>
+                    <th scope="col" className="text-left p-4 font-semibold text-[#1A1A1A]">The Leadership Intensive ($3,500)</th>
+                    <th scope="col" className="text-left p-4 font-semibold text-[#14739C]">Executive Leadership Coaching ($9,000)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#E5E5E5]">
                   {[
-                    { cat: "Primary Goal", sprint: "Clarity + traction + execution", program: "Deep, sustained transformation" },
-                    { cat: "Best For", sprint: "Decision point, urgent priorities", program: "Complex challenges, identity-level growth" },
-                    { cat: "Sessions", sprint: "6 sessions", program: "12 sessions" },
-                    { cat: "Support Level", sprint: "Light between-session support", program: "Higher-touch + email access" },
-                    { cat: "Ideal Outcome", sprint: "Clear direction, first wins", program: "Sustained confidence, long-term advancement" },
+                    { cat: "Primary Goal", sprint: "Focused progress on what's in front of you", program: "Deep, sustained transformation" },
+                    { cat: "Best For", sprint: "One pressing challenge or decision point", program: "Complex challenges, identity-level growth" },
+                    { cat: "Format", sprint: "4 sessions over 6 weeks", program: "12 sessions over 6 months" },
+                    { cat: "Support Level", sprint: "High-touch, focused first step", program: "Full support system + between-session access" },
+                    { cat: "Ideal Outcome", sprint: "Clear plan, fast traction", program: "Sustained confidence, long-term advancement" },
                   ].map((row) => (
                     <tr key={row.cat}>
-                      <td className="p-4 font-medium text-[#1A1A1A]">{row.cat}</td>
+                      <th scope="row" className="p-4 font-medium text-[#1A1A1A] text-left">{row.cat}</th>
                       <td className="p-4 text-[#525252]">{row.sprint}</td>
                       <td className="p-4 text-[#525252]">{row.program}</td>
                     </tr>
@@ -450,15 +446,16 @@ export default function ForIndividualsPage() {
         <section className="section bg-[#F5F5F5]">
           <div className="container-tight text-center">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#1A1A1A]">
-              Not sure where to start?
+              Not sure which fits?
             </h2>
             <p className="body-large mt-6 max-w-2xl mx-auto">
-              Begin with a <strong>Leadership Clarity Session</strong> to get clear on your goals,
-              your biggest blockers, and the best next step for your coaching journey.
+              Start with a discovery call and we&apos;ll figure it out together — where you
+              are right now, where you&apos;re headed, and the best next step for your
+              leadership journey.
             </p>
             <div className="mt-10">
               <Link href="/schedule/individuals/" className="btn-primary">
-                Schedule a Consultation
+                Book a Discovery Call
               </Link>
             </div>
           </div>
