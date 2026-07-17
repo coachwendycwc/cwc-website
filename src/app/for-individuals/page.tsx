@@ -60,7 +60,7 @@ const individualTestimonials = [
 const coachingPrograms = [
   {
     id: "executive-program",
-    tier: "Signature Program",
+    tier: "Signature",
     title: "Executive Leadership Coaching",
     subtitle: "Deep, sustained transformation",
     price: "$1,500/month",
@@ -98,7 +98,7 @@ const coachingPrograms = [
   },
   {
     id: "coaching-lab",
-    tier: "Community Program",
+    tier: "Community",
     title: "Executive Leadership Lab",
     subtitle: "Grow alongside a community of women who get it",
     price: "$997",
@@ -289,9 +289,9 @@ export default function ForIndividualsPage() {
                   }`}
                 >
                   {/* Tier Badge */}
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-start justify-between gap-3 mb-4">
                     <span
-                      className={`text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full ${
+                      className={`shrink-0 whitespace-nowrap text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full ${
                         program.highlight
                           ? "bg-[#3EBCE8] text-white"
                           : "bg-[#E8F8FD] text-[#3EBCE8]"
@@ -299,7 +299,7 @@ export default function ForIndividualsPage() {
                     >
                       {program.tier}
                     </span>
-                    <span className={`text-sm ${program.highlight ? "text-[#A3A3A3]" : "text-[#737373]"}`}>
+                    <span className={`text-right text-sm leading-tight ${program.highlight ? "text-[#A3A3A3]" : "text-[#737373]"}`}>
                       {program.duration}
                     </span>
                   </div>
