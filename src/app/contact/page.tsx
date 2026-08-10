@@ -284,9 +284,10 @@ export default function ContactPage() {
                         For Your Team
                       </p>
                       <a
-                        href="/cwc-capabilities-statement-v2.html"
+                        href="/cwc-capabilities-statement-v2.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
+                        download="CWC-Capabilities-Statement.pdf"
                         className="inline-flex items-center gap-2 text-[#525252] hover:text-[#3EBCE8] transition-colors text-sm"
                       >
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

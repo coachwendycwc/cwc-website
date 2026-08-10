@@ -111,7 +111,7 @@ export default function ForOrganizationsPage() {
                   <Link href="/contact" className="btn-primary">
                     Request a Proposal
                   </Link>
-                  <a href={`${siteConfig.basePath}/cwc-capabilities-statement-v2.html`} target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                  <a href={`${siteConfig.basePath}/cwc-capabilities-statement-v2.pdf`} target="_blank" rel="noopener noreferrer" download="CWC-Capabilities-Statement.pdf" className="btn-secondary">
                     Download Capabilities Statement
                   </a>
                 </div>

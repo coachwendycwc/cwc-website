@@ -228,7 +228,7 @@ export default function Home() {
           ctaLabel="Request a Proposal"
           ctaHref="/contact"
           secondaryCtaLabel="Download Capabilities Brief"
-          secondaryCtaHref="/cwc-capabilities-statement-v2.html"
+          secondaryCtaHref="/cwc-capabilities-statement-v2.pdf"
           footerLink={{
             label: "Looking for individual coaching? Start here →",
             href: "/for-individuals",

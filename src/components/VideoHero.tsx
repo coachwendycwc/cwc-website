@@ -61,7 +61,7 @@ export default function VideoHero({
   }, []);
 
   const resolvedSecondaryHref =
-    secondaryCtaHref ?? `${siteConfig.basePath}/cwc-capabilities-statement-v2.html`;
+    secondaryCtaHref ?? `${siteConfig.basePath}/cwc-capabilities-statement-v2.pdf`;
 
   return (
     <section className="video-hero min-h-screen flex items-center justify-start relative overflow-hidden" style={{ backgroundColor: '#1a1a1a' }}>
@@ -131,6 +131,7 @@ export default function VideoHero({
                 href={resolvedSecondaryHref}
                 target="_blank"
                 rel="noopener noreferrer"
+                download={resolvedSecondaryHref.endsWith(".pdf") ? "CWC-Capabilities-Statement.pdf" : undefined}
                 className="btn-secondary-light"
               >
                 {secondaryCtaLabel}
