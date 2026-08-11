@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confidence Building Tool — Coaching Women of Color®</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+  <style>
+    :root {
+      --pink: #D01A7D;
+      --blue: #3EBCE8;
+      --yellow: #FFC425;
+      --green: #C4D82E;
+      --purple: #8B7BB5;
+      --dark: #1A1A1A;
+      --gray-800: #2D2D2D;
+      --gray-700: #404040;
+      --gray-600: #525252;
+      --gray-500: #737373;
+      --gray-400: #9CA3AF;
+      --gray-200: #E5E7EB;
+      --gray-100: #F5F5F5;
+      --white: #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @page { size: letter; margin: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── ACCENT BAR ── */
+    .accent-bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--pink) 0%, var(--pink) 20%, var(--blue) 20%, var(--blue) 40%, var(--green) 40%, var(--green) 60%, var(--yellow) 60%, var(--yellow) 80%, var(--purple) 80%, var(--purple) 100%);
+      flex-shrink: 0;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 14px 36px 12px;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .header-logo { height: 48px; width: auto; }
+
+    .header-back {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--pink);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 8px;
+      border: 1px solid rgba(208, 26, 125, 0.25);
+      border-radius: 3px;
+    }
+
+    .header-right {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .header-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+    }
+
+    .header-subtitle {
+      font-size: 7px;
+      color: var(--gray-500);
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+
+    /* ── HERO BAND ── */
+    .hero-band {
+      background: var(--white);
+      padding: 12px 36px;
+      border-bottom: 1px solid var(--gray-200);
+      flex-shrink: 0;
+    }
+
+    .hero-eyebrow {
+      font-size: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gray-500);
+      margin-bottom: 3px;
+    }
+
+    .hero-h1 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+
+    .hero-h1 em {
+      color: var(--pink);
+      font-style: normal;
+    }
+
+    .hero-sub {
+      font-size: 8.5px;
+      color: var(--gray-500);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* ── INTRO BAR ── */
+    .intro-bar {
+      padding: 10px 36px;
+      background: var(--gray-100);
+      border-bottom: 1px solid var(--gray-200);
+      flex-shrink: 0;
+    }
+
+    .intro-bar p {
+      font-size: 8.5px;
+      line-height: 1.65;
+      color: var(--gray-700);
+    }
+
+    .intro-bar strong { color: var(--pink); font-weight: 700; }
+
+    /* ── MAIN GRID ── */
+    .main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .col-left {
+      padding: 12px 16px 8px 36px;
+      border-right: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col-right {
+      padding: 12px 36px 8px 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--pink);
+      display: inline-block;
+    }
+
+    /* ── TOOL CARDS ── */
+    .tool-card {
+      padding: 8px 10px;
+      border-radius: 5px;
+      background: var(--gray-100);
+      margin-bottom: 7px;
+    }
+
+    .tool-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .tool-number {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--pink);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .tool-name {
+      font-size: 9px;
+      font-weight: 800;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .tool-insight {
+      font-size: 8px;
+      font-weight: 600;
+      color: var(--pink);
+      font-style: italic;
+      margin-bottom: 5px;
+      line-height: 1.4;
+      padding-left: 30px;
+    }
+
+    .tool-activity-label {
+      font-size: 7px;
+      font-weight: 800;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+      padding-left: 30px;
+    }
+
+    .tool-steps {
+      list-style: none;
+      padding-left: 30px;
+    }
+
+    .tool-steps li {
+      font-size: 7.5px;
+      line-height: 1.5;
+      color: var(--gray-700);
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      margin-bottom: 2px;
+    }
+
+    .tool-steps li::before {
+      content: '→';
+      color: var(--blue);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0;
+    }
+
+    /* ── MID-PAGE CTA (bottom of right col) ── */
+    .mid-cta {
+      margin-top: auto;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, #fdf2f8 0%, #f0f9ff 100%);
+      border: 1.5px solid var(--pink);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .mid-cta-text {
+      font-size: 8px;
+      color: var(--dark);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .mid-cta-text span {
+      font-size: 7.5px;
+      font-weight: 400;
+      color: var(--gray-600);
+      display: block;
+      margin-top: 1px;
+    }
+
+    .mid-cta-button {
+      display: inline-block;
+      padding: 5px 12px;
+      font-size: 7px;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--pink);
+      border-radius: 3px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ── NOTE BOX ── */
+    .note-box {
+      margin-top: auto;
+      padding: 8px 12px;
+      background: var(--gray-100);
+      border-radius: 5px;
+      border-left: 3px solid var(--pink);
+      margin-bottom: 8px;
+    }
+
+    .note-label {
+      font-size: 7.5px;
+      font-weight: 800;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 3px;
+    }
+
+    .note-text {
+      font-size: 7.5px;
+      line-height: 1.5;
+      color: var(--gray-600);
+    }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      padding: 10px 36px;
+      background: linear-gradient(135deg, #fdf2f8 0%, #f0f9ff 100%);
+      border-top: 2px solid var(--pink);
+      border-bottom: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .cta-band-text {
+      font-size: 9.5px;
+      color: var(--dark);
+      font-weight: 600;
+      max-width: 480px;
+    }
+
+    .cta-band-text span {
+      font-size: 8.5px;
+      color: var(--gray-600);
+      font-weight: 400;
+      display: block;
+      margin-top: 1px;
+    }
+
+    .cta-band-button {
+      display: inline-block;
+      padding: 7px 18px;
+      font-size: 8px;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--pink);
+      border-radius: 4px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ── CONTACT BAR ── */
+    .contact-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 36px;
+      background: var(--dark);
+      flex-shrink: 0;
+    }
+
+    .contact-name { font-size: 10px; font-weight: 700; color: var(--white); }
+    .contact-title { font-size: 7px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; }
+    .contact-info { text-align: center; font-size: 8.5px; color: rgba(255,255,255,0.8); }
+    .contact-info a { color: var(--blue); text-decoration: none; }
+    .contact-right { text-align: right; }
+    .contact-url { font-size: 9px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── COPYRIGHT ── */
+    .copyright {
+      text-align: center;
+      padding: 5px 36px;
+      font-size: 7px;
+      color: var(--gray-400);
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      flex-shrink: 0;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media screen and (max-width: 900px) {
+      .page { width: 100%; height: auto; overflow: visible; }
+      .header { padding: 16px 24px 12px; }
+      .header-logo { height: 36px; }
+      .header-back { font-size: 12px; }
+      .header-title { font-size: 11px; }
+      .hero-band { padding: 18px 24px; }
+      .hero-h1 { font-size: 26px; }
+      .hero-sub { font-size: 12px; margin-top: 6px; }
+      .intro-bar { padding: 14px 24px; }
+      .intro-bar p { font-size: 13px; line-height: 1.6; }
+      .main { grid-template-columns: 1fr; flex: none; }
+      .col-left { padding: 20px 24px; border-right: none; border-bottom: 1px solid var(--gray-200); }
+      .col-right { padding: 20px 24px; }
+      .section-label { font-size: 13px; margin-bottom: 14px; }
+      .tool-card { padding: 14px 16px; margin-bottom: 12px; }
+      .tool-number { width: 30px; height: 30px; font-size: 14px; }
+      .tool-name { font-size: 13px; }
+      .tool-insight { font-size: 12px; padding-left: 38px; }
+      .tool-activity-label { font-size: 10px; padding-left: 38px; margin-bottom: 5px; }
+      .tool-steps { padding-left: 38px; }
+      .tool-steps li { font-size: 12px; line-height: 1.6; gap: 7px; margin-bottom: 4px; }
+      .note-box { padding: 14px 16px; margin-bottom: 16px; }
+      .note-label { font-size: 11px; }
+      .note-text { font-size: 13px; }
+      .mid-cta { flex-direction: column; align-items: flex-start; padding: 14px 16px; gap: 8px; }
+      .mid-cta-text { font-size: 14px; }
+      .mid-cta-text span { font-size: 12px; }
+      .mid-cta-button { font-size: 12px; padding: 10px 20px; min-height: 44px; display: inline-flex; align-items: center; }
+      .cta-band { padding: 16px 24px; flex-direction: column; text-align: center; gap: 10px; }
+      .cta-band-text { font-size: 16px; max-width: 100%; }
+      .cta-band-text span { font-size: 13px; }
+      .cta-band-button { font-size: 13px; padding: 10px 24px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+      .contact-bar { flex-direction: column; gap: 8px; padding: 16px 24px; text-align: center; }
+      .contact-name { font-size: 13px; }
+      .contact-info { font-size: 12px; }
+      .contact-right { text-align: center; }
+      .contact-url { font-size: 12px; }
+    }
+
+    @media screen and (max-width: 480px) {
+      .header { padding: 12px 16px; gap: 10px; }
+      .hero-band { padding: 14px 16px; }
+      .hero-h1 { font-size: 22px; }
+      .intro-bar { padding: 12px 16px; }
+      .col-left, .col-right { padding: 16px; }
+      .cta-band { padding: 14px 16px; }
+      .contact-bar { padding: 14px 16px; }
+    }
+
+    /* ── DESKTOP ── */
+    @media screen and (min-width: 901px) {
+      body { background: #e5e7eb; padding: 40px 0; }
+      .page { width: 100%; max-width: 1100px; height: auto; overflow: visible; box-shadow: 0 2px 20px rgba(0,0,0,0.12); }
+      .accent-bar { height: 8px; }
+      .header { padding: 20px 48px 16px; gap: 20px; }
+      .header-logo { height: 60px; }
+      .header-back { font-size: 11px; }
+      .header-title { font-size: 15px; letter-spacing: 3px; }
+      .header-subtitle { font-size: 10px; margin-top: 4px; }
+      .hero-band { padding: 22px 48px; }
+      .hero-eyebrow { font-size: 10px; margin-bottom: 5px; }
+      .hero-h1 { font-size: 32px; }
+      .hero-sub { font-size: 14px; margin-top: 6px; }
+      .intro-bar { padding: 16px 48px; }
+      .intro-bar p { font-size: 15px; line-height: 1.7; }
+      .col-left { padding: 24px 24px 16px 48px; }
+      .col-right { padding: 24px 48px 16px 24px; }
+      .section-label { font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; padding-bottom: 6px; border-bottom-width: 3px; }
+      .tool-card { padding: 14px 16px; margin-bottom: 12px; border-radius: 8px; }
+      .tool-number { width: 30px; height: 30px; font-size: 14px; }
+      .tool-name { font-size: 13px; }
+      .tool-insight { font-size: 12px; padding-left: 38px; margin-bottom: 7px; }
+      .tool-activity-label { font-size: 10px; padding-left: 38px; margin-bottom: 5px; }
+      .tool-steps { padding-left: 38px; }
+      .tool-steps li { font-size: 13px; line-height: 1.6; gap: 7px; margin-bottom: 4px; }
+      .note-box { padding: 14px 18px; }
+      .note-label { font-size: 11px; margin-bottom: 5px; }
+      .note-text { font-size: 13px; line-height: 1.6; }
+      .mid-cta { padding: 14px 18px; border-radius: 8px; }
+      .mid-cta-text { font-size: 14px; }
+      .mid-cta-text span { font-size: 12px; margin-top: 2px; }
+      .mid-cta-button { font-size: 11px; padding: 7px 16px; border-radius: 5px; }
+      .cta-band { padding: 16px 48px; }
+      .cta-band-text { font-size: 15px; }
+      .cta-band-text span { font-size: 13px; margin-top: 2px; }
+      .cta-band-button { font-size: 12px; padding: 10px 24px; border-radius: 6px; }
+      .contact-bar { padding: 14px 48px; }
+      .contact-name { font-size: 14px; }
+      .contact-title { font-size: 10px; }
+      .contact-info { font-size: 13px; }
+      .contact-url { font-size: 13px; }
+    }
+
+    @media print {
+      body { background: white; }
+      .page { width: 8.5in; height: 11in; box-shadow: none; margin: 0; overflow: hidden; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="accent-bar"></div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <img class="header-logo" src="logo.webp" alt="Coaching Women of Color®" />
+      <a href="cwc-capabilities-statement.html" class="header-back">&#8592; Capabilities</a>
+      <div class="header-right">
+        <div class="header-title">Confidence Building Tool</div>
+        <div class="header-subtitle">Wendy Perdomo &mdash; Certified Executive Coach | ICF Coach | Imposter Syndrome Coach Practitioner</div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero-band">
+      <div class="hero-eyebrow">Client Resource &mdash; Imposter Syndrome Support</div>
+      <h1 class="hero-h1">The work is real.<br><em>The doubt is not.</em></h1>
+      <div class="hero-sub">Six practical tools to strengthen self-belief, own your voice, and show up fully in every room you walk into.</div>
+    </div>
+
+    <!-- INTRO -->
+    <div class="intro-bar">
+      <p><strong>Imposter syndrome is not a character flaw.</strong> It's a predictable response to navigating spaces that weren't designed with you in mind. And while we can't change the systems overnight, we can change the relationship you have with yourself inside of them. These six tools are designed to help you do exactly that — one honest, practical step at a time.</p>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div class="col-left">
+        <h2 class="section-label">Tools 1 – 3</h2>
+
+        <!-- Tool 1 -->
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-number">1</div>
+            <div class="tool-name">Name Your Self-Doubt</div>
+          </div>
+          <div class="tool-insight">You cannot fight what you refuse to see.</div>
+          <div class="tool-activity-label">The Activity</div>
+          <ul class="tool-steps">
+            <li>Keep a running note — digital or paper — and jot down moments of uncertainty throughout the day.</li>
+            <li>For each one: write the scenario, what you told yourself, and how your body responded.</li>
+            <li>Look for the pattern. Patterns can be interrupted. Unexamined ones cannot.</li>
+          </ul>
+        </div>
+
+        <!-- Tool 2 -->
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-number">2</div>
+            <div class="tool-name">Build Your Confidence Bank</div>
+          </div>
+          <div class="tool-insight">The fastest antidote to doubt is your own track record.</div>
+          <div class="tool-activity-label">The Activity</div>
+          <ul class="tool-steps">
+            <li>Every week, list 3–5 wins — big or small. Include the strength or skill you used to get there.</li>
+            <li>Store them somewhere you can find them when the doubt gets loud.</li>
+            <li>Reference it often. Let the evidence speak back to the narrative.</li>
+          </ul>
+        </div>
+
+        <!-- Tool 3 -->
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-number">3</div>
+            <div class="tool-name">Reframe the Setback</div>
+          </div>
+          <div class="tool-insight">Confidence isn't built by avoiding failure. It's built by reading it differently.</div>
+          <div class="tool-activity-label">The Activity</div>
+          <ul class="tool-steps">
+            <li>After anything that doesn't go as planned, ask: What went well? What didn't, and why?</li>
+            <li>Write the lesson, not just the loss.</li>
+            <li>Growth lives in the gap between what happened and what you learned from it.</li>
+          </ul>
+        </div>
+        <!-- NOTE BOX — moved to left to fill white space -->
+        <div class="note-box" style="margin-top: auto; margin-bottom: 0;">
+          <div class="note-label">A Note from Wendy</div>
+          <div class="note-text">These tools work best when you use them consistently — not just when the doubt gets loud. Make them a practice. Imposter syndrome doesn't disappear overnight, but it does lose its grip when you stop letting it run unchecked.</div>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <h2 class="section-label">Tools 4 – 6</h2>
+
+        <!-- Tool 4 -->
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-number">4</div>
+            <div class="tool-name">Presence Is a Practice</div>
+          </div>
+          <div class="tool-insight">Your body doesn't wait for your mind to catch up. Give it a reason to lead.</div>
+          <div class="tool-activity-label">The Activity</div>
+          <ul class="tool-steps">
+            <li>Posture — Stand or sit tall, shoulders back, take one deep breath before any high-stakes moment.</li>
+            <li>Vocal pace — Slow down. Record yourself saying one confident statement out loud. Play it back.</li>
+            <li>Eye contact — Look up when someone enters your space. Face relaxed. Alert. Present.</li>
+          </ul>
+        </div>
+
+        <!-- Tool 5 -->
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-number">5</div>
+            <div class="tool-name">Ask for the Feedback</div>
+          </div>
+          <div class="tool-insight">You cannot see your own blind spots. That's not weakness — that's human.</div>
+          <div class="tool-activity-label">The Activity</div>
+          <ul class="tool-steps">
+            <li>Identify one trusted colleague, manager, or mentor and ask them two specific questions.</li>
+            <li>"What do you see as my strongest contribution right now?" and "What should I develop further?"</li>
+            <li>The gap between how others see you and how you see yourself is often where confidence lives.</li>
+          </ul>
+        </div>
+
+        <!-- Tool 6 -->
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-number">6</div>
+            <div class="tool-name">Celebrate the Win</div>
+          </div>
+          <div class="tool-insight">If you never mark the progress, your brain defaults back to the doubt.</div>
+          <div class="tool-activity-label">The Activity</div>
+          <ul class="tool-steps">
+            <li>At the end of each week, name one thing you did that you're proud of. Say it out loud.</li>
+            <li>Write it down. Tell someone. Stop moving the goalpost before you've stood in the end zone.</li>
+            <li>Confidence compounds. Let it.</li>
+          </ul>
+        </div>
+
+        <!-- MID CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta-text">
+            Ready for personalized support?
+            <span>Book a 1:1 coaching session with Wendy to go deeper.</span>
+          </div>
+          <a href="https://coachingwomenofcolor.com/schedule/" target="_blank" rel="noopener noreferrer" class="mid-cta-button">Book a Call &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA BAND -->
+    <div class="cta-band">
+      <div class="cta-band-text">
+        You've earned your seat. Now let's make sure you believe it.
+        <span>Coaching Women of Color&reg; offers individual and group coaching for leaders navigating imposter syndrome and career growth.</span>
+      </div>
+      <a href="https://coachingwomenofcolor.com/schedule/" target="_blank" rel="noopener noreferrer" class="cta-band-button">Schedule a Discovery Call &rarr;</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-bar">
+      <div>
+        <div class="contact-name">Wendy Perdomo, CEO</div>
+        <div class="contact-title">Coaching Women of Color&reg;</div>
+      </div>
+      <div class="contact-info">
+        <a href="mailto:Wendy@CoachingWomenOfColor.com">Wendy@CoachingWomenOfColor.com</a>&nbsp; / &nbsp;(917) 224-1343
+      </div>
+      <div class="contact-right">
+        <div class="contact-url">coachingwomenofcolor.com</div>
+      </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="copyright">
+      Confidence Building Tool &copy; Coaching Women of Color&reg;, LLC. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
