@@ -52,13 +52,13 @@ npm start          # Start production server on port 3001
 - **Production:** `main` branch → S3 `coachingwomenofcolor.com` → CloudFront `E2RMMPGLN2DEIG`
 - **Staging:** `staging` branch → S3 `staging.coachingwomenofcolor.com` → CloudFront `E39U9T07BP67U4`
 - **Staging deploy is manual** -- no GitHub Actions for `staging` branch
-- Deploy commands:
+- Deploy commands — ALWAYS use the script, not a bare `s3 sync`:
   ```bash
-  # Build & deploy to STAGING
-  npm run build
-  aws s3 sync out/ s3://staging.coachingwomenofcolor.com/ --delete
-  aws cloudfront create-invalidation --distribution-id E39U9T07BP67U4 --paths "/*"
+  ./scripts/deploy.sh staging   # or: ./scripts/deploy.sh prod
   ```
+  The script re-applies `Cache-Control: no-cache` to the capabilities
+  statement files after syncing; a bare sync wipes those headers and
+  brings back the stale-page problem (Wendy saw old verbiage, 2026-08-10).
 - **NEVER push to `main` or production without explicit user approval**
 - **Pre-deploy checklist (MANDATORY before any production deploy):**
   1. Run `git status` — confirm there are no untracked or uncommitted files that belong to the site (new pages, images, components)
