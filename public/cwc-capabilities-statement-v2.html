@@ -513,7 +513,9 @@
 
     @media print {
       body { background: white; }
-      .page { width: 8.5in; height: 11in; box-shadow: none; margin: 0; overflow: hidden; }
+      /* Content runs ~12.5in tall at design size; zoom 0.88 fits it on one
+         letter page, and the left margin centers the scaled page box. */
+      .page { width: 8.5in; height: 12.5in; zoom: 0.88; box-shadow: none; margin: 0 0 0 0.58in; overflow: hidden; }
     }
 
     /* ── DESKTOP ── */
