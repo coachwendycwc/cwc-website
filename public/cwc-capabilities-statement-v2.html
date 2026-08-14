@@ -26,7 +26,7 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    @page { size: letter; margin: 0; }
+    @page { size: 8.5in 14in; margin: 0; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -512,10 +512,38 @@
     }
 
     @media print {
+      /* Full-bleed digital one-pager: page matches the design (8.5x14in),
+         type is bumped 25% over the screen-compact sizes for readability.
+         Printers scale-to-fit letter automatically. */
       body { background: white; }
-      /* Content runs ~12.5in tall at design size; zoom 0.88 fits it on one
-         letter page, and the left margin centers the scaled page box. */
-      .page { width: 8.5in; height: 12.5in; zoom: 0.88; box-shadow: none; margin: 0 0 0 0.58in; overflow: hidden; }
+      .page { width: 8.5in; height: 14in; zoom: 1; box-shadow: none; margin: 0; overflow: hidden; }
+      .header-name { font-size: 26.2px !important; }
+      .header-tagline { font-size: 11.9px !important; }
+      .intro p { font-size: 11.2px !important; }
+      .section-label { font-size: 12.5px !important; }
+      .capability-name { font-size: 11.2px !important; }
+      .capability p { font-size: 10.0px !important; }
+      .outcomes-label { font-size: 11.2px !important; }
+      .outcome-item { font-size: 9.4px !important; }
+      .difference-list li { font-size: 11.2px !important; }
+      .check-circle { font-size: 12.5px !important; }
+      .sectors-label { font-size: 11.2px !important; }
+      .sector-tag { font-size: 8.8px !important; }
+      .quote-mark { font-size: 37.5px !important; }
+      .testimonial-quote { font-size: 10.6px !important; }
+      .testimonial-author { font-size: 9.4px !important; }
+      .cta-band-text { font-size: 11.9px !important; }
+      .cta-band-text span { font-size: 10.6px !important; }
+      .cta-band-button { font-size: 10.0px !important; }
+      .clients-header { font-size: 10.0px !important; }
+      .contact-name { font-size: 12.5px !important; }
+      .contact-title { font-size: 8.8px !important; }
+      .contact-info { font-size: 10.6px !important; }
+      .contact-url { font-size: 11.2px !important; }
+      .contact-naics { font-size: 8.8px !important; }
+      .methodology-text { font-size: 10.0px !important; }
+      .methodology-delivery { font-size: 10.0px !important; }
+      .reset-method-link { font-size: 9.4px !important; }
     }
 
     /* ── DESKTOP ── */
