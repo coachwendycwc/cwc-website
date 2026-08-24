@@ -33,8 +33,8 @@ aws s3 sync out/ "s3://$BUCKET/" --delete
 
 # Files that must always revalidate in the browser. Add here anything
 # that gets shared as a direct link and edited in place.
-NO_CACHE_HTML=(cwc-capabilities-statement.html cwc-capabilities-statement-v2.html)
-NO_CACHE_PDF=(cwc-capabilities-statement.pdf cwc-capabilities-statement-v2.pdf)
+NO_CACHE_HTML=(cwc-capabilities-statement.html cwc-capabilities-statement-v2.html cwc-reset-method.html)
+NO_CACHE_PDF=(cwc-capabilities-statement.pdf cwc-capabilities-statement-v2.pdf cwc-reset-method.pdf)
 
 for f in "${NO_CACHE_HTML[@]}"; do
   aws s3 cp "out/$f" "s3://$BUCKET/$f" --cache-control no-cache --content-type text/html
