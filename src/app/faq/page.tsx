@@ -64,7 +64,7 @@ const faqs = [
       },
       {
         q: "What coaching programs are available for individuals?",
-        a: "We offer four pathways: the Leadership Clarity Session (a 90-minute deep dive), the 90-Day Executive Momentum Sprint (6 sessions), the Executive Leadership Coaching Program (6 months, 12 sessions), and the Executive Leadership Lab (a 12-month group program with 10 asynchronous leadership labs, 1 live monthly group coaching call, and community support — July and August are integration months).",
+        a: "We offer three pathways: the Executive Leadership Coaching Program (our signature 6-month program, 12 sessions), The Leadership Intensive (a focused 6-week reset, 4 sessions), and the Executive Leadership Lab (a 12-month group program with 10 self-paced leadership labs, 1 live monthly group coaching call, and community support — July and August are integration months).",
       },
       {
         q: "What can I expect from a coaching session?",
@@ -93,7 +93,7 @@ const faqs = [
       },
       {
         q: "How much does coaching cost?",
-        a: "Individual coaching programs range from $697 for a Leadership Clarity Session to $9,900 for the 6-month Executive Leadership Coaching Program. Organizational pricing is customized based on the scope, format, and duration of the engagement. Contact us to book a discovery call and receive a custom quote.",
+        a: "Individual coaching programs range from $997 for the year-long Executive Leadership Lab to $9,000 for the 6-month Executive Leadership Coaching Program ($1,500/month), with The Leadership Intensive at $3,500. Organizational pricing is customized based on the scope, format, and duration of the engagement. Contact us to book a discovery call and receive a custom quote.",
       },
       {
         q: "Do you provide post-engagement support?",
