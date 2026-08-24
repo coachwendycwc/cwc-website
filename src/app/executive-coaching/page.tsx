@@ -158,10 +158,10 @@ export default function ExecutiveCoachingPage() {
                       6-Month Program
                     </p>
                     <div className="text-4xl md:text-5xl font-semibold text-[#1A1A1A]">
-                      $9,900
+                      $9,000
                     </div>
                     <p className="text-[#737373] mt-2">
-                      or $1,650/month payment plan
+                      or $1,500/month payment plan
                     </p>
                   </div>
                   <div>
