@@ -83,7 +83,7 @@ const faqStructuredData = {
       name: "What coaching programs are available for individuals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We offer three pathways: the Executive Leadership Coaching Program (our signature 6-month program, 12 sessions), The Leadership Intensive (a focused 6-week reset, 4 sessions), and the Executive Leadership Lab (a 12-month group program).",
+        text: "Every individual engagement begins with one of three entry sessions — the Strategy Call (30 minutes, $150), the Clarity Call (60 minutes, $300), or the Breakthrough Session (90 minutes, $450). If we continue working together, we shape the right ongoing engagement in conversation.",
       },
     },
     {
@@ -91,7 +91,7 @@ const faqStructuredData = {
       name: "How much does coaching cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Individual coaching programs range from $997 for the year-long Executive Leadership Lab to $9,000 for the 6-month Executive Leadership Coaching Program ($1,500/month), with The Leadership Intensive at $3,500. Organizational pricing is customized based on the scope, format, and duration of the engagement.",
+        text: "Entry sessions are $150 (30 minutes), $300 (60 minutes), and $450 (90 minutes). Pricing for ongoing engagements is discussed in conversation, with payment plans available. Organizational pricing is customized based on the scope, format, and duration of the engagement.",
       },
     },
     {

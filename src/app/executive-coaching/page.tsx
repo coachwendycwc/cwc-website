@@ -157,11 +157,11 @@ export default function ExecutiveCoachingPage() {
                     <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-2">
                       6-Month Program
                     </p>
-                    <div className="text-4xl md:text-5xl font-semibold text-[#1A1A1A]">
-                      $9,000
+                    <div className="text-2xl md:text-3xl font-semibold text-[#1A1A1A]">
+                      Pricing shared in conversation
                     </div>
                     <p className="text-[#737373] mt-2">
-                      or $1,500/month payment plan
+                      Begin with an <Link href="/for-individuals" className="underline hover:text-[#3EBCE8]">entry session</Link> &mdash; payment plans available
                     </p>
                   </div>
                   <div>
