@@ -72,7 +72,7 @@ const faqs = [
       },
       {
         q: "How do I get started?",
-        a: "Book a free consultation through our website. We'll start with a conversation to understand your goals and determine which program is the right fit for you.",
+        a: "Start with one of our three entry sessions — the Strategy Call (30 minutes), the Clarity Call (60 minutes), or the Breakthrough Session (90 minutes). Pick the one that matches where you are on the For Individuals page; you'll pay and choose your time in the same place, then complete a short intake so we start working from minute one. Organizations can request a proposal through our contact page.",
       },
     ],
   },
