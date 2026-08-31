@@ -198,7 +198,7 @@ export default function FAQPage() {
               Still have questions?
             </h2>
             <p className="mt-6 text-xl text-[#A3A3A3] max-w-2xl mx-auto">
-              We&apos;d love to hear from you. Book a free consultation or send us a message.
+              We&apos;d love to hear from you. Book an entry session or send us a message.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/schedule/" className="btn-primary">
