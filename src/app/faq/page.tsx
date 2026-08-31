@@ -201,8 +201,8 @@ export default function FAQPage() {
               We&apos;d love to hear from you. Book an entry session or send us a message.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/schedule/" className="btn-primary">
-                Book a Free Consultation
+              <Link href="/for-individuals" className="btn-primary">
+                Book an Entry Session
               </Link>
               <Link href="/contact" className="btn-secondary bg-transparent text-white border-white hover:bg-white hover:text-[#1A1A1A]">
                 Contact Us

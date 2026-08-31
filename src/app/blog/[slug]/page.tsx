@@ -249,8 +249,8 @@ export default async function BlogPostPage({
               Book a free consultation and let&apos;s talk about your goals.
             </p>
             <div className="mt-10">
-              <Link href="/schedule/" className="btn-primary">
-                Book a Free Consultation
+              <Link href="/for-individuals" className="btn-primary">
+                Book an Entry Session
               </Link>
             </div>
           </div>
