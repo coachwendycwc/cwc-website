@@ -88,17 +88,6 @@ export default function Header() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden lg:flex lg:items-center lg:gap-4">
-          <Link
-            href="/contact"
-            className="px-6 py-2.5 bg-[#3EBCE8] text-white text-sm font-medium rounded-full transition-[background-color,transform] duration-200 hover:bg-[#1A9FCC] [@media(hover:hover)]:hover:scale-105 active:scale-[0.97]"
-            style={{ transitionTimingFunction: "cubic-bezier(0.23, 1, 0.32, 1)" }}
-          >
-            Request a Proposal
-          </Link>
-        </div>
-
         {/* Mobile menu button */}
         <button
           type="button"
@@ -149,13 +138,6 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="block w-full text-center px-6 py-3 bg-[#3EBCE8] text-white font-medium rounded-full mt-6"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Request a Proposal
-            </Link>
           </div>
         </div>
       )}
