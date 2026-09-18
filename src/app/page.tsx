@@ -220,8 +220,7 @@ export default function Home() {
       <main id="main-content">
         {/* Hero Section - Video Background */}
         <VideoHero
-          videoSrc="videos/wendy-workshop.mp4"
-          posterSrc="images/wendy-hero.jpg"
+          imageSrc="images/wendy-workshop-hero.jpg"
           headlineTop="Invest in your leaders."
           headlineGradient=""
           subheadline="Invest in the leaders who are already transforming your organization—through executive coaching, keynotes, workshops, and strategic retreats."

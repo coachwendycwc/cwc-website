@@ -5,10 +5,12 @@ import Link from "next/link";
 import { siteConfig } from "@/config";
 
 interface VideoHeroProps {
-  /** Path to video file relative to public/ (e.g., "videos/wendy-keynote.mp4") */
-  videoSrc: string;
+  /** Path to video file relative to public/ (e.g., "videos/wendy-keynote.mp4"). Omit to use a still image. */
+  videoSrc?: string;
   /** Fallback image shown while video loads or if video fails */
   posterSrc?: string;
+  /** Still image used as the hero background when no videoSrc is given (relative to public/) */
+  imageSrc?: string;
   /** Main headline - first line */
   headlineTop?: string;
   /** Main headline - gradient line */
@@ -34,6 +36,7 @@ interface VideoHeroProps {
 export default function VideoHero({
   videoSrc,
   posterSrc,
+  imageSrc,
   headlineTop = "Invest in",
   headlineGradient = "your leaders.",
   subheadline = "Invest in the leaders who are already transforming your organization—through executive coaching, keynotes, workshops, and strategic retreats.",
@@ -65,8 +68,21 @@ export default function VideoHero({
 
   return (
     <section className="video-hero min-h-screen flex items-center justify-start relative overflow-hidden" style={{ backgroundColor: '#1a1a1a' }}>
+      {/* Still-image background (used when no video is supplied) */}
+      {!videoSrc && imageSrc && (
+        // eslint-disable-next-line @next/next/no-img-element -- static export: images are unoptimized by design
+        <img
+          src={`${siteConfig.basePath}/${imageSrc}`}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-[66%_38%]"
+          fetchPriority="high"
+          decoding="async"
+          aria-hidden="true"
+        />
+      )}
+
       {/* Video Background */}
-      {!videoError && (
+      {videoSrc && !videoError && (
         <video
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover object-[72%_80%] lg:object-[80%_center]"
