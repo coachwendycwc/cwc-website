@@ -221,8 +221,8 @@ export default function Home() {
         {/* Hero Section - Video Background */}
         <VideoHero
           imageSrc="images/wendy-workshop-hero.jpg"
-          headlineTop="Invest in your leaders."
-          headlineGradient=""
+          headlineTop="Invest in"
+          headlineGradient="your leaders."
           subheadline="Invest in the leaders who are already transforming your organization—through executive coaching, keynotes, workshops, and strategic retreats."
           ctaLabel="Request a Proposal"
           ctaHref="/contact"
