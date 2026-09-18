@@ -64,7 +64,7 @@ const faqs = [
       },
       {
         q: "What coaching programs are available for individuals?",
-        a: "Every individual engagement begins with one of three entry sessions — the Strategy Call (30 minutes, $150), the Clarity Call (60 minutes, $300), or the Breakthrough Session (90 minutes, $450). Each is a real working session with a concrete deliverable, not a sales call. If we continue working together, we shape the right ongoing engagement in conversation.",
+        a: "Every individual engagement begins with a complimentary 30-minute discovery call. Bring one real situation you are carrying and leave with Wendy's honest read and a recommendation you can act on. From there, we choose the engagement that matches what you are trying to change — Foundation (1 month), Momentum (3 months), Transformation (4 months), Performance-Based Transformation (4 months, for when the person who needs support is on your team), or The Executive Alliance (6 months minimum). Imposter syndrome coaching is available on its own as a four-session Intensive or alongside any engagement.",
       },
       {
         q: "What can I expect from a coaching session?",
@@ -72,7 +72,7 @@ const faqs = [
       },
       {
         q: "How do I get started?",
-        a: "Start with one of our three entry sessions — the Strategy Call (30 minutes), the Clarity Call (60 minutes), or the Breakthrough Session (90 minutes). Pick the one that matches where you are on the For Individuals page; you'll pay and choose your time in the same place, then complete a short intake so we start working from minute one. Organizations can request a proposal through our contact page.",
+        a: "Book a complimentary 30-minute discovery call from the For Individuals page. A short questionnaire goes out when you book so we start with substance, and you leave the call with a recommendation and the reasoning behind it. Organizations can request a proposal through our contact page.",
       },
     ],
   },
@@ -81,7 +81,7 @@ const faqs = [
     questions: [
       {
         q: "How long are coaching engagements?",
-        a: "Engagement length varies based on your needs. Individual coaching ranges from a single 90-minute session to a 6-month program. Group coaching and virtual series can range from a short series to a longer engagement. Retreats are available as half-day or full-day sessions.",
+        a: "Engagement length varies based on your needs. Individual engagements range from the one-month Foundation to The Executive Alliance at six months minimum; timeframes shown are typical and your cadence is agreed at the start. Group coaching and virtual series can range from a short series to a longer engagement. Retreats are available as half-day or full-day sessions.",
       },
       {
         q: "Do you offer DiSC® assessments?",
@@ -93,7 +93,7 @@ const faqs = [
       },
       {
         q: "How much does coaching cost?",
-        a: "Entry sessions are $150 (30 minutes), $300 (60 minutes), and $450 (90 minutes) — and if you enroll in a coaching engagement within 30 days, up to $300 of your entry session applies toward it. Pricing for ongoing engagements is discussed in conversation, with payment plans available. Organizational pricing is customized based on the scope, format, and duration of the engagement.",
+        a: "The discovery call is complimentary and carries no obligation. Investment for each engagement is discussed on the call and sent afterward on the rate sheet, with payment plans available on every engagement. Employer sponsorship is available for any engagement and required for none. Organizational pricing is customized based on the scope, format, and duration of the engagement.",
       },
       {
         q: "Do you provide post-engagement support?",
@@ -198,11 +198,11 @@ export default function FAQPage() {
               Still have questions?
             </h2>
             <p className="mt-6 text-xl text-[#A3A3A3] max-w-2xl mx-auto">
-              We&apos;d love to hear from you. Book an entry session or send us a message.
+              We&apos;d love to hear from you. Book a discovery call or send us a message.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/for-individuals" className="btn-primary">
-                Book an Entry Session
+                Book a Discovery Call
               </Link>
               <Link href="/contact" className="btn-secondary bg-transparent text-white border-white hover:bg-white hover:text-[#1A1A1A]">
                 Contact Us

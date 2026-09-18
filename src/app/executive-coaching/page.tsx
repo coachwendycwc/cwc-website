@@ -161,7 +161,7 @@ export default function ExecutiveCoachingPage() {
                       Pricing shared in conversation
                     </div>
                     <p className="text-[#737373] mt-2">
-                      Begin with an <Link href="/for-individuals" className="underline hover:text-[#3EBCE8]">entry session</Link> &mdash; payment plans available
+                      Begin with a <Link href="/for-individuals" className="underline hover:text-[#3EBCE8]">complimentary discovery call</Link> &mdash; payment plans available
                     </p>
                   </div>
                   <div>

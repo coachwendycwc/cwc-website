@@ -83,7 +83,7 @@ const faqStructuredData = {
       name: "What coaching programs are available for individuals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every individual engagement begins with one of three entry sessions — the Strategy Call (30 minutes, $150), the Clarity Call (60 minutes, $300), or the Breakthrough Session (90 minutes, $450). If we continue working together, we shape the right ongoing engagement in conversation.",
+        text: "Every individual engagement begins with a complimentary 30-minute discovery call. Bring one real situation you are carrying and leave with Wendy's honest read and a recommendation you can act on. From there, we choose the engagement that matches what you are trying to change — Foundation (1 month), Momentum (3 months), Transformation (4 months), Performance-Based Transformation (4 months, for when the person who needs support is on your team), or The Executive Alliance (6 months minimum). Imposter syndrome coaching is available on its own as a four-session Intensive or alongside any engagement.",
       },
     },
     {
@@ -91,7 +91,7 @@ const faqStructuredData = {
       name: "How much does coaching cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Entry sessions are $150 (30 minutes), $300 (60 minutes), and $450 (90 minutes). Pricing for ongoing engagements is discussed in conversation, with payment plans available. Organizational pricing is customized based on the scope, format, and duration of the engagement.",
+        text: "The discovery call is complimentary and carries no obligation. Investment for each engagement is discussed on the call and sent afterward on the rate sheet, with payment plans available on every engagement. Employer sponsorship is available for any engagement and required for none. Organizational pricing is customized based on the scope, format, and duration of the engagement.",
       },
     },
     {
@@ -99,7 +99,7 @@ const faqStructuredData = {
       name: "How long are coaching engagements?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Engagement length varies based on your needs. Individual coaching ranges from a single 90-minute session to a 6-month program. Group coaching and virtual series can range from a short series to a longer engagement. Retreats are available as half-day or full-day sessions.",
+        text: "Engagement length varies based on your needs. Individual engagements range from the one-month Foundation to The Executive Alliance at six months minimum; timeframes shown are typical and your cadence is agreed at the start. Group coaching and virtual series can range from a short series to a longer engagement. Retreats are available as half-day or full-day sessions.",
       },
     },
     {
