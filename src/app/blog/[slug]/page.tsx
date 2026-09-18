@@ -246,11 +246,11 @@ export default async function BlogPostPage({
               Ready to invest in your leadership?
             </h2>
             <p className="mt-6 text-xl text-[#A3A3A3] max-w-2xl mx-auto">
-              Book a free consultation and let&apos;s talk about your goals.
+              Book a complimentary discovery call and let&apos;s talk about your goals.
             </p>
             <div className="mt-10">
               <Link href="/for-individuals" className="btn-primary">
-                Book an Entry Session
+                Book a Discovery Call
               </Link>
             </div>
           </div>
