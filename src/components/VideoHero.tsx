@@ -74,7 +74,7 @@ export default function VideoHero({
         <img
           src={`${siteConfig.basePath}/${imageSrc}`}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover object-[66%_38%]"
+          className="absolute inset-0 w-full h-full object-cover object-[66%_8%]"
           fetchPriority="high"
           decoding="async"
           aria-hidden="true"
