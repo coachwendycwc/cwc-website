@@ -29,7 +29,7 @@ export default function ContactPage() {
     "Workshops & Webinars",
     "Group Coaching",
     "Virtual Series",
-    "Performance Coaching (RESET Method®)",
+    "Performance Coaching (RESET Method™)",
     "Other",
   ];
 

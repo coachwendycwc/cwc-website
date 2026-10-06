@@ -300,7 +300,7 @@ export default function ForIndividualsPage() {
               <p>
                 For when you are the manager. Someone on your team is struggling, you have tried
                 what you know, and you want them supported properly rather than managed out.
-                Delivered through The RESET Method&reg;: it begins with you, to understand what is
+                Delivered through The RESET Method&trade;: it begins with you, to understand what is
                 actually happening, then works directly with your team member. You stay involved
                 at three defined points and receive a report at the close. Session content stays
                 confidential; what comes back to you is progress against the outcomes we set

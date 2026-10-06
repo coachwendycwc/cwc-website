@@ -31,11 +31,11 @@ const faqs = [
     questions: [
       {
         q: "What services do you offer for organizations?",
-        a: "We offer seven core solutions: Executive Coaching for Leaders (1:1), Group Coaching, Keynote Speaking, Customized Webinars & Workshops, Multi-Session Virtual Series, Strategic Leadership & Board Retreats, and Performance-Based Coaching (The RESET Method®).",
+        a: "We offer seven core solutions: Executive Coaching for Leaders (1:1), Group Coaching, Keynote Speaking, Customized Webinars & Workshops, Multi-Session Virtual Series, Strategic Leadership & Board Retreats, and Performance-Based Coaching (The RESET Method™).",
       },
       {
-        q: "What is The RESET Method®?",
-        a: "The RESET Method® is our proprietary performance-based coaching framework. It engages both the leader and the team member from the start to close performance gaps, surface blind spots, build shared understanding, and produce lasting shifts in behavior and accountability—retaining talent instead of replacing it.",
+        q: "What is The RESET Method™?",
+        a: "The RESET Method™ is our proprietary performance-based coaching framework. It engages both the leader and the team member from the start to close performance gaps, surface blind spots, build shared understanding, and produce lasting shifts in behavior and accountability—retaining talent instead of replacing it.",
       },
       {
         q: "How does the engagement process work?",
