@@ -22,8 +22,8 @@ const outcomes = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Performance Coaching \u2014 RESET Method\u2122",
-  description: "The RESET Method\u2122 closes performance gaps by coaching both the leader and the team member. A structured, dual-engagement framework that drives accountability and real behavior change.",
+  name: "Performance Coaching \u2014 RESET Method\u00ae",
+  description: "The RESET Method\u00ae closes performance gaps by coaching both the leader and the team member. A structured, dual-engagement framework that drives accountability and real behavior change.",
   provider: {
     "@type": "Organization",
     name: "Coaching Women of Color",
