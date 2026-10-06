@@ -70,9 +70,7 @@ export default function ForIndividualsPage() {
 .swc .eng h3{margin:0;}
 .swc .eng .dur{font-size:13px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--tgold);}
 .swc .eng p{font-size:15.5px;margin:0;}
-.swc .aside{background:var(--band);border-left:3px solid var(--tmagenta);border-radius:0 4px 4px 0;padding:20px 24px;margin-top:20px;}
-.swc .aside p{font-size:16px;margin:0;}
-.swc .aside p b{color:var(--tpurple);}
+.swc .eng p + p{margin-top:12px;}
 .swc ul.fine{margin:16px 0 0;padding-left:20px;color:var(--ink-2);font-size:15.5px;}
 .swc ul.fine li{margin-bottom:9px;max-width:62ch;}
 .swc .closing{background:var(--band);border-radius:5px;padding:36px 34px;margin-top:44px;text-align:center;}
@@ -218,33 +216,27 @@ export default function ForIndividualsPage() {
           <section>
             <h2>If we work together</h2>
             <p>
-              Each engagement is a different depth of work. Most are for you and your own
-              leadership. One of them &mdash; Performance-Based Transformation &mdash; is what you
-              bring when the person who needs support is on your team. We choose the one that
-              matches what you are actually trying to change, and we talk through the investment
-              on our call.
+              Each engagement is a different depth of work, and every one of them runs four
+              months or longer. This work changes how a leader shows up, and that does not happen
+              in a handful of sessions. Most are for you and your own leadership. One of them,
+              Performance-Based Transformation, is what you bring when the person who needs
+              support is on your team. We choose the one that matches what you are actually
+              trying to change, and we talk through the investment on our call.
             </p>
 
             <div className="eng">
               <div className="ehead">
-                <h3>Foundation</h3>
-                <span className="dur">1 month</span>
+                <h3>The Imposter Syndrome Intensive</h3>
+                <span className="dur">4 months</span>
               </div>
               <p>
-                Where the work gets set up. A leadership assessment, a development plan built
-                around your goals, and the sessions to put them into motion. This is groundwork
-                you establish once and keep.
-              </p>
-            </div>
-
-            <div className="eng">
-              <div className="ehead">
-                <h3>Momentum</h3>
-                <span className="dur">3 months</span>
-              </div>
-              <p>
-                For a leader who already knows what she wants and needs the accountability to get
-                there. Habit building, execution support, and structure between sessions.
+                For the woman who can name this before she can name anything else. Impostor
+                syndrome is not a mood to be talked out of. It is a way of being, built over
+                years, and it takes a sustained arc to move. You take the Clance Impostor
+                Phenomenon Scale at the start and again at the close, so the shift is something
+                you can see rather than only something you feel. This runs the same length and
+                the same depth as Transformation. What differs is the doorway: you come in naming
+                the pattern, and we go to work on it from the first session.
               </p>
             </div>
 
@@ -254,10 +246,49 @@ export default function ForIndividualsPage() {
                 <span className="dur">4 months</span>
               </div>
               <p>
-                Deep individual leadership development across a sustained arc, including a full
-                Everything DiSC&reg; assessment, a leadership roadmap, and a follow-up session
-                thirty days after we close. This one is yours alone &mdash; entirely private to
-                you.
+                You have built a career most people would be proud of. And still, there is
+                something you want that you have not reached, or something in your way that you
+                have not been able to name.
+              </p>
+              <p>
+                You do not need the words for it before we begin. Finding them is usually the
+                first thing this work does.
+              </p>
+              <p>
+                Four months of private coaching that goes underneath the tactics, to how you
+                think, how you decide, and how you show up when it counts. Not a plan you will
+                abandon by March. A change in how you operate that is still there after we
+                finish. You take a full Everything DiSC&reg; assessment and build a leadership
+                roadmap you keep, and we meet once more thirty days after we close to see what
+                held.
+              </p>
+              <p>
+                This one is yours alone. No one in your organization is part of it, and nothing
+                said in these sessions leaves them.
+              </p>
+            </div>
+
+            <div className="eng">
+              <div className="ehead">
+                <h3>Sustained Transformation</h3>
+                <span className="dur">6 months</span>
+              </div>
+              <p>
+                Some things do not finish on a four-month schedule, and you usually know in
+                advance when yours is one of them. Maybe you have done work like this before and
+                watched it fade once the sessions ended. Maybe what you are reaching for is simply
+                bigger than a season.
+              </p>
+              <p>
+                Twelve sessions across six months, at the pace the work actually moves. There is
+                a point, usually somewhere after the fourth month, where the change stops taking
+                effort and starts feeling like you. Four months can get you to the edge of it.
+                Six gets you through.
+              </p>
+              <p>
+                Halfway we stop and take honest stock of what has moved and what has not. After
+                we close we meet twice more across sixty days, because the part where it holds is
+                the part that happens once the coaching ends.
               </p>
             </div>
 
@@ -269,10 +300,10 @@ export default function ForIndividualsPage() {
               <p>
                 For when you are the manager. Someone on your team is struggling, you have tried
                 what you know, and you want them supported properly rather than managed out.
-                Delivered through The RESET Method&reg;: it begins with <b>you</b>, to understand
-                what is actually happening, then works directly with your team member. You stay
-                involved at three defined points and receive a report at the close. Session content
-                stays confidential; what comes back to you is progress against the outcomes we set
+                Delivered through The RESET Method&reg;: it begins with you, to understand what is
+                actually happening, then works directly with your team member. You stay involved
+                at three defined points and receive a report at the close. Session content stays
+                confidential; what comes back to you is progress against the outcomes we set
                 together. Usually employer-sponsored.
               </p>
             </div>
@@ -284,18 +315,11 @@ export default function ForIndividualsPage() {
               </div>
               <p>
                 A dedicated advisory relationship rather than a set number of sessions.
-                Twice-monthly coaching plus weekly syncs, same-day response, crisis support, and
+                Twice-monthly coaching, and between those sessions you can reach me by voice note
+                or message, answered within one business day, short calls when you need them
+                rather than scheduled in advance, and a call before the room when something
+                high-stakes is coming. Stakeholder interviews at the start of the term, and
                 on-site availability. What you are retaining is access.
-              </p>
-            </div>
-
-            <div className="aside">
-              <p>
-                <b>Imposter syndrome coaching</b> is available on its own as a focused four-session
-                Intensive, or woven alongside any engagement. The first session finds the pattern,
-                where it shows up, and what sets it off. And where what you are describing turns
-                out to be an accurate read of your environment, I will name that plainly and point
-                you toward the support that fits it. You deserve the truth about which one it is.
               </p>
             </div>
           </section>
@@ -303,16 +327,17 @@ export default function ForIndividualsPage() {
           <section>
             <h2>Good to know</h2>
             <ul className="fine">
-              <li>All sessions are virtual via Zoom and strictly confidential.</li>
+              <li>All sessions are virtual via Zoom and strictly confidential</li>
+              <li>Every engagement runs four months or longer. Shorter engagements are not offered</li>
               <li>
                 The discovery call is complimentary, carries no obligation, and is offered once
-                per client.
+                per client
               </li>
-              <li>Every engagement begins with a written coaching agreement.</li>
-              <li>Payment plans are available on every engagement.</li>
-              <li>Employer sponsorship is available for any engagement and required for none.</li>
-              <li>Timeframes shown are typical. Your cadence is agreed at the start.</li>
-              <li>Rescheduling requires 24 hours notice.</li>
+              <li>Every engagement begins with a written coaching agreement</li>
+              <li>Payment plans are available on every engagement</li>
+              <li>Employer sponsorship is available for any engagement and required for none</li>
+              <li>Timeframes shown are typical. Your cadence is agreed at the start</li>
+              <li>Rescheduling requires 24 hours notice</li>
             </ul>
           </section>
 

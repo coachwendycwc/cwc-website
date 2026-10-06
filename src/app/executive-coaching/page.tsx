@@ -155,13 +155,17 @@ export default function ExecutiveCoachingPage() {
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <p className="text-sm font-medium text-[#14739C] uppercase tracking-widest mb-2">
-                      6-Month Program
+                      Sustained Transformation
                     </p>
                     <div className="text-2xl md:text-3xl font-semibold text-[#1A1A1A]">
                       Pricing shared in conversation
                     </div>
                     <p className="text-[#737373] mt-2">
                       Begin with a <Link href="/for-individuals" className="underline hover:text-[#3EBCE8]">complimentary discovery call</Link> &mdash; payment plans available
+                    </p>
+                    <p className="text-[#737373] mt-2">
+                      See the full ladder of engagements on the{" "}
+                      <Link href="/for-individuals" className="underline hover:text-[#3EBCE8]">For Individuals</Link> page.
                     </p>
                   </div>
                   <div>

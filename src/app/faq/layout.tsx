@@ -83,7 +83,7 @@ const faqStructuredData = {
       name: "What coaching programs are available for individuals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every individual engagement begins with a complimentary 30-minute discovery call. Bring one real situation you are carrying and leave with Wendy's honest read and a recommendation you can act on. From there, we choose the engagement that matches what you are trying to change — Foundation (1 month), Momentum (3 months), Transformation (4 months), Performance-Based Transformation (4 months, for when the person who needs support is on your team), or The Executive Alliance (6 months minimum). Imposter syndrome coaching is available on its own as a four-session Intensive or alongside any engagement.",
+        text: "Every individual engagement begins with a complimentary 30-minute discovery call. From there we choose one of five engagements: The Imposter Syndrome Intensive (4 months), Transformation (4 months), Sustained Transformation (6 months), Performance-Based Transformation (4 months, for when the person who needs support is on your team), or The Executive Alliance (6 months minimum). Every engagement runs four months or longer.",
       },
     },
     {
@@ -99,7 +99,7 @@ const faqStructuredData = {
       name: "How long are coaching engagements?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Engagement length varies based on your needs. Individual engagements range from the one-month Foundation to The Executive Alliance at six months minimum; timeframes shown are typical and your cadence is agreed at the start. Group coaching and virtual series can range from a short series to a longer engagement. Retreats are available as half-day or full-day sessions.",
+        text: "Individual engagements run four months or longer, from a four-month arc to The Executive Alliance at six months minimum. Shorter engagements are not offered. Timeframes shown are typical and your cadence is agreed at the start. Group coaching and virtual series can range from a short series to a longer engagement. Retreats are available as half-day or full-day sessions.",
       },
     },
     {
