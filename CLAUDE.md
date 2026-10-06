@@ -86,7 +86,7 @@ npm start          # Start production server on port 3001
 - Canonical URLs on all pages via `alternates.canonical`
 - `robots.ts` and `sitemap.ts` for search engine crawling
 - Title template: `"%s | Coaching Women of Color"`
-- Marks: Coaching Women of Color® (registered, use ®) and RESET Method™ (trademarked, NOT registered — use ™, never ®). Rafael 2026-10-06.
+- Registered trademarks: Coaching Women of Color® and RESET Method® (use ® not ™). Both registered — confirmed by Rafael 2026-10-06; never swap to ™.
 
 ### Accessibility
 - Skip-to-main-content link in root layout

@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Leadership Development for Organizations | Coaching Women of Color®",
   description:
-    "Retain and advance women of color in your organization. Keynote speaking, executive coaching, workshops, retreats, and the RESET Method™ — trusted by Fortune 500 companies, nonprofits, and universities.",
+    "Retain and advance women of color in your organization. Keynote speaking, executive coaching, workshops, retreats, and the RESET Method® — trusted by Fortune 500 companies, nonprofits, and universities.",
   alternates: {
     canonical: "https://coachingwomenofcolor.com/for-organizations/",
   },
@@ -317,7 +317,7 @@ export default function ForOrganizationsPage() {
                 { title: "Workshops & Webinars", subtitle: "Interactive Learning Experiences", href: "/services/workshops-webinars", icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", color: "#8B7BB5" },
                 { title: "Virtual Series", subtitle: "Sustained Behavior Change", href: "/services/virtual-series", icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z", color: "#C4D82E" },
                 { title: "Strategic Retreats", subtitle: "Align, Strategize, Move Forward", href: "/services/strategic-retreats", icon: "M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7", color: "#E91E8C" },
-                { title: "Performance Coaching", subtitle: "The RESET Method™", href: "/services/performance-coaching", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", color: "#3EBCE8" },
+                { title: "Performance Coaching", subtitle: "The RESET Method®", href: "/services/performance-coaching", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", color: "#3EBCE8" },
               ].map((solution) => (
                 <Link
                   key={solution.title}
